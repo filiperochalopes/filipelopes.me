@@ -1,0 +1,113 @@
+/* ----------- HEADER ----------- */
+
+.circle{
+    border-radius: 50%;
+  }
+  
+  section.nav_construcao{
+    padding: 30px 30vw;
+    text-align: center;
+  
+    &.bkg{
+      background: #242424 !important;
+      box-shadow: inset 0 -2px 30px rgba(0, 0, 0, 0.1);
+      color: #ffffffcc !important;
+    }
+  
+    button{
+      color: #b32b2b;
+      padding: 5px 30px;
+      margin: 20px 0
+    }
+  
+    p{
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+  
+    a{
+      font-weight: bold;
+      background: #ffffffcc;
+      padding: 0 5px;
+      border-radius: 2px;
+    }
+  
+  }
+  
+  header{
+    background: #363636;
+    position: relative;
+    
+    nav{
+      display: inline-block;
+      overflow: auto;
+      padding: 20px;
+      text-align: center;
+      
+      ul{
+        overflow: auto;
+        
+        li{
+          padding: 0 20px;
+        }
+      }
+    }
+    
+    .bt_header_theme{
+      position: absolute;
+      bottom:10px;
+      right: 10px;
+      font-size: .8em;
+    }
+    
+    .circle{
+      height: 320px;
+      width: 320px;
+      position: relative;
+      background: rgba(0, 0, 0, 0.2);
+      // box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
+      //   inset 0 0 15px rgba(0, 0, 0, 0.13),
+      //   0 0 25px 5px rgba(255, 255, 255, 0.02);
+      margin: 80px 10vw 20px 0; 
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); 
+      
+      #canvas_avatar, #canvas_3d_avatar{  
+        height: 100%;
+        width:100%;
+        position: absolute;
+        overflow: hidden;
+        border-radius: 50%;
+  
+        // Temporário
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      button{
+        position: absolute;
+        @include centerx();
+        bottom: -70px;
+      }
+      
+    }
+  }
+  
+  #header_slim{
+    text-align: center;
+    color: #fff;
+    height: auto !important;
+  
+    a{
+      img{
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: block;
+      }
+    }
+  }

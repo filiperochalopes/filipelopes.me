@@ -1,0 +1,261 @@
+// Importar fontes
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,800');
+
+// Importar variáveis
+@import 'variables';
+
+// Importar mixins
+@import 'mixins';
+
+// Importar layouts
+@import 'layouts/curriculo';
+@import 'layouts/portfolio';
+
+// Importar componentes
+@import 'components/form/form';
+@import 'components/struct/header';
+@import 'components/struct/footer';
+@import 'components/appBar';
+
+
+/* ----------- DADOS GERAIS ----------- */
+
+html, body{
+    font-family: 'Open Sans', sans-serif;
+    @include mp0;
+}
+
+h1, h2{
+    font-family: 'Raleway', sans-serif;
+  }
+
+ul{
+    list-style: none;
+
+    &.ul_inline{
+        li{
+            display: inline;
+        }
+    }
+}
+
+.mt-30{
+    margin-top: 30px;
+}
+
+.flex{
+    display: flex;
+    flex-flow: row;
+    flex-grow: 1;
+}
+
+@media (max-width: 767.98px) {
+    .flex{
+        flex-wrap: wrap;
+    }
+}
+
+.soon{
+  margin: 10px 0;
+  font-style: italic;
+  display: inline-block;
+  color: $orange_bar;
+}
+
+html, body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1{  
+  a{
+    vertical-align: middle;
+  }
+
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+  
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.container{
+  position: relative;
+  @include centerx;
+  max-width: 1200px;
+  padding: 20px 15vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+  &.bigpadd{
+    padding: 120px 15vw;
+
+    &.header{ // HACK
+      padding-top: 30px;
+    }
+  }
+    
+  &.full{
+    padding: 0;
+  }
+  
+  &.nopadd{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.inline {
+	display: inline;
+}
+
+.flex{
+  width: 100%;
+  display: inline-flex; /* or inline-flex */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: center; //esse pode mudar se quiser alinhar tudo pra cima
+  
+  &.space{
+    justify-content: space-evenly;
+  }
+  
+  &.nowrap{
+    flex-wrap: nowrap;
+  }
+  
+}
+
+.flex-center{
+  display: inline-flex; /* or inline-flex */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center; //esse pode mudar se quiser alinhar tudo pra cima
+  
+  &.space{
+    justify-content: space-evenly;
+  }
+  
+  &.nowrap{
+    flex-wrap: nowrap;
+  }
+  
+}
+
+.block{
+  display: block;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li{
+    display: inline;
+  }
+}
+
+.unvisible{
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.visible{
+  opacity: 1;
+}
+
+/* ----------- SECTION ----------- */
+
+section{
+  background: #363636;
+}
+
+
+/* ----------- KEYFRAMES ----------- */
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 767.98px) {
+
+  section.nav_construcao{
+    padding:20px;
+    font-size: .8em;
+  }
+
+  .container{
+    max-width: 100vw;
+    padding: 20px 10vw;
+    
+    &.bigpadd{
+      padding: 5vh;
+
+      &.header{
+        padding-top: 0px;
+      }
+    }
+  }
+
+  header nav{
+    width: 100%;
+    opacity: .3;
+  }  
+
+  .nowrap{
+    flex-wrap: wrap !important;
+  }
+
+  .circle{
+    width: 80vw !important;
+    height: 80vw !important;
+    margin-top: 40px !important;
+    margin-right: 0px !important;
+    margin-bottom: 65px !important;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  #textSobremim{
+    max-width: 90% !important;
+    opacity: .8;
+  }
+
+  .min-opacity{
+    opacity: .2;
+    color: #fff;
+  }
+
+  .bt_header_theme{
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 20px auto !important;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }

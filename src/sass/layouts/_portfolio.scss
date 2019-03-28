@@ -1,0 +1,177 @@
+@import "mixins";
+
+.portfolio_item_wrap{
+    position: relative;
+    width: 23.3vw;
+    height: 23.3vw;
+
+    $paddPortfolioCoverItem: 15px;
+    $transitionPortfolioCoverItem: .5s all;
+
+    img{
+        position: absolute;
+        @include center();
+        @include fullSize();
+        object-fit: cover;
+        z-index: 2;
+    }
+
+    canvas{
+        position: absolute;
+        @include center();
+        @include fullSize();
+        object-fit: cover;
+        display: none;
+        z-index: 3;
+    }
+
+    .curtain{
+        @include absoluteTopLeft();
+        @include fullSize();
+        z-index: 4;
+        background: rgba(25, 25, 25, 0.1);
+        transition: $transitionPortfolioCoverItem;
+    }
+
+    .curtain_over{
+        @include absoluteTopLeft();
+        @include fullSize();
+        z-index: 6;
+    }
+
+    .info{
+        @include absoluteTopLeft();
+        @include fullSize();
+        z-index: 5;
+        padding: $paddPortfolioCoverItem;
+        overflow: hidden;
+
+        h4{
+            margin: 0;
+            margin-bottom: 5px;
+            transform: translateY(-20px);
+            transition: $transitionPortfolioCoverItem;
+            opacity: 0;
+        }
+
+        ul{
+            list-style: none;
+            @include marginPadding0;
+        }
+
+        .categories li, .tags li{
+            font-size: .7em;
+            padding: 2px 4px;
+            background: black;
+            border-radius: 2px;
+            margin: 0px 2px;
+            opacity: 0;
+            transition: $transitionPortfolioCoverItem;
+            display: inline-block;
+        }
+
+        .description{
+            display: inline-block;
+            padding: 10px;
+            font-size: 0.9em;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: $transitionPortfolioCoverItem;
+        }
+
+        .tags{
+            position: absolute;
+            bottom: $paddPortfolioCoverItem;
+            left: $paddPortfolioCoverItem;
+        }
+    }
+
+    &:hover{
+        .curtain{
+            background: rgba(25, 25, 25, 0.7);
+        }
+
+        .info{
+            h4{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            .categories li, .tags li{
+                opacity: 1;
+            }
+
+            .description{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+
+}
+
+
+#portfolio_item{
+    height: 100vh;
+    width: 100vw;
+    transition: 1s all;
+
+    header{
+        padding: 0px 15px;
+        height: 60px;
+        line-height: 60px;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    #carousel{
+        height: calc(100vh - 60px);
+
+        .slider, .slider-frame, ul, li{
+            height: 100% !important;
+        }
+    }
+}
+
+.portfolio_item_container{
+    @include fullSize();
+
+    .portfolio_item{
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        .children{
+            position: absolute;
+            @include center();
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 1px 2px #000,
+            0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+        }
+    }
+}
+
+.portfolio_search{
+    
+    input{
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 1px 2px #555;
+        padding: 5px;
+        outline: 0;
+    }
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+
+    .portfolio_item_wrap{
+        width: 80vw;
+        height: 80vw;
+    }
+
+}

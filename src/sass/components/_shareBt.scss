@@ -1,0 +1,51 @@
+.share_bt{
+    position: relative;
+    display: inline;
+    
+    a{
+        text-decoration: none;
+        
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    
+    div button{
+        font-size: 20px;
+        font-weight: bold;
+        
+        &:hover{
+            color: #fff;
+        }
+    }
+    
+    .submenu{
+        position: absolute;
+        left: 60px;
+        top: -5px;
+        width: auto;
+        
+        a{
+            display: inline-block;
+            float: left;
+        }
+    }
+    
+    .whatsapp{
+        &:hover{
+            background: #2f7c1d;
+        }
+    }
+    
+    .mail{
+        &:hover{
+            background: #a72e2e;
+        }
+    }
+    .facebook{
+        font-size: 18px;
+        &:hover{
+            background: #12378b;
+        }
+    }
+}
