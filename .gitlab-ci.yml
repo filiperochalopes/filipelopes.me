@@ -26,9 +26,12 @@ deploy:
     - yarn install
     - yarn build
     - ssh -p 2222 filipelo@filipelopes.me "cd ${FOLDER} && rm -rf * && exit"
+    # Adiciona primeiramente pastas necessárias
     - | 
       sftp -P 2222 filipelo@filipelopes.me:${FOLDER} <<EOF
       mkdir static
+      mkdir img
+      mkdir blend4web
       ls -l
       lcd build
       lls -l
