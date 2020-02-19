@@ -29,6 +29,10 @@ class App extends Component {
       <Switch>
         <Route exact path="/" render={ () => ([
           <Header/>,
+          // <section>
+          //   <h2>Clientes</h2>
+          //   btcbolsa
+          // </section>,
           <Contato />,
           <Footer/>,
         ])} />

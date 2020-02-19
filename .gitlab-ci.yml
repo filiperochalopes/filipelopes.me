@@ -1,0 +1,41 @@
+image: node:13.8.0
+
+before_script:
+  - apt-get update -qq
+  - apt-get install -qq git
+  # Setup SSH deploy keys
+  - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    
+deploy:
+  type: deploy
+  environment:
+    name: staging
+    url: filipelopes.me
+  script:
+    # - ssh filipelo@filipelopes.me "cd /var/www/uilgo.orango.io && sudo git checkout master && sudo git pull origin master && sudo yarn install && sudo yarn build && exit"
+    - export NOCOLOR='\033[0m'
+    - export YELLOW='\033[1;33m'
+    - ls -la
+    # - npm -v
+    - echo -e "${YELLOW} Aqui devo executar o yarn...${NOCOLOR}"
+    - export CI=false
+    - yarn install
+    - yarn build
+    - ssh -p 2222 filipelo@filipelopes.me "cd ${FOLDER} && rm -rf * && exit"
+    - | 
+      sftp -P 2222 filipelo@filipelopes.me:${FOLDER} <<EOF
+      mkdir static
+      ls -l
+      lcd build
+      lls -l
+      put -r *
+      lcd ../apache2
+      put .htaccess
+      exit
+      EOF
+  only:
+    - master
