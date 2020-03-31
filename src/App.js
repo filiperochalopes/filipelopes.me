@@ -6,6 +6,7 @@ import Header from './components/header'
 import Portfolio from './pages/portfolio'
 import Contato from './components/contato'
 import Footer from './components/footer'
+import PixelizedImage from './components/PixelizedImage'
 import asyncComponent from './functions/async_component';
 
 const AsyncCurriculo = asyncComponent(() => import("./pages/curriculo"));
@@ -29,6 +30,7 @@ class App extends Component {
       <Switch>
         <Route exact path="/" render={ () => ([
           <Header/>,
+          <PixelizedImage/>,
           // <section>
           //   <h2>Clientes</h2>
           //   btcbolsa
