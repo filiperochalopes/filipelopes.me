@@ -1,11 +1,11 @@
 import AvatarHeader from './components/Avatar';
 import NavHeader from './components/Nav';
-import UnderConstruction from '../UnderConstruction';
 
-import AboutMe from 'views/Index/components/AboutMe';
+import UnderConstruction from '../UnderConstruction';
 
 import Button from '@material-ui/core/Button';
 import React, { Component } from 'react';
+import AboutMe from 'views/Index/components/AboutMe';
 
 const headerTheme = {
   neutral: {

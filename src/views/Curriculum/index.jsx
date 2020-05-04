@@ -1,13 +1,11 @@
 import CurriculoHeader from './components/Header';
 
 import HeaderSlim from '../../components/Header/components/Slim';
-import ShareBt from '../../components/share_bt';
-import Skill from '../../components/Skiil';
-import Footer from '../components/footer';
 
-import IconButton from '@material-ui/core/IconButton';
+import Footer from 'components/Footer';
+import Skill from 'components/Skill';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 class Curriculo extends Component {
   constructor(props) {

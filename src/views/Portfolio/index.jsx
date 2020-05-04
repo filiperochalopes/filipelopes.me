@@ -5,10 +5,10 @@ import PortfolioCoverItem from './components/SlideItem';
 import { AppContext } from '../../App';
 import Contato from '../../components/Contact';
 import Footer from '../../components/Footer';
-import HeaderSlim from '../../components/Header/components/Slim';
-import ShareBt from '../../components/share_bt';
 
 import IconButton from '@material-ui/core/IconButton';
+import HeaderSlim from 'components/Header/components/Slim';
+import ShareBt from 'components/ShareBt';
 import Carousel from 'nuka-carousel';
 import React, { Component } from 'react';
 import OnVisible from 'react-on-visible';
