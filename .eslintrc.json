@@ -1,0 +1,96 @@
+{
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["prettier", "prettier/react", "react-app", "eslint:recommended"],
+  "plugins": ["react", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": ["error", { "allow": ["log", "warn", "error"] }],
+    "arrow-parens": ["error", "always"],
+    "no-underscore-dangle": [
+      "error",
+      { "allow": ["_embedded", "_leaflet_id"] }
+    ],
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/forbid-prop-types": [
+      0,
+      {
+        "forbid": ["any"]
+      }
+    ],
+    "react/prop-types": 0,
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "external",
+          "unknown"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "*react*/**",
+            "group": "index"
+          },
+          {
+            "pattern": "./styles",
+            "group": "index"
+          },
+          {
+            "pattern": "**/views/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "**/components/**",
+            "group": "sibling",
+            "position": "after"
+          },
+          {
+            "pattern": "**/services/**",
+            "group": "sibling",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
+}
