@@ -1,4 +1,3 @@
-import Button from '@material-ui/core/Button';
 import React, { Component } from 'react';
 import OnVisible from 'react-on-visible';
 
@@ -17,11 +16,11 @@ class Skill extends Component {
 
   readSkills = (skills) => {
     let listSkills = [];
-    skills.map((data, i) => {
+    skills.forEach((data, i) => {
       listSkills.push(
         <li key={i}>
           <div className="img">
-            <img src={`/img/${data[2] || data[0]}.jpg`} />
+            <img src={`/img/${data[2] || data[0]}.jpg`} alt="Habilidade" />
           </div>
           <span>
             {data[0]}

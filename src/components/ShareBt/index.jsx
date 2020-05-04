@@ -1,6 +1,5 @@
 import IconButton from '@material-ui/core/IconButton';
 import React, { Component } from 'react';
-import OnVisible from 'react-on-visible';
 
 class ShareBt extends Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class ShareBt extends Component {
   }
 
   changeStatus = () => {
-    if (this.state.status == 'none') {
+    if (this.state.status === 'none') {
       this.setState({ status: 'flex' });
     } else {
       this.setState({ status: 'none' });
@@ -37,6 +36,7 @@ class ShareBt extends Component {
           <a
             href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <IconButton className="mail" onClick={this.changeStatus}>
               <i className="far fa-envelope"></i>
@@ -45,6 +45,7 @@ class ShareBt extends Component {
           <a
             href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <IconButton className="facebook" onClick={this.changeStatus}>
               <i className="fab fa-facebook-f"></i>

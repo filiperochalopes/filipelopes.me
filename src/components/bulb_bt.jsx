@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const BulbBt = (props) => {
   return <span>{props.children}</span>;

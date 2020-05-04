@@ -8,10 +8,6 @@ const style = {
 };
 
 class SobreMim extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div id="textSobremim" style={style}>

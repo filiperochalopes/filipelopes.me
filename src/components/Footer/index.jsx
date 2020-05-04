@@ -1,8 +1,5 @@
 import Button from '@material-ui/core/Button';
-import Input from '@material-ui/core/Input';
 import React, { Component } from 'react';
-import OnVisible from 'react-on-visible';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Footer extends Component {
   constructor(props) {

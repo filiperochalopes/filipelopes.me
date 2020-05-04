@@ -1,5 +1,4 @@
 import PortfolioItem from './components/ListItem';
-import PortfolioSearch from './components/Search';
 import PortfolioCoverItem from './components/SlideItem';
 
 import { AppContext } from '../../App';
@@ -7,13 +6,12 @@ import Contato from '../../components/Contact';
 import Footer from '../../components/Footer';
 
 import IconButton from '@material-ui/core/IconButton';
-import HeaderSlim from 'components/Header/components/Slim';
 import ShareBt from 'components/ShareBt';
 import Carousel from 'nuka-carousel';
 import React, { Component } from 'react';
 import OnVisible from 'react-on-visible';
 import Palette from 'react-palette';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Portfolio extends Component {
   constructor(props) {
@@ -80,7 +78,7 @@ class Portfolio extends Component {
   shouldComponentUpdate = (nextProps, nextState) => {
     console.log(
       'chamou should',
-      nextProps.match.params.name == this.props.match.params.name
+      nextProps.match.params.name === this.props.match.params.name
     );
 
     if (this.props.match.params.name) {
@@ -123,13 +121,10 @@ class Portfolio extends Component {
     switch (item.type) {
       case 'cover':
         return '/img/portfolio/cover/' + item.url;
-        break;
       case 'img':
         return '/img/portfolio/' + item.url;
-        break;
       default:
         return '/img/portfolio/defaultBackground.jpg';
-        break;
     }
   };
 
@@ -167,14 +162,14 @@ class Portfolio extends Component {
 
       console.log('changeIndex', move, prev, next);
 
-      if (move == 'prev') {
+      if (move === 'prev') {
         this.setState({
           currentIndex: prev,
         });
         this.backgroundRef.current.style.backgroundColor = this.portfolioItemsBaseColors[
           prev
         ];
-      } else if (move == 'next') {
+      } else if (move === 'next') {
         this.setState({
           currentIndex: next,
         });
@@ -186,129 +181,112 @@ class Portfolio extends Component {
   };
 
   render() {
-    if (false) {
-      if (this.props.match.params.name) {
-        return (
-          <section
-            id="portfolio_item"
-            ref={this.backgroundRef}
-            style={{
-              backgroundColor: this.state.backgroundColor,
-            }}
-          >
-            {this.state.atual.items.map((item, i) => (
-              <Palette key={i} image={this.getUrl(item)}>
-                {(palette) => (
-                  <div
-                    className="getBackground"
-                    style={{
-                      backgroundColor: palette.lightMuted,
-                      display: 'none',
-                    }}
-                  >
-                    {this.backgroundArrayPush(palette, i)}
-                  </div>
-                )}
-              </Palette>
-            ))}
-            <header>
-              <IconButton onClick={this.goBack}>
-                <i className="fas fa-long-arrow-alt-left"></i>
-              </IconButton>
-              {this.state.atual.name}
-            </header>
-            {/* <Palette> */}
-            <div id="carousel" times={this.state.nextTimes}>
-              <Carousel
-                renderCenterLeftControls={({ previousSlide }) => (
-                  <IconButton
-                    size="small"
-                    onClick={() => {
-                      previousSlide();
-                      this.changeIndex('prev');
-                    }}
-                  >
-                    <i className="fas fa-arrow-left"></i>
-                  </IconButton>
-                )}
-                renderCenterRightControls={({ nextSlide }) => (
-                  <IconButton
-                    onClick={() => {
-                      nextSlide();
-                      this.changeIndex('next');
-                    }}
-                  >
-                    <i className="fas fa-arrow-right"></i>
-                  </IconButton>
-                )}
-                renderBottomCenterControls={() => null}
-                afterSlide={(currentIndex) => {
-                  this.afterSlide(currentIndex);
-                }}
-                swiping={true}
-              >
-                {this.state.atual.items.map(
-                  (item, i) => (
-                    console.log(i),
-                    (
-                      <PortfolioItem
-                        // backgroundColor={this.changeBackColor}
-                        item={item}
-                        key={i}
-                        backgroundColor={i}
-                      />
-                    )
-                  )
-                )}
-              </Carousel>
-            </div>
-            {/* </Palette> */}
-          </section>
-        );
-      } else {
-        return [
-          <AppContext.Consumer>
-            {(context) => (
-              <section>
-                <div className="container">
-                  <h1>
-                    <Link to="/portfolio">
-                      Portfólio <i className="fas fa-external-link-alt"></i>
-                    </Link>{' '}
-                    <ShareBt whatsapp="whatsapp://send?text=Veja o meu currículo: https://filipelopes.me/curriculo" />
-                  </h1>
-                  {/* <PortfolioSearch/> */}
-                  <OnVisible
-                    className="flex"
-                    visibleClassName="visible"
-                    percent={150}
-                    wrappingElement="div"
-                    onChange={this.getPortfolio}
-                  >
-                    {this.state.data.map((item, i) => (
-                      <PortfolioCoverItem key={i} item={item} />
-                    ))}
-                  </OnVisible>
-                </div>
-              </section>
-            )}
-          </AppContext.Consumer>,
-          <Contato />,
-          <Footer />,
-        ];
-      }
-    } else {
+    if (this.props.match.params.name) {
       return (
         <section
+          id="portfolio_item"
           ref={this.backgroundRef}
           style={{
-            height: '100vh',
+            backgroundColor: this.state.backgroundColor,
           }}
         >
-          <HeaderSlim />
-          <p className="soon"> Em breve </p>
+          {this.state.atual.items.map((item, i) => (
+            <Palette key={i} image={this.getUrl(item)}>
+              {(palette) => (
+                <div
+                  className="getBackground"
+                  style={{
+                    backgroundColor: palette.lightMuted,
+                    display: 'none',
+                  }}
+                >
+                  {this.backgroundArrayPush(palette, i)}
+                </div>
+              )}
+            </Palette>
+          ))}
+          <header>
+            <IconButton onClick={this.goBack}>
+              <i className="fas fa-long-arrow-alt-left"></i>
+            </IconButton>
+            {this.state.atual.name}
+          </header>
+          {/* <Palette> */}
+          <div id="carousel" times={this.state.nextTimes}>
+            <Carousel
+              renderCenterLeftControls={({ previousSlide }) => (
+                <IconButton
+                  size="small"
+                  onClick={() => {
+                    previousSlide();
+                    this.changeIndex('prev');
+                  }}
+                >
+                  <i className="fas fa-arrow-left"></i>
+                </IconButton>
+              )}
+              renderCenterRightControls={({ nextSlide }) => (
+                <IconButton
+                  onClick={() => {
+                    nextSlide();
+                    this.changeIndex('next');
+                  }}
+                >
+                  <i className="fas fa-arrow-right"></i>
+                </IconButton>
+              )}
+              renderBottomCenterControls={() => null}
+              afterSlide={(currentIndex) => {
+                this.afterSlide(currentIndex);
+              }}
+              swiping={true}
+            >
+              {this.state.atual.items.map((item, i) =>
+                console.log(i)(
+                  <PortfolioItem
+                    // backgroundColor={this.changeBackColor}
+                    item={item}
+                    key={i}
+                    backgroundColor={i}
+                  />
+                )
+              )}
+            </Carousel>
+          </div>
+          {/* </Palette> */}
         </section>
       );
+    } else {
+      return [
+        <AppContext.Consumer>
+          {(context) => (
+            <section>
+              <div className="container">
+                <h1>
+                  <Link to="/portfolio">
+                    Portfólio <i className="fas fa-external-link-alt"></i>
+                  </Link>{' '}
+                  <ShareBt whatsapp="whatsapp://send?text=Veja o meu currículo: https://filipelopes.me/curriculo" />
+                </h1>
+                {/* <PortfolioSearch/> */}
+                <OnVisible
+                  className="flex"
+                  visibleClassName="visible"
+                  percent={150}
+                  wrappingElement="div"
+                  onChange={this.getPortfolio}
+                >
+                  {this.state.data.map((item, i) => (
+                    <PortfolioCoverItem key={i} item={item} />
+                  ))}
+                </OnVisible>
+              </div>
+            </section>
+          )}
+        </AppContext.Consumer>,
+        <Contato />,
+        <Footer />,
+      ];
     }
   }
 }

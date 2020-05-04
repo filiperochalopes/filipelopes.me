@@ -1,11 +1,9 @@
-import CurriculoHeader from './components/Header';
-
 import HeaderSlim from '../../components/Header/components/Slim';
 
 import Footer from 'components/Footer';
 import Skill from 'components/Skill';
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Curriculo extends Component {
   constructor(props) {
@@ -28,11 +26,10 @@ class Curriculo extends Component {
               </Link>
               {/* <ShareBt whatsapp="whatsapp://send?text=Veja o meu currículo: https://filipelopes.me/curriculo" /> */}
             </h1>
-            <Route exact path="/curriculo" component={CurriculoHeader} />
             <h2>Resumo</h2>
             <section id="curriculo_resumo">
               <div className="imagem">
-                <img src="/img/profile.jpg" />
+                <img src="/img/profile.jpg" alt="Foto de perfil" />
               </div>
               <div className="texto">
                 <p>

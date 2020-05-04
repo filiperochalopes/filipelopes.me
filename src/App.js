@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
 import './sass/app.scss';
-// import Curriculo from './components/curriculo.jsx'
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import PixelizedImage from './components/PixelizedImage';
 import asyncComponent from './services/async_component';
 import Portfolio from './views/Portfolio';
+
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const AsyncCurriculo = asyncComponent(() => import('./views/Curriculum'));
 

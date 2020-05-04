@@ -1,6 +1,6 @@
 import Pixelate from 'pixelate';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class PortfolioCoverItem extends Component {
   constructor(props) {
@@ -49,21 +49,6 @@ class PortfolioCoverItem extends Component {
     }
   };
 
-  // getPortfolio = () => {
-  // fetch("http://localhost/sites/server.filipelopes.me/get_portfolio.php")
-  // // fetch("https://server.filipelopes.me/get_put_views.php")
-  // .then(function(response) {
-  //   return response.text();
-  // }).then((data) => {
-  //   data = JSON.parse(data);
-  //   console.log(data);
-
-  //   this.setState({
-  // 		data
-  //   })
-  // })
-  // }
-
   componentDidMount = () => {
     this.pixelate = new Pixelate(this.coverRef.current);
   };
@@ -101,12 +86,13 @@ class PortfolioCoverItem extends Component {
             <div className="curtain"></div>
             <div className="curtain_over"></div>
             {item.items
-              .filter((portfolioItem) => portfolioItem.type == 'cover')
+              .filter((portfolioItem) => portfolioItem.type === 'cover')
               .map((portfolioItem, i) => (
                 <img
                   key={i}
                   ref={this.coverRef}
                   src={'/img/portfolio/cover/' + portfolioItem.url}
+                  alt="Imagem de capa do portfólio"
                 />
               ))}
           </Link>

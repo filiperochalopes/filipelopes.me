@@ -5,7 +5,7 @@ export default function header_slim() {
   return (
     <header id="header_slim">
       <Link to="/">
-        <img src="/img/logo.jpg" />
+        <img src="/img/logo.jpg" alt="Filipe Lopes logo" />
       </Link>
       <Link to="/portfolio">Portfólio</Link>&nbsp;&nbsp;&#9642;&nbsp;&nbsp;
       <Link to="/curriculo">Currículo</Link>

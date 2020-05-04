@@ -27,7 +27,7 @@ class AvatarHeader extends Component {
             id="canvas_avatar"
             style={{ display: this.state.vision ? 'none' : 'block' }}
           >
-            <img src="/img/profile.jpg" />
+            <img src="/img/profile.jpg" alt="Foto de perfil" />
           </div>
           <IconButton
             className="toggle_3d_vision"
@@ -42,17 +42,10 @@ class AvatarHeader extends Component {
 
   componentDidMount() {
     var m_app = b4w.app;
-    var m_cfg = b4w.config;
     var m_data = b4w.data;
     var m_preloader = b4w.preloader;
-    var m_ver = b4w.version;
-    var m_logic = b4w.logic_nodes;
-    var m_transform = b4w.transform;
-    var m_material = b4w.material;
-    var m_scenes = b4w.scenes;
 
     // detect application mode
-    var DEBUG = m_ver.type() == 'DEBUG';
     var APP_ASSETS_PATH = 'blend4web/AvatarHeader/';
 
     m_app.init({

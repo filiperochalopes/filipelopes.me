@@ -1,5 +1,4 @@
 import Button from '@material-ui/core/Button';
-import Input from '@material-ui/core/Input';
 import React, { Component } from 'react';
 
 class Contato extends Component {

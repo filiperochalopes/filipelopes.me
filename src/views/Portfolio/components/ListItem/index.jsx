@@ -1,8 +1,4 @@
-import ButtonBase from '@material-ui/core/ButtonBase';
-import IconButton from '@material-ui/core/IconButton';
 import React, { Component } from 'react';
-import OnVisible from 'react-on-visible';
-import Palette from 'react-palette';
 
 class PortfolioItem extends Component {
   constructor(props) {
@@ -22,50 +18,30 @@ class PortfolioItem extends Component {
             <img
               className="children"
               src={'/img/portfolio/cover/' + item.url}
+              alt="Imagem de capa de potfólio"
             />
           );
-          break;
         case 'img':
           return (
-            <img className="children" src={'/img/portfolio/' + item.url} />
+            <img
+              className="children"
+              src={'/img/portfolio/' + item.url}
+              alt="Imagem de Porfólio"
+            />
           );
-          break;
         case 'text':
           return <div className="children">{item.url}</div>;
-          break;
         case 'link':
           return <div className="children">{item.url}</div>;
-          break;
         case 'video':
           return <div className="children">{item.url}</div>;
-          break;
         default:
           return <div className="children">{item.url}</div>;
-          break;
       }
     } else {
       return 'Erro, sem resultados';
     }
   };
-
-  // componentWillReceiveProps = (nextProps) => {
-  // 	console.log("recebeu props", nextProps);
-  // 	console.log("recebeu props", this.props);
-  // }
-
-  // shouldComponentUpdate = (nextProps, nextState) => {
-  // 	console.log("chamou should item", nextProps.times == this.state.nextTimes);
-
-  // 	// if(nextProps.times == this.state.nextTimes){
-  // 	// 	return false;
-  // 	// }
-
-  //   return true;
-  // }
-
-  // componentDidUpdate = () => {
-  // 	console.log("update");
-  // }
 
   render() {
     const item = this.props.item;
