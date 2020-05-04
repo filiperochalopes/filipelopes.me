@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
-
-import IconButton from '@material-ui/core/IconButton';
 import ButtonBase from '@material-ui/core/ButtonBase';
-
+import IconButton from '@material-ui/core/IconButton';
+import React, { Component } from 'react';
 import OnVisible from 'react-on-visible';
-
 import Palette from 'react-palette';
 
 class PortfolioItem extends Component {

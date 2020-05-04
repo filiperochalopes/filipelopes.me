@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import b4w from 'blend4web';
 import IconButton from '@material-ui/core/IconButton';
+import b4w from 'blend4web';
+import React, { Component } from 'react';
 
 class AvatarHeader extends Component {
   constructor(props) {

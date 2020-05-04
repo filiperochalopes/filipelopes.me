@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
-import ShareBt from '../../components/share_bt';
-import { AppContext } from '../../App';
-import PortfolioSearch from './components/Search';
 import PortfolioItem from './components/ListItem';
+import PortfolioSearch from './components/Search';
 import PortfolioCoverItem from './components/SlideItem';
 
-import OnVisible from 'react-on-visible';
-
-import HeaderSlim from '../../components/Header/components/Slim';
+import { AppContext } from '../../App';
 import Contato from '../../components/Contact';
 import Footer from '../../components/Footer';
-import Palette from 'react-palette';
-import Carousel from 'nuka-carousel';
+import HeaderSlim from '../../components/Header/components/Slim';
+import ShareBt from '../../components/share_bt';
 
 import IconButton from '@material-ui/core/IconButton';
-
+import Carousel from 'nuka-carousel';
+import React, { Component } from 'react';
+import OnVisible from 'react-on-visible';
+import Palette from 'react-palette';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Portfolio extends Component {

@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-
-import OnVisible from 'react-on-visible';
 import Button from '@material-ui/core/Button';
+import React, { Component } from 'react';
+import OnVisible from 'react-on-visible';
 
 class Skill extends Component {
   constructor(props) {

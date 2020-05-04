@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
 import Pixelate from 'pixelate';
-
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class PortfolioCoverItem extends Component {

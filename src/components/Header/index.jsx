@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
-import AvatarHeader from './Header/components/Avatar';
-import NavHeader from './header_nav';
-import SobreMim from '../views/Index/components/AboutMe/header_sobremim';
-import UnderConstruction from './under_construction';
+import AvatarHeader from './components/Avatar';
+import NavHeader from './components/Nav';
+import UnderConstruction from '../UnderConstruction';
+
+import AboutMe from 'views/Index/components/AboutMe';
+
 import Button from '@material-ui/core/Button';
+import React, { Component } from 'react';
 
 const headerTheme = {
   neutral: {
@@ -81,7 +83,7 @@ class Header extends Component {
             <div className="block">
               <div className="flex-center nowrap">
                 <AvatarHeader />
-                <SobreMim />
+                <AboutMe />
                 <Button
                   className="bt_header_theme"
                   onClick={this.changeHeaderTheme}

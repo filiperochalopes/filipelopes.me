@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
 import BulbBt from '../../../../components/bulb_bt';
+
+import React, { Component } from 'react';
 
 const style = {
   maxWidth: '60%',

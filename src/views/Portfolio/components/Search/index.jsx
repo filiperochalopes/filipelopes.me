@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
 import { SearchContext } from '../../../../components/context_search';
+
+import React, { Component } from 'react';
 
 class PortfolioSearch extends Component {
   constructor(props) {
