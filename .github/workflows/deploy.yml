@@ -21,7 +21,10 @@ jobs:
           port: 22022
           script: |
             whoami
-            ls -al
+            cd /var/www/filipelopes.me
+            node --version
+            yarn --version
+            yarn && yarn build
       - name: Backend Rsync
         uses: easingthemes/ssh-deploy@v2.1.6
         env:
