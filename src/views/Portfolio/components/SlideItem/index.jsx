@@ -16,7 +16,7 @@ class PortfolioCoverItem extends Component {
 
   requestAnimation = null;
 
-  logFunc = (num) => {
+  logFunc = num => {
     //Math.log(x) / Math.log(outraBase)
     return (Math.log(num) / Math.log(250) + 2.5) * 0.38;
   };
@@ -72,13 +72,13 @@ class PortfolioCoverItem extends Component {
             <div className="info">
               <h4>{item.name}</h4>
               <ul className="categories">
-                {item.categories.map((category) => (
+                {item.categories.map(category => (
                   <li key={category}>{category}</li>
                 ))}
               </ul>
               <span className="description">{item.description}</span>
               <ul className="tags">
-                {item.tags.map((tag) => (
+                {item.tags.map(tag => (
                   <li key={tag}>{tag}</li>
                 ))}
               </ul>
@@ -86,7 +86,7 @@ class PortfolioCoverItem extends Component {
             <div className="curtain"></div>
             <div className="curtain_over"></div>
             {item.items
-              .filter((portfolioItem) => portfolioItem.type === 'cover')
+              .filter(portfolioItem => portfolioItem.type === 'cover')
               .map((portfolioItem, i) => (
                 <img
                   key={i}

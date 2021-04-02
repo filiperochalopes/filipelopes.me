@@ -13,12 +13,12 @@ class InputText extends Component {
   }
 
   // Modifica state.focus para true
-  onFocus = (e) => {
+  onFocus = e => {
     this.setState({ focused_or_filled: true }, this.setLabelStyle);
   };
 
   // Modifica state.focus para false caso esteja vazio
-  onBlur = (e) => {
+  onBlur = e => {
     if (!e.target.value) {
       this.setState({ focused_or_filled: false }, this.setLabelStyle);
     }

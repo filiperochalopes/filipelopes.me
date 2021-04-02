@@ -15,12 +15,12 @@ class InputPass extends Component {
   }
 
   // Modifica state.focus para true
-  onFocus = (e) => {
+  onFocus = e => {
     this.setState({ focusedOrFilled: true }, this.setLabelStyle);
   };
 
   // Modifica state.focus para false caso esteja vazio
-  onBlur = (e) => {
+  onBlur = e => {
     if (!e.target.value) {
       this.setState({ focusedOrFilled: false }, this.setLabelStyle);
     }
@@ -37,7 +37,7 @@ class InputPass extends Component {
     }
   };
 
-  toggleType = (e) => {
+  toggleType = e => {
     if (this.state.inputType === 'password') {
       this.setState({
         inputType: 'text',
@@ -66,6 +66,7 @@ class InputPass extends Component {
         <img
           className="inside_icon"
           onClick={this.toggleType}
+          role="button"
           src={this.state.eyeIcon}
           alt="Alternar visualização de senha"
         />

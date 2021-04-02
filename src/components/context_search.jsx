@@ -15,14 +15,14 @@ export class SearchProvider extends Component {
       <SearchContext.Provider
         value={{
           state: this.state,
-          insertTag: (str) => {
+          insertTag: str => {
             let tags = this.state.tags.concat(str);
             this.setState({ tags });
             console.log('insertTag call', tags);
           },
-          removeTag: (str) => {
+          removeTag: str => {
             console.log('Called with', str);
-            let tags = this.state.tags.filter((tag) => tag !== str);
+            let tags = this.state.tags.filter(tag => tag !== str);
             this.setState({ tags });
           },
         }}

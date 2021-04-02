@@ -10,7 +10,7 @@ class PortfolioItem extends Component {
     };
   }
 
-  filterItem = (item) => {
+  filterItem = item => {
     if (item.type) {
       switch (item.type) {
         case 'cover':

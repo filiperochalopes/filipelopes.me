@@ -14,7 +14,7 @@ class Skill extends Component {
     };
   }
 
-  readSkills = (skills) => {
+  readSkills = skills => {
     let listSkills = [];
     skills.forEach((data, i) => {
       listSkills.push(
@@ -62,7 +62,7 @@ class Skill extends Component {
     console.log('click');
   };
 
-  returnBarColor = (percent) => {
+  returnBarColor = percent => {
     if (percent >= 70) {
       return '__good';
     } else if (percent < 40) {

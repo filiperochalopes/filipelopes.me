@@ -1,54 +1,26 @@
-import './sass/app.scss';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import PixelizedImage from './components/PixelizedImage';
 import asyncComponent from './services/async_component';
-import Portfolio from './views/Portfolio';
+import Index from './views/Index';
 
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-const AsyncCurriculo = asyncComponent(() => import('./views/Curriculum'));
+const AsyncCurriculum = asyncComponent(() => import('./views/Curriculum'));
+const AsyncPortfolio = asyncComponent(() => import('./views/Portfolio'));
 
 export const AppContext = React.createContext();
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const providerAppContextValue = {
+  theme: 'orange',
+};
 
-    // State com todos os dados globais necessários para a aplicação
-    this.state = {
-      // Context state
-    };
-  }
-
-  render() {
-    return (
-      <Router>
-        <AppContext.Provider value={this.state}>
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => [
-                <Header />,
-                <PixelizedImage />,
-                // <section>
-                //   <h2>Clientes</h2>
-                //   btcbolsa, Marinha do Brasil, INEMA, ALT-, Montreal Informática, Lithocenter Hospital DIa
-                // </section>,
-                <Contact />,
-                <Footer />,
-              ]}
-            />
-            <Route path="/portfolio/:name?" component={Portfolio} />
-            <Route path="/curriculo" component={AsyncCurriculo} />
-          </Switch>
-        </AppContext.Provider>
-      </Router>
-    );
-  }
-}
-
-export default App;
+export default () => (
+  <Router>
+    <AppContext.Provider value={providerAppContextValue}>
+      <Switch>
+        <Route exact path="/" component={Index} />
+        <Route path="/portfolio/:name?" component={AsyncPortfolio} />
+        <Route path="/curriculo" component={AsyncCurriculum} />
+        <Route path="/curriculum" component={AsyncCurriculum} />
+      </Switch>
+    </AppContext.Provider>
+  </Router>
+);

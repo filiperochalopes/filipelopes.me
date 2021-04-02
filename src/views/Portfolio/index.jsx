@@ -48,7 +48,7 @@ class Portfolio extends Component {
       .then(function (response) {
         return response.text();
       })
-      .then((data) => {
+      .then(data => {
         data = JSON.parse(data);
         console.log(data);
 
@@ -58,7 +58,7 @@ class Portfolio extends Component {
       });
   };
 
-  getPortfolioItem = (slug) => {
+  getPortfolioItem = slug => {
     fetch(
       'http://192.168.0.64/sites/server.filipelopes.me/get_portfolio_item.php?slug=' +
         slug
@@ -67,7 +67,7 @@ class Portfolio extends Component {
       .then(function (response) {
         return response.text();
       })
-      .then((atual) => {
+      .then(atual => {
         atual = JSON.parse(atual);
         this.setState({
           atual,
@@ -112,12 +112,12 @@ class Portfolio extends Component {
     window.history.back();
   };
 
-  getBackground = (e) => {
+  getBackground = e => {
     console.log('pediu pra trocar');
     console.log(e.target.backgroundcolor);
   };
 
-  getUrl = (item) => {
+  getUrl = item => {
     switch (item.type) {
       case 'cover':
         return '/img/portfolio/cover/' + item.url;
@@ -139,7 +139,7 @@ class Portfolio extends Component {
     ];
   };
 
-  afterSlide = (currentIndex) => {
+  afterSlide = currentIndex => {
     if (this.props.match.params.name) {
       //estava dando erro caso passasse o slide e fechasse antes de completar
       this.setState(
@@ -155,7 +155,7 @@ class Portfolio extends Component {
     }
   };
 
-  changeIndex = (move) => {
+  changeIndex = move => {
     if (this.backgroundRef.current) {
       let prev = this.state.currentIndex - 1;
       let next = this.state.currentIndex + 1;
@@ -192,7 +192,7 @@ class Portfolio extends Component {
         >
           {this.state.atual.items.map((item, i) => (
             <Palette key={i} image={this.getUrl(item)}>
-              {(palette) => (
+              {palette => (
                 <div
                   className="getBackground"
                   style={{
@@ -236,7 +236,7 @@ class Portfolio extends Component {
                 </IconButton>
               )}
               renderBottomCenterControls={() => null}
-              afterSlide={(currentIndex) => {
+              afterSlide={currentIndex => {
                 this.afterSlide(currentIndex);
               }}
               swiping={true}
@@ -258,8 +258,8 @@ class Portfolio extends Component {
       );
     } else {
       return [
-        <AppContext.Consumer>
-          {(context) => (
+        <AppContext.Consumer key="contextConsumer">
+          {context => (
             <section>
               <div className="container">
                 <h1>
@@ -284,8 +284,8 @@ class Portfolio extends Component {
             </section>
           )}
         </AppContext.Consumer>,
-        <Contato />,
-        <Footer />,
+        <Contato key="contact" />,
+        <Footer key="footer" />,
       ];
     }
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BulbBt = (props) => {
+const BulbBt = props => {
   return <span>{props.children}</span>;
 };
 

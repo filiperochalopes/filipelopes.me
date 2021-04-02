@@ -11,7 +11,7 @@ class PortfolioSearch extends Component {
     };
   }
 
-  remove = (element) => {
+  remove = element => {
     const array = this.props.context.state.tags;
     const index = array.indexOf(element);
 
@@ -20,7 +20,7 @@ class PortfolioSearch extends Component {
     }
   };
 
-  separaVirgulas = (event) => {
+  separaVirgulas = event => {
     let str = event.target.value;
     console.log(event.target.value);
     this.setState({ inputTagsValue: str });
@@ -36,14 +36,14 @@ class PortfolioSearch extends Component {
   render() {
     return (
       <SearchContext.Consumer>
-        {(context) => (
+        {context => (
           <div className="portfolio_search">
             <input type="search" />
             <input
               type="text"
               placeholder="#"
               value={this.state.inputTagsValue}
-              onChange={(e) => {
+              onChange={e => {
                 console.log('change context', context);
                 this.setState({ inputTagsValue: e.target.value });
                 if (this.separaVirgulas(e) !== false) {
@@ -56,7 +56,7 @@ class PortfolioSearch extends Component {
             {context.state.tags.map((tag, index) => (
               <span
                 key={index}
-                onClick={(evt) => {
+                onClick={evt => {
                   console.log('clicking here', evt);
                   console.log('with context', context);
                   context.removeTag(tag);

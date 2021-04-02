@@ -7,7 +7,6 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
     "react-app",
     "prettier/react",
     "prettier"

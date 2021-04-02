@@ -1,38 +1,21 @@
 import Button from '@material-ui/core/Button';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class Footer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.contactButtons = {
-      margin: '10px 20px',
-      marginLeft: '0',
-      display: 'inline-block',
-    };
-
-    this.state = {
-      views: 0,
-    };
-
-    this.get_put_Views();
-  }
-
-  get_put_Views = () => {
+export default () => {
+  const [views, setViews] = useState(0);
+  const get_put_Views = () => {
     // fetch("server/get_put_views.php")
     fetch('https://server.filipelopes.me/get_put_views.php')
       .then(function (response) {
         return response.text();
       })
-      .then((data) => {
+      .then(data => {
         let json = JSON.parse(data);
-        this.setState({
-          views: json.views,
-        });
+        setViews(json.views);
       });
   };
 
-  webAPIshare = () => {
+  const webAPIshare = () => {
     if (navigator.share) {
       navigator
         .share({
@@ -41,32 +24,28 @@ class Footer extends Component {
           url: 'https://filipelopes.me',
         })
         .then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing', error));
+        .catch(error => console.log('Error sharing', error));
     } else {
       alert('Seu navegador não suporta essa função');
     }
   };
 
-  render() {
-    return (
-      <footer>
-        <Button
-          variant="contained"
-          onClick={this.webAPIshare}
-          style={{ background: '#363636' }}
-        >
-          <i className="fas fa-share-alt"></i>&nbsp;Compartilhar
-        </Button>
-        <sub>
-          Funciona em <i className="fab fa-chrome"></i> Google Chrome
-        </sub>
-        <sub>
-          <i className="far fa-eye"></i> {this.state.views} visualizações
-        </sub>
-        Filipe Lopes &copy; 2018
-      </footer>
-    );
-  }
-}
-
-export default Footer;
+  return (
+    <footer>
+      <Button
+        variant="contained"
+        onClick={webAPIshare}
+        style={{ background: '#363636' }}
+      >
+        <i className="fas fa-share-alt"></i>&nbsp;Compartilhar
+      </Button>
+      <sub>
+        Funciona em <i className="fab fa-chrome"></i> Google Chrome
+      </sub>
+      <sub>
+        <i className="far fa-eye"></i> {views} visualizações
+      </sub>
+      Filipe Lopes &copy; 2018
+    </footer>
+  );
+};

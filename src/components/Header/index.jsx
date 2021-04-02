@@ -1,8 +1,6 @@
 import AvatarHeader from './components/Avatar';
 import NavHeader from './components/Nav';
 
-import UnderConstruction from '../UnderConstruction';
-
 import Button from '@material-ui/core/Button';
 import React, { Component } from 'react';
 import AboutMe from 'views/Index/components/AboutMe';
@@ -76,7 +74,6 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <UnderConstruction headerTheme={this.state.headerTheme} />
         <header style={this.state.headerTheme}>
           <div className="container bigpadd header">
             <NavHeader />

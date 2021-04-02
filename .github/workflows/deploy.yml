@@ -16,7 +16,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.6
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avzhr --progress --delete --exclude api'
+          ARGS: '-avzhr --progress --delete --exclude api --exclude node_modules --exclude build'
           SOURCE: ''
           REMOTE_HOST: 162.214.108.8
           REMOTE_USER: root
