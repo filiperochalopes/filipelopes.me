@@ -19,7 +19,9 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22022
-          script: whoami
+          script: |
+            whoami
+            ls -al
       - name: Backend Rsync
         uses: easingthemes/ssh-deploy@v2.1.6
         env:
