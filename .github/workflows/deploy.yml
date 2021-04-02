@@ -10,14 +10,23 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Fazendo rsync dos dados
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: 162.214.108.8
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22022
+          script: whoami
+      - name: Backend Rsync
         uses: easingthemes/ssh-deploy@v2.1.6
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: '-avzhr --progress --delete --exclude adm --exclude staging'
           SOURCE: 'api'
-          REMOTE_HOST: forest.orango.io
+          REMOTE_HOST: 162.214.108.8
           REMOTE_USER: root
-          REMOTE_PORT: 22
+          REMOTE_PORT: 22022
           TARGET: /var/www/filipelopes.me/api
