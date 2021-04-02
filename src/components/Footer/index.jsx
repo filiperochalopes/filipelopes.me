@@ -15,6 +15,8 @@ export default () => {
       });
   };
 
+  get_put_Views();
+
   const webAPIshare = () => {
     if (navigator.share) {
       navigator

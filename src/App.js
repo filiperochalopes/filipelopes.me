@@ -1,5 +1,7 @@
-import asyncComponent from './services/async_component';
+import asyncComponent from './services/asyncComponent';
 import Index from './views/Index';
+import GlobalStyle from './styles';
+import { Normalize } from 'styled-normalize';
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -15,6 +17,8 @@ const providerAppContextValue = {
 export default () => (
   <Router>
     <AppContext.Provider value={providerAppContextValue}>
+      <Normalize />
+      <GlobalStyle />
       <Switch>
         <Route exact path="/" component={Index} />
         <Route path="/portfolio/:name?" component={AsyncPortfolio} />
