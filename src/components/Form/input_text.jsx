@@ -43,7 +43,7 @@ class InputText extends Component {
   render() {
     return (
       <div className="input_wrap">
-        <label for={this.props.id} ref={this.label}>
+        <label htmlFor={this.props.id} ref={this.label}>
           {this.props.placeholder}
         </label>
         <input
