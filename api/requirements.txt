@@ -4,3 +4,5 @@ django-filter
 django-guardian
 Pygments
 python-dotenv
+gunicorn
+autopep8
