@@ -12,6 +12,16 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
+      - name: Frontend Rsync
+        uses: easingthemes/ssh-deploy@v2.1.6
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: '-avzhr --progress --delete --exclude api'
+          SOURCE: ''
+          REMOTE_HOST: 162.214.108.8
+          REMOTE_USER: root
+          REMOTE_PORT: 22022
+          TARGET: /var/www/filipelopes.me
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
