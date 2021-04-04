@@ -1,12 +1,12 @@
 import GlobalStyle from './styles';
 
+import AppContext from './services/AppContext';
 import asyncComponent from './services/asyncComponent';
 import Index from './views/Index';
 
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Normalize } from 'styled-normalize';
-import AppContext from './services/AppContext';
 const AsyncCurriculum = asyncComponent(() => import('./views/Curriculum'));
 const AsyncPortfolio = asyncComponent(() => import('./views/Portfolio'));
 

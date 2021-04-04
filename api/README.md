@@ -14,3 +14,10 @@ python manage.py runserver 0.0.0.0:8001
 # Criar migration atualizada com base nas classes
 python manage.py makemigrations
 ```
+
+## To watch/compile sass
+
+```sh
+python manage.py sass django_rest_api/cms/static/scss/ django_rest_api/cms/static/css/ --watch
+python manage.py sass django_rest_api/cms/static/scss/ django_rest_api/cms/static/css/ -t compressed
+```

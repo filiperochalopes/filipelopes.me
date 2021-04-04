@@ -30,5 +30,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/posts', post_get),
+    path('cms/', include(('django_rest_api.cms.urls', 'cms'), namespace='cms')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

@@ -1,7 +1,6 @@
 import PortfolioItem from './components/ListItem';
 import PortfolioCoverItem from './components/SlideItem';
 
-import AppContext from 'services/AppContext';
 import Contato from '../../components/Contact';
 import Footer from '../../components/Footer';
 
@@ -12,6 +11,7 @@ import React, { Component } from 'react';
 import OnVisible from 'react-on-visible';
 import Palette from 'react-palette';
 import { Link } from 'react-router-dom';
+import AppContext from 'services/AppContext';
 
 class Portfolio extends Component {
   constructor(props) {

@@ -1,4 +1,5 @@
 import Wrap, { PixeledLogo, Pixel } from './styles';
+
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 const logoColorMap = [
@@ -32,7 +33,6 @@ const logoColorMap = [
   ];
 
 export default () => {
-  const logoMatrixCopy = [];
   const [logoMatrixState, setLogoMatrixState] = useState(logoMatrix);
   let interval = useRef();
   const changeMatrix = useCallback(matrix => {
@@ -51,16 +51,17 @@ export default () => {
   }, []);
 
   const startInterval = useCallback(() => {
+    const logoMatrixCopy = [];
     logoMatrix.forEach(row => logoMatrixCopy.push([...row]));
     setLogoMatrixState(logoMatrixCopy);
     interval.current = setInterval(() => {
       changeMatrix();
     }, 2000);
-  }, []);
+  }, [changeMatrix]);
 
   useEffect(() => {
     startInterval();
-  }, []);
+  }, [startInterval]);
 
   return (
     <Wrap>

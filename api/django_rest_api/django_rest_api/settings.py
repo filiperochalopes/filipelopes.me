@@ -40,10 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_sass',
     'django_rest_api.core',
     'django_rest_api.curriculum',
     'django_rest_api.portfolio',
     'django_rest_api.posts',
+    'django_rest_api.cms',
 ]
 
 MIDDLEWARE = [
