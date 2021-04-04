@@ -48,5 +48,40 @@ environment=DJANGO_SETTINGS_MODULE="django_rest_api.settings", LANG="pt_BR.utf8"
 supervisorctl reread
 supervisorctl update
 supervisorctl start api_filipelopes_me
-supervisorctl
+supervisorctl status
+```
+
+# Known Issues
+
+## Hostgator environment
+
+My website host is a CentOS 9 Hostgator VPS. The default sqlite3 version is to low for the application
+
+```py
+import sqlite3
+sqlite3.sqlite_version # '3.7.17'
+```
+
+```log
+raise ImproperlyConfigured('SQLite 3.8.3 or later is required (found %s).' % Database.sqlite_version)
+django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).
+```
+
+So I need to update
+
+```sh
+# https://number1.co.za/upgrading-sqlite-on-centos-to-3-8-3-or-later/
+cd /opt
+wget https://www.sqlite.org/2021/sqlite-autoconf-3350400.tar.gz
+cd sqlite-autoconf-3350400
+./configure
+make
+sudo make install
+pyenv uninsntall 3.9.3
+LD_RUN_PATH=/usr/local/lib PYTHON_CONFIGURE_OPTS="LD_RUN_PATH=/usr/local/lib" pyenv install 3.9.3
+```
+
+```py
+import sqlite3
+sqlite3.sqlite_version # '3.35.4'
 ```
