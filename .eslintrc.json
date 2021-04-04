@@ -29,7 +29,7 @@
     "semi": "off",
     "no-console": ["error", { "allow": ["log", "warn", "error"] }],
     "arrow-parens": ["error", "as-needed"],
-    "no-underscore-dangle": ["error", { "allow": [] }],
+    "no-underscore-dangle": ["off", { "allow": [] }],
     "quotes": [2, "single", { "avoidEscape": true }],
     "prettier/prettier": "warn",
     "react-hooks/rules-of-hooks": "error",

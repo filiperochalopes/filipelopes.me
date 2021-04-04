@@ -1,6 +1,5 @@
 import Wrap, { PixeledLogo, Pixel } from './styles';
-
-import React from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 const logoColorMap = [
     '#3a3a3a',
@@ -32,20 +31,59 @@ const logoColorMap = [
     [1, 1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1],
   ];
 
-const DynamicPixel = ({ color, transitionTime }) => {
-  console.log(color);
-  return <Pixel color={color} transitionTime={transitionTime} />;
-};
-
 export default () => {
+  const logoMatrixCopy = [];
+  const [logoMatrixState, setLogoMatrixState] = useState(logoMatrix);
+  let interval = useRef();
+  const changeMatrix = useCallback(matrix => {
+    if (matrix) {
+      setLogoMatrixState(matrix);
+    } else {
+      let _logoMatrixState = [];
+      for (let i = 0; i < 18; i++) {
+        _logoMatrixState.push([]);
+        for (let j = 0; j < 18; j++) {
+          _logoMatrixState[i][j] = Math.floor(Math.random() * 7);
+        }
+      }
+      setLogoMatrixState(_logoMatrixState);
+    }
+  }, []);
+
+  const startInterval = useCallback(() => {
+    logoMatrix.forEach(row => logoMatrixCopy.push([...row]));
+    setLogoMatrixState(logoMatrixCopy);
+    interval.current = setInterval(() => {
+      changeMatrix();
+    }, 2000);
+  }, []);
+
+  useEffect(() => {
+    startInterval();
+  }, []);
+
   return (
     <Wrap>
-      <PixeledLogo>
-        {logoMatrix.map((line, i) =>
-          line.map((index, j) => (
-            <DynamicPixel key={`${i}${j}`} color={logoColorMap[index]}>
-              ola
-            </DynamicPixel>
+      <PixeledLogo
+        onMouseEnter={() => {
+          clearInterval(interval.current);
+          changeMatrix(logoMatrix);
+        }}
+        onMouseLeave={() => {
+          clearInterval(interval.current);
+          changeMatrix();
+          interval.current = setInterval(() => {
+            changeMatrix();
+          }, 2000);
+        }}
+      >
+        {logoMatrixState.map((line, i) =>
+          line.map((colorIndex, j) => (
+            <Pixel
+              key={`${i}${j}`}
+              color={logoColorMap[colorIndex]}
+              transitionTime={Math.random() * 2}
+            />
           ))
         )}
       </PixeledLogo>

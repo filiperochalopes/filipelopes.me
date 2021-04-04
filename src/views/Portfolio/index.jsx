@@ -1,7 +1,7 @@
 import PortfolioItem from './components/ListItem';
 import PortfolioCoverItem from './components/SlideItem';
 
-import { AppContext } from '../../App';
+import AppContext from 'services/AppContext';
 import Contato from '../../components/Contact';
 import Footer from '../../components/Footer';
 

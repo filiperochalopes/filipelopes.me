@@ -1,8 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export default styled.section`
   background-color: orange;
   min-height: 100vh;
+  text-align: center;
+
+  h1 {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 80px;
+  }
 `;
 
 export const PixeledLogo = styled.div`
@@ -17,10 +26,14 @@ export const PixeledLogo = styled.div`
   grid-template-rows: repeat(18, 1fr);
 `;
 
-export const Pixel = styled.div`
+export const Pixel = styled.div.attrs(props => ({
+  style: {
+    transition: props.transitionTime
+      ? `background-color ${props.transitionTime}s`
+      : 'background-color 2s',
+  },
+}))`
   width: 15px;
   height: 15px;
-  background-color: ${({ color }) => color || '#f8f8f8'};
-  transition: ${({ transitionTime }) =>
-    `${transitionTime}s background-color` || '0.5s background-color'};
+  background-color: ${({ color }) => color || '#3a3a3a'};
 `;
