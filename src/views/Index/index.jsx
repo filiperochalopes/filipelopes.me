@@ -43,11 +43,16 @@ export default () => {
       for (let i = 0; i < 18; i++) {
         _logoMatrixState.push([]);
         for (let j = 0; j < 18; j++) {
-          _logoMatrixState[i][j] = Math.floor(Math.random() * 7);
+          if (Math.random() >= 0.5) {
+            _logoMatrixState[i][j] = Math.floor(Math.random() * 7);
+          } else {
+            _logoMatrixState[i][j] = logoMatrixState[i][j];
+          }
         }
       }
       setLogoMatrixState(_logoMatrixState);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const startInterval = useCallback(() => {
@@ -62,6 +67,10 @@ export default () => {
   useEffect(() => {
     startInterval();
   }, [startInterval]);
+
+  useEffect(() => {
+    console.log('MONTOU');
+  }, []);
 
   return (
     <Wrap>

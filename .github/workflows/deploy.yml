@@ -22,7 +22,7 @@ jobs:
           REMOTE_USER: root
           REMOTE_PORT: 22022
           TARGET: /var/www/filipelopes.me
-      - name: executing remote ssh commands using ssh key
+      - name: Frontend build
         uses: appleboy/ssh-action@master
         with:
           host: 162.214.108.8
@@ -45,3 +45,18 @@ jobs:
           REMOTE_USER: root
           REMOTE_PORT: 22022
           TARGET: /var/www/filipelopes.me/api
+      - name: Backend deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: 162.214.108.8
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22022
+          script: |
+            whoami
+            cd /var/www/filipelopes.me/api
+            pyenv local filipelopes.me
+            pip -r requirements.txt
+            supervisorctl reread
+            supervisorctl update
+            supervisorctl restart api_filipelopes_me
