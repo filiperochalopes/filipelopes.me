@@ -34,6 +34,26 @@ header {
         list-style: none;
         display: inline;
         background-color: #fff;
+        position: relative;
+
+        ul {
+          position: absolute;
+          top: 15px;
+          left: 0px;
+          display: none;
+          text-align: left;
+
+          li {
+            list-style: none;
+            white-space: nowrap;
+          }
+        }
+
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
       }
     }
   }

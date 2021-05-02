@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block content %}
+<section>
+  {% if mensagem %}
+  <div class="mensagem" style="background-color: {{cor}}">{{mensagem}}</div>
+  {% endif %}
+  <h2>Adicionar Experiência</h2>
+  <section id="add_experience">
+    <form method="post">
+      {% csrf_token %}
+      <label for="title_pt_br">Título (pt-br)</label>
+      <input type="text" name="title_pt_br" id="title_pt_br" required />
+      <label for="title_en_us">Título (en-us)</label>
+      <input type="text" name="title_en_us" id="title_en_us" />
+
+      <label for="organization">Organização</label>
+      <input type="text" name="organization" id="organization" required />
+
+      <label for="place">Local</label>
+      <input type="text" name="place" id="place" required />
+
+      <label for="description_pt_br">Descrição (pt-br)</label>
+      <textarea name="description_pt_br"></textarea>
+
+      <label for="description_en_us">Descrição (en-us)</label>
+      <textarea name="description_en_us"></textarea>
+
+      <label for="key_achievement_pt_br">Principal conquista (pt-br)</label>
+      <input
+        type="text"
+        name="key_achievement_pt_br"
+        id="key_achievement_pt_br"
+        required
+      />
+      <label for="key_achievement_en_us">Key achievement (en-us)</label>
+      <input
+        type="text"
+        name="key_achievement_en_us"
+        id="key_achievement_en_us"
+      />
+
+      <label for="since">Desde</label>
+      <input type="month" name="since" id="since" required />
+      <label for="until">Até</label>
+      <input type="month" name="until" id="until" />
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</section>
+{% endblock content %}

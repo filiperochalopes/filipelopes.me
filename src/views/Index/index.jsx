@@ -1,6 +1,8 @@
-import Wrap, { PixeledLogo, Pixel } from './styles';
+import Wrap, { PixeledLogo, Pixel, Header } from './styles';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import Me from '../Me';
+import Curriculum from '../Curriculum';
 
 const logoColorMap = [
     '#3a3a3a',
@@ -97,7 +99,17 @@ export default () => {
           ))
         )}
       </PixeledLogo>
-      <h1>Página em construção</h1>
+      <Header>
+        <nav>
+          <ul>
+            <li>Me</li>
+            <li>Currículo</li>
+            <li>Contato</li>
+          </ul>
+        </nav>
+      </Header>
+      <Me />
+      <Curriculum />
     </Wrap>
   );
 };

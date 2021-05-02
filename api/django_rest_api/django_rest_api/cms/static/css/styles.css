@@ -34,6 +34,24 @@ header nav ul li {
   list-style: none;
   display: inline;
   background-color: #fff;
+  position: relative;
+}
+
+header nav ul li ul {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  display: none;
+  text-align: left;
+}
+
+header nav ul li ul li {
+  list-style: none;
+  white-space: nowrap;
+}
+
+header nav ul li:hover ul {
+  display: block;
 }
 
 main {

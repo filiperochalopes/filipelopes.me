@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<section>
+  {% if mensagem %}
+  <div class="mensagem" style="background-color: {{cor}}">{{mensagem}}</div>
+  {% endif %}
+  <h2>Adicionar Skill</h2>
+  <section id="add_skill">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="name_pt_br">Nome (pt-br)</label>
+      <input type="text" name="name_pt_br" id="name_pt_br" required />
+      <label for="name_en_us">Nome (en-us)</label>
+      <input type="text" name="name_en_us" id="name_en_us" />
+
+      <label for="description_pt_br">Descrição (pt-br)</label>
+      <textarea name="description_pt_br"></textarea>
+
+      <label for="description_en_us">Descrição (en-us)</label>
+      <textarea name="description_en_us"></textarea>
+
+      <label for="level">Level <span id="percent">50%</span></label>
+      <input type="range" name="level" id="level" min="0" max="100" required />
+
+      <label for="icon">Ícone</label>
+      <input type="file" name="icon" id="icon" />
+
+      <select name="parent_id" id="parent_id">
+        <option value="">Selecione uma Habilidade</option>
+        {% for skill in skills %}
+        <option value="{{skill.id}}">{{skill.name_pt_br}}</option>
+        {% endfor %}
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</section>
+{% endblock content %}

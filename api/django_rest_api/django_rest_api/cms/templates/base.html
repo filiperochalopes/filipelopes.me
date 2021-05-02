@@ -11,20 +11,38 @@
   <body>
     <div id="page-container">
       <header>
-        <h1>Sistema de Contabilidade Residencial</h1>
+        <h1>Sistema de Gerenciamento de Conteúdo (CMS)</h1>
         <nav>
           <ul>
-            <li><a href="/">Registros</a></li>
-            <li><a href="pessoas">Pessoas</a></li>
-            <li><a href="adicionar-pessoa">Adicionar Pessoa</a></li>
-            <li><a href="adicionar-banco">Adicionar Banco</a></li>
-            <li><a href="adicionar-registro">Adicionar Registro</a></li>
-            <li><a href="tags">Tags</a></li>
+            <li>
+              <a href="/cms/curriculum">Curriculum</a>
+              <ul>
+                <li>
+                  <a href="/cms/adicionar-experiencia">Adicionar Experiência</a>
+                </li>
+                <li><a href="/cms/adicionar-curso">Adicionar Curso</a></li>
+                <li><a href="/cms/adicionar-skill">Adicionar Skill</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/cms/portfolio">Portfolio</a>
+              <ul>
+                <li>
+                  <a href="/cms/adicionar-item-portfolio">Adicionar Item</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/cms/posts">Posts</a>
+              <ul>
+                <li><a href="/cms/adicionar-post">Adicionar Post</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </header>
       <main>{% block content %}{% endblock %}</main>
-      <footer>Sistema de Contabilidade Residencial</footer>
+      <footer>Filipe Lopes</footer>
     </div>
   </body>
 </html>

@@ -16,3 +16,11 @@ export default createGlobalStyle`
     font-family: 'Raleway', sans-serif;
   }
 `;
+
+export const theme = {
+  orange: {
+    background: 'orange',
+    textColor: 'black',
+    textColorInverted: 'grey',
+  },
+};

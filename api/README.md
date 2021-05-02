@@ -13,6 +13,7 @@ python manage.py runserver 0.0.0.0:8001
 ```sh
 # Criar migration atualizada com base nas classes
 python manage.py makemigrations
+python manage.py migrate
 ```
 
 ## To watch/compile sass
