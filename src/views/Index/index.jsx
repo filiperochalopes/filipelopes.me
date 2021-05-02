@@ -1,8 +1,9 @@
 import Wrap, { PixeledLogo, Pixel, Header } from './styles';
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import Me from '../Me';
 import Curriculum from '../Curriculum';
+import Me from '../Me';
+
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 const logoColorMap = [
     '#3a3a3a',

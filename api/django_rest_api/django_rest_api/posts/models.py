@@ -16,3 +16,5 @@ class Post(models.Model):
     content_pt_br = models.TextField()
     content_en_us = models.TextField(blank=True)
     type = models.TextField(max_length=4, choices=TypeOfContent.choices)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

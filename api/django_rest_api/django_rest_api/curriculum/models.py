@@ -11,6 +11,8 @@ class Experience(models.Model):
     key_achievement_en_us = models.CharField(max_length=250, blank=True) 
     since = models.DateField()
     until = models.DateField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class Course(models.Model):
     name = models.CharField(max_length=250)
@@ -18,6 +20,8 @@ class Course(models.Model):
     description_en_us = models.TextField(blank=True)
     since = models.DateField()
     until = models.DateField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
 
 class Skill(models.Model):
@@ -28,3 +32,5 @@ class Skill(models.Model):
     level = models.IntegerField()
     icon_file_name = models.CharField(max_length=150)
     parent = models.ForeignKey('Skill', on_delete=models.CASCADE, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

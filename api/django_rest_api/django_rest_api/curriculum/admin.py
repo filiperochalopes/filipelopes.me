@@ -1,3 +1,6 @@
 from django.contrib import admin
+from django_rest_api.curriculum.models import Experience, Course, Skill
 
-# Register your models here.
+admin.site.register(Experience)
+admin.site.register(Course)
+admin.site.register(Skill)

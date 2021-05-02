@@ -6,8 +6,8 @@ import Index from './views/Index';
 
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Normalize } from 'styled-normalize';
 import { ThemeProvider } from 'styled-components';
+import { Normalize } from 'styled-normalize';
 
 const AsyncCurriculum = asyncComponent(() => import('./views/Curriculum'));
 const AsyncPortfolio = asyncComponent(() => import('./views/Portfolio'));

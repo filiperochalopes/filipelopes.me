@@ -49,7 +49,7 @@ def add_skill(request):
             fs = FileSystemStorage()
             filename = fs.save(icon.name, icon)
             uploaded_file_url = fs.url(filename)
-            skill.name_pt_br = request.POST.get('title_pt_br')
+            skill.name_pt_br = request.POST.get('name_pt_br')
             skill.name_en_us = request.POST.get('name_en_us')
             skill.description_pt_br = request.POST.get('description_pt_br')
             skill.description_en_us = request.POST.get('description_en_us')

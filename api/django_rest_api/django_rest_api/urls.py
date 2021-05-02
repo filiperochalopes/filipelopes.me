@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from rest_framework import routers
 from django_rest_api.core import views
 from django_rest_api.posts.views import post_get
+from django_rest_api.curriculum.views import get_curriculum_experience, get_curriculum_skill
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -32,6 +33,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/posts', post_get),
+    path('api/curriculum/experience', get_curriculum_experience),
+    path('api/curriculum/skill', get_curriculum_skill),
     path('cms/', include(('django_rest_api.cms.urls', 'cms'), namespace='cms')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
