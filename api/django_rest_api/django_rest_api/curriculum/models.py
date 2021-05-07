@@ -30,7 +30,10 @@ class Skill(models.Model):
     description_pt_br = models.TextField(blank=True)
     description_en_us = models.TextField(blank=True)
     level = models.IntegerField()
-    icon_file_name = models.CharField(max_length=150)
+    icon = models.ImageField(upload_to='skills', blank=True)
     parent = models.ForeignKey('Skill', on_delete=models.CASCADE, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.name_pt_br}: {self.level}%"

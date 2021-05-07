@@ -1,8 +1,8 @@
-import Wrap, { PixeledLogo, Pixel, Header } from './styles';
+import Wrap, { PixeledLogoWrap, PixeledLogo, Pixel } from './styles';
 
 import Curriculum from '../Curriculum';
-import Me from '../Me';
-
+import Me from 'components/Me';
+import Header from 'components/Header';
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 const logoColorMap = [
@@ -37,7 +37,9 @@ const logoColorMap = [
 
 export default () => {
   const [logoMatrixState, setLogoMatrixState] = useState(logoMatrix);
+  const [showPixeledLogoText, setShowPixeledLogoText] = useState(false);
   let interval = useRef();
+
   const changeMatrix = useCallback(matrix => {
     if (matrix) {
       setLogoMatrixState(matrix);
@@ -72,12 +74,12 @@ export default () => {
   }, [startInterval]);
 
   useEffect(() => {
-    console.log('MONTOU');
+    console.log('Page has been mounted');
   }, []);
 
   return (
     <Wrap>
-      <PixeledLogo
+      <PixeledLogoWrap
         onMouseEnter={() => {
           clearInterval(interval.current);
           changeMatrix(logoMatrix);
@@ -88,27 +90,35 @@ export default () => {
           interval.current = setInterval(() => {
             changeMatrix();
           }, 2000);
+          setShowPixeledLogoText(false);
+        }}
+        onClick={() => {
+          const matrix = new Array(18).fill(new Array(18).fill(0));
+          changeMatrix(matrix);
+          setShowPixeledLogoText(true);
         }}
       >
-        {logoMatrixState.map((line, i) =>
-          line.map((colorIndex, j) => (
-            <Pixel
-              key={`${i}${j}`}
-              color={logoColorMap[colorIndex]}
-              transitionTime={Math.random() * 2}
-            />
-          ))
+        {showPixeledLogoText && (
+          <span>
+            <h2>Pixel</h2> is the minimal component of the visible software
+            tecnology. It&apos;s a creation symbol meaning creativity and
+            transformation. Imagine something! Now pixel it and your imagination
+            becomes real!
+          </span>
         )}
-      </PixeledLogo>
-      <Header>
-        <nav>
-          <ul>
-            <li>Me</li>
-            <li>Currículo</li>
-            <li>Contato</li>
-          </ul>
-        </nav>
-      </Header>
+        <PixeledLogo>
+          {logoMatrixState.map((line, i) =>
+            line.map((colorIndex, j) => (
+              <Pixel
+                key={`${i}${j}`}
+                color={logoColorMap[colorIndex]}
+                transitionTime={Math.random() * 2}
+              />
+            ))
+          )}
+        </PixeledLogo>
+      </PixeledLogoWrap>
+      <Header />
       <Me />
       <Curriculum />
     </Wrap>

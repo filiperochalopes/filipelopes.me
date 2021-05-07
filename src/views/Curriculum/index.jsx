@@ -1,33 +1,39 @@
-import HeaderSlim from '../../components/Header/components/Slim';
-
 import Skill from 'components/Skill';
-import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import SkillList, { Section } from './styles';
+import React, { useContext } from 'react';
+import AppContext from 'services/AppContext';
+import OnVisible from 'react-on-visible';
 
-class Curriculo extends Component {
-  constructor(props) {
-    super(props);
+export default () => {
+  const { setActiveSection } = useContext(AppContext);
 
-    this.state = {
-      tagToSearch: '',
-    };
-  }
-
-  render() {
-    return (
-      <section>
+  return (
+    <OnVisible
+      bounce={true}
+      onChange={visible => {
+        console.log('Me visibility', visible);
+        if (visible) {
+          setTimeout(() => {
+            setActiveSection('curriculum');
+          }, 100);
+        } else {
+          setActiveSection('me');
+        }
+      }}
+    >
+      <Section id="curriculum">
         <div className="container">
           <h1>
             <Link to="/curriculo">
               Currículo <i className="fas fa-external-link-alt"></i>
             </Link>
-            {/* <ShareBt whatsapp="whatsapp://send?text=Veja o meu currículo: https://filipelopes.me/curriculo" /> */}
+            <button>
+              <i className="fas fa-print"></i>
+            </button>
           </h1>
           <h2>Resumo</h2>
           <section id="curriculo_resumo">
-            <div className="imagem">
-              <img src="/img/profile.jpg" alt="Foto de perfil" />
-            </div>
             <div className="texto">
               <p>
                 Primeiramente discípulo de Jesus, graduando em medicina na
@@ -44,10 +50,10 @@ class Curriculo extends Component {
               </p>
             </div>
           </section>
-          <p></p>
+          <h2>Experiência</h2>
           <h2>Habilidades</h2>
           <h3>Design Gráfico</h3>
-          <ul id="skill_list">
+          <SkillList>
             <Skill
               className="blender"
               percent={72}
@@ -96,7 +102,7 @@ class Curriculo extends Component {
             >
               Photoscan Ankisoft&reg;
             </Skill>
-          </ul>
+          </SkillList>
           <h3>Desenvolvedor</h3>
           <ul id="skill_list">
             <Skill
@@ -247,9 +253,7 @@ class Curriculo extends Component {
           {/* <h2>Conquistas e títulos</h2> */}
           {/* Colocar aqui uma lista com (icone) (data) Título - clicável para abrir modal do comprovante se tiver, colocar medalhas tbm*/}
         </div>
-      </section>
-    );
-  }
-}
-
-export default Curriculo;
+      </Section>
+    </OnVisible>
+  );
+};

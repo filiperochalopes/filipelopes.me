@@ -4,7 +4,9 @@ export default createGlobalStyle`
   html,body {
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.2em;
+    /* font-family: 'Open Sans', sans-serif; */
   }
 
   body{
@@ -13,7 +15,16 @@ export default createGlobalStyle`
   }
 
   h1, h2{
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'VT323', monospace;
+  }
+
+  h1{
+    font-size: 43px;
+  }
+
+  h2{
+    font-size: 31px;
   }
 `;
 
@@ -22,5 +33,14 @@ export const theme = {
     background: 'orange',
     textColor: 'black',
     textColorInverted: 'grey',
+  },
+  default: {
+    backgroundColor: '#ef9d0e',
+    invertedBackgroundColor: '#353535',
+    textColor: 'black',
+    textColorInverted: '#e8eaed',
+    colors: {
+      black: '#191919',
+    },
   },
 };

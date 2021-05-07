@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useCallback } from 'react';
 import OnVisible from 'react-on-visible';
+import Skill from './styles';
 
-class Skill extends Component {
-  constructor(props) {
-    super(props);
+export default ({ percent, className, imgUrl, resume, children, skills }) => {
+  const [visible, setVisible] = useState(false);
+  const [barStatus, setBarStatus] = useState(0);
+  const barStatusLimit = percent;
+  const [state, setState] = useState({
+    isToggleOn: true,
+    resumeDisplay: 'block',
+    detailsDisplay: 'none',
+  });
 
-    this.state = {
-      barStatus: 0,
-      barStatusLimit: props.percent,
-      isToggleOn: true,
-      resumeDisplay: 'block',
-      detailsDisplay: 'none',
-    };
-  }
-
-  readSkills = skills => {
+  const readSkills = skills => {
     let listSkills = [];
     skills.forEach((data, i) => {
       listSkills.push(
@@ -25,7 +24,7 @@ class Skill extends Component {
           <span>
             {data[0]}
             <span
-              className={this.returnBarColor(this.props.percent)}
+              className={returnBarColor(percent)}
               style={{ width: `${data[1]}px` }}
             ></span>
           </span>
@@ -36,33 +35,33 @@ class Skill extends Component {
     return listSkills;
   };
 
-  step = () => {
-    let p = this.state.barStatus + 1;
-    this.setState({ barStatus: p });
-    if (this.state.barStatus < this.state.barStatusLimit) {
-      requestAnimationFrame(this.step);
-    }
-  };
+  const step = useCallback(() => {
+    setBarStatus(barStatus + 1);
+  }, [barStatus]);
 
-  click = () => {
-    if (this.state.isToggleOn) {
-      this.setState({
+  useEffect(() => {
+    if (barStatus < barStatusLimit && visible) {
+      window.requestAnimationFrame(step);
+    }
+  }, [barStatus, barStatusLimit, step, visible]);
+
+  const click = () => {
+    if (state.isToggleOn) {
+      setState({
         isToggleOn: false,
         resumeDisplay: 'none',
         detailsDisplay: 'block',
       });
     } else {
-      this.setState({
+      setState({
         isToggleOn: true,
         resumeDisplay: 'block',
         detailsDisplay: 'none',
       });
     }
-
-    console.log('click');
   };
 
-  returnBarColor = percent => {
+  const returnBarColor = percent => {
     if (percent >= 70) {
       return '__good';
     } else if (percent < 40) {
@@ -72,58 +71,57 @@ class Skill extends Component {
     }
   };
 
-  render() {
-    return (
-      <OnVisible
-        className={this.props.className}
-        visibleClassName="visible"
-        percent={150}
-        wrappingElement="li"
-        onChange={() => {
-          window.requestAnimationFrame(this.step);
-        }}
-      >
+  return (
+    <OnVisible
+      className={className}
+      visibleClassName="visible"
+      wrappingElement="li"
+      bounce={false}
+      percent={150}
+      onChange={visible => {
+        setVisible(visible);
+      }}
+    >
+      <Skill className={visible ? `${className} visible` : className}>
         <div
           className="img"
-          style={{ backgroundImage: `url(/img/${this.props.img})` }}
+          style={{ backgroundImage: `url(/img/${imgUrl})` }}
         ></div>
         <div className="info">
-          <div className="title" onClick={this.click}>
-            {this.props.children}
+          <div className="title" onClick={click}>
+            {children}
           </div>
           <div className="bar">
             <div
-              className={`fill ${this.returnBarColor(this.props.percent)}`}
-              style={{ width: this.state.barStatus + '%' }}
+              className={`fill ${returnBarColor(percent)}`}
+              style={{ width: barStatus + '%' }}
             >
-              <div className="number">{this.state.barStatus}%</div>
+              <div className="number">{barStatus}%</div>
             </div>
           </div>
           <div
             className="resume"
             style={{
-              display: this.state.resumeDisplay,
+              display: state.resumeDisplay,
             }}
           >
-            {this.props.resume}
+            {resume}
           </div>
           <ul
             className="details"
             style={{
-              display: this.state.detailsDisplay,
+              display: state.detailsDisplay,
             }}
           >
             <li className="skillsub">
-              <ul>{this.readSkills(this.props.skills)}</ul>
+              <ul>{readSkills(skills)}</ul>
             </li>
             <li className="xp"></li>
             <li className="courses"></li>
             {/* <li className="portfolio"><Button>Ver em portfólio</Button></li> */}
           </ul>
         </div>
-      </OnVisible>
-    );
-  }
-}
-
-export default Skill;
+      </Skill>
+    </OnVisible>
+  );
+};

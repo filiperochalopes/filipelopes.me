@@ -8,3 +8,4 @@ python-dotenv
 gunicorn
 autopep8
 django-sass
+Pillow

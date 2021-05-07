@@ -1,99 +1,60 @@
-import AvatarHeader from './components/Avatar';
-import NavHeader from './components/Nav';
+import Header, { LanguageBt } from './styles';
+import React, { useContext, useEffect } from 'react';
+import AppContext from 'services/AppContext';
+import Navigation from './components/Navigation';
 
-import Button from '@material-ui/core/Button';
-import React, { Component } from 'react';
-import AboutMe from 'views/Index/components/AboutMe';
+export default () => {
+  const { activeSection, setActiveSection, language, setLanguage } = useContext(
+    AppContext
+  );
 
-const headerTheme = {
-  neutral: {
-    background: '#363636',
-    color: '#a8a8a8',
-    avatarBackground: '#363636',
-    avatarShirt: '#363636',
-  },
-  orange: {
-    background: '#954223',
-    color: '#bebebe',
-    avatarBackground: '#954223',
-    avatarShirt: '#bebebe',
-  },
-  green: {
-    background: '#2d5248',
-    color: '#f2f2f2',
-    avatarBackground: '#2d5248',
-    avatarShirt: '#f2f2f2',
-  },
-  purple: {
-    background: '#442d52',
-    color: '#e0e0e0',
-    avatarBackground: '#442d52',
-    avatarShirt: '#e0e0e0',
-  },
+  const sections = [
+    { reference: 'me', title_ptBR: 'Me', title_enUS: 'Me' },
+    {
+      reference: 'curriculum',
+      title_ptBR: 'Currículo',
+      title_enUS: 'Curriculum',
+    },
+    { reference: 'contact', title_ptBR: 'Contato', title_enUS: 'Contact' },
+  ];
+
+  const moveTo = index => () => {
+    const reference = sections[index].reference;
+    setActiveSection(reference);
+  };
+
+  useEffect(() => {
+    console.log('language', language);
+  }, [language]);
+
+  return (
+    <Header>
+      <Navigation
+        items={sections}
+        activeItem={(() => {
+          let item = null;
+          sections.forEach((section, index) => {
+            if (section.reference === activeSection) item = index;
+          });
+          return item;
+        })()}
+        moveTo={moveTo}
+      />
+      <LanguageBt
+        onClick={() => {
+          if (language === 'pt-br') {
+            setLanguage('en-us');
+          } else {
+            setLanguage('pt-br');
+          }
+        }}
+      >
+        {language === 'pt-br' ? (
+          <img src="/img/br_flag.gif" alt="Bandeira do Brasil" />
+        ) : (
+          <img src="/img/us_flag.gif" alt="US Flag" />
+        )}
+      </LanguageBt>
+    </Header>
+  );
 };
-
-class Header extends Component {
-  constructor(props) {
-    super(props);
-
-    const arrayTheme = ['neutral', 'orange', 'green', 'purple'];
-    const metaThemeColor = document.querySelector('meta[name=theme-color]');
-
-    let selectedTheme =
-      arrayTheme[Math.floor(Math.random() * arrayTheme.length)];
-
-    this.changeHeaderTheme = () => {
-      let selectedTheme =
-        arrayTheme[Math.floor(Math.random() * arrayTheme.length)];
-      this.setState(
-        {
-          headerTheme: {
-            background: headerTheme[selectedTheme].background,
-            color: headerTheme[selectedTheme].color,
-          },
-        },
-        () => {
-          metaThemeColor.setAttribute(
-            'content',
-            this.state.headerTheme.background
-          );
-        }
-      );
-    };
-
-    this.state = {
-      headerTheme: {
-        background: headerTheme[selectedTheme].background,
-        color: headerTheme[selectedTheme].color,
-      },
-    };
-
-    metaThemeColor.setAttribute('content', this.state.headerTheme.background);
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        <header style={this.state.headerTheme}>
-          <div className="container bigpadd header">
-            <NavHeader />
-            <div className="block">
-              <div className="flex-center nowrap">
-                <AvatarHeader />
-                <AboutMe />
-                <Button
-                  className="bt_header_theme"
-                  onClick={this.changeHeaderTheme}
-                >
-                  Alterar tema
-                </Button>
-              </div>
-            </div>
-          </div>
-        </header>
-      </React.Fragment>
-    );
-  }
-}
-
-export default Header;
