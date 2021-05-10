@@ -9,3 +9,4 @@ gunicorn
 autopep8
 django-sass
 Pillow
+django-cors-headers

@@ -5,7 +5,7 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'PT Sans', sans-serif;
-    line-height: 1.2em;
+    line-height: 135%;
     /* font-family: 'Open Sans', sans-serif; */
   }
 
@@ -24,7 +24,7 @@ export default createGlobalStyle`
   }
 
   h2{
-    font-size: 31px;
+    font-size: 35px;
   }
 `;
 

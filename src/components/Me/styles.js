@@ -32,6 +32,7 @@ export const Text = styled.div`
   width: 600px;
   /* height: 100%; */
   z-index: 1;
+  padding: 40px;
   padding-left: 200px;
   box-sizing: border-box;
   text-align: left;

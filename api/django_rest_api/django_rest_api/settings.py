@@ -28,7 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '192.168.100.17',
-    '127.0.0.1'
+    '127.0.0.1',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
 ]
 
 
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
     'django_rest_api.portfolio',
     'django_rest_api.posts',
     'django_rest_api.cms',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +63,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'django_rest_api.urls'

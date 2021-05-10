@@ -8,8 +8,14 @@ from django_rest_api.posts.serializers import PostSerializer
 
 @api_view(['GET'])
 @permission_classes((permissions.AllowAny,))
-def post_get(request):
-    print(request.query_params)
-    posts = Post.objects.all()
-    serializer = PostSerializer(posts, many=True)
-    return JsonResponse(serializer.data, safe=False)
+def get_post(request, slug=None):
+    posts = Post.objects
+    print(posts)
+    if slug:
+        posts = posts.filter(slug=slug).first()
+        serializer = PostSerializer(posts)
+        return JsonResponse(serializer.data)
+    else:
+        posts = posts.all()
+        serializer = PostSerializer(posts, many=True)
+        return JsonResponse(serializer.data, safe=False)

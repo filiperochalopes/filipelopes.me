@@ -1,11 +1,17 @@
 import Section, { ContentWrap, ImageWrap, Text } from './styles';
 import { Parallax } from 'react-scroll-parallax';
 import OnVisible from 'react-on-visible';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AppContext from 'services/AppContext';
+import { fetchData } from 'services/getters';
 
 export default () => {
-  const { setActiveSection } = useContext(AppContext);
+  const { setActiveSection, language } = useContext(AppContext);
+  const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    fetchData('/posts/about-me', language).then(data => setContent(data));
+  }, [language]);
 
   return (
     <OnVisible
@@ -42,8 +48,8 @@ export default () => {
             }}
           >
             <Text>
-              <h2>Filipe Lopes</h2>
-              <p></p>
+              <h2>{content?.title}</h2>
+              <p>{content?.content}</p>
             </Text>
           </Parallax>
         </ContentWrap>

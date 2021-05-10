@@ -3,10 +3,10 @@ import { useCallback } from 'react';
 import OnVisible from 'react-on-visible';
 import Skill from './styles';
 
-export default ({ percent, className, imgUrl, resume, children, skills }) => {
+export default ({ level, imgUrl, description, children, skills }) => {
   const [visible, setVisible] = useState(false);
   const [barStatus, setBarStatus] = useState(0);
-  const barStatusLimit = percent;
+  const barStatusLimit = level;
   const [state, setState] = useState({
     isToggleOn: true,
     resumeDisplay: 'block',
@@ -24,7 +24,7 @@ export default ({ percent, className, imgUrl, resume, children, skills }) => {
           <span>
             {data[0]}
             <span
-              className={returnBarColor(percent)}
+              className={returnBarColor(level)}
               style={{ width: `${data[1]}px` }}
             ></span>
           </span>
@@ -73,7 +73,6 @@ export default ({ percent, className, imgUrl, resume, children, skills }) => {
 
   return (
     <OnVisible
-      className={className}
       visibleClassName="visible"
       wrappingElement="li"
       bounce={false}
@@ -82,10 +81,10 @@ export default ({ percent, className, imgUrl, resume, children, skills }) => {
         setVisible(visible);
       }}
     >
-      <Skill className={visible ? `${className} visible` : className}>
+      <Skill className={visible ? 'visible' : ''}>
         <div
           className="img"
-          style={{ backgroundImage: `url(/img/${imgUrl})` }}
+          style={{ backgroundImage: `url(${imgUrl})` }}
         ></div>
         <div className="info">
           <div className="title" onClick={click}>
@@ -93,7 +92,7 @@ export default ({ percent, className, imgUrl, resume, children, skills }) => {
           </div>
           <div className="bar">
             <div
-              className={`fill ${returnBarColor(percent)}`}
+              className={`fill ${returnBarColor(level)}`}
               style={{ width: barStatus + '%' }}
             >
               <div className="number">{barStatus}%</div>
@@ -105,7 +104,7 @@ export default ({ percent, className, imgUrl, resume, children, skills }) => {
               display: state.resumeDisplay,
             }}
           >
-            {resume}
+            {description}
           </div>
           <ul
             className="details"

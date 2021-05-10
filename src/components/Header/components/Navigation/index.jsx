@@ -1,5 +1,5 @@
 import { Navigation, Buttons, Line } from './styles';
-
+import TextLang from 'components/TextLang';
 import React, { useRef, useState, useEffect } from 'react';
 
 export default ({ items, activeItem, moveTo }) => {
@@ -67,7 +67,7 @@ export default ({ items, activeItem, moveTo }) => {
               onClick={moveTo(i)}
               className={i === activeItem ? 'active' : null}
             >
-              {content.title_ptBR}
+              <TextLang ptBR={content.title_ptBR} enUS={content.title_enUS} />
             </button>
           </a>
         ))}
