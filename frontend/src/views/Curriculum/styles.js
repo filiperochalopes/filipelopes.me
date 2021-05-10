@@ -43,4 +43,8 @@ export default styled.section`
       cursor: pointer;
     }
   }
+
+  section {
+    margin: 80px 0;
+  }
 `;
