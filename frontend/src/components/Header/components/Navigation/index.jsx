@@ -1,4 +1,5 @@
 import { Navigation, Buttons, Line } from './styles';
+
 import TextLang from 'components/TextLang';
 import React, { useRef, useState, useEffect } from 'react';
 

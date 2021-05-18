@@ -1,8 +1,10 @@
 import Wrap from './styles';
+
 import Curriculum from '../Curriculum';
-import Me from 'components/Me';
-import Intro from 'components/Intro';
+
 import Header from 'components/Header';
+import Intro from 'components/Intro';
+import Me from 'components/Me';
 import React from 'react';
 
 export default () => {

@@ -1,9 +1,11 @@
 import Section, { ContentWrap, ImageWrap, Text } from './styles';
-import { Parallax } from 'react-scroll-parallax';
-import OnVisible from 'react-on-visible';
-import React, { useContext, useEffect, useState } from 'react';
-import AppContext from 'services/AppContext';
+
 import { fetchData } from 'services/getters';
+
+import React, { useContext, useEffect, useState } from 'react';
+import OnVisible from 'react-on-visible';
+import { Parallax } from 'react-scroll-parallax';
+import AppContext from 'services/AppContext';
 
 export default () => {
   const { setActiveSection, language } = useContext(AppContext);

@@ -1,5 +1,7 @@
 import { PixeledLogoWrap, PixeledLogo, Pixel } from './styles';
 
+import { fetchData } from 'services/getters';
+
 import React, {
   useState,
   useEffect,
@@ -8,7 +10,6 @@ import React, {
   useContext,
 } from 'react';
 import AppContext from 'services/AppContext';
-import { fetchData } from 'services/getters';
 const logoColorMap = [
     '#3a3a3a',
     '#494949',

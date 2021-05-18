@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path, re_path
+from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
 from django_rest_api.core import views
+from rest_framework.schemas import get_schema_view
 from django_rest_api.posts.views import get_post
 from django_rest_api.curriculum.views import get_curriculum_experience, get_curriculum_skill
 
@@ -37,5 +39,14 @@ urlpatterns = [
     path('api/curriculum/experience', get_curriculum_experience),
     path('api/curriculum/skill', get_curriculum_skill),
     path('cms/', include(('django_rest_api.cms.urls', 'cms'), namespace='cms')),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('openapi', get_schema_view(
+        title="Your Project",
+        description="API for all things …",
+        version="1.0.0"
+    ), name='openapi-schema'),
+    path('docs/', TemplateView.as_view(
+        template_name='openapi.html',
+        extra_context={'schema_url': 'openapi-schema'}
+    ), name='openapi')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

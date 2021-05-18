@@ -6,10 +6,10 @@ import Index from './views/Index';
 
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import { Normalize } from 'styled-normalize';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import SmoothScroll from 'smooth-scroll';
+import { ThemeProvider } from 'styled-components';
+import { Normalize } from 'styled-normalize';
 
 const AsyncCurriculum = asyncComponent(() => import('./views/Curriculum'));
 const AsyncPortfolio = asyncComponent(() => import('./views/Portfolio'));

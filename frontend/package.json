@@ -2,6 +2,7 @@
   "name": "filipelopes.me",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://djangoapp:8000",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "axios": "^0.21.1",

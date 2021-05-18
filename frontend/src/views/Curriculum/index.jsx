@@ -1,12 +1,16 @@
+import Section, { SkillList, ExperienceList } from './styles';
+
+import { fetchData } from 'services/getters';
+
+import ExperienceItem from './components/ExperienceItem';
+
 import Skill from 'components/Skill';
 import TextLang from 'components/TextLang';
-import { Link } from 'react-router-dom';
-import Section, { SkillList, ExperienceList } from './styles';
 import React, { useContext, useEffect, useState } from 'react';
-import AppContext from 'services/AppContext';
-import { fetchData } from 'services/getters';
 import OnVisible from 'react-on-visible';
-import ExperienceItem from './components/ExperienceItem';
+import { Link } from 'react-router-dom';
+import AppContext from 'services/AppContext';
+
 export default () => {
   const { setActiveSection, language } = useContext(AppContext);
   const [skills, setSkills] = useState([]);

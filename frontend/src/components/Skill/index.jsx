@@ -1,7 +1,8 @@
+import Skill from './styles';
+
 import React, { useEffect, useState } from 'react';
 import { useCallback } from 'react';
 import OnVisible from 'react-on-visible';
-import Skill from './styles';
 
 export default ({ level, imgUrl, description, children, skills }) => {
   const [visible, setVisible] = useState(false);

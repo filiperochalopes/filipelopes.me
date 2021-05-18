@@ -1,7 +1,9 @@
 import Header, { LanguageBt } from './styles';
+
+import Navigation from './components/Navigation';
+
 import React, { useContext, useEffect } from 'react';
 import AppContext from 'services/AppContext';
-import Navigation from './components/Navigation';
 
 export default () => {
   const { activeSection, setActiveSection, language, setLanguage } = useContext(

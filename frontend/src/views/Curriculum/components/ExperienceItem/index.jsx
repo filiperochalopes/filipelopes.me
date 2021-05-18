@@ -1,6 +1,7 @@
 import Wrap from './styles';
-import React, { useContext } from 'react';
+
 import TextLang from 'components/TextLang';
+import React, { useContext } from 'react';
 import AppContext from 'services/AppContext';
 
 export default ({

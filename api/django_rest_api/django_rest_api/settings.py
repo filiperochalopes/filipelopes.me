@@ -29,6 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '192.168.100.17',
     '127.0.0.1',
+    'djangoapp',
+    'localhost',
 ]
 
 CORS_ALLOWED_ORIGINS = [
