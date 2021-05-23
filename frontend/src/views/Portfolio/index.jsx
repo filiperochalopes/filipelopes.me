@@ -1,7 +1,6 @@
 import PortfolioItem from './components/ListItem';
 import PortfolioCoverItem from './components/SlideItem';
 
-import Contato from '../../components/Contact';
 import Footer from '../../components/Footer';
 
 import IconButton from '@material-ui/core/IconButton';
@@ -284,7 +283,6 @@ class Portfolio extends Component {
             </section>
           )}
         </AppContext.Consumer>,
-        <Contato key="contact" />,
         <Footer key="footer" />,
       ];
     }

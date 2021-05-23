@@ -15,10 +15,15 @@ export default styled.section`
   text-align: left;
   font-size: 21px;
   line-height: 28px; // 135%
+  padding-bottom: 50px;
 
   .container {
     max-width: 670px;
     margin: 0 auto;
+
+    @media (max-width: 480px) {
+      padding: 0 32px;
+    }
   }
 
   h1 {
