@@ -7,6 +7,10 @@ export default styled.section`
   @media (max-width: 769px) {
     padding-bottom: 250px;
   }
+
+  @media (max-width: 480px) {
+    padding-bottom: 300px;
+  }
 `;
 
 export const ContentWrap = styled.div`

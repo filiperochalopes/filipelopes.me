@@ -61,7 +61,7 @@ export default () => {
             href="https://api.whatsapp.com/send?phone=5571986056232&text=Olá%20Filipe%20Lopes,%20estou%20entrando%20em%20contato%20através%20de%20seu%20site."
             target="_blank"
             size="large"
-            color="whatsapp"
+            className="whatsapp"
           >
             <i className="fab fa-whatsapp"></i>&nbsp;WhatsApp
           </ContactButton>
@@ -71,7 +71,7 @@ export default () => {
             href="https://www.instagram.com/filipelopes.web/"
             target="_blank"
             size="large"
-            color="instagram"
+            className="instagram"
           >
             <i className="fab fa-instagram"></i>&nbsp;Instagram.web
           </ContactButton>
@@ -81,15 +81,15 @@ export default () => {
             href="https://www.instagram.com/filipelopes.art/"
             target="_blank"
             size="large"
-            color="instagram"
+            className="instagram"
           >
             <i className="fab fa-instagram"></i>&nbsp;Instagram.art
           </ContactButton>
         </section>
-        <sub>
+        {/* <sub>
           <i className="far fa-eye"></i> {views} visualizações
-        </sub>
-        Filipe Lopes &copy; 2010 - 2021
+        </sub> */}
+        <sub>Filipe Lopes &copy; 2010 - 2021</sub>
       </Footer>
     </OnVisible>
   );

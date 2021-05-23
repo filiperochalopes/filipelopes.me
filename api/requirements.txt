@@ -12,3 +12,4 @@ Pillow
 django-cors-headers
 pyyaml
 uritemplate
+xhtml2pdf

@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django_rest_api.portfolio',
     'django_rest_api.posts',
     'django_rest_api.cms',
+    'django_rest_api.pdf',
     'corsheaders',
 ]
 
