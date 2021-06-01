@@ -1,6 +1,7 @@
 version: "3"
 services:
   frontend:
+    container_name: filipelopesme_frontend
     build:
       context: frontend
       dockerfile: Dockerfile.dev
@@ -12,6 +13,7 @@ services:
     links:
       - djangoapp
   tests:
+    container_name: filipelopesme_frontend_test
     build:
       context: frontend
       dockerfile: Dockerfile.dev
@@ -22,6 +24,7 @@ services:
       - djangoapp
     command: ["yarn", "test"]
   djangoapp:
+    container_name: filipelopesme_backend
     build:
       context: api
       dockerfile: Dockerfile
@@ -31,6 +34,7 @@ services:
       - ./api:/usr/src/app
     command: python django_rest_api/manage.py runserver 0.0.0.0:8000
   nginx:
+    container_name: filipelopesme_nginx
     restart: always
     build:
       context: .
