@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export default styled.div`
   position: relative;
+  margin-bottom: 40px;
+  cursor: pointer;
+
   &::before {
     content: '';
     width: 10px;
@@ -29,5 +32,14 @@ export default styled.div`
   }
 
   span {
+    font-size: 15px;
+    line-height: 135%;
+    display: block;
+
+    .fa-level-up-alt {
+      transform: rotate(90deg);
+      margin-left: 20px;
+      margin-right: 10px;
+    }
   }
 `;

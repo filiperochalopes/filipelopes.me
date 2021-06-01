@@ -11,6 +11,6 @@ sqlite3 db.sqlite3 < dump.sql
 ### Inicializando migrações
 
 ```sh
-docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/app && python manage.py makemigrations"
-docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/app && python manage.py migrate"
+docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/django_rest_api && python manage.py makemigrations"
+docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/django_rest_api && python manage.py migrate"
 ```

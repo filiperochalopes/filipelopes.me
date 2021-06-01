@@ -124,8 +124,6 @@ export default () => {
           {/* <h3>Hobbies</h3> */}
           {/* Teclado Violão Arquearia (filiado à...) */}
           {/* Fazer grid like insta com minhas fotos fazendo, */}
-          {/* <h2>Experiência</h2> */}
-          {/* LEMBRAR DE PROFESSOR Próximo passo: criar um layout legal com filtro por nível de relevância ou data */}
           {/* <h3>Clientes</h3> */}
           {/* Colocar logos flat em grid, onmouse over color */}
           {/* <h2>Conquistas e títulos</h2> */}

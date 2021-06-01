@@ -1,7 +1,7 @@
 import Wrap from './styles';
 
 import TextLang from 'components/TextLang';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from 'services/AppContext';
 
 export default ({
@@ -45,16 +45,21 @@ export default ({
     },
   };
 
+  const [showBullets, setShowBullets] = useState(false);
+
   const formatDate = stringDate => {
     const dateTimestamp = Date.parse(`${stringDate}T12:00:00`);
     const date = new Date(dateTimestamp);
-    console.log(stringDate, date);
-    return (
-      <>
-        {months[language][date.getMonth() + 1]} <TextLang ptBR="de" enUS="" />{' '}
-        {date.getFullYear()}
-      </>
-    );
+    if (stringDate) {
+      return (
+        <>
+          {months[language][date.getMonth() + 1]} <TextLang ptBR="de" enUS="" />{' '}
+          {date.getFullYear()}
+        </>
+      );
+    } else {
+      return null;
+    }
   };
 
   const bullets = description => {
@@ -70,16 +75,18 @@ export default ({
   };
 
   return (
-    <Wrap>
+    <Wrap onClick={() => setShowBullets(!showBullets)}>
       <h4>
         {title} <TextLang ptBR="-" enUS="at" /> {organization}
       </h4>
       <h5>
-        {formatDate(since)} - {formatDate(until)}, {local}
+        {formatDate(since)} -{' '}
+        {formatDate(until) || <TextLang ptBR="Hoje" enUS="Today" />}, {local}
       </h5>
-      {bullets(description)}
+      {showBullets && bullets(description)}
       <span>
         <strong>
+          <i className="fas fa-level-up-alt"></i>
           <TextLang ptBR="Principal conquista:" enUS="Key achievement:" />
         </strong>
         &nbsp;
