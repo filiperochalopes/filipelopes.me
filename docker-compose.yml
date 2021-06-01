@@ -28,7 +28,7 @@ services:
     ports:
       - 8060:8000
     volumes:
-      - .:/code
+      - ./api:/usr/src/app
     command: python django_rest_api/manage.py runserver 0.0.0.0:8000
   nginx:
     restart: always
