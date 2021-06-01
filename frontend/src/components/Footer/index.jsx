@@ -1,7 +1,8 @@
-import OnVisible from 'react-on-visible';
-import React, { useContext, useEffect, useState } from 'react';
-import AppContext from 'services/AppContext';
 import Footer, { ContactButton } from './styles';
+
+import React, { useContext, useEffect, useState } from 'react';
+import OnVisible from 'react-on-visible';
+import AppContext from 'services/AppContext';
 
 export default () => {
   const { setActiveSection, language } = useContext(AppContext);
