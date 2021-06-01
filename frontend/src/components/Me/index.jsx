@@ -1,7 +1,7 @@
 import Section, { ContentWrap, ImageWrap, Text } from './styles';
 
 import { fetchData } from 'services/getters';
-
+import BibleText from 'components/BibleText';
 import React, { useContext, useEffect, useState } from 'react';
 import OnVisible from 'react-on-visible';
 import { Parallax } from 'react-scroll-parallax';
@@ -55,6 +55,7 @@ export default () => {
             </Text>
           </Parallax>
         </ContentWrap>
+        <BibleText slug="daniel-2-21" />
       </Section>
     </OnVisible>
   );

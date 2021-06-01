@@ -1,8 +1,10 @@
-import Section, { SkillList, ExperienceList } from './styles';
+import Section, { SkillList, ExperienceList, CourseList } from './styles';
 
 import { fetchData } from 'services/getters';
 
 import ExperienceItem from './components/ExperienceItem';
+import BibleText from 'components/BibleText';
+import CourseItem from './components/CourseItem';
 
 import Skill from 'components/Skill';
 import TextLang from 'components/TextLang';
@@ -15,6 +17,7 @@ export default () => {
   const { setActiveSection, language } = useContext(AppContext);
   const [skills, setSkills] = useState([]);
   const [experiences, setExperiences] = useState([]);
+  const [courses, setCourses] = useState([]);
   const [resume, setResume] = useState(null);
 
   useEffect(() => {
@@ -37,18 +40,20 @@ export default () => {
     fetchData('/curriculum/experience', language).then(data =>
       setExperiences(data)
     );
+    fetchData('/curriculum/course', language).then(data => setCourses(data));
   }, [language]);
 
   useEffect(() => {
-    console.log(skills);
     console.log(experiences);
-  }, [skills, experiences]);
+    console.log(skills);
+    console.log(courses);
+  }, [courses, experiences, skills]);
 
   return (
     <OnVisible
       bounce={true}
       onChange={visible => {
-        console.log('Me visibility', visible);
+        console.log('Curriculum visibility', visible);
         if (visible) {
           setTimeout(() => {
             setActiveSection('curriculum');
@@ -93,33 +98,55 @@ export default () => {
               ))}
             </ExperienceList>
           </section>
-          <h2>Habilidades</h2>
-          {/* Adicionar categorias */}
-          <SkillList>
-            {skills.map(skill => (
-              <Skill
-                key={skill.id}
-                level={skill.level}
-                imgUrl={`${process.env.REACT_APP_DJANGO_URL}${skill.icon}`}
-                description={skill.description}
-                skills={
-                  skill.children
-                    ? [
-                        ...skill.children.reduce(
-                          (acc, { name, icon, level }) => [
-                            ...acc,
-                            { name, icon, level },
-                          ],
-                          []
-                        ),
-                      ]
-                    : []
-                }
-              >
-                {skill.name}
-              </Skill>
-            ))}
-          </SkillList>
+          <section>
+            <h2>
+              <TextLang ptBR="Habilidades" enUS="Skills" />
+            </h2>
+            {/* Adicionar categorias */}
+            <SkillList>
+              {skills.map(skill => (
+                <Skill
+                  key={skill.id}
+                  level={skill.level}
+                  imgUrl={`${process.env.REACT_APP_DJANGO_URL}${skill.icon}`}
+                  description={skill.description}
+                  skills={
+                    skill.children
+                      ? [
+                          ...skill.children.reduce(
+                            (acc, { name, icon, level }) => [
+                              ...acc,
+                              { name, icon, level },
+                            ],
+                            []
+                          ),
+                        ]
+                      : []
+                  }
+                >
+                  {skill.name}
+                </Skill>
+              ))}
+            </SkillList>
+          </section>
+          <BibleText slug="tiago-1-17" />
+          <section>
+            <h2>
+              <TextLang ptBR="Cursos" enUS="Courses" />
+            </h2>
+            <CourseList>
+              {courses.map(course => (
+                <CourseItem
+                  key={courses.id}
+                  name={course.name}
+                  place={course.place}
+                  description={course.description}
+                  since={course.since}
+                  until={course.until}
+                />
+              ))}
+            </CourseList>
+          </section>
           {/* <p className="soon">Experiência, clientes e títulos em breve.</p> */}
           {/* <h3>Hobbies</h3> */}
           {/* Teclado Violão Arquearia (filiado à...) */}

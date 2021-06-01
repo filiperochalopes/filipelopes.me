@@ -16,17 +16,17 @@ export default ({ level, imgUrl, description, children, skills }) => {
 
   const readSkills = skills => {
     let listSkills = [];
-    skills.forEach((data, i) => {
+    skills.forEach(({ name, icon, level }, i) => {
       listSkills.push(
         <li key={i}>
           <div className="img">
-            <img src={`/img/${data[2] || data[0]}.jpg`} alt="Habilidade" />
+            <img src={icon} alt="Habilidade" />
           </div>
           <span>
-            {data[0]}
+            {name}
             <span
               className={returnBarColor(level)}
-              style={{ width: `${data[1]}px` }}
+              style={{ width: `${level}px` }}
             ></span>
           </span>
         </li>
@@ -47,18 +47,20 @@ export default ({ level, imgUrl, description, children, skills }) => {
   }, [barStatus, barStatusLimit, step, visible]);
 
   const click = () => {
-    if (state.isToggleOn) {
-      setState({
-        isToggleOn: false,
-        resumeDisplay: 'none',
-        detailsDisplay: 'block',
-      });
-    } else {
-      setState({
-        isToggleOn: true,
-        resumeDisplay: 'block',
-        detailsDisplay: 'none',
-      });
+    if (readSkills(skills).length > 0) {
+      if (state.isToggleOn) {
+        setState({
+          isToggleOn: false,
+          resumeDisplay: 'none',
+          detailsDisplay: 'block',
+        });
+      } else {
+        setState({
+          isToggleOn: true,
+          resumeDisplay: 'block',
+          detailsDisplay: 'none',
+        });
+      }
     }
   };
 
@@ -88,7 +90,10 @@ export default ({ level, imgUrl, description, children, skills }) => {
           style={{ backgroundImage: `url(${imgUrl})` }}
         ></div>
         <div className="info">
-          <div className="title" onClick={click}>
+          <div
+            className={`title ${readSkills(skills).length > 0 ? 'click' : ''}`}
+            onClick={click}
+          >
             {children}
           </div>
           <div className="bar">
@@ -113,11 +118,9 @@ export default ({ level, imgUrl, description, children, skills }) => {
               display: state.detailsDisplay,
             }}
           >
-            <li className="skillsub">
-              <ul>{readSkills(skills)}</ul>
-            </li>
-            <li className="xp"></li>
-            <li className="courses"></li>
+            {readSkills(skills)}
+            {/* <li className="xp"></li> */}
+            {/* <li className="courses"></li> */}
             {/* <li className="portfolio"><Button>Ver em portfólio</Button></li> */}
           </ul>
         </div>

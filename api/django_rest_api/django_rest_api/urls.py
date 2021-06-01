@@ -22,7 +22,7 @@ from rest_framework import routers
 from django_rest_api.core import views
 from rest_framework.schemas import get_schema_view
 from django_rest_api.posts.views import get_post
-from django_rest_api.curriculum.views import get_curriculum_experience, get_curriculum_skill
+from django_rest_api.curriculum.views import get_curriculum_experience, get_curriculum_skill, get_curriculum_course
 from django_rest_api.pdf.views import ViewPDF, DownloadPDF
 
 router = routers.DefaultRouter()
@@ -39,6 +39,7 @@ urlpatterns = [
     re_path(r'^api/posts/(?P<slug>[-\w]+)', get_post),
     path('api/curriculum/experience', get_curriculum_experience),
     path('api/curriculum/skill', get_curriculum_skill),
+    path('api/curriculum/course', get_curriculum_course),
     path('cms/', include(('django_rest_api.cms.urls', 'cms'), namespace='cms')),
     path('pdf/curriculum', ViewPDF.as_view(), name="pdf_view"),
     path('pdf/download/curriculum', DownloadPDF.as_view(), name="pdf_download"),
