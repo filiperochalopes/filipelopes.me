@@ -1,94 +1,125 @@
+{% load static %}
 <html>
   <head>
     <style>
+      body {
+        font-size: 12px;
+        font-family: "Times New Roman", Times, serif;
+      }
+
       @page {
         size: a4 portrait;
+        margin: 1cm;
+
         @frame header_frame {
           -pdf-frame-content: header_content;
-          left: 50pt;
-          width: 512pt;
-          top: 50pt;
-          height: 40pt;
+          left: 1cm;
+          top: 1cm;
+          height: 1cm;
+          justify-self: center;
+          display: flex;
         }
+
         @frame content_frame {
-          left: 50pt;
-          width: 512pt;
-          top: 90pt;
-          height: 632pt;
+          left: 1cm;
+          width: 19cm;
+          top: 1cm;
+          height: 27cm;
         }
+
         @frame footer_frame {
           -pdf-frame-content: footer_content;
           left: 50pt;
           width: 512pt;
-          top: 600pt;
+          top: 800pt;
           height: 200pt;
+          font-size: 8px;
         }
       }
 
-      body {
-        font-size: 20px;
+      @font-face {
+        font-family: "Teko-Medium";
+        font-style: normal;
+        src: local("Teko-Medium"), url("{% static 'fonts/Teko-Medium.ttf' %}");
+      }
+
+      header {
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-family: "Teko-Medium", Arial, sans-serif;
+      }
+
+      td.main {
+        width: 242pt;
+      }
+
+      td.main {
+        width: 400pt;
+      }
+
+      td.main > div {
+        border-left: 1px solid #000000;
+        padding-left: 20px;
+        position: relative;
       }
     </style>
   </head>
 
   <body>
     <!-- Content for Static Frame 'header_frame' -->
-    <div id="header_content">
-      <h3>Dennnis Ivanov Company XX</h3>
-    </div>
+    <div id="header_content">CURRICULUM</div>
+
+    <!-- HTML Content -->
+    <header>
+      <h1>Filipe Rocha Lopes</h1>
+      <a href="https://wa.me/5571986056232">+55 71 98605-6232</a>
+      <a href="mailto:contato@filipelopes.me">contato@filipelopes.me</a>
+      <a href="https://filipelopes.me">https://filipelopes.me</a>
+    </header>
+    <table>
+      <tr>
+        <td class="aside">
+          <div>
+            <h3>Detalhes</h3>
+          </div>
+          <div>
+            <h3>Habilidades</h3>
+          </div>
+        </td>
+        <td class="main">
+          <div>
+            <h3>Profile</h3>
+            <p>
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
 
     <!-- Content for Static Frame 'footer_frame' -->
     <div id="footer_content">
-      (c) - page <pdf:pagenumber /> of <pdf:pagecount />
+      (c) - page
+      <pdf:pagenumber /> of
+      <pdf:pagecount />
     </div>
-
-    <!-- HTML Content -->
-    <table>
-      <tr>
-        <td>{{address}}</td>
-        <td>{{phone}}</td>
-      </tr>
-      <tr>
-        <td>{{city}} {{state}},</td>
-        <td>{{email}}</td>
-      </tr>
-      <tr>
-        <td>{{zipcode}}</td>
-        <td>{{website}}</td>
-      </tr>
-    </table>
-
-    <hr />
-
-    <table>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      <tr>
-        <td>Hosting Plan</td>
-        <td>$7.99</td>
-        <td>2</td>
-        <td>$15.98</td>
-      </tr>
-      <tr>
-        <td>consultation</td>
-        <td>$225</td>
-        <td>1</td>
-        <td>$225</td>
-      </tr>
-      <tr>
-        <td>Service Hours</td>
-        <td>$189</td>
-        <td>45.7</td>
-        <td>$8637.30</td>
-      </tr>
-    </table>
-
-    <hr />
-
-    <p><strong>Total: $8878.28</strong></p>
   </body>
 </html>

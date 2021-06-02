@@ -14,3 +14,11 @@ sqlite3 db.sqlite3 < dump.sql
 docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/django_rest_api && python manage.py makemigrations"
 docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/django_rest_api && python manage.py migrate"
 ```
+
+### Coletando arquivos estáticos
+
+Necessário para capturar arquivos para criar pdf
+
+```sh
+docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/django_rest_api && python manage.py collectstatic"
+```

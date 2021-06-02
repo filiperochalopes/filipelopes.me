@@ -23,7 +23,7 @@ from django_rest_api.core import views
 from rest_framework.schemas import get_schema_view
 from django_rest_api.posts.views import get_post
 from django_rest_api.curriculum.views import get_curriculum_experience, get_curriculum_skill, get_curriculum_course
-from django_rest_api.pdf.views import ViewPDF, DownloadPDF
+from django_rest_api.pdf.views import ViewPDF, ViewHTML, DownloadPDF
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -41,6 +41,7 @@ urlpatterns = [
     path('api/curriculum/skill', get_curriculum_skill),
     path('api/curriculum/course', get_curriculum_course),
     path('cms/', include(('django_rest_api.cms.urls', 'cms'), namespace='cms')),
+    path('pdf/html/curriculum', ViewHTML.as_view(), name="pdf_html"),
     path('pdf/curriculum', ViewPDF.as_view(), name="pdf_view"),
     path('pdf/download/curriculum', DownloadPDF.as_view(), name="pdf_download"),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
@@ -53,4 +54,7 @@ urlpatterns = [
         template_name='openapi.html',
         extra_context={'schema_url': 'openapi-schema'}
     ), name='openapi')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, show_indexes=True)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True) 

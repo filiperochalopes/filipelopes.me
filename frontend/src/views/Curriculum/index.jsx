@@ -70,7 +70,9 @@ export default () => {
               Currículo <i className="fas fa-external-link-alt"></i>
             </Link>
             <button>
-              <i className="fas fa-print"></i>
+              <a href="pdf/curriculum">
+                <i className="fas fa-print"></i>
+              </a>
             </button>
           </h1>
           <section>
