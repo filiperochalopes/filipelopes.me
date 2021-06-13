@@ -68,7 +68,6 @@ class Skill(models.Model):
         'Relevance', on_delete=models.CASCADE, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    # courses
     # tags (to search)
 
     def __str__(self):
@@ -96,3 +95,19 @@ class Relevance(models.Model):
 
     def __str__(self):
         return f"{self.order} - {self.value}"
+
+
+class Certificate(models.Model):
+    title_pt_br = models.CharField(max_length=100)
+    title_en_us = models.CharField(max_length=100, blank=True)
+    date = models.DateField(blank=True, null=True)
+    file = models.FileField(upload_to='certificates', blank=True)
+    relevance = models.ForeignKey(
+        'Relevance', on_delete=models.CASCADE, blank=True, null=True)
+    course = models.ForeignKey(
+        'Course', on_delete=models.CASCADE, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title_pt_br

@@ -1,6 +1,7 @@
 import Section, { ContentWrap, ImageWrap, Text } from './styles';
 
 import { fetchData } from 'services/getters';
+
 import BibleText from 'components/BibleText';
 import React, { useContext, useEffect, useState } from 'react';
 import OnVisible from 'react-on-visible';

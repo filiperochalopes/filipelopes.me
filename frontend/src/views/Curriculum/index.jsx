@@ -2,10 +2,10 @@ import Section, { SkillList, ExperienceList, CourseList } from './styles';
 
 import { fetchData } from 'services/getters';
 
-import ExperienceItem from './components/ExperienceItem';
-import BibleText from 'components/BibleText';
 import CourseItem from './components/CourseItem';
+import ExperienceItem from './components/ExperienceItem';
 
+import BibleText from 'components/BibleText';
 import Skill from 'components/Skill';
 import TextLang from 'components/TextLang';
 import React, { useContext, useEffect, useState } from 'react';
@@ -135,6 +135,26 @@ export default () => {
           <section>
             <h2>
               <TextLang ptBR="Cursos" enUS="Courses" />
+            </h2>
+            <CourseList>
+              {courses.map(course => (
+                <CourseItem
+                  key={courses.id}
+                  name={course.name}
+                  place={course.place}
+                  description={course.description}
+                  since={course.since}
+                  until={course.until}
+                />
+              ))}
+            </CourseList>
+          </section>
+          <section>
+            <h2>
+              <TextLang
+                ptBR="Certificados e Premiações"
+                enUS="Certificates and Awards"
+              />
             </h2>
             <CourseList>
               {courses.map(course => (

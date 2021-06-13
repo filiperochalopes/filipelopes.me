@@ -1,4 +1,5 @@
 import { fetchData } from 'services/getters';
+
 import React, { useState, useEffect, useContext } from 'react';
 import AppContext from 'services/AppContext';
 
