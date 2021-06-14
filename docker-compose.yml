@@ -2,6 +2,7 @@ version: "3"
 services:
   frontend:
     container_name: filipelopesme_frontend
+    restart: always
     build:
       context: frontend
       dockerfile: Dockerfile.dev
@@ -25,6 +26,7 @@ services:
     command: ["yarn", "test"]
   djangoapp:
     container_name: filipelopesme_backend
+    restart: always
     build:
       context: api
       dockerfile: Dockerfile

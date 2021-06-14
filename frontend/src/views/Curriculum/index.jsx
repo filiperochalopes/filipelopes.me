@@ -7,9 +7,9 @@ import Section, {
 
 import { fetchData } from 'services/getters';
 
+import CertificateItem from './components/CertificateItem';
 import CourseItem from './components/CourseItem';
 import ExperienceItem from './components/ExperienceItem';
-import CertificateItem from './components/CertificateItem';
 
 import BibleText from 'components/BibleText';
 import Skill from 'components/Skill';
