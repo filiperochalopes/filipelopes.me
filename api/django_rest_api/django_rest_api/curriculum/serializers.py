@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from django_rest_api.curriculum.models import Experience, Skill, Course
+from django_rest_api.curriculum.models import Experience, Skill, Course, Certificate
 
 
 class ExperienceSerializer(serializers.ModelSerializer):
@@ -19,4 +19,9 @@ class SkillSerializer(serializers.ModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
+        fields = '__all__'
+
+class CertificateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Certificate
         fields = '__all__'

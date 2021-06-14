@@ -12,19 +12,20 @@ export default () => {
   }, [language]);
 
   const [views, setViews] = useState(0);
-  const get_put_Views = () => {
-    // fetch("server/get_put_views.php")
-    fetch('https://server.filipelopes.me/get_put_views.php')
-      .then(function (response) {
-        return response.text();
-      })
-      .then(data => {
-        let json = JSON.parse(data);
-        setViews(json.views);
-      });
-  };
 
-  get_put_Views();
+  // const get_put_Views = () => {
+  //   // fetch("server/get_put_views.php")
+  //   fetch('https://server.filipelopes.me/get_put_views.php')
+  //     .then(function (response) {
+  //       return response.text();
+  //     })
+  //     .then(data => {
+  //       let json = JSON.parse(data);
+  //       setViews(json.views);
+  //     });
+  // };
+
+  // get_put_Views();
 
   const webAPIshare = () => {
     if (navigator.share) {

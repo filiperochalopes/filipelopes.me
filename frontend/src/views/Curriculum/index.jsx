@@ -1,9 +1,15 @@
-import Section, { SkillList, ExperienceList, CourseList } from './styles';
+import Section, {
+  SkillList,
+  ExperienceList,
+  CourseList,
+  CertificateList,
+} from './styles';
 
 import { fetchData } from 'services/getters';
 
 import CourseItem from './components/CourseItem';
 import ExperienceItem from './components/ExperienceItem';
+import CertificateItem from './components/CertificateItem';
 
 import BibleText from 'components/BibleText';
 import Skill from 'components/Skill';
@@ -18,6 +24,7 @@ export default () => {
   const [skills, setSkills] = useState([]);
   const [experiences, setExperiences] = useState([]);
   const [courses, setCourses] = useState([]);
+  const [certificates, setCertificates] = useState([]);
   const [resume, setResume] = useState(null);
 
   useEffect(() => {
@@ -41,13 +48,17 @@ export default () => {
       setExperiences(data)
     );
     fetchData('/curriculum/course', language).then(data => setCourses(data));
+    fetchData('/curriculum/certificate', language).then(data =>
+      setCertificates(data)
+    );
   }, [language]);
 
   useEffect(() => {
     console.log(experiences);
     console.log(skills);
     console.log(courses);
-  }, [courses, experiences, skills]);
+    console.log(certificates);
+  }, [courses, experiences, skills, certificates]);
 
   return (
     <OnVisible
@@ -156,18 +167,16 @@ export default () => {
                 enUS="Certificates and Awards"
               />
             </h2>
-            <CourseList>
-              {courses.map(course => (
-                <CourseItem
-                  key={courses.id}
-                  name={course.name}
-                  place={course.place}
-                  description={course.description}
-                  since={course.since}
-                  until={course.until}
+            <CertificateList>
+              {certificates.map(certificate => (
+                <CertificateItem
+                  key={certificate.id}
+                  title={certificate.title}
+                  date={certificate.date}
+                  file={certificate.file}
                 />
               ))}
-            </CourseList>
+            </CertificateList>
           </section>
           {/* <p className="soon">Experiência, clientes e títulos em breve.</p> */}
           {/* <h3>Hobbies</h3> */}

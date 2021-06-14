@@ -12,6 +12,10 @@ export const CourseList = styled.ul`
   list-style: none;
 `;
 
+export const CertificateList = styled.ul`
+  list-style: none;
+`;
+
 export default styled.section`
   color: #fff;
   background: ${({ theme }) => theme.default.invertedBackgroundColor};
