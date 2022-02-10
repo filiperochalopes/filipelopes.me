@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "blend4web": "^18.5.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nuka-carousel": "^4.5.3",
     "pixelate": "^0.0.5",
     "react": "^16.10.2",
