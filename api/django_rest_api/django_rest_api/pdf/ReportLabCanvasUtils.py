@@ -377,7 +377,7 @@ class ReportLabCanvasUtils():
                 str_to_line = ''
                 broke_lines_times = int(len(text)/char_per_lines)
                 if max_lines_amount != None and broke_lines_times + 1 > max_lines_amount:
-                    raise Exception(f'Nao foi possivel adicionar {camp_name} pois a quantidade de linhas necessrias e maior que {max_lines_amount}')
+                    raise Exception(f'Nao foi possivel adicionar {camp_name} pois a quantidade de linhas necessarias e maior que {max_lines_amount}')
                 current_line = char_per_lines
                 last_line = 0
                 xpos = initial_pos[0]
@@ -635,6 +635,32 @@ class ReportLabCanvasUtils():
         except:
             raise Exception(f'Erro desconhecido enquando adicionava {camp_name}')
 
+
+    def add_education(self, courses, y_pos:int) -> None:
+        try:
+            y_pos -= 25
+            for course in courses:
+                # relevance_id has to be 3 (HIGH)
+                if course.relevance_id != 3:
+                    continue
+                self.set_font('Lato-Bold', 10)
+                # Add description_pt_br, since, until, name_pt_br, place_pt_br
+                y_pos = self.add_morelines_text(text=str(course.name_pt_br).upper(), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=50, decrease_ypos=10, camp_name=f'Nome do curso {course.id}')
+                
+                self.set_font('Lora-Regular', 10)
+                y_pos -= 5
+                y_pos = self.add_morelines_text(text=str(course.place_pt_br), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=50, decrease_ypos=10, camp_name=f'Nome da instituicao {course.id}')
+
+                y_pos -= 5
+                until = str(course.until.year) if course.until is not None else 'Atual'
+                self.add_oneline_text(text=f'{str(course.since.year)} - {until}', pos=(30, y_pos), len_max=20, camp_name=f'Inicio do curso {course.id}')
+                y_pos -= 30
+            self.add_rectangle(pos=(30, y_pos), width=140, height=1, fill=1, color=(0,0,0,0))
+            return y_pos
+        except Exception as error:
+            raise error
+        except:
+            raise Exception('Erro desconhecido enquando adicionava cursos')
 
     def add_cnpj(self, cnpj:str, pos:tuple, camp_name:str,nullable:bool=False, interval:str='') -> None:
         """Add cnpj to canvas
