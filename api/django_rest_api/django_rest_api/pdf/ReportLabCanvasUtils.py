@@ -7,19 +7,20 @@ import re
 import datetime
 from inspect import getfullargspec
 import base64
-from pdf.env import FONT_DIRECTORY, BOLD_FONT_DIRECTORY
+from django_rest_api.settings import FONT_DIRECTORY, BOLD_FONT_DIRECTORY, TEMPLATE_DIRECTORY
 
 
 class ReportLabCanvasUtils():
 
-    def __init__(self, canvas_pagesize) -> None:
+    def __init__(self) -> None:
+        self.TEMPLATE_DIRECTORY = TEMPLATE_DIRECTORY
         self.packet = io.BytesIO()
         # Create canvas and add data
-        self.can = canvas.Canvas(self.packet, pagesize=canvas_pagesize)
+        self.can = canvas.Canvas(self.packet, pagesize=(595, 841))
         # Change canvas font to mach with the document
         # this is also changed in the document to some especific fields
-        pdfmetrics.registerFont(TTFont('Roboto-Mono', FONT_DIRECTORY))
-        pdfmetrics.registerFont(TTFont('Roboto-Condensed-Bold', BOLD_FONT_DIRECTORY))
+        pdfmetrics.registerFont(TTFont('Lato-Bold', FONT_DIRECTORY))
+        pdfmetrics.registerFont(TTFont('Lora-Regular', BOLD_FONT_DIRECTORY))
     
     
     def get_output(self) -> PdfWriter:

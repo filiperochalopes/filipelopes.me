@@ -162,3 +162,8 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Pdf files
+FONT_DIRECTORY = '/usr/src/app/django_rest_api/django_rest_api/pdf/assets/Lora-Regular.ttf'
+BOLD_FONT_DIRECTORY = '/usr/src/app/django_rest_api/django_rest_api/pdf/assets/Lato-Bold.ttf'
+TEMPLATE_DIRECTORY = '/usr/src/app/django_rest_api/django_rest_api/pdf/templates/empty_pdf.pdf'
