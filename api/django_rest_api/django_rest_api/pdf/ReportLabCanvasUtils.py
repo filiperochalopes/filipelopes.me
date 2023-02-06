@@ -19,8 +19,8 @@ class ReportLabCanvasUtils():
         self.can = canvas.Canvas(self.packet, pagesize=(595, 841))
         # Change canvas font to mach with the document
         # this is also changed in the document to some especific fields
-        pdfmetrics.registerFont(TTFont('Lato-Bold', FONT_DIRECTORY))
-        pdfmetrics.registerFont(TTFont('Lora-Regular', BOLD_FONT_DIRECTORY))
+        pdfmetrics.registerFont(TTFont('Lato-Bold', BOLD_FONT_DIRECTORY))
+        pdfmetrics.registerFont(TTFont('Lora-Regular', FONT_DIRECTORY))
     
     
     def get_output(self) -> PdfWriter:

@@ -4,14 +4,19 @@ from django.http import HttpResponse, JsonResponse
 import django_rest_api.settings as settings
 from django_rest_api.pdf.ReportLabCanvasUtils import ReportLabCanvasUtils
 import os
+import json
 from base64 import b64decode
 
 
 def generate_pdf(request):
     pdf = ReportLabCanvasUtils()
     try:
-        pdf.set_font('Lato-Bold', 25)
-        pdf.add_oneline_text(text='Nome do Filipe', pos=(294, 798), camp_name='Nome', len_max=100, centralized=True)
+        with open(settings.FILIPE_DATA_JSON, 'r') as f:
+            filipe_data = json.loads(f.read())
+        pdf.set_font('Lato-Bold', 35)
+        pdf.add_oneline_text(text=filipe_data['name'], pos=(294, 780), camp_name='Nome', len_max=100, centralized=True, interval=' ')
+        pdf.set_font('Lora-Regular', 12)
+        pdf.add_oneline_text(text=f"{filipe_data.get('phone_number')}  |  {filipe_data.get('email')}  |  {filipe_data.get('website')}", pos=(294, 730), camp_name='Informacoes de Contato', len_max=100, centralized=True)
         
         
         
@@ -32,7 +37,7 @@ def generate_pdf(request):
             f.write(decoded)
             f.close()
         
-        return HttpResponse(content=str(settings.BASE_DIR))
+        return HttpResponse(content=str('aaaaaaa'))
     except Exception as error:
             return error
     except:
