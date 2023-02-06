@@ -3,3 +3,4 @@
 __pycache__
 /api/django_rest_api/static
 tests_files/*
+api/django_rest_api/django_rest_api/pdf/tests_files/*
