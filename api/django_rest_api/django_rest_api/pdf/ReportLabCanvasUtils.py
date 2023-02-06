@@ -342,7 +342,7 @@ class ReportLabCanvasUtils():
             raise Exception(f'Erro desconhecido enquando adicionava {camp_name}')
 
 
-    def add_morelines_text(self, text:str, initial_pos:tuple, decrease_ypos:int, camp_name:str, len_max:int, char_per_lines:int, max_lines_amount:int=None, nullable:bool=False, len_min:int=0, interval:str='') -> None:
+    def add_morelines_text(self, text:str, initial_pos:tuple, decrease_ypos:int, camp_name:str, len_max:int, char_per_lines:int, max_lines_amount:int=None, nullable:bool=False, len_min:int=0, interval:str='') -> int:
         """Add text that is fill in one line
 
         Args:
@@ -357,7 +357,7 @@ class ReportLabCanvasUtils():
             len_min (int, optional): Minimum text lenght. Defaults to 0.
             interval (str): interval to add between every char
         Returns:
-            None
+            y last position
         """    
         try:
             if nullable:
@@ -393,7 +393,7 @@ class ReportLabCanvasUtils():
                     broke_lines_times -= 1
                     ypos -= decrease_ypos
 
-                return None
+                return ypos
             else:
                 raise Exception(f"Nao foi possivel adicionar {camp_name} porque e maior que {len_max} characteres ou menor que {len_min} caracteres")
 

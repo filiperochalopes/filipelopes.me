@@ -18,8 +18,8 @@ def generate_pdf():
         pdf.add_oneline_text(text=f"{filipe_data.get('phone_number')}  |  {filipe_data.get('email')}  |  {filipe_data.get('website')}", pos=(294, 730), camp_name='Informacoes de Contato', len_max=100, centralized=True)
         pdf.add_rectangle(pos=(30, 697), width=535, height=1, fill=1, color=(0,0,0,0))
         pdf.add_rectangle(pos=(30, 690), width=535, height=1, fill=1, color=(0,0,0,0))
-        pdf.add_morelines_text(text=filipe_data.get('about'), initial_pos=(30, 650), camp_name='Sobre', len_max=5000, centralized=False, decrease_ypos=16, char_per_lines=535)
-        
+        last_y_pos = pdf.add_morelines_text(text=filipe_data.get('about'), initial_pos=(30, 650), camp_name='Sobre', len_max=5000, decrease_ypos=16, char_per_lines=95)
+        pdf.add_rectangle(pos=(30, last_y_pos-(16*2)), width=535, height=1, fill=1, color=(0,0,0,0))
         
         
         
@@ -35,7 +35,7 @@ def generate_pdf():
         return pdf.get_base64()
         
     except Exception as error:
-        return error
+        raise error
     except:
-        return Exception('Erro desconhecido ocorreu enquanto adicionava dados obrigadorios')
+        raise Exception('Erro desconhecido ocorreu enquanto adicionava dados obrigadorios')
 
