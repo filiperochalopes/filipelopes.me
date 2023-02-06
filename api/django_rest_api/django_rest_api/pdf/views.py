@@ -3,10 +3,13 @@ from django.shortcuts import render
 from io import BytesIO
 from django.http import HttpResponse
 from django.template.loader import get_template
+from django_rest_api.pdf.facade import generate_pdf
 from django.views import View
 from xhtml2pdf import pisa
 from django.conf import settings
 import os
+from base64 import b64decode
+
 
 
 def link_callback(uri, rel):
@@ -36,6 +39,19 @@ def link_callback(uri, rel):
                 'media URI must start with %s or %s' % (sUrl, mUrl)
             )
     return path
+
+
+def generate_pdf_curriculum(request):
+    try:
+        pdf_base64_enconded = generate_pdf()
+        decoded = b64decode(pdf_base64_enconded, validate=True)
+        with open('/usr/src/app/django_rest_api/django_rest_api/pdf/tests_files/curriculum_test.pdf', 'wb') as f:
+            f.write(decoded)
+            f.close()
+        
+        return HttpResponse(content=str(decoded))
+    except Exception as error:
+        return HttpResponse('Erro inesperado ocorreu enquanto gerava o PDF', status=500)
 
 
 def render_to_pdf(template_src, context_dict={}):
