@@ -662,6 +662,46 @@ class ReportLabCanvasUtils():
         except:
             raise Exception('Erro desconhecido enquando adicionava cursos')
 
+
+    def add_work_experience(self, experiences, y_pos:int) -> None:
+        try:
+            y_pos -= 25
+            for exp in experiences:
+                # relevance_id has to be 3 (HIGH)
+                if exp.relevance_id != 3:
+                    continue
+                self.set_font('Lato-Bold', 10)
+                # Add description_pt_br, since, until, name_pt_br, organization
+                y_pos = self.add_morelines_text(text=str(exp.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, camp_name=f'Cargo de Trabalho {exp.id}')
+                
+                self.set_font('Lora-Regular', 10)
+                until = str(exp.until.year) if exp.until is not None else 'Atual'
+                start_end = f'{str(exp.since.year)} - {until}'
+                y_pos -= 5
+                y_pos = self.add_morelines_text(text=f'{str(exp.organization)} / {start_end}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, camp_name=f'Nome da empresa {exp.id} e periodo de trabalho')
+
+                y_pos -= 5
+                y_pos = self.add_morelines_text(text=str(exp.key_achievement_pt_br), initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, camp_name=f'Descricao do trabalho {exp.id}')
+
+                y_pos -= 5
+                for achievement in str(exp.description_pt_br).split('-'):
+                    achievement = achievement.replace('\n', '').strip()
+                    if len(achievement) == 0:
+                        continue
+                    achievement = '- ' + achievement
+                    y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, camp_name=f'Conquistas no trabalho {exp.id}', nullable=True)
+                    y_pos -= 3
+                
+                y_pos -= 30
+            
+            return y_pos
+        except Exception as error:
+            raise error
+        except:
+            raise Exception('Erro desconhecido enquando adicionava experiencia profissional')
+
+
+
     def add_cnpj(self, cnpj:str, pos:tuple, camp_name:str,nullable:bool=False, interval:str='') -> None:
         """Add cnpj to canvas
 
