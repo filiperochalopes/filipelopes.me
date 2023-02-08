@@ -640,9 +640,6 @@ class ReportLabCanvasUtils():
         try:
             y_pos -= 25
             for course in courses:
-                # relevance_id has to be 3 (HIGH)
-                if course.relevance_id != 3:
-                    continue
                 self.set_font('Lato-Bold', 10)
                 # Add description_pt_br, since, until, name_pt_br, place_pt_br
                 y_pos = self.add_morelines_text(text=str(course.name_pt_br).upper(), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=50, decrease_ypos=10, camp_name=f'Nome do curso {course.id}')
@@ -667,9 +664,6 @@ class ReportLabCanvasUtils():
         try:
             y_pos -= 25
             for exp in experiences:
-                # relevance_id has to be 3 (HIGH)
-                if exp.relevance_id != 3:
-                    continue
                 self.set_font('Lato-Bold', 10)
                 # Add description_pt_br, since, until, name_pt_br, organization
                 y_pos = self.add_morelines_text(text=str(exp.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, camp_name=f'Cargo de Trabalho {exp.id}')

@@ -27,9 +27,10 @@ def generate_pdf():
         pdf.add_oneline_text(text=f'EXPERIÊNCIA PROFISSIONAL', pos=(217, new_y_pos), camp_name='titulo experiencia', len_max=100, interval=' ')
         pdf.add_rectangle(pos=(177, new_y_pos+10), width=1, height=-520, fill=1, color=(0,0,0,0))
         old_y_pos = new_y_pos
-        new_y_pos = pdf.add_education(courses=Course.objects.all(), y_pos=new_y_pos)
+        # relevance_id has to be 3 (HIGH)
+        new_y_pos = pdf.add_education(courses=Course.objects.filter(relevance_id=3), y_pos=new_y_pos)
         
-        pdf.add_work_experience(experiences=Experience.objects.all(), y_pos=old_y_pos)
+        pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id=3), y_pos=old_y_pos)
         
         
         
