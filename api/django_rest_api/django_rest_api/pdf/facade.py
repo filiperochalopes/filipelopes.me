@@ -1,4 +1,4 @@
-from django_rest_api.curriculum.models import Certificate, Course, Experience
+from django_rest_api.curriculum.models import Certificate, Course, Experience, Skill
 from django_rest_api.curriculum.views import get_curriculum_certificate
 from django.http import HttpResponse, JsonResponse
 import django_rest_api.settings as settings
@@ -29,8 +29,14 @@ def generate_pdf():
         old_y_pos = new_y_pos
         # relevance_id has to be 3 (HIGH)
         new_y_pos = pdf.add_education(courses=Course.objects.filter(relevance_id=3), y_pos=new_y_pos)
-        
         pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id=3), y_pos=old_y_pos)
+        # TODO
+        # Add Skill relevance_id filter
+        new_y_pos -= 25
+        pdf.add_oneline_text(text=f'HABILIDADES', pos=(30, new_y_pos), camp_name='titulo habilidades', len_max=100, interval=' ')
+        new_y_pos -= 20
+        raise Exception(str(list(Skill.objects.all())))
+        pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
         
         
         

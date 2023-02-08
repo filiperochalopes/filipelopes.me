@@ -659,6 +659,22 @@ class ReportLabCanvasUtils():
         except:
             raise Exception('Erro desconhecido enquando adicionava cursos')
 
+    def add_skills(self, skills, y_pos:int) -> None:
+        try:
+            for skill in skills:
+                if skill is None:
+                    continue
+                self.set_font('Lora-Regular', 10)
+                y_pos = self.add_oneline_text(text=str(skill.name_pt_br), pos=(30, y_pos), len_max=50, camp_name=f'Habilidade {skill.id}', nullable=True)
+                
+                y_pos -= 10
+
+            return y_pos
+        except Exception as error:
+            raise error
+        except:
+            raise Exception('Erro desconhecido enquando adicionava habilidade')
+
 
     def add_work_experience(self, experiences, y_pos:int) -> None:
         try:
@@ -686,14 +702,13 @@ class ReportLabCanvasUtils():
                     y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, camp_name=f'Conquistas no trabalho {exp.id}', nullable=True)
                     y_pos -= 3
                 
-                y_pos -= 30
+                y_pos -= 20
             
             return y_pos
         except Exception as error:
             raise error
         except:
             raise Exception('Erro desconhecido enquando adicionava experiencia profissional')
-
 
 
     def add_cnpj(self, cnpj:str, pos:tuple, camp_name:str,nullable:bool=False, interval:str='') -> None:
