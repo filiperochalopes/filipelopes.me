@@ -279,7 +279,6 @@ class ReportLabCanvasUtils():
                     return None
 
             self.validate_func_args(function_to_verify=self.add_oneline_text, variables_to_verify={'text':text, 'pos':pos, 'camp_name':camp_name, 'len_max':len_max, 'nullable':nullable, 'len_min':len_min, 'interval':interval, 'centralized':centralized, 'right_align':right_align})
-
             if not nullable:
                 text = text.strip()
                 if len(text) == 0:
@@ -665,7 +664,7 @@ class ReportLabCanvasUtils():
                 if skill is None:
                     continue
                 self.set_font('Lora-Regular', 10)
-                y_pos = self.add_oneline_text(text=str(skill.name_pt_br), pos=(30, y_pos), len_max=50, camp_name=f'Habilidade {skill.id}', nullable=True)
+                y_pos = self.add_morelines_text(text=str(skill.name_pt_br), initial_pos=(30, y_pos), len_max=50, camp_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
                 
                 y_pos -= 10
 

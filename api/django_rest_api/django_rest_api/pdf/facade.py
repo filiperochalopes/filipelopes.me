@@ -35,7 +35,6 @@ def generate_pdf():
         new_y_pos -= 25
         pdf.add_oneline_text(text=f'HABILIDADES', pos=(30, new_y_pos), camp_name='titulo habilidades', len_max=100, interval=' ')
         new_y_pos -= 20
-        raise Exception(str(list(Skill.objects.all())))
         pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
         
         
