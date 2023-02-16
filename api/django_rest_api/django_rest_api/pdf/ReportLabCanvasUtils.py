@@ -698,7 +698,9 @@ class ReportLabCanvasUtils():
                     y_pos = 780
                     self.set_font('Lora-Regular', 10)
                     self.add_oneline_text(text='HABILIDADES', pos=(30, y_pos), field_name='titulo habilidades pagina 2', len_max=100, interval=' ')
+                    self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
                     y_pos -= 20
+                
                 self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=str(skill.name_pt_br), initial_pos=(30, y_pos), len_max=50, field_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
                 self.add_skills_square(skill=skill, pos=(30, y_pos))
