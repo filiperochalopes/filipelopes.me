@@ -666,6 +666,9 @@ class ReportLabCanvasUtils():
                 self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=str(skill.name_pt_br), initial_pos=(30, y_pos), len_max=50, camp_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
                 
+                self.add_skills_square(skill=skill, pos=(30, y_pos))
+                
+                
                 y_pos -= 10
 
             return y_pos
@@ -674,6 +677,19 @@ class ReportLabCanvasUtils():
         except:
             raise Exception('Erro desconhecido enquando adicionava habilidade')
 
+
+    def add_skills_square(self, skill, pos:tuple):
+        x_pos = pos[0]
+        # get the complete blocks quantity
+        complete_blocks = skill.level // 10
+        # last block size
+        last_block_size = skill.level - (complete_blocks * 10)
+        for x in range(complete_blocks):
+            self.add_square(pos=(x_pos, pos[1]), size=(10, 5))
+            x_pos += 14
+        if last_block_size != 0:
+            self.add_square(pos=(x_pos, pos[1]), size=(last_block_size, 5))
+        return None
 
     def add_work_experience(self, experiences, y_pos:int) -> None:
         try:

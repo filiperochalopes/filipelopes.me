@@ -30,11 +30,12 @@ def generate_pdf():
         # relevance_id has to be 3 (HIGH)
         new_y_pos = pdf.add_education(courses=Course.objects.filter(relevance_id=3), y_pos=new_y_pos)
         pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id=3), y_pos=old_y_pos)
-        # TODO
-        # Add Skill relevance_id filter
         new_y_pos -= 25
         pdf.add_oneline_text(text=f'HABILIDADES', pos=(30, new_y_pos), camp_name='titulo habilidades', len_max=100, interval=' ')
         new_y_pos -= 20
+        # TODO
+        # Add Skill relevance_id filter
+        #pdf.add_skills(skills=Skill.objects.filter(relevance_id=3), y_pos=new_y_pos)
         pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
         
         
