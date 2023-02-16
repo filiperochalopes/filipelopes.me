@@ -26,6 +26,8 @@ class ReportLabCanvasUtils():
         pdfmetrics.registerFont(TTFont('Lato-Bold', BOLD_FONT_DIRECTORY))
         pdfmetrics.registerFont(TTFont('Lora-Regular', FONT_DIRECTORY))
         self.can = self.can_1
+        self.skill_reached_y_page_limit = False
+        self.experience_reached_y_page_limit = False
     
     
     def get_output(self) -> PdfWriter:
@@ -684,9 +686,19 @@ class ReportLabCanvasUtils():
 
     def add_skills(self, skills, y_pos:int) -> None:
         try:
+            self.add_oneline_text(text=f'HABILIDADES', pos=(30, y_pos), camp_name='titulo habilidades', len_max=100, interval=' ')
+            y_pos -= 20
+
             for skill in skills:
                 if skill is None:
                     continue
+                if y_pos <= 10:
+                    self.skill_reached_y_page_limit = True
+                    self.change_canvas()
+                    y_pos = 780
+                    self.set_font('Lora-Regular', 10)
+                    self.add_oneline_text(text='HABILIDADES', pos=(30, y_pos), camp_name='titulo habilidades pagina 2', len_max=100, interval=' ')
+                    y_pos -= 20
                 self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=str(skill.name_pt_br), initial_pos=(30, y_pos), len_max=50, camp_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
                 self.add_skills_square(skill=skill, pos=(30, y_pos))
