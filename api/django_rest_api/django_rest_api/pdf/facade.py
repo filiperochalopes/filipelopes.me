@@ -38,6 +38,8 @@ def generate_pdf():
         #pdf.add_skills(skills=Skill.objects.filter(relevance_id=3), y_pos=new_y_pos)
         pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
         
+        pdf.change_canvas()
+        pdf.add_oneline_text(text='CERTIFICADOS', pos=(30, 780), camp_name='titulo certificados', len_max=100, interval=' ')
         
         
         

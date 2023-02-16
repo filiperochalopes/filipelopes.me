@@ -14,26 +14,38 @@ class ReportLabCanvasUtils():
 
     def __init__(self) -> None:
         self.TEMPLATE_DIRECTORY = TEMPLATE_DIRECTORY
-        self.packet = io.BytesIO()
+        self.packet_1 = io.BytesIO()
         # Create canvas and add data
-        self.can = canvas.Canvas(self.packet, pagesize=(595, 841))
+        self.can_1 = canvas.Canvas(self.packet_1, pagesize=(595, 841))
+        #Create second canvas
+        self.packet_2 = io.BytesIO()
+        # Create canvas and add data
+        self.can_2 = canvas.Canvas(self.packet_2, pagesize=(595, 841))
         # Change canvas font to mach with the document
         # this is also changed in the document to some especific fields
         pdfmetrics.registerFont(TTFont('Lato-Bold', BOLD_FONT_DIRECTORY))
         pdfmetrics.registerFont(TTFont('Lora-Regular', FONT_DIRECTORY))
+        self.can = self.can_1
     
     
     def get_output(self) -> PdfWriter:
-        self.can.save()
-        self.packet.seek(0)
-        new_pdf = PdfReader(self.packet)
+        self.can_1.save()
+        self.packet_1.seek(0)
+        self.can_2.save()
+        self.packet_2.seek(0)
+        new_pdf = PdfReader(self.packet_1)
+        new_pdf_2 = PdfReader(self.packet_2)
         # read the template pdf 
         template_pdf = PdfReader(open(self.TEMPLATE_DIRECTORY, "rb"))
         output = PdfWriter()
         # add the "watermark" (which is the new pdf) on the existing page
         page = template_pdf.pages[0]
         page.merge_page(new_pdf.pages[0])
+        #raise Exception(str(len(template_pdf.pages)))
+        page_2 = template_pdf.pages[1]
+        page_2.merge_page(new_pdf_2.pages[0])
         output.add_page(page)
+        output.add_page(page_2)
         return output
     
     def validate_func_args(self, function_to_verify, variables_to_verify:dict, nullable_variables:list=[]) -> None:
@@ -76,6 +88,14 @@ class ReportLabCanvasUtils():
             raise Exception(f'KeyError, Alguma chave em {function_to_verify} esta faltando, enquanto validava os tipos, a chaves necessarias sao {args_types.keys()}')
         except:
             raise Exception(f'{arg_to_validate} tipo {right_type} erro desconhecido enquanto validava os argumentos {variables_keys} na funcao {function_to_verify}')
+
+
+    def change_canvas(self) -> None:
+        """Change to second canvas to write new data"""
+        self.can_1 = self.can
+        self.can = self.can_2
+        return None
+
 
     def set_font(self, fontname:str, size:int) -> None:
         """Change canvas font
@@ -234,6 +254,8 @@ class ReportLabCanvasUtils():
             output_file = open(self.WRITE_DIRECTORY, 'wb')
             output.write(output_file)
             output_file.close()
+        except Exception as error:
+            raise error
         except:
             raise Exception("Erro desconhecido enquanto criava um novo arquivo pdf")
 
@@ -253,8 +275,10 @@ class ReportLabCanvasUtils():
             bytes_stream = io.BytesIO()
             output.write(bytes_stream)
             return base64.b64encode(bytes_stream.getvalue())
+        except Exception as error:
+            raise error
         except:
-            raise Exception("Erro desconhecido enquanto criava um novo arquivo pdf")
+            raise Exception("Erro desconhecido enquanto criava um novo arquivo pdf em base64")
 
 
     def add_oneline_text(self, text:str, pos:tuple, camp_name:str, len_max:int, nullable:bool=False, len_min:int=0, interval:str='', centralized:bool=False, right_align:bool=False) -> None:
@@ -665,9 +689,7 @@ class ReportLabCanvasUtils():
                     continue
                 self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=str(skill.name_pt_br), initial_pos=(30, y_pos), len_max=50, camp_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
-                
                 self.add_skills_square(skill=skill, pos=(30, y_pos))
-                
                 
                 y_pos -= 10
 
@@ -690,6 +712,7 @@ class ReportLabCanvasUtils():
         if last_block_size != 0:
             self.add_square(pos=(x_pos, pos[1]), size=(last_block_size, 5))
         return None
+
 
     def add_work_experience(self, experiences, y_pos:int) -> None:
         try:
