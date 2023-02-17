@@ -32,13 +32,17 @@ def generate_pdf(relevance_level=3):
         old_y_pos = new_y_pos
         # relevance_id has to be 3 (HIGH)
         new_y_pos = pdf.add_education(courses=Course.objects.filter(relevance_id=relevance_level), y_pos=new_y_pos)
-        pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id=relevance_level), y_pos=old_y_pos)
+        work_y_pos = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id=relevance_level), y_pos=old_y_pos)
         new_y_pos -= 25
         # TODO
         # Add Skill relevance_id filter
         #pdf.add_skills(skills=Skill.objects.filter(relevance_id=relevance_level), y_pos=new_y_pos)
         y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
+        if y_pos < 30 and not pdf.skill_reached_y_page_limit:
+            pdf.skill_reached_y_page_limit = True
+            y_pos = 780
         
+        #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id=relevance_level), y_pos=work_y_pos)
         
         #pdf.add_oneline_text(text='CERTIFICADOS', pos=(30, 780), field_name='titulo certificados', len_max=100, interval=' ')
         
