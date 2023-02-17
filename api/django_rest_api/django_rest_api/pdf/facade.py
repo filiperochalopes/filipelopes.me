@@ -7,7 +7,7 @@ import os
 import json
 
 
-def generate_pdf(relevance_level=2):
+def generate_pdf(relevance_level=3):
     pdf = ReportLabCanvasUtils()
     try:
         with open(settings.FILIPE_DATA_JSON, 'r') as f:
@@ -38,11 +38,9 @@ def generate_pdf(relevance_level=2):
         # Add Skill relevance_id filter
         #pdf.add_skills(skills=Skill.objects.filter(relevance_id=relevance_level), y_pos=new_y_pos)
         y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
-        if y_pos < 30 and not pdf.skill_reached_y_page_limit:
-            pdf.skill_reached_y_page_limit = True
-            y_pos = 780
         
         #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id=relevance_level), y_pos=work_y_pos)
+        #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.all(), y_pos=work_y_pos)
         
         #pdf.add_oneline_text(text='CERTIFICADOS', pos=(30, 780), field_name='titulo certificados', len_max=100, interval=' ')
         

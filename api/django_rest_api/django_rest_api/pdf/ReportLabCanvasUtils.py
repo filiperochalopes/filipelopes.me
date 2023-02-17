@@ -713,6 +713,9 @@ class ReportLabCanvasUtils():
                 self.add_skills_square(skill=skill, pos=(30, y_pos))
                 
                 y_pos -= 10
+            if y_pos < 30 and not self.skill_reached_y_page_limit:
+                self.skill_reached_y_page_limit = True
+                y_pos = 780
 
             return y_pos
         except Exception as error:
@@ -768,6 +771,9 @@ class ReportLabCanvasUtils():
                     y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, field_name=f'Conquistas no trabalho {exp.id}', nullable=True)
                     y_pos -= 3
                 
+                if y_pos < 30 and not self.experience_reached_y_page_limit:
+                    self.experience_reached_y_page_limit = True
+                    y_pos = 780
                 y_pos -= 20
             
             return y_pos
@@ -788,9 +794,19 @@ class ReportLabCanvasUtils():
 
     # def add_certificates(self, certificates, y_pos):
     #     try:
+    #         if self.experience_reached_y_page_limit and not self.skill_reached_y_page_limit:
+    #             self.change_canvas(change_to_second_page=True)
+            
     #         self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
     #         y_pos -= 25
     #         for certif in certificates:
+    #             if y_pos <= 20:
+    #                 self.experience_reached_y_page_limit = True
+    #                 self.change_canvas(change_to_second_page=True)
+    #                 y_pos = 780
+    #                 self.set_font('Lora-Regular', 10)
+    #                 self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
+    #                 y_pos -= 20
     #             self.set_font('Lato-Bold', 10)
     #             # Add description_pt_br, since, until, name_pt_br, organization
     #             y_pos = self.add_morelines_text(text=str(certif.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
