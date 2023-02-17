@@ -815,14 +815,14 @@ class ReportLabCanvasUtils():
                     self.set_font('Lora-Regular', 10)
                     self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
                     y_pos -= 20
-                self.set_font('Lato-Bold', 10)
+                self.set_font('Lato-Bold', 9)
                 # Add description_pt_br, since, until, name_pt_br, organization
                 y_pos = self.add_morelines_text(text=str(certif.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
                 
                 self.set_font('Lora-Regular', 10)
                 y_pos -= 5
                 y_pos = self.add_morelines_text(text=f'{certif.date.year}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Ano do certificado {certif.id}')
-                y_pos -= 20
+                y_pos -= 10
             
             return y_pos
         except Exception as error:
