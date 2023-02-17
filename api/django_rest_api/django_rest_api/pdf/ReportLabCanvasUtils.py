@@ -31,6 +31,8 @@ class ReportLabCanvasUtils():
     
     
     def get_output(self) -> PdfWriter:
+        if self.skill_reached_y_page_limit and self.experience_reached_y_page_limit:
+            self.can_2 = self.can
         self.can_1.save()
         self.packet_1.seek(0)
         self.can_2.save()
@@ -50,6 +52,7 @@ class ReportLabCanvasUtils():
         output.add_page(page_2)
         return output
     
+
     def validate_func_args(self, function_to_verify, variables_to_verify:dict, nullable_variables:list=[]) -> None:
         """validate all args with the type needed or default values
 
@@ -792,36 +795,40 @@ class ReportLabCanvasUtils():
         y_pos -= 20
         return y_pos
 
-    # def add_certificates(self, certificates, y_pos):
-    #     try:
-    #         if self.experience_reached_y_page_limit and not self.skill_reached_y_page_limit:
-    #             self.change_canvas(change_to_second_page=True)
+
+    def add_certificates(self, certificates, y_pos):
+        try:
+            if self.skill_reached_y_page_limit:
+                self.change_canvas(change_to_second_page=False)
             
-    #         self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
-    #         y_pos -= 25
-    #         for certif in certificates:
-    #             if y_pos <= 20:
-    #                 self.experience_reached_y_page_limit = True
-    #                 self.change_canvas(change_to_second_page=True)
-    #                 y_pos = 780
-    #                 self.set_font('Lora-Regular', 10)
-    #                 self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
-    #                 y_pos -= 20
-    #             self.set_font('Lato-Bold', 10)
-    #             # Add description_pt_br, since, until, name_pt_br, organization
-    #             y_pos = self.add_morelines_text(text=str(certif.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
-                
-    #             self.set_font('Lora-Regular', 10)
-    #             y_pos -= 5
-    #             y_pos = self.add_morelines_text(text=f'{certif.date.year}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Ano do certificado {certif.id}')
-                
-    #             y_pos -= 20
+            if self.experience_reached_y_page_limit:
+                self.change_canvas(change_to_second_page=True)
             
-    #         return y_pos
-    #     except Exception as error:
-    #         raise error
-    #     except:
-    #         raise Exception('Erro desconhecido enquando adicionava certificatos')
+            self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
+            y_pos -= 25
+            for certif in certificates:
+                if y_pos <= 20:
+                    self.experience_reached_y_page_limit = True
+                    self.skill_reached_y_page_limit = True
+                    self.change_canvas(change_to_second_page=True)
+                    y_pos = 780
+                    self.set_font('Lora-Regular', 10)
+                    self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
+                    y_pos -= 20
+                self.set_font('Lato-Bold', 10)
+                # Add description_pt_br, since, until, name_pt_br, organization
+                y_pos = self.add_morelines_text(text=str(certif.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
+                
+                self.set_font('Lora-Regular', 10)
+                y_pos -= 5
+                y_pos = self.add_morelines_text(text=f'{certif.date.year}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Ano do certificado {certif.id}')
+                y_pos -= 20
+            
+            return y_pos
+        except Exception as error:
+            raise error
+        except:
+            raise Exception('Erro desconhecido enquando adicionava certificatos')
 
 
     def add_cnpj(self, cnpj:str, pos:tuple, field_name:str,nullable:bool=False, interval:str='') -> None:

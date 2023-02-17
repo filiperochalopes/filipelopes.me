@@ -40,9 +40,8 @@ def generate_pdf(relevance_level=3):
         y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
         
         #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id=relevance_level), y_pos=work_y_pos)
-        #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.all(), y_pos=work_y_pos)
+        work_y_pos = pdf.add_certificates(certificates=Certificate.objects.all(), y_pos=work_y_pos)
         
-        #pdf.add_oneline_text(text='CERTIFICADOS', pos=(30, 780), field_name='titulo certificados', len_max=100, interval=' ')
         
         
         
