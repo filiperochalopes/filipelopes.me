@@ -92,10 +92,14 @@ class ReportLabCanvasUtils():
             raise Exception(f'{arg_to_validate} tipo {right_type} erro desconhecido enquanto validava os argumentos {variables_keys} na funcao {function_to_verify}')
 
 
-    def change_canvas(self) -> None:
+    def change_canvas(self, change_to_second_page:bool=True) -> None:
         """Change to second canvas to write new data"""
-        self.can_1 = self.can
-        self.can = self.can_2
+        if change_to_second_page:
+            self.can_1 = self.can
+            self.can = self.can_2
+            return None
+        self.can_2 = self.can
+        self.can = self.can_1
         return None
 
 
@@ -686,8 +690,11 @@ class ReportLabCanvasUtils():
 
     def add_skills(self, skills, y_pos:int) -> None:
         try:
-            self.add_oneline_text(text=f'HABILIDADES', pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
+            self.add_oneline_text(text='HABILIDADES', pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
             y_pos -= 20
+
+            if self.experience_reached_y_page_limit:
+                self.change_canvas(change_to_second_page=False)
 
             for skill in skills:
                 if skill is None:
@@ -732,16 +739,21 @@ class ReportLabCanvasUtils():
         try:
             y_pos -= 25
             for exp in experiences:
+                if y_pos <= 10:
+                    y_pos = self.change_work_experience_canvas()
                 self.set_font('Lato-Bold', 10)
                 # Add description_pt_br, since, until, name_pt_br, organization
                 y_pos = self.add_morelines_text(text=str(exp.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}')
-                
                 self.set_font('Lora-Regular', 10)
                 until = str(exp.until.year) if exp.until is not None else 'Atual'
                 start_end = f'{str(exp.since.year)} - {until}'
                 y_pos -= 5
+                if y_pos <= 10:
+                    y_pos = self.change_work_experience_canvas()
                 y_pos = self.add_morelines_text(text=f'{str(exp.organization)} / {start_end}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Nome da empresa {exp.id} e periodo de trabalho')
 
+                if y_pos <= 10:
+                    y_pos = self.change_work_experience_canvas()
                 y_pos -= 5
                 y_pos = self.add_morelines_text(text=str(exp.key_achievement_pt_br), initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Descricao do trabalho {exp.id}')
 
@@ -751,6 +763,8 @@ class ReportLabCanvasUtils():
                     if len(achievement) == 0:
                         continue
                     achievement = '- ' + achievement
+                    if y_pos <= 10:
+                        y_pos = self.change_work_experience_canvas()
                     y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, field_name=f'Conquistas no trabalho {exp.id}', nullable=True)
                     y_pos -= 3
                 
@@ -762,6 +776,15 @@ class ReportLabCanvasUtils():
         except:
             raise Exception('Erro desconhecido enquando adicionava experiencia profissional')
 
+
+    def change_work_experience_canvas(self):
+        self.experience_reached_y_page_limit = True
+        self.change_canvas(change_to_second_page=True)
+        y_pos = 780
+        self.set_font('Lora-Regular', 10)
+        self.add_oneline_text(text=f'EXPERIÊNCIA PROFISSIONAL', pos=(217, y_pos), field_name='titulo experiencia pagina 2', len_max=100, interval=' ')
+        y_pos -= 20
+        return y_pos
 
     # def add_certificates(self, certificates, y_pos):
     #     try:

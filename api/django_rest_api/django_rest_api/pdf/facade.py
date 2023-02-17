@@ -7,7 +7,7 @@ import os
 import json
 
 
-def generate_pdf(relevance_level=3):
+def generate_pdf(relevance_level=2):
     pdf = ReportLabCanvasUtils()
     try:
         with open(settings.FILIPE_DATA_JSON, 'r') as f:
