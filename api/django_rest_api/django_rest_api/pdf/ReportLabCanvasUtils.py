@@ -805,6 +805,7 @@ class ReportLabCanvasUtils():
             if self.experience_reached_y_page_limit:
                 self.change_canvas(change_to_second_page=True)
             
+            self.set_font('Lora-Regular', 12)
             self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
             y_pos -= 25
             for certif in certificates:
