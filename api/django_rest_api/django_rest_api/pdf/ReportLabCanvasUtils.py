@@ -693,6 +693,7 @@ class ReportLabCanvasUtils():
 
     def add_skills(self, skills, y_pos:int) -> None:
         try:
+            self.set_font('Lora-Regular', 12)
             self.add_oneline_text(text='HABILIDADES', pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
             y_pos -= 20
 
@@ -706,7 +707,7 @@ class ReportLabCanvasUtils():
                     self.skill_reached_y_page_limit = True
                     self.change_canvas()
                     y_pos = 780
-                    self.set_font('Lora-Regular', 10)
+                    self.set_font('Lora-Regular', 12)
                     self.add_oneline_text(text='HABILIDADES', pos=(30, y_pos), field_name='titulo habilidades pagina 2', len_max=100, interval=' ')
                     self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
                     y_pos -= 20
@@ -750,7 +751,7 @@ class ReportLabCanvasUtils():
                 self.set_font('Lato-Bold', 10)
                 # Add description_pt_br, since, until, name_pt_br, organization
                 y_pos = self.add_morelines_text(text=str(exp.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}')
-                self.set_font('Lora-Regular', 10)
+                self.set_font('Lora-Regular', 9)
                 until = str(exp.until.year) if exp.until is not None else 'Atual'
                 start_end = f'{str(exp.since.year)} - {until}'
                 y_pos -= 5
@@ -812,7 +813,7 @@ class ReportLabCanvasUtils():
                     self.skill_reached_y_page_limit = True
                     self.change_canvas(change_to_second_page=True)
                     y_pos = 780
-                    self.set_font('Lora-Regular', 10)
+                    self.set_font('Lora-Regular', 12)
                     self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
                     y_pos -= 20
                 self.set_font('Lato-Bold', 9)

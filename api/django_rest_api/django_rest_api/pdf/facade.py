@@ -30,8 +30,10 @@ def generate_pdf(relevance_level=3):
         # Bar between about and education
         pdf.add_rectangle(pos=(30, new_y_pos), width=535, height=1, fill=1, color=(0,0,0,0))
         new_y_pos -= 40
+        pdf.set_font('Lora-Regular', 12)
         pdf.add_oneline_text(text=f'EDUCAÇÃO', pos=(30, new_y_pos), field_name='titulo Educacao', len_max=100, interval=' ')
         pdf.add_oneline_text(text=f'EXPERIÊNCIA PROFISSIONAL', pos=(217, new_y_pos), field_name='titulo experiencia', len_max=100, interval=' ')
+        pdf.set_font('Lora-Regular', 9)
         # vertical bar between education and experience
         pdf.add_rectangle(pos=(177, new_y_pos+10), width=1, height=-520, fill=1, color=(0,0,0,0))
         old_y_pos = new_y_pos
