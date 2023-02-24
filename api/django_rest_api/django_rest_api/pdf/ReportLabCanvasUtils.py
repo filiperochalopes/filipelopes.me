@@ -846,7 +846,11 @@ class ReportLabCanvasUtils():
                 self.change_canvas(change_to_second_page=True)
             
             self.set_font('Lora-Regular', 12)
-            self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
+            certificates_titles = {
+                'pt': 'CERTIFICADOS',
+                'en': 'CERTIFICATES',
+            }
+            self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
             y_pos -= 25
             for certif in certificates:
                 if y_pos <= 20:
@@ -855,11 +859,18 @@ class ReportLabCanvasUtils():
                     self.change_canvas(change_to_second_page=True)
                     y_pos = 780
                     self.set_font('Lora-Regular', 12)
-                    self.add_oneline_text(text='CERTIFICADOS', pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
+                    self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
                     y_pos -= 20
                 self.set_font('Lato-Bold', 9)
-                # Add description_pt_br, since, until, name_pt_br, organization
-                y_pos = self.add_morelines_text(text=str(certif.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
+                certif_info = {
+                    'pt': {
+                        'title': certif.title_pt_br,
+                    },
+                    'en': {
+                        'title': certif.title_en_us,
+                    }
+                }
+                y_pos = self.add_morelines_text(text=str(certif_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
                 
                 self.set_font('Lora-Regular', 10)
                 y_pos -= 5
