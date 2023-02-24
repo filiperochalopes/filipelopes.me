@@ -674,12 +674,21 @@ class ReportLabCanvasUtils():
             y_pos -= 25
             for course in courses:
                 self.set_font('Lato-Bold', 10)
-                # Add description_pt_br, since, until, name_pt_br, place_pt_br
-                y_pos = self.add_morelines_text(text=str(course.name_pt_br).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=50, decrease_ypos=10, field_name=f'Nome do curso {course.id}')
+                course_info = {
+                    'pt': {
+                        'name': course.name_pt_br,
+                        'place': course.place_pt_br,
+                    },
+                    'en': {
+                        'name': course.name_en_us,
+                        'place': course.place_en_us,
+                    }
+                }
+                y_pos = self.add_morelines_text(text=str(course_info[self.default_language]['name']).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}')
                 
                 self.set_font('Lora-Regular', 10)
                 y_pos -= 5
-                y_pos = self.add_morelines_text(text=str(course.place_pt_br), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=50, decrease_ypos=10, field_name=f'Nome da instituicao {course.id}')
+                y_pos = self.add_morelines_text(text=str(course_info[self.default_language]['place']), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=100, decrease_ypos=10, field_name=f'Nome da instituicao {course.id}')
 
                 y_pos -= 5
                 until = str(course.until.year) if course.until is not None else 'Atual'

@@ -7,7 +7,7 @@ import os
 import json
 
 
-def generate_pdf(relevance_level=3, lang:str = 'en'):
+def generate_pdf(relevance_level=3, lang:str='en'):
     pdf = ReportLabCanvasUtils()
     try:
         with open(settings.FILIPE_DATA_JSON, 'r') as f:
@@ -34,11 +34,11 @@ def generate_pdf(relevance_level=3, lang:str = 'en'):
             pdf.add_oneline_text(text=str(profession_title_en).upper(), pos=(294, 747), field_name='Professional Title', len_max=100, centralized=True, interval=' ')
 
         pdf.set_font('Lora-Regular', 10)
-        pdf.add_oneline_text(text=f"{filipe_data.get('phone_number')}  |  {filipe_data.get('email')}  |  {filipe_data.get('website')}", pos=(294, 700), field_name='Informacoes de Contato', len_max=100, centralized=True)
+        pdf.add_oneline_text(text=f"{filipe_data.get('phone_number')}  |  {filipe_data.get('email')}  |  {filipe_data.get('website')}", pos=(294, 700), field_name='Informacoes de Contato | Contact info', len_max=100, centralized=True)
         # bars between contact info and about
         pdf.add_rectangle(pos=(30, 680), width=535, height=1, fill=1, color=(0,0,0,0))
         pdf.add_rectangle(pos=(30, 673), width=535, height=1, fill=1, color=(0,0,0,0))
-        last_y_pos = pdf.add_morelines_text(text=filipe_data.get('about'), initial_pos=(30, 630), field_name='Sobre', len_max=5000, decrease_ypos=16, char_per_lines=110)
+        last_y_pos = pdf.add_morelines_text(text=filipe_data.get('about'), initial_pos=(30, 630), field_name='Sobre | About', len_max=5000, decrease_ypos=16, char_per_lines=110)
         new_y_pos = last_y_pos - (16*2)
         # Bar between about and education
         pdf.add_rectangle(pos=(30, new_y_pos), width=535, height=1, fill=1, color=(0,0,0,0))
