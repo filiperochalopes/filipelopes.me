@@ -38,7 +38,7 @@ class ReportLabCanvasUtils():
             new_pdfs = []
             new_pages = []
             pdf_writer = PdfFileWriter()
-            for key, value in self.canvas_dict.items():
+            for value in self.canvas_dict.values():
                 value[0].save()
                 value[1].seek(0)
                 # Create pdf object and new blank page
