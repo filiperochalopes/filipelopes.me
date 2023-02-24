@@ -770,13 +770,27 @@ class ReportLabCanvasUtils():
         try:
             y_pos -= 25
             for exp in experiences:
+                exp_info = {
+                    'pt': {
+                        'title': exp.title_pt_br,
+                        'description': exp.description_pt_br,
+                        'achivements': exp.key_achievement_pt_br,
+                        'present': 'Atual',
+                    },
+                    'en': {
+                        'title': exp.title_en_us,
+                        'description': exp.description_en_us,
+                        'achivements': exp.key_achievement_en_us,
+                        'present': 'Present',
+                    }
+                }
                 if y_pos <= 10:
                     y_pos = self.change_work_experience_canvas()
                 self.set_font('Lato-Bold', 10)
-                # Add description_pt_br, since, until, name_pt_br, organization
-                y_pos = self.add_morelines_text(text=str(exp.title_pt_br).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}')
+                
+                y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}')
                 self.set_font('Lora-Regular', 9)
-                until = str(exp.until.year) if exp.until is not None else 'Atual'
+                until = str(exp.until.year) if exp.until is not None else exp_info[self.default_language].get('present')
                 start_end = f'{str(exp.since.year)} - {until}'
                 y_pos -= 5
                 if y_pos <= 10:
@@ -786,10 +800,10 @@ class ReportLabCanvasUtils():
                 if y_pos <= 10:
                     y_pos = self.change_work_experience_canvas()
                 y_pos -= 5
-                y_pos = self.add_morelines_text(text=str(exp.key_achievement_pt_br), initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Descricao do trabalho {exp.id}')
+                y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('achivements')), initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Descricao do trabalho {exp.id}')
 
                 y_pos -= 5
-                for achievement in str(exp.description_pt_br).split('-'):
+                for achievement in str(exp_info[self.default_language].get('description')).split('-'):
                     achievement = achievement.replace('\n', '').strip()
                     if len(achievement) == 0:
                         continue

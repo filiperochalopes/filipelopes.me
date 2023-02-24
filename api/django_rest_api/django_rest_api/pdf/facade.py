@@ -15,7 +15,7 @@ def generate_pdf(relevance_level=3, lang:str='pt'):
         pdf.set_font('Lato-Bold', 35)
         pdf.add_oneline_text(text=str(filipe_data['name']).upper(), pos=(294, 780), field_name='Nome', len_max=100, centralized=True, interval=' ')
         
-        #lang = 'en'
+        lang = 'en'
         if lang == 'pt':
             # Variable to be used in titles
             language_is_portuguese = True
