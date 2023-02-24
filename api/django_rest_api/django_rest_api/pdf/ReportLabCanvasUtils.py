@@ -14,6 +14,7 @@ class ReportLabCanvasUtils():
 
     def __init__(self) -> None:
         self.TEMPLATE_DIRECTORY = TEMPLATE_DIRECTORY
+        self.default_language = 'pt'
         self.packet_1 = io.BytesIO()
         # Create canvas and add data
         self.can_1 = canvas.Canvas(self.packet_1, pagesize=(595, 841))

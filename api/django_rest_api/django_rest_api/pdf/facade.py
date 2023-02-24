@@ -7,7 +7,7 @@ import os
 import json
 
 
-def generate_pdf(relevance_level=3):
+def generate_pdf(relevance_level=3, lang:str = 'en'):
     pdf = ReportLabCanvasUtils()
     try:
         with open(settings.FILIPE_DATA_JSON, 'r') as f:
@@ -15,10 +15,23 @@ def generate_pdf(relevance_level=3):
         pdf.set_font('Lato-Bold', 35)
         pdf.add_oneline_text(text=str(filipe_data['name']).upper(), pos=(294, 780), field_name='Nome', len_max=100, centralized=True, interval=' ')
         
+        if lang == 'pt':
+            # Variable to be used in titles
+            language_is_portuguese = True
+            pdf.default_language = 'pt'
+        elif lang == 'en':
+            language_is_portuguese = False
+            pdf.default_language = 'en'
+        else:
+            raise Exception(f'selected language "{lang}" does not exist, please select "pt" or "en"')
+
         pdf.set_font('Lora-Regular', 12)
         profession_title_pt = 'Desenvolvedor Web e Médico'
         profession_title_en = 'Web Developer and M.D./Physician'
-        pdf.add_oneline_text(text=str(profession_title_pt).upper(), pos=(294, 747), field_name='Titulo profissional', len_max=100, centralized=True, interval=' ')
+        if language_is_portuguese:
+            pdf.add_oneline_text(text=str(profession_title_pt).upper(), pos=(294, 747), field_name='Titulo profissional', len_max=100, centralized=True, interval=' ')
+        else:
+            pdf.add_oneline_text(text=str(profession_title_en).upper(), pos=(294, 747), field_name='Professional Title', len_max=100, centralized=True, interval=' ')
 
         pdf.set_font('Lora-Regular', 10)
         pdf.add_oneline_text(text=f"{filipe_data.get('phone_number')}  |  {filipe_data.get('email')}  |  {filipe_data.get('website')}", pos=(294, 700), field_name='Informacoes de Contato', len_max=100, centralized=True)
@@ -31,8 +44,13 @@ def generate_pdf(relevance_level=3):
         pdf.add_rectangle(pos=(30, new_y_pos), width=535, height=1, fill=1, color=(0,0,0,0))
         new_y_pos -= 40
         pdf.set_font('Lora-Regular', 12)
-        pdf.add_oneline_text(text=f'EDUCAÇÃO', pos=(30, new_y_pos), field_name='titulo Educacao', len_max=100, interval=' ')
-        pdf.add_oneline_text(text=f'EXPERIÊNCIA PROFISSIONAL', pos=(217, new_y_pos), field_name='titulo experiencia', len_max=100, interval=' ')
+        if language_is_portuguese:
+            pdf.add_oneline_text(text=f'EDUCAÇÃO', pos=(30, new_y_pos), field_name='titulo Educacao', len_max=100, interval=' ')
+            pdf.add_oneline_text(text=f'EXPERIÊNCIA PROFISSIONAL', pos=(217, new_y_pos), field_name='titulo experiencia', len_max=100, interval=' ')
+        else:
+            pdf.add_oneline_text(text=f'EDUCATION', pos=(30, new_y_pos), field_name='Education Title', len_max=100, interval=' ')
+            pdf.add_oneline_text(text=f'PROFESSIONAL EXPERIENCE', pos=(217, new_y_pos), field_name='Experience title', len_max=100, interval=' ')
+            
         pdf.set_font('Lora-Regular', 9)
         # vertical bar between education and experience
         pdf.add_rectangle(pos=(177, new_y_pos+10), width=1, height=-520, fill=1, color=(0,0,0,0))
