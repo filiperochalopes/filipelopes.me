@@ -1,7 +1,7 @@
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from PyPDF2 import PdfWriter, PdfReader
+from PyPDF2 import PdfWriter, PdfReader, PdfFileWriter
 import io
 import re
 import datetime
@@ -32,26 +32,30 @@ class ReportLabCanvasUtils():
     
     
     def get_output(self) -> PdfWriter:
-        if self.skill_reached_y_page_limit and self.experience_reached_y_page_limit:
-            self.can_2 = self.can
-        self.can_1.save()
-        self.packet_1.seek(0)
-        self.can_2.save()
-        self.packet_2.seek(0)
-        new_pdf = PdfReader(self.packet_1)
-        new_pdf_2 = PdfReader(self.packet_2)
-        # read the template pdf 
-        template_pdf = PdfReader(open(self.TEMPLATE_DIRECTORY, "rb"))
-        output = PdfWriter()
-        # add the "watermark" (which is the new pdf) on the existing page
-        page = template_pdf.pages[0]
-        page.merge_page(new_pdf.pages[0])
-        #raise Exception(str(len(template_pdf.pages)))
-        page_2 = template_pdf.pages[1]
-        page_2.merge_page(new_pdf_2.pages[0])
-        output.add_page(page)
-        output.add_page(page_2)
-        return output
+        try:
+            if self.skill_reached_y_page_limit and self.experience_reached_y_page_limit:
+                self.can_2 = self.can
+            self.can_1.save()
+            self.packet_1.seek(0)
+            self.can_2.save()
+            self.packet_2.seek(0)
+            new_pdf = PdfReader(self.packet_1)
+            new_pdf_2 = PdfReader(self.packet_2)
+            # read the template pdf 
+            #template_pdf = PdfReader(open(self.TEMPLATE_DIRECTORY, "rb"))
+            pdf_writer = PdfFileWriter()
+            page_1 = pdf_writer.addBlankPage(width=595, height=841)
+            page_2 = pdf_writer.addBlankPage(width=595, height=841)
+            output = PdfWriter()
+            # add the "watermark" (which is the new pdf) on the existing page
+            page_1.merge_page(new_pdf.pages[0])
+            #raise Exception(str(len(template_pdf.pages)))
+            page_2.merge_page(new_pdf_2.pages[0])
+            output.add_page(page_1)
+            output.add_page(page_2)
+            return output
+        except Exception as e:
+            raise Exception(str(e))
     
 
     def validate_func_args(self, function_to_verify, variables_to_verify:dict, nullable_variables:list=[]) -> None:

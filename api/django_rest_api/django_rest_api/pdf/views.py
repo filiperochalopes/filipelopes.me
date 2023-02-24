@@ -55,7 +55,6 @@ def generate_pdf_curriculum(request):
         return HttpResponse(content=decoded, content_type='application/pdf')
     except Exception as error:
         return HttpResponse(str(error), status=500)
-        #return HttpResponse('Erro inesperado ocorreu enquanto gerava o PDF', status=500)
 
 
 def render_to_pdf(template_src, context_dict={}):
