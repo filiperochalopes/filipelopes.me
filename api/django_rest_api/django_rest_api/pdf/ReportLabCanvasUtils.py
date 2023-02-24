@@ -704,7 +704,11 @@ class ReportLabCanvasUtils():
     def add_skills(self, skills, y_pos:int) -> None:
         try:
             self.set_font('Lora-Regular', 12)
-            self.add_oneline_text(text='HABILIDADES', pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
+            skill_titles = {
+                'pt': 'HABILIDADES',
+                'en': 'SKILLS',
+            }
+            self.add_oneline_text(text=skill_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
             y_pos -= 20
 
             if self.experience_reached_y_page_limit:
@@ -713,17 +717,27 @@ class ReportLabCanvasUtils():
             for skill in skills:
                 if skill is None:
                     continue
+                skill_info = {
+                    'pt': {
+                        'title': 'HABILIDADES',
+                        'name': skill.name_pt_br,
+                    },
+                    'en': {
+                        'title': 'SKILLS',
+                        'name': skill.name_en_us,
+                    }
+                }
                 if y_pos <= 10:
                     self.skill_reached_y_page_limit = True
                     self.change_canvas()
                     y_pos = 780
                     self.set_font('Lora-Regular', 12)
-                    self.add_oneline_text(text='HABILIDADES', pos=(30, y_pos), field_name='titulo habilidades pagina 2', len_max=100, interval=' ')
+                    self.add_oneline_text(text=skill_info[self.default_language].get('title'), pos=(30, y_pos), field_name='titulo habilidades pagina 2', len_max=100, interval=' ')
                     self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
                     y_pos -= 20
                 
                 self.set_font('Lora-Regular', 10)
-                y_pos = self.add_morelines_text(text=str(skill.name_pt_br), initial_pos=(30, y_pos), len_max=50, field_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
+                y_pos = self.add_morelines_text(text=str(skill_info[self.default_language].get('name')), initial_pos=(30, y_pos), len_max=50, field_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
                 self.add_skills_square(skill=skill, pos=(30, y_pos))
                 
                 y_pos -= 10
@@ -732,7 +746,7 @@ class ReportLabCanvasUtils():
                 y_pos = 780
 
             return y_pos
-        except Exception as error:
+        except (Exception, KeyError) as error:
             raise error
         except:
             raise Exception('Erro desconhecido enquando adicionava habilidade')
