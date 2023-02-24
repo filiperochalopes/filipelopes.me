@@ -59,11 +59,11 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         new_y_pos -= 25
         # TODO
         # Add Skill relevance_id filter
-        #pdf.add_skills(skills=Skill.objects.filter(relevance_id=relevance), y_pos=new_y_pos)
-        y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
+        y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id=relevance), y_pos=new_y_pos)
+        #y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
         
-        #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id=relevance), y_pos=work_y_pos)
-        work_y_pos = pdf.add_certificates(certificates=Certificate.objects.all(), y_pos=work_y_pos)
+        work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id=relevance), y_pos=work_y_pos)
+        #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.all(), y_pos=work_y_pos)
         
         
         
