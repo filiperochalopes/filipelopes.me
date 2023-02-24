@@ -684,11 +684,11 @@ class ReportLabCanvasUtils():
                         'place': course.place_en_us,
                     }
                 }
-                y_pos = self.add_morelines_text(text=str(course_info[self.default_language]['name']).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}')
+                y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('name')).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}')
                 
                 self.set_font('Lora-Regular', 10)
                 y_pos -= 5
-                y_pos = self.add_morelines_text(text=str(course_info[self.default_language]['place']), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=100, decrease_ypos=10, field_name=f'Nome da instituicao {course.id}')
+                y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('place')), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=100, decrease_ypos=10, field_name=f'Nome da instituicao {course.id}')
 
                 y_pos -= 5
                 until = str(course.until.year) if course.until is not None else 'Atual'
@@ -746,7 +746,7 @@ class ReportLabCanvasUtils():
                 y_pos = 780
 
             return y_pos
-        except (Exception, KeyError) as error:
+        except Exception as error:
             raise error
         except:
             raise Exception('Erro desconhecido enquando adicionava habilidade')
