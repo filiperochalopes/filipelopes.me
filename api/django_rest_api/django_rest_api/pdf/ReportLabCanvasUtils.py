@@ -809,7 +809,7 @@ class ReportLabCanvasUtils():
                     achievement = achievement.replace('\n', '').strip()
                     if len(achievement) == 0:
                         continue
-                    achievement = '- ' + achievement
+                    achievement = '• ' + achievement
                     if y_pos <= 10:
                         y_pos = self.change_work_experience_canvas()
                     y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, field_name=f'Conquistas no trabalho {exp.id}', nullable=True)
