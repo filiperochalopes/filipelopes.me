@@ -43,7 +43,10 @@ def link_callback(uri, rel):
 
 def generate_pdf_curriculum(request):
     try:
-        pdf_base64_enconded = generate_pdf()
+        pdf_base64_enconded = generate_pdf(
+            relevance=request.GET.get('relevance'),
+            lang=request.GET.get('lang'),
+        )
         decoded = b64decode(pdf_base64_enconded, validate=True)
         with open('/usr/src/app/django_rest_api/django_rest_api/pdf/tests_files/curriculum_test.pdf', 'wb') as f:
             f.write(decoded)
