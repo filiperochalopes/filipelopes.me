@@ -678,10 +678,12 @@ class ReportLabCanvasUtils():
                     'pt': {
                         'name': course.name_pt_br,
                         'place': course.place_pt_br,
+                        'present': 'Atual',
                     },
                     'en': {
                         'name': course.name_en_us,
                         'place': course.place_en_us,
+                        'present': 'Present',
                     }
                 }
                 y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('name')).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}')
@@ -691,7 +693,7 @@ class ReportLabCanvasUtils():
                 y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('place')), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=100, decrease_ypos=10, field_name=f'Nome da instituicao {course.id}')
 
                 y_pos -= 5
-                until = str(course.until.year) if course.until is not None else 'Atual'
+                until = str(course.until.year) if course.until is not None else course_info[self.default_language].get('present')
                 self.add_oneline_text(text=f'{str(course.since.year)} - {until}', pos=(30, y_pos), len_max=20, field_name=f'Inicio do curso {course.id}')
                 y_pos -= 30
             self.add_rectangle(pos=(30, y_pos), width=140, height=1, fill=1, color=(0,0,0,0))
