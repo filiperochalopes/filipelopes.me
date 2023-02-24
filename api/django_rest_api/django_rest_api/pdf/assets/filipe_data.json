@@ -1,7 +1,18 @@
 {
-    "name": "Filipe Rocha Lopes",
-    "phone_number" : "+55 71 98605-6232",
-    "email": "contato@filipelopes.me",
-    "website": "filipelopes.me",
-    "about": "Discípulo de Jesus Cristo, programador criativo com mais de 10 anos de experiência, fundador da empresa ORANGO I/O TECNOLOGIA, concluindo o curso de medicina na Universidade Federal da Bahia. Ao longo dos anos trabalhei para diversos clientes como Marinha do Brasil e organizações do meio ambiente estaduais e internacionais com Javascript, Python, PHP, desenvolvendo e gerenciando desde sistemas de orçamentos e teleatendimento para clínicas até programa com visualização tridimensional. Desejoso por aprender, criar e trazer soluções práticas e simples nas diversas áreas do conhecimento, porém com foco maior em saúde. Atualmente estou estudando matemática avançada e Machine Learning para poder aumentar o alcance e eficiência dos sistemas a serem criados com a real Inteligência Artificial. Gosto muito de praticar atividades físicas e cantar em grupo nas horas vagas."
+    "pt":{
+        "name": "Filipe Rocha Lopes",
+        "professional_title": "Desenvolvedor Web e Médico",
+        "phone_number" : "+55 71 98605-6232",
+        "email": "contato@filipelopes.me",
+        "website": "filipelopes.me",
+        "about": "Discípulo de Jesus Cristo, programador criativo com mais de 10 anos de experiência, fundador da empresa ORANGO I/O TECNOLOGIA, concluindo o curso de medicina na Universidade Federal da Bahia. Ao longo dos anos trabalhei para diversos clientes como Marinha do Brasil e organizações do meio ambiente estaduais e internacionais com Javascript, Python, PHP, desenvolvendo e gerenciando desde sistemas de orçamentos e teleatendimento para clínicas até programa com visualização tridimensional. Desejoso por aprender, criar e trazer soluções práticas e simples nas diversas áreas do conhecimento, porém com foco maior em saúde. Atualmente estou estudando matemática avançada e Machine Learning para poder aumentar o alcance e eficiência dos sistemas a serem criados com a real Inteligência Artificial. Gosto muito de praticar atividades físicas e cantar em grupo nas horas vagas."
+    },
+    "en":{
+        "name": "Filipe Rocha Lopes",
+        "professional_title": "Web Developer and M.D./Physician",
+        "phone_number" : "+55 71 98605-6232",
+        "email": "contato@filipelopes.me",
+        "website": "filipelopes.me",
+        "about": "Disciple of Jesus Christ, creative programmer with more than 10 years of experience, founder of the company ORANGO I/O TECNOLOGIA, completing the medical course at the Federal University of Bahia. Over the years I worked for several clients such as the Brazilian Navy and state and international environmental organizations with Javascript, Python, PHP, developing and managing everything from budgeting and call center systems for clinics to programs with three-dimensional visualization. Eager to learn, create and bring practical and simple solutions in different areas of knowledge, but with a greater focus on health. I am currently studying advanced mathematics and Machine Learning in order to increase the scope and efficiency of systems to be created with real Artificial Intelligence. I really like to practice physical activities and sing in groups in my spare time."
+    }
 }
