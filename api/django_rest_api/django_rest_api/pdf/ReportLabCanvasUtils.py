@@ -18,15 +18,14 @@ class ReportLabCanvasUtils():
         self.packet_1 = io.BytesIO()
         # Create canvas and add data
         self.can_1 = canvas.Canvas(self.packet_1, pagesize=(595, 841))
-        #Create second canvas
-        self.packet_2 = io.BytesIO()
-        # Create canvas and add data
-        self.can_2 = canvas.Canvas(self.packet_2, pagesize=(595, 841))
+        self.canvas_dict = {
+            'can_1': [self.can_1, self.packet_1]
+        }
         # Change canvas font to mach with the document
         # this is also changed in the document to some especific fields
         pdfmetrics.registerFont(TTFont('Lato-Bold', BOLD_FONT_DIRECTORY))
         pdfmetrics.registerFont(TTFont('Lora-Regular', FONT_DIRECTORY))
-        self.can = self.can_1
+        self.can = self.canvas_dict['can_1'][0]
         self.skill_reached_y_page_limit = False
         self.experience_reached_y_page_limit = False
     
@@ -34,13 +33,17 @@ class ReportLabCanvasUtils():
     def get_output(self) -> PdfWriter:
         try:
             if self.skill_reached_y_page_limit and self.experience_reached_y_page_limit:
-                self.can_2 = self.can
-            self.can_1.save()
-            self.packet_1.seek(0)
-            self.can_2.save()
-            self.packet_2.seek(0)
-            new_pdf = PdfReader(self.packet_1)
-            new_pdf_2 = PdfReader(self.packet_2)
+                self.canvas_dict['can_2'][0] = self.can
+            #self.can_1.save()
+            for key, value in self.canvas_dict.items():
+                value[0].save()
+                value[1].seek(0)
+            # self.canvas_dict['can_1'].save()
+            # self.packet_1.seek(0)
+            # self.can_2.save()
+            # self.packet_2.seek(0)
+            new_pdf = PdfReader(self.canvas_dict['can_1'][1])
+            new_pdf_2 = PdfReader(self.canvas_dict['can_2'][1])
             # read the template pdf 
             #template_pdf = PdfReader(open(self.TEMPLATE_DIRECTORY, "rb"))
             pdf_writer = PdfFileWriter()
@@ -103,11 +106,18 @@ class ReportLabCanvasUtils():
     def change_canvas(self, change_to_second_page:bool=True) -> None:
         """Change to second canvas to write new data"""
         if change_to_second_page:
-            self.can_1 = self.can
-            self.can = self.can_2
+            if len(self.canvas_dict.keys()) == 1:
+                #Create second canvas
+                self.packet_2 = io.BytesIO()
+                # Create canvas and add data
+                self.can_2 = canvas.Canvas(self.packet_2, pagesize=(595, 841))
+                self.canvas_dict['can_2'] = [self.can_2, self.packet_2]
+            self.canvas_dict['can_1'][0] = self.can
+            self.can = self.canvas_dict['can_2'][0]
             return None
-        self.can_2 = self.can
-        self.can = self.can_1
+        
+        self.canvas_dict['can_2'][0] = self.can
+        self.can = self.canvas_dict['can_1'][0]
         return None
 
 
