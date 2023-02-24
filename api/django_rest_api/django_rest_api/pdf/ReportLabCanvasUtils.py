@@ -34,39 +34,23 @@ class ReportLabCanvasUtils():
         try:
             if self.skill_reached_y_page_limit and self.experience_reached_y_page_limit:
                 self.canvas_dict['can_2'][0] = self.can
-            #self.can_1.save()
+
+            new_pdfs = []
+            new_pages = []
+            pdf_writer = PdfFileWriter()
             for key, value in self.canvas_dict.items():
                 value[0].save()
                 value[1].seek(0)
-            # self.canvas_dict['can_1'].save()
-            # self.packet_1.seek(0)
-            # self.can_2.save()
-            # self.packet_2.seek(0)
-            new_pdfs = []
-            for key, value in self.canvas_dict.items():
+                # Create pdf object and new blank page
                 new_pdfs.append(PdfReader(value[1]))
-            
-            # new_pdf = PdfReader(self.canvas_dict['can_1'][1])
-            # new_pdf_2 = PdfReader(self.canvas_dict['can_2'][1])
-            # read the template pdf 
-            #template_pdf = PdfReader(open(self.TEMPLATE_DIRECTORY, "rb"))
-            pdf_writer = PdfFileWriter()
-            new_pages = []
-            for page in new_pdfs:
                 new_pages.append(pdf_writer.addBlankPage(width=595, height=841))
-            # page_1 = pdf_writer.addBlankPage(width=595, height=841)
-            # page_2 = pdf_writer.addBlankPage(width=595, height=841)
+
             output = PdfWriter()
             # add the "watermark" (which is the new pdf) on the existing page
             for position in range(0, len(new_pages)):
                 new_pages[position].mergePage(new_pdfs[position].pages[0])
                 output.add_page(new_pages[position])
 
-            # page_1.merge_page(new_pdf.pages[0])
-            # #raise Exception(str(len(template_pdf.pages)))
-            # page_2.merge_page(new_pdf_2.pages[0])
-            # output.add_page(page_1)
-            # output.add_page(page_2)
             return output
         except Exception as e:
             raise Exception(str(e))
