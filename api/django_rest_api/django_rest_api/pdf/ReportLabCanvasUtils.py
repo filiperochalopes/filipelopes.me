@@ -700,12 +700,12 @@ class ReportLabCanvasUtils():
 
     def add_education(self, courses, y_pos:int) -> None:
         try:
-            self.set_font('Lora-Regular', 12)
             education_titles = {
                 'pt': 'EDUCACAO',
                 'en': 'EDUCATION',
             }
 
+            self.set_font('Lora-Regular', 12)
             self.add_oneline_text(text=education_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
             y_pos -= 25
             for course in courses:
