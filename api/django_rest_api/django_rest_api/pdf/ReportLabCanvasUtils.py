@@ -814,10 +814,28 @@ class ReportLabCanvasUtils():
             self.add_square(pos=(x_pos, pos[1]), size=(last_block_size, 5))
         return None
 
+    def change_work_experience_canvas(self, title):
+        self.change_canvas(change_to_next_page=True)
+        y_pos = 780
+        self.set_font('Lora-Regular', 12)
+        self.add_oneline_text(text=title, pos=(217, y_pos), field_name='titulo experiencia pagina 2', len_max=100, interval=' ')
+        y_pos -= 20
+        return y_pos
+
 
     def add_work_experience(self, experiences, y_pos:int) -> None:
         try:
+            experience_titles = {
+                'pt': 'EXPERIÊNCIA PROFISSIONAL',
+                'en': 'WORK EXPERIENCE',
+            }
+
+            if y_pos <= 10:
+                y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
+            self.set_font('Lora-Regular', 12)
+            self.add_oneline_text(text=experience_titles[self.default_language], pos=(217, y_pos), field_name='titulo experiencia', len_max=100, interval=' ')
             y_pos -= 25
+
             for exp in experiences:
                 exp_info = {
                     'pt': {
@@ -834,20 +852,21 @@ class ReportLabCanvasUtils():
                     }
                 }
                 if y_pos <= 10:
-                    y_pos = self.change_work_experience_canvas()
+                    y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                 self.set_font('Lato-Bold', 10)
-                
                 y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}')
                 self.set_font('Lora-Regular', 9)
                 until = str(exp.until.year) if exp.until is not None else exp_info[self.default_language].get('present')
                 start_end = f'{str(exp.since.year)} - {until}'
                 y_pos -= 5
                 if y_pos <= 10:
-                    y_pos = self.change_work_experience_canvas()
+                    y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
+                self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=f'{str(exp.organization)} / {start_end}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Nome da empresa {exp.id} e periodo de trabalho')
 
                 if y_pos <= 10:
-                    y_pos = self.change_work_experience_canvas()
+                    y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
+                    self.set_font('Lora-Regular', 10)
                 y_pos -= 5
                 y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('achivements')), initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Descricao do trabalho {exp.id}')
 
@@ -858,30 +877,20 @@ class ReportLabCanvasUtils():
                         continue
                     achievement = '• ' + achievement
                     if y_pos <= 10:
-                        y_pos = self.change_work_experience_canvas()
+                        y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
+                        self.set_font('Lora-Regular', 10)
                     y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, field_name=f'Conquistas no trabalho {exp.id}', nullable=True)
                     y_pos -= 3
-                
-                if y_pos < 30 and not self.experience_reached_y_page_limit:
-                    self.experience_reached_y_page_limit = True
-                    y_pos = 780
+                    
                 y_pos -= 20
+                if y_pos < 30:
+                    y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
             
             return y_pos, self.current_pag_number   
         except Exception as error:
             raise error
         except:
             raise Exception('Erro desconhecido enquando adicionava experiencia profissional')
-
-
-    def change_work_experience_canvas(self):
-        self.experience_reached_y_page_limit = True
-        self.change_canvas(change_to_next_page=True)
-        y_pos = 780
-        self.set_font('Lora-Regular', 10)
-        self.add_oneline_text(text=f'EXPERIÊNCIA PROFISSIONAL', pos=(217, y_pos), field_name='titulo experiencia pagina 2', len_max=100, interval=' ')
-        y_pos -= 20
-        return y_pos
 
 
     def change_certificate_canvas(self, title) -> int:
@@ -891,6 +900,7 @@ class ReportLabCanvasUtils():
         self.add_oneline_text(text=title, pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
         y_pos -= 20
         return y_pos
+
 
     def add_certificates(self, certificates, y_pos, work_page_number:int):
         try:
@@ -907,7 +917,6 @@ class ReportLabCanvasUtils():
             self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
             y_pos -= 25
             for certif in certificates:
-                self.set_font('Lato-Bold', 9)
                 certif_info = {
                     'pt': {
                         'title': certif.title_pt_br,
@@ -918,6 +927,7 @@ class ReportLabCanvasUtils():
                 }
                 if y_pos <= 20:
                     y_pos = self.change_certificate_canvas(title=certificates_titles.get(self.default_language))
+                self.set_font('Lato-Bold', 9)
                 y_pos = self.add_morelines_text(text=str(certif_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
                 
                 self.set_font('Lora-Regular', 10)
