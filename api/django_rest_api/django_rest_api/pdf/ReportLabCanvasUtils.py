@@ -867,7 +867,7 @@ class ReportLabCanvasUtils():
                     y_pos = 780
                 y_pos -= 20
             
-            return y_pos
+            return y_pos, self.current_pag_number   
         except Exception as error:
             raise error
         except:
@@ -884,30 +884,29 @@ class ReportLabCanvasUtils():
         return y_pos
 
 
-    def add_certificates(self, certificates, y_pos):
+    def change_certificate_canvas(self, title) -> int:
+        self.change_canvas(change_to_next_page=True)
+        y_pos = 780
+        self.set_font('Lora-Regular', 12)
+        self.add_oneline_text(text=title, pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
+        y_pos -= 20
+        return y_pos
+
+    def add_certificates(self, certificates, y_pos, work_page_number:int):
         try:
-            if self.skill_reached_y_page_limit:
-                self.change_canvas(change_to_next_page=False)
-            
-            if self.experience_reached_y_page_limit:
-                self.change_canvas(change_to_next_page=True)
+            self.change_canvas(change_to_next_page=False, change_to_canvas_number=work_page_number)
 
             self.set_font('Lora-Regular', 12)
             certificates_titles = {
                 'pt': 'CERTIFICADOS',
                 'en': 'CERTIFICATES',
             }
+
+            if y_pos <= 20:
+                y_pos = self.change_certificate_canvas(title=certificates_titles.get(self.default_language))
             self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
             y_pos -= 25
             for certif in certificates:
-                if y_pos <= 20:
-                    self.experience_reached_y_page_limit = True
-                    self.skill_reached_y_page_limit = True
-                    self.change_canvas(change_to_next_page=True)
-                    y_pos = 780
-                    self.set_font('Lora-Regular', 12)
-                    self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
-                    y_pos -= 20
                 self.set_font('Lato-Bold', 9)
                 certif_info = {
                     'pt': {
@@ -917,6 +916,8 @@ class ReportLabCanvasUtils():
                         'title': certif.title_en_us,
                     }
                 }
+                if y_pos <= 20:
+                    y_pos = self.change_certificate_canvas(title=certificates_titles.get(self.default_language))
                 y_pos = self.add_morelines_text(text=str(certif_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
                 
                 self.set_font('Lora-Regular', 10)
