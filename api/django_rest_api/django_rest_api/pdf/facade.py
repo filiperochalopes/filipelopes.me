@@ -54,16 +54,16 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         pdf.add_rectangle(pos=(177, new_y_pos+10), width=1, height=-520, fill=1, color=(0,0,0,0))
         old_y_pos = new_y_pos
         # relevance_id has to be 3 (HIGH)
-        new_y_pos = pdf.add_education(courses=Course.objects.filter(relevance_id=relevance), y_pos=new_y_pos)
-        work_y_pos = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id=relevance), y_pos=old_y_pos)
+        new_y_pos = pdf.add_education(courses=Course.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
+        work_y_pos = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id__gte=relevance), y_pos=old_y_pos)
         new_y_pos -= 25
         # TODO
         # Add Skill relevance_id filter
-        # y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id=relevance), y_pos=new_y_pos)
-        y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
+        y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
+        #y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
         
-        # work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id=relevance), y_pos=work_y_pos)
-        work_y_pos = pdf.add_certificates(certificates=Certificate.objects.all(), y_pos=work_y_pos)
+        work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id__gte=relevance), y_pos=work_y_pos)
+        #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.all(), y_pos=work_y_pos)
         
         
         
