@@ -693,7 +693,7 @@ class ReportLabCanvasUtils():
     def change_education_canvas(self, title) -> int:
         self.change_canvas(change_to_next_page=True)
         y_pos = 780
-        self.set_font('Lora-Regular', 10)
+        self.set_font('Lora-Regular', 12)
         self.add_oneline_text(text=title, pos=(30, y_pos), field_name='titulo educacao next page', len_max=100, interval=' ')
         self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
         y_pos -= 20
@@ -710,7 +710,6 @@ class ReportLabCanvasUtils():
             self.add_oneline_text(text=education_titles[self.default_language], pos=(30, y_pos), field_name='titulo educacao', len_max=100, interval=' ')
             y_pos -= 25
             for course in courses:
-                self.set_font('Lato-Bold', 10)
                 course_info = {
                     'pt': {
                         'name': course.name_pt_br,
@@ -725,6 +724,7 @@ class ReportLabCanvasUtils():
                 }
                 if y_pos <= 10:
                     y_pos = self.change_education_canvas(title=education_titles[self.default_language])
+                self.set_font('Lato-Bold', 10)
                 y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('name')).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}')
                 
                 self.set_font('Lora-Regular', 10)
@@ -767,6 +767,7 @@ class ReportLabCanvasUtils():
                 y_pos = self.change_skill_canvas(title=skill_info[self.default_language].get('title'))
             
             # Change to same canvas that experience
+            self.set_font('Lora-Regular', 12)
             self.add_oneline_text(text=skill_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
             y_pos -= 20
 
