@@ -694,7 +694,8 @@ class ReportLabCanvasUtils():
         self.change_canvas(change_to_next_page=True)
         y_pos = 780
         self.set_font('Lora-Regular', 10)
-        self.add_oneline_text(text=title, pos=(217, y_pos), field_name='titulo experiencia pagina 2', len_max=100, interval=' ')
+        self.add_oneline_text(text=title, pos=(30, y_pos), field_name='titulo educacao next page', len_max=100, interval=' ')
+        self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
         y_pos -= 20
         return y_pos
 
@@ -706,7 +707,7 @@ class ReportLabCanvasUtils():
             }
 
             self.set_font('Lora-Regular', 12)
-            self.add_oneline_text(text=education_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
+            self.add_oneline_text(text=education_titles[self.default_language], pos=(30, y_pos), field_name='titulo educacao', len_max=100, interval=' ')
             y_pos -= 25
             for course in courses:
                 self.set_font('Lato-Bold', 10)
@@ -829,7 +830,8 @@ class ReportLabCanvasUtils():
                 'pt': 'EXPERIÊNCIA PROFISSIONAL',
                 'en': 'WORK EXPERIENCE',
             }
-
+            
+            self.change_canvas(change_to_canvas_number=1, change_to_next_page=False)
             if y_pos <= 10:
                 y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
             self.set_font('Lora-Regular', 12)
