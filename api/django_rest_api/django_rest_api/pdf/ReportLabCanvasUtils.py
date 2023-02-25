@@ -26,14 +26,15 @@ class ReportLabCanvasUtils():
         pdfmetrics.registerFont(TTFont('Lato-Bold', BOLD_FONT_DIRECTORY))
         pdfmetrics.registerFont(TTFont('Lora-Regular', FONT_DIRECTORY))
         self.can = self.canvas_dict['can_1'][0]
+        self.current_pag_number = 1
         self.skill_reached_y_page_limit = False
         self.experience_reached_y_page_limit = False
     
     
     def get_output(self) -> PdfWriter:
         try:
-            if self.skill_reached_y_page_limit and self.experience_reached_y_page_limit:
-                self.canvas_dict['can_2'][0] = self.can
+            # save the current canvas
+            self.canvas_dict[f'can_{self.current_pag_number}'][0] = self.can
 
             new_pdfs = []
             new_pages = []
@@ -98,21 +99,25 @@ class ReportLabCanvasUtils():
             raise Exception(f'{arg_to_validate} tipo {right_type} erro desconhecido enquanto validava os argumentos {variables_keys} na funcao {function_to_verify}')
 
 
-    def change_canvas(self, change_to_second_page:bool=True) -> None:
+    def change_canvas(self, change_to_next_page:bool=True) -> None:
         """Change to second canvas to write new data"""
-        if change_to_second_page:
-            if len(self.canvas_dict.keys()) == 1:
-                #Create second canvas
-                self.packet_2 = io.BytesIO()
-                # Create canvas and add data
-                self.can_2 = canvas.Canvas(self.packet_2, pagesize=(595, 841))
-                self.canvas_dict['can_2'] = [self.can_2, self.packet_2]
-            self.canvas_dict['can_1'][0] = self.can
-            self.can = self.canvas_dict['can_2'][0]
+        if change_to_next_page:
+            new_page_number = self.current_pag_number + 1
+            
+            if len(self.canvas_dict.keys()) == self.current_pag_number:
+                # Needs to create a new canvas
+                self.new_packet = io.BytesIO()
+                self.new_canvas = canvas.Canvas(self.new_packet, pagesize=(595, 841))
+                self.canvas_dict[f'can_{new_page_number}'] = [self.new_canvas, self.new_packet]
+            self.canvas_dict[f'can_{self.current_pag_number}'][0] = self.can
+            self.can = self.canvas_dict[f'can_{new_page_number}'][0]
+            self.current_pag_number = new_page_number
             return None
         
-        self.canvas_dict['can_2'][0] = self.can
-        self.can = self.canvas_dict['can_1'][0]
+        new_page_number = self.current_pag_number - 1
+        self.canvas_dict[f'can_{self.current_pag_number}'][0] = self.can
+        self.can = self.canvas_dict[f'can_{new_page_number}'][0]
+        self.current_pag_number = new_page_number
         return None
 
 
@@ -723,7 +728,7 @@ class ReportLabCanvasUtils():
             y_pos -= 20
 
             if self.experience_reached_y_page_limit:
-                self.change_canvas(change_to_second_page=False)
+                self.change_canvas(change_to_next_page=False)
 
             for skill in skills:
                 if skill is None:
@@ -838,7 +843,7 @@ class ReportLabCanvasUtils():
 
     def change_work_experience_canvas(self):
         self.experience_reached_y_page_limit = True
-        self.change_canvas(change_to_second_page=True)
+        self.change_canvas(change_to_next_page=True)
         y_pos = 780
         self.set_font('Lora-Regular', 10)
         self.add_oneline_text(text=f'EXPERIÊNCIA PROFISSIONAL', pos=(217, y_pos), field_name='titulo experiencia pagina 2', len_max=100, interval=' ')
@@ -849,11 +854,11 @@ class ReportLabCanvasUtils():
     def add_certificates(self, certificates, y_pos):
         try:
             if self.skill_reached_y_page_limit:
-                self.change_canvas(change_to_second_page=False)
+                self.change_canvas(change_to_next_page=False)
             
             if self.experience_reached_y_page_limit:
-                self.change_canvas(change_to_second_page=True)
-            
+                self.change_canvas(change_to_next_page=True)
+
             self.set_font('Lora-Regular', 12)
             certificates_titles = {
                 'pt': 'CERTIFICADOS',
@@ -865,7 +870,7 @@ class ReportLabCanvasUtils():
                 if y_pos <= 20:
                     self.experience_reached_y_page_limit = True
                     self.skill_reached_y_page_limit = True
-                    self.change_canvas(change_to_second_page=True)
+                    self.change_canvas(change_to_next_page=True)
                     y_pos = 780
                     self.set_font('Lora-Regular', 12)
                     self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
