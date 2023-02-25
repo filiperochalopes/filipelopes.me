@@ -43,10 +43,10 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         new_y_pos -= 40
         pdf.set_font('Lora-Regular', 12)
         if language_is_portuguese:
-            pdf.add_oneline_text(text=f'EDUCAÇÃO', pos=(30, new_y_pos), field_name='titulo Educacao', len_max=100, interval=' ')
+            #pdf.add_oneline_text(text=f'EDUCAÇÃO', pos=(30, new_y_pos), field_name='titulo Educacao', len_max=100, interval=' ')
             pdf.add_oneline_text(text=f'EXPERIÊNCIA PROFISSIONAL', pos=(217, new_y_pos), field_name='titulo experiencia', len_max=100, interval=' ')
         else:
-            pdf.add_oneline_text(text=f'EDUCATION', pos=(30, new_y_pos), field_name='Education Title', len_max=100, interval=' ')
+            #pdf.add_oneline_text(text=f'EDUCATION', pos=(30, new_y_pos), field_name='Education Title', len_max=100, interval=' ')
             pdf.add_oneline_text(text=f'PROFESSIONAL EXPERIENCE', pos=(217, new_y_pos), field_name='Experience title', len_max=100, interval=' ')
             
         pdf.set_font('Lora-Regular', 9)
@@ -54,13 +54,14 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         pdf.add_rectangle(pos=(177, new_y_pos+10), width=1, height=-520, fill=1, color=(0,0,0,0))
         old_y_pos = new_y_pos
         # relevance_id has to be 3 (HIGH)
-        new_y_pos = pdf.add_education(courses=Course.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
+        new_y_pos, education_pag_number = pdf.add_education(courses=Course.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
         work_y_pos = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id__gte=relevance), y_pos=old_y_pos)
         new_y_pos -= 25
         # TODO
         # Add Skill relevance_id filter
-        y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
-        #y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos)
+        # y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
+        #raise Exception(education_pag_number)
+        y_pos = pdf.add_skills(skills=Skill.objects.all(), y_pos=new_y_pos, education_pag_number=education_pag_number)
         
         work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id__gte=relevance), y_pos=work_y_pos)
         #work_y_pos = pdf.add_certificates(certificates=Certificate.objects.all(), y_pos=work_y_pos)

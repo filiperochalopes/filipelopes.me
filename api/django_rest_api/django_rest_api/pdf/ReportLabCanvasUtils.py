@@ -99,8 +99,15 @@ class ReportLabCanvasUtils():
             raise Exception(f'{arg_to_validate} tipo {right_type} erro desconhecido enquanto validava os argumentos {variables_keys} na funcao {function_to_verify}')
 
 
-    def change_canvas(self, change_to_next_page:bool=True) -> None:
+    def change_canvas(self, change_to_next_page:bool=True, change_to_canvas_number:int=0) -> None:
         """Change to second canvas to write new data"""
+        if change_to_canvas_number != 0:
+            new_page_number = change_to_canvas_number
+            self.canvas_dict[f'can_{self.current_pag_number}'][0] = self.can
+            self.can = self.canvas_dict[f'can_{new_page_number}'][0]
+            self.current_pag_number = new_page_number
+            return None
+        
         if change_to_next_page:
             new_page_number = self.current_pag_number + 1
             
@@ -113,7 +120,7 @@ class ReportLabCanvasUtils():
             self.can = self.canvas_dict[f'can_{new_page_number}'][0]
             self.current_pag_number = new_page_number
             return None
-        
+
         new_page_number = self.current_pag_number - 1
         self.canvas_dict[f'can_{self.current_pag_number}'][0] = self.can
         self.can = self.canvas_dict[f'can_{new_page_number}'][0]
@@ -683,8 +690,23 @@ class ReportLabCanvasUtils():
             raise Exception(f'Erro desconhecido enquando adicionava {field_name}')
 
 
+    def change_education_canvas(self, title) -> int:
+        self.change_canvas(change_to_next_page=True)
+        y_pos = 780
+        self.set_font('Lora-Regular', 10)
+        self.add_oneline_text(text=title, pos=(217, y_pos), field_name='titulo experiencia pagina 2', len_max=100, interval=' ')
+        y_pos -= 20
+        return y_pos
+
     def add_education(self, courses, y_pos:int) -> None:
         try:
+            self.set_font('Lora-Regular', 12)
+            education_titles = {
+                'pt': 'EDUCACAO',
+                'en': 'EDUCATION',
+            }
+
+            self.add_oneline_text(text=education_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
             y_pos -= 25
             for course in courses:
                 self.set_font('Lato-Bold', 10)
@@ -700,6 +722,8 @@ class ReportLabCanvasUtils():
                         'present': 'Present',
                     }
                 }
+                if y_pos <= 10:
+                    y_pos = self.change_education_canvas(title=education_titles[self.default_language])
                 y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('name')).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}')
                 
                 self.set_font('Lora-Regular', 10)
@@ -711,24 +735,39 @@ class ReportLabCanvasUtils():
                 self.add_oneline_text(text=f'{str(course.since.year)} - {until}', pos=(30, y_pos), len_max=20, field_name=f'Inicio do curso {course.id}')
                 y_pos -= 30
             self.add_rectangle(pos=(30, y_pos), width=140, height=1, fill=1, color=(0,0,0,0))
-            return y_pos
+            return y_pos, self.current_pag_number
         except Exception as error:
             raise error
         except:
             raise Exception('Erro desconhecido enquando adicionava cursos')
 
-    def add_skills(self, skills, y_pos:int) -> None:
+    def change_skill_canvas(self, title) -> int:
+        self.skill_reached_y_page_limit = True
+        self.change_canvas(change_to_next_page=True)
+        y_pos = 780
+        self.set_font('Lora-Regular', 12)
+        self.add_oneline_text(text=title, pos=(30, y_pos), field_name='titulo habilidades proxima pagina', len_max=100, interval=' ')
+        self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
+        y_pos -= 20
+        return y_pos
+
+    def add_skills(self, skills, y_pos:int, education_pag_number:int) -> None:
         try:
             self.set_font('Lora-Regular', 12)
             skill_titles = {
                 'pt': 'HABILIDADES',
                 'en': 'SKILLS',
             }
+
+            #raise Exception(self.current_pag_number)
+            self.change_canvas(change_to_canvas_number=education_pag_number, change_to_next_page=False)
+            
+            if y_pos <= 10:
+                y_pos = self.change_skill_canvas(title=skill_info[self.default_language].get('title'))
+            
+            # Change to same canvas that experience
             self.add_oneline_text(text=skill_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
             y_pos -= 20
-
-            if self.experience_reached_y_page_limit:
-                self.change_canvas(change_to_next_page=False)
 
             for skill in skills:
                 if skill is None:
@@ -744,13 +783,7 @@ class ReportLabCanvasUtils():
                     }
                 }
                 if y_pos <= 10:
-                    self.skill_reached_y_page_limit = True
-                    self.change_canvas()
-                    y_pos = 780
-                    self.set_font('Lora-Regular', 12)
-                    self.add_oneline_text(text=skill_info[self.default_language].get('title'), pos=(30, y_pos), field_name='titulo habilidades pagina 2', len_max=100, interval=' ')
-                    self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
-                    y_pos -= 20
+                    y_pos = self.change_skill_canvas(title=skill_info[self.default_language].get('title'))
                 
                 self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=str(skill_info[self.default_language].get('name')), initial_pos=(30, y_pos), len_max=50, field_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
