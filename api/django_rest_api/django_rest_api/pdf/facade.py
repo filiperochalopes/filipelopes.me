@@ -6,7 +6,6 @@ from django_rest_api.pdf.ReportLabCanvasUtils import ReportLabCanvasUtils
 import os
 import json
 
-
 def generate_pdf(relevance:str=3, lang:str='pt'):
     pdf = ReportLabCanvasUtils()
     try:
@@ -24,6 +23,7 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
             filipe_data = json.loads(f.read())
         pdf.set_font('Lato-Bold', 35)
 
+        
         pdf.add_oneline_text(text=str(filipe_data[pdf.default_language].get('name')).upper(), pos=(294, 780), field_name='Nome', len_max=100, centralized=True, interval=' ')
         
 

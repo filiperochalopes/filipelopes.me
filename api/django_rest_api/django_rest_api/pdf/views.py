@@ -48,9 +48,6 @@ def generate_pdf_curriculum(request):
             lang=request.GET.get('lang'),
         )
         decoded = b64decode(pdf_base64_enconded, validate=True)
-        with open('/usr/src/app/django_rest_api/django_rest_api/pdf/tests_files/curriculum_test.pdf', 'wb') as f:
-            f.write(decoded)
-            f.close()
         
         return HttpResponse(content=decoded, content_type='application/pdf')
     except Exception as error:

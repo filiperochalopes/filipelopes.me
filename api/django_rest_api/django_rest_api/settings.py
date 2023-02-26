@@ -164,7 +164,21 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Pdf files
-FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/Lora-Regular.ttf')
-BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/Lato-Bold.ttf')
+# FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/Inconsolata-Regular.ttf')
+# BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/Inconsolata-Bold.ttf')
+# FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/UbuntuMono-Regular.ttf')
+# BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/UbuntuMono-Bold.ttf')
+# FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/Lora-Regular.ttf')
+# BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/Lato-Bold.ttf')
+# FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/AzeretMono-Regular.ttf')
+# BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/AzeretMono-Bold.ttf')
+
+# FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/MartianMono-Regular.ttf')
+# BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/MartianMono-Bold.ttf')
+# FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/RobotoMono-Regular.ttf')
+# BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/RobotoMono-Bold.ttf')
+FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/ArialMonoMTProRegular.ttf')
+BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/ArialMonoMTProBold.ttf')
+
 FILIPE_DATA_JSON = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/filipe_data.json')
 TEMPLATE_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/templates/empty_pdf.pdf')
