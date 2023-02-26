@@ -695,7 +695,7 @@ class ReportLabCanvasUtils():
         y_pos = 780
         self.set_font('Lora-Regular', 12)
         self.add_oneline_text(text=title, pos=(30, y_pos), field_name='titulo educacao next page', len_max=100, interval=' ')
-        self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
+        self.add_rectangle(pos=(190, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
         y_pos -= 20
         return y_pos
 
@@ -748,7 +748,7 @@ class ReportLabCanvasUtils():
         y_pos = 780
         self.set_font('Lora-Regular', 12)
         self.add_oneline_text(text=title, pos=(30, y_pos), field_name='titulo habilidades proxima pagina', len_max=100, interval=' ')
-        self.add_rectangle(pos=(177, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
+        self.add_rectangle(pos=(190, y_pos+10), width=1, height=-780, fill=1, color=(0,0,0,0))
         y_pos -= 20
         return y_pos
 

@@ -43,7 +43,7 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         
         pdf.set_font('Lora-Regular', 9)
         # vertical bar between education and experience
-        pdf.add_rectangle(pos=(177, new_y_pos+10), width=1, height=-520, fill=1, color=(0,0,0,0))
+        pdf.add_rectangle(pos=(190, new_y_pos+10), width=1, height=-520, fill=1, color=(0,0,0,0))
         old_y_pos = new_y_pos
         new_y_pos, education_pag_number = pdf.add_education(courses=Course.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
         work_y_pos, work_page_number = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id__gte=relevance), y_pos=old_y_pos)
