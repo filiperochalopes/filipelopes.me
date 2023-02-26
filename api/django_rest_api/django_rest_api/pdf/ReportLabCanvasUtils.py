@@ -1,6 +1,7 @@
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.lib.styles import ParagraphStyle
+from reportlab.platypus import Paragraph
 from reportlab.pdfbase.ttfonts import TTFont
 from PyPDF2 import PdfWriter, PdfReader, PdfFileWriter
 import io
@@ -31,6 +32,23 @@ class ReportLabCanvasUtils():
         self.skill_reached_y_page_limit = False
         self.experience_reached_y_page_limit = False
     
+
+    def add_paragraph(self, pos:tuple, text:str) -> None:
+        my_Style = ParagraphStyle('My Paragraph style',
+            fontName=self.current_font['name'],
+            backColor='#00FFFFFF',
+            fontSize=self.current_font['size'],
+            borderColor='#00FFFFFF',
+            borderWidth=0,
+            borderPadding=(0,0,0),
+            leading=16,
+            alignment=0
+        )
+        
+        p1 = Paragraph(text, my_Style)
+        p1.wrapOn(self.can,536,100)
+        p1.drawOn(self.can,pos[0],pos[1])
+        return None
     
     def get_output(self) -> PdfWriter:
         try:
@@ -137,6 +155,10 @@ class ReportLabCanvasUtils():
             size (int): size 
         """
         self.can.setFont(fontname, size)
+        self.current_font = {
+            'name': fontname,
+            'size': size
+        }
         return None
 
     def is_RG_valid(self, rg:str) -> bool:
@@ -427,6 +449,8 @@ class ReportLabCanvasUtils():
                     raise Exception(f'{field_name} nao pode ser vazio')
             # verify if text is in the need lenght
             text = text.strip()
+            # Turns white to wrte a invisible paragraph to get metrics need
+            self.can.setFillColorRGB(1, 1, 1, 1)
             if len_min <= len(text) <= len_max:
                 text = self.add_interval_to_data(data=text, interval=interval)
                 str_to_line = ''
@@ -448,6 +472,9 @@ class ReportLabCanvasUtils():
                     broke_lines_times -= 1
                     ypos -= decrease_ypos
 
+                # Turn black again to write text
+                self.can.setFillColorRGB(0, 0, 0, 1)
+                self.add_paragraph(text=text, pos=(initial_pos[0], ypos))
                 return ypos
             else:
                 raise Exception(f"Nao foi possivel adicionar {field_name} porque e maior que {len_max} characteres ou menor que {len_min} caracteres")

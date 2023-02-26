@@ -23,7 +23,6 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
             filipe_data = json.loads(f.read())
         pdf.set_font('Lato-Bold', 35)
 
-        
         pdf.add_oneline_text(text=str(filipe_data[pdf.default_language].get('name')).upper(), pos=(294, 780), field_name='Nome', len_max=100, centralized=True, interval=' ')
         
 
@@ -35,7 +34,9 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         # bars between contact info and about
         pdf.add_rectangle(pos=(30, 680), width=535, height=1, fill=1, color=(0,0,0,0))
         pdf.add_rectangle(pos=(30, 673), width=535, height=1, fill=1, color=(0,0,0,0))
-        last_y_pos = pdf.add_morelines_text(text=filipe_data[pdf.default_language].get('about'), initial_pos=(30, 630), field_name='Sobre | About', len_max=5000, decrease_ypos=16, char_per_lines=110)
+        last_y_pos = pdf.add_morelines_text(text=filipe_data[pdf.default_language].get('about'), initial_pos=(30, 630), field_name='Sobre | About', len_max=5000, decrease_ypos=16, char_per_lines=105)
+        #pdf.add_paragraph(text=filipe_data[pdf.default_language].get('about'), pos=(30, last_y_pos))
+        
         new_y_pos = last_y_pos - (16*2)
         # Bar between about and education
         pdf.add_rectangle(pos=(30, new_y_pos), width=535, height=1, fill=1, color=(0,0,0,0))
