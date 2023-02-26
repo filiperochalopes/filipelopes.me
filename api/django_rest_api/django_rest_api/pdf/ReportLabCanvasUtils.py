@@ -792,7 +792,7 @@ class ReportLabCanvasUtils():
             self.change_canvas(change_to_canvas_number=education_pag_number, change_to_next_page=False)
             
             if y_pos <= 10:
-                y_pos = self.change_skill_canvas(title=skill_info[self.default_language].get('title'))
+                y_pos = self.change_skill_canvas(title=skill_titles[self.default_language])
             
             # Change to same canvas that experience
             self.set_font('Lora-Regular', 12)
