@@ -946,8 +946,10 @@ class ReportLabCanvasUtils():
 
             if y_pos <= 20:
                 y_pos = self.change_certificate_canvas(title=certificates_titles.get(self.default_language))
-            self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
-            y_pos -= 25
+            else:
+                self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
+                y_pos -= 20
+            
             for certif in certificates:
                 certif_info = {
                     'pt': {
@@ -960,11 +962,11 @@ class ReportLabCanvasUtils():
                 if y_pos <= 20:
                     y_pos = self.change_certificate_canvas(title=certificates_titles.get(self.default_language))
                 self.set_font('Lato-Bold', 9)
-                y_pos = self.add_morelines_text(text=str(certif_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}')
+                y_pos = self.add_morelines_text(text=str(certif_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}', paragraph_widht=347)
                 
                 self.set_font('Lora-Regular', 10)
                 y_pos -= 5
-                y_pos = self.add_morelines_text(text=f'{certif.date.year}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Ano do certificado {certif.id}')
+                y_pos = self.add_morelines_text(text=f'{certif.date.year}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Ano do certificado {certif.id}', paragraph_widht=347)
                 y_pos -= 10
             
             return y_pos
