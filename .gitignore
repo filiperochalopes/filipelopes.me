@@ -2,3 +2,4 @@
 *.sqlite3
 __pycache__
 /api/django_rest_api/static
+*.pyc
