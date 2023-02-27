@@ -166,6 +166,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Pdf files
 FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/Lora-Regular.ttf')
 BOLD_FONT_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/Lato-Bold.ttf')
+TEST_PDF_FILES_DIRECTORY = '/usr/src/app/django_rest_api/django_rest_api/pdf/tests_files'
 
 FILIPE_DATA_JSON = os.path.join(BASE_DIR, 'django_rest_api/pdf/assets/filipe_data.json')
-TEMPLATE_DIRECTORY = os.path.join(BASE_DIR, 'django_rest_api/pdf/templates/empty_pdf.pdf')
+

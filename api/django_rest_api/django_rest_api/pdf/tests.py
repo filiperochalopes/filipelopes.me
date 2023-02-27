@@ -1,5 +1,6 @@
 import pytest
 import requests
+from django_rest_api.settings import TEST_PDF_FILES_DIRECTORY
 
 
 @pytest.mark.parametrize('infos',[('pt', 1),
@@ -12,9 +13,10 @@ import requests
 def test_creates_pdfs_from_correct_url(infos):
     response = requests.get(f'http://localhost:8000/pdf/generate?lang={infos[0]}&relevance={infos[1]}')
 
-    with open(f'/usr/src/app/django_rest_api/django_rest_api/pdf/tests_files/test_lang_{infos[0]}_relev_{infos[1]}.pdf', 'wb') as f:
-            f.write(response.content)
-            f.close()
+    with open(f'{TEST_PDF_FILES_DIRECTORY}/test_lang_{infos[0]}_relev_{infos[1]}.pdf', 'wb') as f:
+        print('awed')
+        f.write(response.content)
+        f.close()
     assert response.status_code == 200
 
 
@@ -25,7 +27,7 @@ def test_creates_pdfs_from_correct_url(infos):
 ('asd', '76'),
 ('pt', 'naa')]
 )
-def test_creates_pdfs_from_correct_url(infos):
+def test_creates_pdfs_from_incorrect_url(infos):
     response = requests.get(f'http://localhost:8000/pdf/generate?lang={infos[0]}&relevance={infos[1]}')
 
     assert response.status_code == 500
