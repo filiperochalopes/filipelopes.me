@@ -670,7 +670,7 @@ class ReportLabCanvasUtils():
                     achievement = achievement.replace('\n', '').strip()
                     if len(achievement) == 0:
                         continue
-                    achievement = '• ' + achievement
+                    achievement = '<bullet>&bull;</bullet>' + achievement
                     if y_pos <= 10:
                         y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                         self.set_font('Lora-Regular', 10)
