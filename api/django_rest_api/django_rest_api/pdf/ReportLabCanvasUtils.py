@@ -9,13 +9,12 @@ import re
 import datetime
 from inspect import getfullargspec
 import base64
-from django_rest_api.settings import FONT_DIRECTORY, BOLD_FONT_DIRECTORY, TEMPLATE_DIRECTORY
+from django_rest_api.settings import FONT_DIRECTORY, BOLD_FONT_DIRECTORY
 
 
 class ReportLabCanvasUtils():
 
     def __init__(self) -> None:
-        self.TEMPLATE_DIRECTORY = TEMPLATE_DIRECTORY
         self.default_language = 'pt'
         self.packet_1 = io.BytesIO()
         # Create canvas and add data
