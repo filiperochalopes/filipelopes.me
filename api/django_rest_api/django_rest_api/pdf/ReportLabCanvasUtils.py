@@ -487,7 +487,7 @@ class ReportLabCanvasUtils():
         return y_pos
 
 
-    def add_education(self, courses, y_pos:int) -> None:
+    def add_education(self, courses, y_pos:int, page_y_limit:int) -> None:
         try:
             education_titles = {
                 'pt': 'EDUCACAO',
@@ -510,7 +510,7 @@ class ReportLabCanvasUtils():
                         'present': 'Present',
                     }
                 }
-                if y_pos <= 10:
+                if y_pos <= page_y_limit:
                     y_pos = self.change_education_canvas(title=education_titles[self.default_language])
                 self.set_font('Lato-Bold', 10)
                 y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('name')).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}', paragraph_widht=150)
@@ -542,7 +542,7 @@ class ReportLabCanvasUtils():
         return y_pos
 
 
-    def add_skills(self, skills, y_pos:int, education_pag_number:int) -> None:
+    def add_skills(self, skills, y_pos:int, education_pag_number:int, page_y_limit:int) -> None:
         try:
             self.set_font('Lora-Regular', 12)
             skill_titles = {
@@ -555,7 +555,7 @@ class ReportLabCanvasUtils():
             
             # Change to same canvas that experience
             self.set_font('Lora-Regular', 12)
-            if y_pos <= 10:
+            if y_pos <= page_y_limit:
                 y_pos = self.change_skill_canvas(title=skill_titles[self.default_language])
             else:
                 self.add_oneline_text(text=skill_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
@@ -575,7 +575,7 @@ class ReportLabCanvasUtils():
                         'name': skill.name_en_us,
                     }
                 }
-                if y_pos <= 10:
+                if y_pos <= page_y_limit:
                     y_pos = self.change_skill_canvas(title=skill_info[self.default_language].get('title'))
                 
                 self.set_font('Lora-Regular', 10)
@@ -617,7 +617,7 @@ class ReportLabCanvasUtils():
         return y_pos
 
 
-    def add_work_experience(self, experiences, y_pos:int) -> None:
+    def add_work_experience(self, experiences, y_pos:int, page_y_limit:int) -> None:
         try:
             experience_titles = {
                 'pt': 'EXPERIÊNCIA PROFISSIONAL',
@@ -625,7 +625,7 @@ class ReportLabCanvasUtils():
             }
             
             self.change_canvas(change_to_canvas_number=1, change_to_next_page=False)
-            if y_pos <= 10:
+            if y_pos <= page_y_limit:
                 y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
             self.set_font('Lora-Regular', 12)
             self.add_oneline_text(text=experience_titles[self.default_language], pos=(217, y_pos), field_name='titulo experiencia', len_max=100, interval=' ')
@@ -646,7 +646,7 @@ class ReportLabCanvasUtils():
                         'present': 'Present',
                     }
                 }
-                if y_pos <= 10:
+                if y_pos <= page_y_limit:
                     y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                 self.set_font('Lato-Bold', 10)
                 y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}', paragraph_widht=347)
@@ -654,12 +654,12 @@ class ReportLabCanvasUtils():
                 until = str(exp.until.year) if exp.until is not None else exp_info[self.default_language].get('present')
                 start_end = f'{str(exp.since.year)} - {until}'
                 y_pos -= 5
-                if y_pos <= 10:
+                if y_pos <= page_y_limit:
                     y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                 self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=f'{str(exp.organization)} / {start_end}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Nome da empresa {exp.id} e periodo de trabalho',paragraph_widht=347)
 
-                if y_pos <= 10:
+                if y_pos <= page_y_limit:
                     y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                     self.set_font('Lora-Regular', 10)
                 y_pos -= 5
@@ -671,7 +671,7 @@ class ReportLabCanvasUtils():
                     if len(achievement) == 0:
                         continue
                     achievement = '• ' + achievement
-                    if y_pos <= 10:
+                    if y_pos <= page_y_limit:
                         y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                         self.set_font('Lora-Regular', 10)
                     y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, field_name=f'Conquistas no trabalho {exp.id}', nullable=True, paragraph_widht=327)
@@ -697,7 +697,7 @@ class ReportLabCanvasUtils():
         return y_pos
 
 
-    def add_certificates(self, certificates, y_pos, work_page_number:int):
+    def add_certificates(self, certificates, y_pos, work_page_number:int, page_y_limit:int):
         try:
             self.change_canvas(change_to_next_page=False, change_to_canvas_number=work_page_number)
 
@@ -707,7 +707,7 @@ class ReportLabCanvasUtils():
                 'en': 'CERTIFICATES',
             }
 
-            if y_pos <= 20:
+            if y_pos <= page_y_limit:
                 y_pos = self.change_certificate_canvas(title=certificates_titles.get(self.default_language))
             else:
                 self.add_oneline_text(text=certificates_titles.get(self.default_language), pos=(217, y_pos), field_name='titulo certificados', len_max=100, interval=' ')
@@ -722,7 +722,7 @@ class ReportLabCanvasUtils():
                         'title': certif.title_en_us,
                     }
                 }
-                if y_pos <= 20:
+                if y_pos <= page_y_limit:
                     y_pos = self.change_certificate_canvas(title=certificates_titles.get(self.default_language))
                 self.set_font('Lato-Bold', 9)
                 y_pos = self.add_morelines_text(text=str(certif_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Titulo do certificado {certif.id}', paragraph_widht=347)
