@@ -4,6 +4,7 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import Paragraph
 from reportlab.pdfbase.ttfonts import TTFont
 from PyPDF2 import PdfWriter, PdfReader, PdfFileWriter
+from math import ceil
 import io
 import re
 import datetime
@@ -597,14 +598,10 @@ class ReportLabCanvasUtils():
     def add_skills_square(self, skill, pos:tuple):
         x_pos = pos[0]
         # get the complete blocks quantity
-        complete_blocks = skill.level // 10
-        # last block size
-        last_block_size = skill.level - (complete_blocks * 10)
+        complete_blocks = ceil(skill.level / 5)
         for x in range(complete_blocks):
-            self.add_square(pos=(x_pos, pos[1]), size=(10, 5))
-            x_pos += 14
-        if last_block_size != 0:
-            self.add_square(pos=(x_pos, pos[1]), size=(last_block_size, 5))
+            self.add_square(pos=(x_pos, pos[1]), size=(5, 5))
+            x_pos += 7
         return None
 
 
