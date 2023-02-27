@@ -9,7 +9,10 @@ gunicorn
 autopep8
 django-sass
 Pillow
+pypdf2==2.11.1
+pytest
 django-cors-headers
 pyyaml
+reportlab==3.6.11
 uritemplate
 xhtml2pdf
