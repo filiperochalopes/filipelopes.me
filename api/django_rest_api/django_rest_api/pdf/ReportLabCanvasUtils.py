@@ -562,9 +562,10 @@ class ReportLabCanvasUtils():
                 self.add_oneline_text(text=skill_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
                 y_pos -= 20
             
+            sub_skills_list = [skill for skill in skills if skill.parent_id is not None]
 
             for skill in skills:
-                if skill is None:
+                if skill is None or skill.parent_id is not None:
                     continue
                 skill_info = {
                     'pt': {
@@ -582,6 +583,11 @@ class ReportLabCanvasUtils():
                 self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=str(skill_info[self.default_language].get('name')), initial_pos=(30, y_pos), len_max=50, field_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28, paragraph_widht=150)
                 self.add_skills_square(skill=skill, pos=(30, y_pos))
+
+                current_sub_skills = [sub_skill for sub_skill in sub_skills_list if sub_skill.parent_id == skill.id]
+                if len(current_sub_skills) > 0:
+                    y_pos = self.add_sub_skills(current_sub_skills=current_sub_skills, page_y_limit=page_y_limit, y_pos=y_pos, new_title=skill_info[self.default_language].get('title')) 
+                    
                 
                 y_pos -= 10
             if y_pos < 30 and not self.skill_reached_y_page_limit:
@@ -600,9 +606,28 @@ class ReportLabCanvasUtils():
         # get the complete blocks quantity
         complete_blocks = ceil(skill.level / 5)
         for x in range(complete_blocks):
-            self.add_square(pos=(x_pos, pos[1]), size=(5, 5))
-            x_pos += 7
+            self.add_square(pos=(x_pos, pos[1]), size=(3, 3))
+            x_pos += 6
         return None
+
+
+    def add_sub_skills(self, current_sub_skills, page_y_limit:int, new_title:str, y_pos:int):
+        for sub_skill in current_sub_skills:
+            sub_skill_info = {
+                'pt': {
+                    'name': sub_skill.name_pt_br,
+                },
+                'en': {
+                    'name': sub_skill.name_en_us,
+                }
+            }
+            self.set_font('Lora-Regular', 10)
+            y_pos -= 12
+            if y_pos <= page_y_limit:
+                y_pos = self.change_skill_canvas(title=new_title)
+            y_pos = self.add_morelines_text(text=str(sub_skill_info[self.default_language].get('name')), initial_pos=(37, y_pos), len_max=50, field_name=f'Sub habilidade {sub_skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28, paragraph_widht=143)
+            self.add_skills_square(skill=sub_skill, pos=(37, y_pos))
+        return y_pos
 
 
     def change_work_experience_canvas(self, title):
