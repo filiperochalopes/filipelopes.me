@@ -885,7 +885,7 @@ class ReportLabCanvasUtils():
                 if y_pos <= 10:
                     y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                 self.set_font('Lato-Bold', 10)
-                y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}')
+                y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}', paragraph_widht=347)
                 self.set_font('Lora-Regular', 9)
                 until = str(exp.until.year) if exp.until is not None else exp_info[self.default_language].get('present')
                 start_end = f'{str(exp.since.year)} - {until}'
@@ -893,13 +893,13 @@ class ReportLabCanvasUtils():
                 if y_pos <= 10:
                     y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                 self.set_font('Lora-Regular', 10)
-                y_pos = self.add_morelines_text(text=f'{str(exp.organization)} / {start_end}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Nome da empresa {exp.id} e periodo de trabalho')
+                y_pos = self.add_morelines_text(text=f'{str(exp.organization)} / {start_end}', initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Nome da empresa {exp.id} e periodo de trabalho',paragraph_widht=347)
 
                 if y_pos <= 10:
                     y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                     self.set_font('Lora-Regular', 10)
                 y_pos -= 5
-                y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('achivements')), initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Descricao do trabalho {exp.id}')
+                y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('achivements')), initial_pos=(217, y_pos), char_per_lines=70, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Descricao do trabalho {exp.id}', paragraph_widht=347)
 
                 y_pos -= 5
                 for achievement in str(exp_info[self.default_language].get('description')).split('-'):
@@ -910,7 +910,7 @@ class ReportLabCanvasUtils():
                     if y_pos <= 10:
                         y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
                         self.set_font('Lora-Regular', 10)
-                    y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, field_name=f'Conquistas no trabalho {exp.id}', nullable=True)
+                    y_pos = self.add_morelines_text(text=achievement, initial_pos=(237, y_pos), char_per_lines=62, max_lines_amount=10, len_max=700, decrease_ypos=10, field_name=f'Conquistas no trabalho {exp.id}', nullable=True, paragraph_widht=327)
                     y_pos -= 3
                     
                 y_pos -= 20
