@@ -52,7 +52,7 @@ def generate_pdf(relevance:int=3, lang:str='pt'):
         new_y_pos, education_pag_number = pdf.add_education(courses=Course.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos, page_y_limit=DEFAULT_PAGE_Y_LIMIT)
         work_y_pos, work_page_number = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id__gte=relevance), y_pos=old_y_pos, page_y_limit=DEFAULT_PAGE_Y_LIMIT)
         new_y_pos -= 25
-        y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos, education_pag_number=education_pag_number, page_y_limit=DEFAULT_PAGE_Y_LIMIT)
+        y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance).order_by('-level'), y_pos=new_y_pos, education_pag_number=education_pag_number, page_y_limit=DEFAULT_PAGE_Y_LIMIT)
         work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id__gte=relevance), y_pos=work_y_pos, work_page_number=work_page_number, page_y_limit=DEFAULT_PAGE_Y_LIMIT)
         
         #Get pdf base64
