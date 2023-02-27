@@ -11,10 +11,8 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
     try:
         if lang == 'pt':
             # Variable to be used in titles
-            language_is_portuguese = True
             pdf.default_language = 'pt'
         elif lang == 'en':
-            language_is_portuguese = False
             pdf.default_language = 'en'
         else:
             raise Exception(f'selected language "{lang}" does not exist, please select "pt" or "en"')
@@ -34,8 +32,8 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         # bars between contact info and about
         pdf.add_rectangle(pos=(30, 680), width=535, height=1, fill=1, color=(0,0,0,0))
         pdf.add_rectangle(pos=(30, 673), width=535, height=1, fill=1, color=(0,0,0,0))
-        last_y_pos = pdf.add_morelines_text(text=filipe_data[pdf.default_language].get('about'), initial_pos=(30, 630), field_name='Sobre | About', len_max=5000, decrease_ypos=16, char_per_lines=105)
-        #pdf.add_paragraph(text=filipe_data[pdf.default_language].get('about'), pos=(30, last_y_pos))
+        last_y_pos = pdf.add_morelines_text(text=filipe_data[pdf.default_language].get('about'), initial_pos=(30, 630), field_name='Sobre | About', len_max=5000, decrease_ypos=16, char_per_lines=105, paragraph_widht=536)
+        
         
         new_y_pos = last_y_pos - (16*2)
         # Bar between about and education
@@ -47,10 +45,10 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         pdf.add_rectangle(pos=(190, new_y_pos+10), width=1, height=-520, fill=1, color=(0,0,0,0))
         old_y_pos = new_y_pos
         new_y_pos, education_pag_number = pdf.add_education(courses=Course.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
-        work_y_pos, work_page_number = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id__gte=relevance), y_pos=old_y_pos)
-        new_y_pos -= 25
-        y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos, education_pag_number=education_pag_number)
-        work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id__gte=relevance), y_pos=work_y_pos, work_page_number=work_page_number)
+        # work_y_pos, work_page_number = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id__gte=relevance), y_pos=old_y_pos)
+        # new_y_pos -= 25
+        # y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos, education_pag_number=education_pag_number)
+        # work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id__gte=relevance), y_pos=work_y_pos, work_page_number=work_page_number)
         
         
         

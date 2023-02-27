@@ -33,7 +33,7 @@ class ReportLabCanvasUtils():
         self.experience_reached_y_page_limit = False
     
 
-    def add_paragraph(self, pos:tuple, text:str) -> None:
+    def add_paragraph(self, pos:tuple, text:str, leading:int, widht:int, height:int=100) -> None:
         my_Style = ParagraphStyle('My Paragraph style',
             fontName=self.current_font['name'],
             backColor='#00FFFFFF',
@@ -41,12 +41,12 @@ class ReportLabCanvasUtils():
             borderColor='#00FFFFFF',
             borderWidth=0,
             borderPadding=(0,0,0),
-            leading=16,
+            leading=leading,
             alignment=0
         )
         
         p1 = Paragraph(text, my_Style)
-        p1.wrapOn(self.can,536,100)
+        p1.wrapOn(self.can,widht,height)
         p1.drawOn(self.can,pos[0],pos[1])
         return None
     
@@ -419,7 +419,7 @@ class ReportLabCanvasUtils():
             raise Exception(f'Erro desconhecido enquando adicionava {field_name}')
 
 
-    def add_morelines_text(self, text:str, initial_pos:tuple, decrease_ypos:int, field_name:str, len_max:int, char_per_lines:int, max_lines_amount:int=None, nullable:bool=False, len_min:int=0, interval:str='') -> int:
+    def add_morelines_text(self, text:str, initial_pos:tuple, decrease_ypos:int, field_name:str, len_max:int, char_per_lines:int, paragraph_widht:int,max_lines_amount:int=None, nullable:bool=False, len_min:int=0, interval:str='', paragraph_height:int=100) -> int:
         """Add text that is fill in one line
 
         Args:
@@ -440,7 +440,7 @@ class ReportLabCanvasUtils():
             if nullable:
                 if text == None or len(str(text).strip()) == 0:
                     return None
-            self.validate_func_args(function_to_verify=self.add_morelines_text, variables_to_verify={'text':text, 'initial_pos':initial_pos, 'decrease_ypos':decrease_ypos, 'field_name':field_name, 'len_max':len_max, 'char_per_lines':char_per_lines, 'max_lines_amount':max_lines_amount, 'nullable':nullable, 'len_min':len_min, 'interval':interval}, nullable_variables=['max_lines_amount'])
+            self.validate_func_args(function_to_verify=self.add_morelines_text, variables_to_verify={'text':text, 'initial_pos':initial_pos, 'decrease_ypos':decrease_ypos, 'field_name':field_name, 'len_max':len_max, 'char_per_lines':char_per_lines, 'max_lines_amount':max_lines_amount, 'nullable':nullable, 'len_min':len_min, 'interval':interval, 'paragraph_widht':paragraph_widht, 'paragraph_height':paragraph_height}, nullable_variables=['max_lines_amount'])
 
 
             if not nullable:
@@ -474,7 +474,7 @@ class ReportLabCanvasUtils():
 
                 # Turn black again to write text
                 self.can.setFillColorRGB(0, 0, 0, 1)
-                self.add_paragraph(text=text, pos=(initial_pos[0], ypos))
+                self.add_paragraph(text=text, pos=(initial_pos[0], ypos+decrease_ypos), leading=decrease_ypos, widht=paragraph_widht, height=paragraph_height)
                 return ypos
             else:
                 raise Exception(f"Nao foi possivel adicionar {field_name} porque e maior que {len_max} characteres ou menor que {len_min} caracteres")
@@ -753,11 +753,11 @@ class ReportLabCanvasUtils():
                 if y_pos <= 10:
                     y_pos = self.change_education_canvas(title=education_titles[self.default_language])
                 self.set_font('Lato-Bold', 10)
-                y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('name')).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}')
+                y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('name')).upper(), initial_pos=(30, y_pos), char_per_lines=25, max_lines_amount=3, len_max=60, decrease_ypos=10, field_name=f'Nome do curso {course.id}', paragraph_widht=150)
                 
                 self.set_font('Lora-Regular', 10)
                 y_pos -= 5
-                y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('place')), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=100, decrease_ypos=10, field_name=f'Nome da instituicao {course.id}')
+                y_pos = self.add_morelines_text(text=str(course_info[self.default_language].get('place')), initial_pos=(30, y_pos), char_per_lines=28, max_lines_amount=3, len_max=100, decrease_ypos=10, field_name=f'Nome da instituicao {course.id}', paragraph_widht=150)
 
                 y_pos -= 5
                 until = str(course.until.year) if course.until is not None else course_info[self.default_language].get('present')
