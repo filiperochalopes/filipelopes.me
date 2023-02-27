@@ -791,13 +791,14 @@ class ReportLabCanvasUtils():
             #raise Exception(self.current_pag_number)
             self.change_canvas(change_to_canvas_number=education_pag_number, change_to_next_page=False)
             
-            if y_pos <= 10:
-                y_pos = self.change_skill_canvas(title=skill_titles[self.default_language])
-            
             # Change to same canvas that experience
             self.set_font('Lora-Regular', 12)
-            self.add_oneline_text(text=skill_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
-            y_pos -= 20
+            if y_pos <= 10:
+                y_pos = self.change_skill_canvas(title=skill_titles[self.default_language])
+            else:
+                self.add_oneline_text(text=skill_titles[self.default_language], pos=(30, y_pos), field_name='titulo habilidades', len_max=100, interval=' ')
+                y_pos -= 20
+            
 
             for skill in skills:
                 if skill is None:
@@ -816,7 +817,7 @@ class ReportLabCanvasUtils():
                     y_pos = self.change_skill_canvas(title=skill_info[self.default_language].get('title'))
                 
                 self.set_font('Lora-Regular', 10)
-                y_pos = self.add_morelines_text(text=str(skill_info[self.default_language].get('name')), initial_pos=(30, y_pos), len_max=50, field_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28)
+                y_pos = self.add_morelines_text(text=str(skill_info[self.default_language].get('name')), initial_pos=(30, y_pos), len_max=50, field_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28, paragraph_widht=150)
                 self.add_skills_square(skill=skill, pos=(30, y_pos))
                 
                 y_pos -= 10

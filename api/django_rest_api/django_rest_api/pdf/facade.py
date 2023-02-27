@@ -47,7 +47,7 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         new_y_pos, education_pag_number = pdf.add_education(courses=Course.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos)
         work_y_pos, work_page_number = pdf.add_work_experience(experiences=Experience.objects.filter(relevance_id__gte=relevance), y_pos=old_y_pos)
         new_y_pos -= 25
-        # y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos, education_pag_number=education_pag_number)
+        y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos, education_pag_number=education_pag_number)
         # work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id__gte=relevance), y_pos=work_y_pos, work_page_number=work_page_number)
         
         
