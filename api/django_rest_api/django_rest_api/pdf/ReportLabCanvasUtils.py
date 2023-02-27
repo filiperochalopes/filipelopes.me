@@ -612,6 +612,7 @@ class ReportLabCanvasUtils():
 
 
     def add_sub_skills(self, current_sub_skills, page_y_limit:int, new_title:str, y_pos:int):
+        self.set_font('Lora-Regular', 9)
         for sub_skill in current_sub_skills:
             sub_skill_info = {
                 'pt': {
@@ -621,12 +622,14 @@ class ReportLabCanvasUtils():
                     'name': sub_skill.name_en_us,
                 }
             }
-            self.set_font('Lora-Regular', 10)
             y_pos -= 12
             if y_pos <= page_y_limit:
                 y_pos = self.change_skill_canvas(title=new_title)
             y_pos = self.add_morelines_text(text=str(sub_skill_info[self.default_language].get('name')), initial_pos=(37, y_pos), len_max=50, field_name=f'Sub habilidade {sub_skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28, paragraph_widht=143)
             self.add_skills_square(skill=sub_skill, pos=(37, y_pos))
+
+        # Change font to default    
+        self.set_font('Lora-Regular', 10)
         return y_pos
 
 
