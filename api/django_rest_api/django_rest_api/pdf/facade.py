@@ -17,6 +17,9 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         else:
             raise Exception(f'selected language "{lang}" does not exist, please select "pt" or "en"')
         
+        if relevance not in [1,2,3]:
+            raise Exception(f'selected relevance "{relevance}" does not exist, please select 1, 2 or 3')
+        
         with open(settings.FILIPE_DATA_JSON, 'r') as f:
             filipe_data = json.loads(f.read())
         pdf.set_font('Lato-Bold', 35)
@@ -49,14 +52,6 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         new_y_pos -= 25
         y_pos = pdf.add_skills(skills=Skill.objects.filter(relevance_id__gte=relevance), y_pos=new_y_pos, education_pag_number=education_pag_number)
         work_y_pos = pdf.add_certificates(certificates=Certificate.objects.filter(relevance_id__gte=relevance), y_pos=work_y_pos, work_page_number=work_page_number)
-        
-        
-        
-        
-        
-        
-        
-        
         
         #Get pdf base64
         return pdf.get_base64()
