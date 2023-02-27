@@ -6,7 +6,7 @@ from django_rest_api.pdf.ReportLabCanvasUtils import ReportLabCanvasUtils
 import os
 import json
 
-def generate_pdf(relevance:str=3, lang:str='pt'):
+def generate_pdf(relevance:int=3, lang:str='pt'):
     pdf = ReportLabCanvasUtils()
     try:
         if lang == 'pt':
@@ -17,6 +17,7 @@ def generate_pdf(relevance:str=3, lang:str='pt'):
         else:
             raise Exception(f'selected language "{lang}" does not exist, please select "pt" or "en"')
         
+        relevance = int(relevance)
         if relevance not in [1,2,3]:
             raise Exception(f'selected relevance "{relevance}" does not exist, please select 1, 2 or 3')
         
