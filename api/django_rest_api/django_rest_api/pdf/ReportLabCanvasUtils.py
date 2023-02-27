@@ -673,6 +673,7 @@ class ReportLabCanvasUtils():
                 }
                 if y_pos <= page_y_limit:
                     y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
+                    y_pos -= 15
                 self.set_font('Lato-Bold', 10)
                 y_pos = self.add_morelines_text(text=str(exp_info[self.default_language].get('title')).upper(), initial_pos=(217, y_pos), char_per_lines=62, max_lines_amount=3, len_max=500, decrease_ypos=10, field_name=f'Cargo de Trabalho {exp.id}', paragraph_widht=347)
                 self.set_font('Lora-Regular', 9)
@@ -703,8 +704,6 @@ class ReportLabCanvasUtils():
                     y_pos -= 3
                     
                 y_pos -= 20
-                if y_pos < 30:
-                    y_pos = self.change_work_experience_canvas(title=experience_titles[self.default_language])
             
             return y_pos, self.current_pag_number   
         except Exception as error:
