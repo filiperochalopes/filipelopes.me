@@ -180,20 +180,21 @@ class ReportLabCanvasUtils():
             raise Exception("Erro desconhecido enquanto adicionava um dado no documento com o canvas")
 
 
-    def add_square(self, pos:tuple, size:tuple=(9, 9)) -> None:
+    def add_square(self, pos:tuple, size:tuple=(9, 9), fill:int=1) -> None:
         """Add square in document using canvas object
 
         Args:
             
             pos (tuple): position to add the square
             size (tuple, optional): square size default is the size of the option quare. Defaults to 9.
+            fill (int, optional): fill the square with color. Defaults to 1.
 
         Returns:
             None
             
         """
         try:
-            self.can.rect(x=pos[0], y=pos[1], width=size[0], height=size[1], fill=1)
+            self.can.rect(x=pos[0], y=pos[1], width=size[0], height=size[1], fill=fill)
             return None
         except:
             raise Exception("Erro desconhecido enquanto adicionava um quadrado (opcoes de marcar) no documento com o canvas")
@@ -582,14 +583,15 @@ class ReportLabCanvasUtils():
                 
                 self.set_font('Lora-Regular', 10)
                 y_pos = self.add_morelines_text(text=str(skill_info[self.default_language].get('name')), initial_pos=(30, y_pos), len_max=50, field_name=f'Habilidade {skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28, paragraph_widht=150)
-                self.add_skills_square(skill=skill, pos=(30, y_pos))
+                y_pos = self.add_skills_square(skill=skill, pos=(30, y_pos))
 
                 current_sub_skills = [sub_skill for sub_skill in sub_skills_list if sub_skill.parent_id == skill.id]
                 if len(current_sub_skills) > 0:
-                    y_pos = self.add_sub_skills(current_sub_skills=current_sub_skills, page_y_limit=page_y_limit, y_pos=y_pos, new_title=skill_info[self.default_language].get('title')) 
-                    
+                    y_pos = self.add_sub_skills(current_sub_skills=current_sub_skills, page_y_limit=page_y_limit, y_pos=y_pos, new_title=skill_info[self.default_language].get('title'))
+                    y_pos -= 4
+                else:
+                    y_pos -= 15
                 
-                y_pos -= 10
             if y_pos < 30 and not self.skill_reached_y_page_limit:
                 self.skill_reached_y_page_limit = True
                 y_pos = 780
@@ -601,18 +603,27 @@ class ReportLabCanvasUtils():
             raise Exception('Erro desconhecido enquando adicionava habilidade')
 
 
-    def add_skills_square(self, skill, pos:tuple):
+    def add_skills_square(self, skill, pos:tuple, is_sub_skill:bool=False):
         x_pos = pos[0]
         # get the complete blocks quantity
+        if is_sub_skill:
+            # Add background square
+            self.add_square(pos=(x_pos, pos[1]), size=(25, 4), fill=0)
+            block_size = skill.level / 5 + 1
+            self.add_square(pos=(x_pos, pos[1]), size=(block_size, 4), fill=1)
+            return pos[1]
+        
         complete_blocks = ceil(skill.level / 5)
         for x in range(complete_blocks):
             self.add_square(pos=(x_pos, pos[1]), size=(3, 3))
             x_pos += 6
-        return None
+        return pos[1]
 
 
     def add_sub_skills(self, current_sub_skills, page_y_limit:int, new_title:str, y_pos:int):
         self.set_font('Lora-Regular', 9)
+        text_x_pos = 37
+        y_pos -= 12
         for sub_skill in current_sub_skills:
             sub_skill_info = {
                 'pt': {
@@ -622,11 +633,16 @@ class ReportLabCanvasUtils():
                     'name': sub_skill.name_en_us,
                 }
             }
-            y_pos -= 12
             if y_pos <= page_y_limit:
                 y_pos = self.change_skill_canvas(title=new_title)
-            y_pos = self.add_morelines_text(text=str(sub_skill_info[self.default_language].get('name')), initial_pos=(37, y_pos), len_max=50, field_name=f'Sub habilidade {sub_skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28, paragraph_widht=143)
-            self.add_skills_square(skill=sub_skill, pos=(37, y_pos))
+                self.set_font('Lora-Regular', 9)
+
+            text_y_pos = y_pos
+            skill_name = str(sub_skill_info[self.default_language].get('name'))
+            y_pos = self.add_morelines_text(text=skill_name, initial_pos=(text_x_pos, y_pos), len_max=50, field_name=f'Sub habilidade {sub_skill.id}', decrease_ypos=10, nullable=True, char_per_lines=28, paragraph_widht=143)
+            # Put the squares in the right position
+            y_pos = self.add_skills_square(skill=sub_skill, pos=(110, text_y_pos + 1), is_sub_skill=True)
+            y_pos -= 13
 
         # Change font to default    
         self.set_font('Lora-Regular', 10)
