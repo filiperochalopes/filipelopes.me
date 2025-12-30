@@ -1,12 +1,18 @@
-FROM node:16-buster-slim as build_stage
+FROM node:20-bullseye-slim as build_stage
 
 RUN mkdir -p /app
 WORKDIR /app
-COPY frontend/package.json .
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends python3 make g++ \
+  && rm -rf /var/lib/apt/lists/*
+RUN corepack enable \
+  && corepack prepare pnpm@10.26.2 --activate
+ENV NODE_OPTIONS=--openssl-legacy-provider
+COPY frontend/package.json frontend/pnpm-lock.yaml frontend/.npmrc ./
 COPY frontend/.env.development .env
-RUN yarn
+RUN pnpm install
 COPY frontend .
-RUN yarn build
+RUN pnpm build
 
 FROM nginx:1.16.0-alpine
 
