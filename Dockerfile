@@ -1,4 +1,4 @@
-FROM node:14.18.3-buster-slim as build_stage
+FROM node:16-buster-slim as build_stage
 
 RUN mkdir -p /app
 WORKDIR /app
