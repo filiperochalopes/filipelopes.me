@@ -7,16 +7,14 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 RUN corepack enable \
   && corepack prepare pnpm@10.26.2 --activate
-ENV NODE_OPTIONS=--openssl-legacy-provider
-COPY frontend/package.json frontend/pnpm-lock.yaml frontend/.npmrc ./
-COPY frontend/.env.development .env
+COPY frontend/package.json frontend/pnpm-lock.yaml ./
 RUN pnpm install
 COPY frontend .
 RUN pnpm build
 
 FROM nginx:1.16.0-alpine
 
-COPY --from=build_stage /app/build /usr/share/nginx/html
+COPY --from=build_stage /app/dist /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80

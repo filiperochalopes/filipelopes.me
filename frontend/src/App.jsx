@@ -7,12 +7,12 @@ import Index from './views/Index';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import SmoothScroll from 'smooth-scroll';
 import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
 
 const AsyncCurriculum = asyncComponent(() => import('./views/Curriculum'));
 const AsyncPortfolio = asyncComponent(() => import('./views/Portfolio'));
+const AsyncPdfCurriculum = asyncComponent(() => import('./views/PdfCurriculum'));
 
 export default () => {
   const [state, setState] = useState({
@@ -39,8 +39,11 @@ export default () => {
   const setLogoReset = boolean => setState({ ...state, logoReset: boolean });
 
   useEffect(() => {
-    new SmoothScroll('a[href*="#"]', {
-      speed: 300,
+    import('smooth-scroll').then((module) => {
+      const SmoothScroll = module.default;
+      new SmoothScroll('a[href*="#"]', {
+        speed: 300,
+      });
     });
   }, []);
 
@@ -63,6 +66,11 @@ export default () => {
               <Route path="/portfolio/:name?" component={AsyncPortfolio} />
               <Route path="/curriculo" component={AsyncCurriculum} />
               <Route path="/curriculum" component={AsyncCurriculum} />
+              <Route path="/pdf/curriculum" component={AsyncPdfCurriculum} />
+              <Route
+                path="/pdf/download/curriculum"
+                component={AsyncPdfCurriculum}
+              />
             </Switch>
           </ThemeProvider>
         </AppContext.Provider>

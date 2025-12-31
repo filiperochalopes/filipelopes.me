@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import * as styledModule from 'styled-components';
+const styled = styledModule.default || styledModule;
 
 export default styled.div`
   margin-bottom: 20px;

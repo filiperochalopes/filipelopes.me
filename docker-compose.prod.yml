@@ -1,16 +1,5 @@
 version: "3"
 services:
-  djangoapp:
-    container_name: filipelopesme_backend
-    restart: always
-    build:
-      context: api
-      dockerfile: Dockerfile
-    ports:
-      - 8060:8000
-    volumes:
-      - ./api:/usr/src/app
-    command: python django_rest_api/manage.py runserver 0.0.0.0:8000
   nginx:
     container_name: filipelopesme_nginx
     restart: always
@@ -19,6 +8,3 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3050:80
-    depends_on:
-      - frontend
-      - djangoapp

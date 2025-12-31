@@ -1,9 +1,6 @@
-import axios from 'axios';
-
-const apiRequest = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
-  timeout: 1000,
-});
+import posts from '../data/posts.json';
+import curriculum from '../data/curriculum.json';
+import portfolio from '../data/portfolio.json';
 
 export const fetchData = (url, language = 'pt-br') =>
   new Promise((resolve, reject) => {
@@ -14,48 +11,72 @@ export const fetchData = (url, language = 'pt-br') =>
       };
 
       const sufix = `_${languageMap[language]}`;
-      Object.keys(element).forEach(key => {
-        // Select keys that needs to change
+      const cloned = { ...element };
+
+      Object.keys(cloned).forEach(key => {
         const newKey = key.replace(sufix, '');
         if (key.includes(sufix)) {
-          if (element[key] === '') {
-            element[newKey] = element[`${newKey}_pt_br`];
+          if (cloned[key] === '') {
+            cloned[newKey] = cloned[`${newKey}_pt_br`];
           } else {
-            element[newKey] = element[key];
+            cloned[newKey] = cloned[key];
           }
-          delete element[key];
+          delete cloned[key];
         }
       });
 
-      // delete keys of other language
       Object.keys(languageMap).forEach(key => {
         if (key !== language) {
-          Object.keys(element).forEach(elementKey => {
+          Object.keys(cloned).forEach(elementKey => {
             if (elementKey.includes(languageMap[key])) {
-              delete element[elementKey];
+              delete cloned[elementKey];
             }
           });
         }
       });
 
-      return element;
+      Object.keys(cloned).forEach(key => {
+        if (Array.isArray(cloned[key])) {
+          cloned[key] = cloned[key].map(item =>
+            typeof item === 'object' && item !== null ? languageReducer(item) : item
+          );
+        } else if (cloned[key] && typeof cloned[key] === 'object') {
+          cloned[key] = languageReducer(cloned[key]);
+        }
+      });
+
+      return cloned;
     };
 
-    apiRequest(url)
-      .then(result => {
-        resolve(result.data);
-        if (result.data) {
-          if (Array.isArray(result.data)) {
-            resolve(
-              result.data.reduce(
-                (acc, current) => [...acc, languageReducer(current)],
-                []
-              )
-            );
-          } else {
-            resolve(languageReducer(result.data));
-          }
-        }
-      })
-      .catch(e => reject(e));
+    try {
+      let data = null;
+
+      if (url.startsWith('/posts/')) {
+        const slug = url.replace('/posts/', '').trim();
+        data = posts.find(post => post.slug === slug) || null;
+      } else if (url === '/curriculum/experience') {
+        data = curriculum.experiences;
+      } else if (url === '/curriculum/skill') {
+        data = curriculum.skills;
+      } else if (url === '/curriculum/course') {
+        data = curriculum.courses;
+      } else if (url === '/curriculum/certificate') {
+        data = curriculum.certificates;
+      } else if (url === '/portfolio') {
+        data = portfolio;
+      }
+
+      if (data === null || data === undefined) {
+        resolve(data);
+        return;
+      }
+
+      if (Array.isArray(data)) {
+        resolve(data.map(item => languageReducer(item)));
+      } else {
+        resolve(languageReducer(data));
+      }
+    } catch (error) {
+      reject(error);
+    }
   });

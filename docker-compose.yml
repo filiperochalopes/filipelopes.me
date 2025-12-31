@@ -8,17 +8,6 @@ services:
     volumes:
       - ./frontend:/home/node/app
       - /home/node/app/node_modules
-    links:
-      - djangoapp
-  djangoapp:
-    container_name: filipelopesme_backend
-    restart: always
-    build: api
-    ports:
-      - 8060:8000
-    volumes:
-      - ./api:/usr/src/app
-    command: python django_rest_api/manage.py runserver 0.0.0.0:8000
   nginx:
     container_name: filipelopesme_nginx
     restart: always
@@ -29,4 +18,3 @@ services:
       - 3050:80
     depends_on:
       - frontend
-      - djangoapp

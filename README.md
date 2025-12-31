@@ -1,24 +1,39 @@
-### Realizando dump de banco de dados
+# filipelopes.me
+
+Site estático em Astro + React. O conteúdo vem do SQLite (sem Django) e é exportado para JSON.
+
+## Exportar dados do SQLite
 
 ```sh
-# backup sqlite3
-sqlite3 db.sqlite3 .dump > dump.sql
-# restore sqlite3
-mv db.sqlite3 _db.sqlite3
-sqlite3 db.sqlite3 < dump.sql
+python3 scripts/export_data.py
 ```
 
-### Inicializando migrações
+Gera:
+- `frontend/src/data/posts.json`
+- `frontend/src/data/curriculum.json`
+- `frontend/src/data/portfolio.json`
+- `frontend/src/data/database.json`
+
+## Desenvolvimento
 
 ```sh
-docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/django_rest_api && python manage.py makemigrations"
-docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/django_rest_api && python manage.py migrate"
+cd frontend
+pnpm install
+pnpm dev
 ```
 
-### Coletando arquivos estáticos
-
-Necessário para capturar arquivos para criar pdf
+## Docker (dev)
 
 ```sh
-docker exec -it filipelopesme_backend bash -c "cd /usr/src/app/django_rest_api && python manage.py collectstatic"
+docker-compose up --build
 ```
+
+## Build (produção)
+
+```sh
+docker-compose -f docker-compose.prod.yml up --build
+```
+
+## PDF do currículo
+
+A rota `/pdf/curriculum` gera o PDF via **jsPDF** no navegador.

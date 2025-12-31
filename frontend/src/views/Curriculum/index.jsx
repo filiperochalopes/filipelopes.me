@@ -37,9 +37,11 @@ export default () => {
         .reduce((acc, cur) => ({ ...acc, [cur.id]: cur }), {});
       data.forEach(skill => {
         if (skill.parent) {
-          if (!reducedSkills[skill.parent].children)
-            reducedSkills[skill.parent].children = [];
-          reducedSkills[skill.parent].children.push(skill);
+          if (reducedSkills[skill.parent]) {
+            if (!reducedSkills[skill.parent].children)
+              reducedSkills[skill.parent].children = [];
+            reducedSkills[skill.parent].children.push(skill);
+          }
         }
       });
       setSkills(Object.values(reducedSkills));
@@ -81,7 +83,7 @@ export default () => {
               Currículo <i className="fas fa-external-link-alt"></i>
             </Link>
             <button>
-              <a href="pdf/curriculum">
+              <a href="/pdf/curriculum">
                 <i className="fas fa-print"></i>
               </a>
             </button>
@@ -121,7 +123,7 @@ export default () => {
                 <Skill
                   key={skill.id}
                   level={skill.level}
-                  imgUrl={`${process.env.REACT_APP_DJANGO_URL}${skill.icon}`}
+                  imgUrl={skill.icon}
                   description={skill.description}
                   skills={
                     skill.children
@@ -150,7 +152,7 @@ export default () => {
             <CourseList>
               {courses.map(course => (
                 <CourseItem
-                  key={courses.id}
+                  key={course.id}
                   name={course.name}
                   place={course.place}
                   description={course.description}

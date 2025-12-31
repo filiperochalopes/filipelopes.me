@@ -1,65 +1,38 @@
 {
   "name": "filipelopes.me",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://djangoapp:8000",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
   "dependencies": {
+    "@astrojs/react": "^4.4.2",
     "@material-ui/core": "^4.11.3",
-    "axios": "^0.21.1",
-    "babel-eslint": "^10.1.0",
+    "astro": "^5.16.6",
     "blend4web": "^18.5.0",
+    "jspdf": "^2.5.1",
     "nuka-carousel": "^4.7.7",
     "pixelate": "^0.0.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-on-visible": "^1.6.0",
     "react-palette": "^1.0.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
     "react-scroll-parallax": "^2.4.0",
     "smooth-scroll": "^16.1.3",
-    "standard": "^16.0.3",
-    "styled-components": "^5.2.3",
+    "styled-components": "^5.3.11",
     "styled-normalize": "^8.0.7"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.+(js|jsx)' --fix",
-    "prettier": "prettier --write 'src/**/*.+(js|jsx)'"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-react-app": "^5.2.1",
-    "eslint-plugin-flowtype": "^4.7.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1"
-  },
-  "resolutions": {
-    "@babel/core": "^7.16.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn prettier && yarn lint"
+  "pnpm": {
+    "overrides": {
+      "css-tree": "3.0.1",
+      "csso>css-tree": "2.2.1"
     }
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^2.1.4"
   }
 }

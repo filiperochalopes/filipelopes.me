@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import * as styledModule from 'styled-components';
+
+const styled = styledModule.default || styledModule;
 
 export default styled.main`
   background: ${({ theme }) => theme.default.backgroundColor};

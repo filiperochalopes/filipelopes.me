@@ -1,0 +1,3513 @@
+{
+  "auth_group": [],
+  "auth_group_permissions": [],
+  "auth_permission": [
+    {
+      "id": 1,
+      "content_type_id": 1,
+      "codename": "add_logentry",
+      "name": "Can add log entry"
+    },
+    {
+      "id": 2,
+      "content_type_id": 1,
+      "codename": "change_logentry",
+      "name": "Can change log entry"
+    },
+    {
+      "id": 3,
+      "content_type_id": 1,
+      "codename": "delete_logentry",
+      "name": "Can delete log entry"
+    },
+    {
+      "id": 4,
+      "content_type_id": 1,
+      "codename": "view_logentry",
+      "name": "Can view log entry"
+    },
+    {
+      "id": 5,
+      "content_type_id": 2,
+      "codename": "add_permission",
+      "name": "Can add permission"
+    },
+    {
+      "id": 6,
+      "content_type_id": 2,
+      "codename": "change_permission",
+      "name": "Can change permission"
+    },
+    {
+      "id": 7,
+      "content_type_id": 2,
+      "codename": "delete_permission",
+      "name": "Can delete permission"
+    },
+    {
+      "id": 8,
+      "content_type_id": 2,
+      "codename": "view_permission",
+      "name": "Can view permission"
+    },
+    {
+      "id": 9,
+      "content_type_id": 3,
+      "codename": "add_group",
+      "name": "Can add group"
+    },
+    {
+      "id": 10,
+      "content_type_id": 3,
+      "codename": "change_group",
+      "name": "Can change group"
+    },
+    {
+      "id": 11,
+      "content_type_id": 3,
+      "codename": "delete_group",
+      "name": "Can delete group"
+    },
+    {
+      "id": 12,
+      "content_type_id": 3,
+      "codename": "view_group",
+      "name": "Can view group"
+    },
+    {
+      "id": 13,
+      "content_type_id": 4,
+      "codename": "add_user",
+      "name": "Can add user"
+    },
+    {
+      "id": 14,
+      "content_type_id": 4,
+      "codename": "change_user",
+      "name": "Can change user"
+    },
+    {
+      "id": 15,
+      "content_type_id": 4,
+      "codename": "delete_user",
+      "name": "Can delete user"
+    },
+    {
+      "id": 16,
+      "content_type_id": 4,
+      "codename": "view_user",
+      "name": "Can view user"
+    },
+    {
+      "id": 17,
+      "content_type_id": 5,
+      "codename": "add_contenttype",
+      "name": "Can add content type"
+    },
+    {
+      "id": 18,
+      "content_type_id": 5,
+      "codename": "change_contenttype",
+      "name": "Can change content type"
+    },
+    {
+      "id": 19,
+      "content_type_id": 5,
+      "codename": "delete_contenttype",
+      "name": "Can delete content type"
+    },
+    {
+      "id": 20,
+      "content_type_id": 5,
+      "codename": "view_contenttype",
+      "name": "Can view content type"
+    },
+    {
+      "id": 21,
+      "content_type_id": 6,
+      "codename": "add_session",
+      "name": "Can add session"
+    },
+    {
+      "id": 22,
+      "content_type_id": 6,
+      "codename": "change_session",
+      "name": "Can change session"
+    },
+    {
+      "id": 23,
+      "content_type_id": 6,
+      "codename": "delete_session",
+      "name": "Can delete session"
+    },
+    {
+      "id": 24,
+      "content_type_id": 6,
+      "codename": "view_session",
+      "name": "Can view session"
+    },
+    {
+      "id": 25,
+      "content_type_id": 7,
+      "codename": "add_tag",
+      "name": "Can add tag"
+    },
+    {
+      "id": 26,
+      "content_type_id": 7,
+      "codename": "change_tag",
+      "name": "Can change tag"
+    },
+    {
+      "id": 27,
+      "content_type_id": 7,
+      "codename": "delete_tag",
+      "name": "Can delete tag"
+    },
+    {
+      "id": 28,
+      "content_type_id": 7,
+      "codename": "view_tag",
+      "name": "Can view tag"
+    },
+    {
+      "id": 29,
+      "content_type_id": 8,
+      "codename": "add_course",
+      "name": "Can add course"
+    },
+    {
+      "id": 30,
+      "content_type_id": 8,
+      "codename": "change_course",
+      "name": "Can change course"
+    },
+    {
+      "id": 31,
+      "content_type_id": 8,
+      "codename": "delete_course",
+      "name": "Can delete course"
+    },
+    {
+      "id": 32,
+      "content_type_id": 8,
+      "codename": "view_course",
+      "name": "Can view course"
+    },
+    {
+      "id": 33,
+      "content_type_id": 9,
+      "codename": "add_experience",
+      "name": "Can add experience"
+    },
+    {
+      "id": 34,
+      "content_type_id": 9,
+      "codename": "change_experience",
+      "name": "Can change experience"
+    },
+    {
+      "id": 35,
+      "content_type_id": 9,
+      "codename": "delete_experience",
+      "name": "Can delete experience"
+    },
+    {
+      "id": 36,
+      "content_type_id": 9,
+      "codename": "view_experience",
+      "name": "Can view experience"
+    },
+    {
+      "id": 37,
+      "content_type_id": 10,
+      "codename": "add_skill",
+      "name": "Can add skill"
+    },
+    {
+      "id": 38,
+      "content_type_id": 10,
+      "codename": "change_skill",
+      "name": "Can change skill"
+    },
+    {
+      "id": 39,
+      "content_type_id": 10,
+      "codename": "delete_skill",
+      "name": "Can delete skill"
+    },
+    {
+      "id": 40,
+      "content_type_id": 10,
+      "codename": "view_skill",
+      "name": "Can view skill"
+    },
+    {
+      "id": 41,
+      "content_type_id": 11,
+      "codename": "add_item",
+      "name": "Can add item"
+    },
+    {
+      "id": 42,
+      "content_type_id": 11,
+      "codename": "change_item",
+      "name": "Can change item"
+    },
+    {
+      "id": 43,
+      "content_type_id": 11,
+      "codename": "delete_item",
+      "name": "Can delete item"
+    },
+    {
+      "id": 44,
+      "content_type_id": 11,
+      "codename": "view_item",
+      "name": "Can view item"
+    },
+    {
+      "id": 45,
+      "content_type_id": 12,
+      "codename": "add_post",
+      "name": "Can add post"
+    },
+    {
+      "id": 46,
+      "content_type_id": 12,
+      "codename": "change_post",
+      "name": "Can change post"
+    },
+    {
+      "id": 47,
+      "content_type_id": 12,
+      "codename": "delete_post",
+      "name": "Can delete post"
+    },
+    {
+      "id": 48,
+      "content_type_id": 12,
+      "codename": "view_post",
+      "name": "Can view post"
+    },
+    {
+      "id": 49,
+      "content_type_id": 13,
+      "codename": "add_category",
+      "name": "Can add category"
+    },
+    {
+      "id": 50,
+      "content_type_id": 13,
+      "codename": "change_category",
+      "name": "Can change category"
+    },
+    {
+      "id": 51,
+      "content_type_id": 13,
+      "codename": "delete_category",
+      "name": "Can delete category"
+    },
+    {
+      "id": 52,
+      "content_type_id": 13,
+      "codename": "view_category",
+      "name": "Can view category"
+    },
+    {
+      "id": 53,
+      "content_type_id": 14,
+      "codename": "add_relevance",
+      "name": "Can add relevance"
+    },
+    {
+      "id": 54,
+      "content_type_id": 14,
+      "codename": "change_relevance",
+      "name": "Can change relevance"
+    },
+    {
+      "id": 55,
+      "content_type_id": 14,
+      "codename": "delete_relevance",
+      "name": "Can delete relevance"
+    },
+    {
+      "id": 56,
+      "content_type_id": 14,
+      "codename": "view_relevance",
+      "name": "Can view relevance"
+    },
+    {
+      "id": 57,
+      "content_type_id": 15,
+      "codename": "add_certificate",
+      "name": "Can add certificate"
+    },
+    {
+      "id": 58,
+      "content_type_id": 15,
+      "codename": "change_certificate",
+      "name": "Can change certificate"
+    },
+    {
+      "id": 59,
+      "content_type_id": 15,
+      "codename": "delete_certificate",
+      "name": "Can delete certificate"
+    },
+    {
+      "id": 60,
+      "content_type_id": 15,
+      "codename": "view_certificate",
+      "name": "Can view certificate"
+    }
+  ],
+  "auth_user": [
+    {
+      "id": 1,
+      "password": "pbkdf2_sha256$216000$jSZzA7dqQreQ$BIKZyvt8n394GJ3pCj52x8Y7xmJlcO6loslTO/RA+8k=",
+      "last_login": "2023-01-06 15:43:20.673201",
+      "is_superuser": 1,
+      "username": "root",
+      "last_name": "",
+      "email": "contato@filipelopes.me",
+      "is_staff": 1,
+      "is_active": 1,
+      "date_joined": "2021-04-02 13:11:21.944018",
+      "first_name": ""
+    }
+  ],
+  "auth_user_groups": [],
+  "auth_user_user_permissions": [],
+  "core_tag": [],
+  "curriculum_category": [
+    {
+      "id": 1,
+      "name_pt_br": "Designer gráfico",
+      "name_en_us": "Graphic Designer",
+      "created_at": "2021-05-08 16:10:06.618167",
+      "updated_at": "2021-05-08 16:10:06.618211"
+    },
+    {
+      "id": 2,
+      "name_pt_br": "Desenvolvedor Web/Mobile",
+      "name_en_us": "Web/Mobile Developer",
+      "created_at": "2021-05-08 16:11:13.320445",
+      "updated_at": "2021-05-08 16:11:13.320492"
+    },
+    {
+      "id": 3,
+      "name_pt_br": "Idiomas",
+      "name_en_us": "Languages",
+      "created_at": "2021-05-08 16:11:26.345162",
+      "updated_at": "2021-05-08 16:11:26.345216"
+    },
+    {
+      "id": 4,
+      "name_pt_br": "Pessoal",
+      "name_en_us": "Personal",
+      "created_at": "2021-06-01 12:46:23.158350",
+      "updated_at": "2021-06-01 13:36:23.561451"
+    }
+  ],
+  "curriculum_certificate": [
+    {
+      "id": 1,
+      "title_pt_br": "Destaque em Disciplina - Colegio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2011-12-06",
+      "file": "certificates/diploma_de_destaque_disciplina_cms.pdf",
+      "created_at": "2021-06-13 20:49:20.823043",
+      "updated_at": "2021-06-13 20:49:20.823099",
+      "course_id": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 2,
+      "title_pt_br": "Diploma de Assiduidade - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2011-12-06",
+      "file": "certificates/diploma_de_assiduidade_2011.pdf",
+      "created_at": "2021-06-13 21:51:13.935739",
+      "updated_at": "2021-06-13 21:52:08.617482",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 3,
+      "title_pt_br": "Diploma de Conclusão do Ensino Fundamental",
+      "title_en_us": "",
+      "date": "2011-12-05",
+      "file": "certificates/diploma_de_conclusao_ensino_fundamental_2011.pdf",
+      "created_at": "2021-06-13 21:52:02.424416",
+      "updated_at": "2021-06-13 21:52:02.424457",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 4,
+      "title_pt_br": "Robot Care Brasil 2019 - PUC-RS",
+      "title_en_us": "",
+      "date": "2019-05-15",
+      "file": "certificates/certificado_robot_care.pdf",
+      "created_at": "2021-06-13 21:55:06.206296",
+      "updated_at": "2021-06-13 21:55:06.206324",
+      "course_id": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 5,
+      "title_pt_br": "Medalha de Ouro - Olimpíadas Brasileira de Matemática das Escolas Públicas 2014",
+      "title_en_us": "",
+      "date": "2015-12-14",
+      "file": "certificates/certificado_olimpiada_de_matematica_2014.pdf",
+      "created_at": "2021-06-13 21:55:51.926789",
+      "updated_at": "2021-06-13 21:55:51.926830",
+      "course_id": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 6,
+      "title_pt_br": "Medalha de Bronze - Nacional - Olimpíada Brasileira de Física das Escolas Públicas 2012",
+      "title_en_us": "",
+      "date": "2013-05-01",
+      "file": "certificates/certificado_OBFEP_2012_nivel_nacional.pdf",
+      "created_at": "2021-06-13 21:59:00.656048",
+      "updated_at": "2021-06-13 21:59:00.656082",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 7,
+      "title_pt_br": "Medalha de Prata - Estadual - Olimíadas Brasileira de Física das Escolas Públicas 2012",
+      "title_en_us": "",
+      "date": "2013-05-01",
+      "file": "certificates/certificado_OBFEP_2012_nivel_estadual.pdf",
+      "created_at": "2021-06-13 21:59:43.020097",
+      "updated_at": "2021-06-13 21:59:43.020124",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 8,
+      "title_pt_br": "Medalha de Ouro - Olimíadas Brasileira de Física das Escolas Públicas 2011",
+      "title_en_us": "",
+      "date": "2012-05-01",
+      "file": "certificates/certificado_OBFEP_2011.pdf",
+      "created_at": "2021-06-13 22:00:45.424553",
+      "updated_at": "2021-06-13 22:00:45.424580",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 9,
+      "title_pt_br": "Medalha de Bronze - VII Olimpíada Baiana de Química",
+      "title_en_us": "",
+      "date": "2012-10-31",
+      "file": "certificates/medalha_bronze_olimpiadas_baiana_quimica.pdf",
+      "created_at": "2021-06-13 22:03:20.066928",
+      "updated_at": "2021-06-13 22:03:20.066954",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 10,
+      "title_pt_br": "Medalha de Prata - Aplicação 2 ano - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2014-05-23",
+      "file": "certificates/certificado_de_aplicacao_em_prata_2ano2014.pdf",
+      "created_at": "2021-06-13 22:08:48.968003",
+      "updated_at": "2021-06-13 22:08:48.968046",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 11,
+      "title_pt_br": "Medalha de Bronze - Aplicação 9 ano - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2012-02-14",
+      "file": "certificates/certificado_de_aplicacao_em_broze_9ano2012.pdf",
+      "created_at": "2021-06-13 22:09:24.983138",
+      "updated_at": "2021-06-13 22:09:24.983164",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 12,
+      "title_pt_br": "Medalha de Ouro - Aplicação 1 ano - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2013-03-27",
+      "file": "certificates/certificado_de_aplicacao_em_ouro_1ano2013.pdf",
+      "created_at": "2021-06-13 22:10:04.273885",
+      "updated_at": "2021-06-13 22:10:04.273923",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 13,
+      "title_pt_br": "Curso de Inglês Avançado - NUPEL - Universidade Federal da Bahia",
+      "title_en_us": "",
+      "date": "2015-12-08",
+      "file": "certificates/certificado_curso_ingles.pdf",
+      "created_at": "2021-06-13 22:11:42.509181",
+      "updated_at": "2021-06-13 22:11:42.509210",
+      "course_id": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 14,
+      "title_pt_br": "Conclusão do Ensino Médio - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2014-07-24",
+      "file": "certificates/certificado_conclusao_ensino_medio.pdf",
+      "created_at": "2021-06-13 22:14:13.195157",
+      "updated_at": "2021-06-13 22:14:13.195210",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 15,
+      "title_pt_br": "Curso de Inglês Júnior CCAA - 2004",
+      "title_en_us": "",
+      "date": "2004-12-01",
+      "file": "certificates/certificado_curso_de_ingles_junior_CCAA_2004.pdf",
+      "created_at": "2021-06-13 22:18:09.250699",
+      "updated_at": "2021-06-13 22:18:09.250735",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 16,
+      "title_pt_br": "Curso de Inglês Júnior CCAA - 2005",
+      "title_en_us": "",
+      "date": "2005-06-01",
+      "file": "",
+      "created_at": "2021-06-13 22:18:55.250893",
+      "updated_at": "2021-06-13 22:19:17.502470",
+      "course_id": null,
+      "relevance_id": 1
+    }
+  ],
+  "curriculum_course": [
+    {
+      "id": 1,
+      "description_pt_br": "Formação em médico generalista na primeira Universidade de Medicina do país",
+      "description_en_us": "Physician graduation at the country's first Medical University",
+      "since": "2015-03-01",
+      "until": null,
+      "created_at": "2021-05-25 11:52:43.040364",
+      "updated_at": "2021-06-01 20:36:06.246290",
+      "place_en_us": "Medicine University of Bahia (FMB - Federal University of Bahia)",
+      "relevance_id": 3,
+      "name_pt_br": "Graduando em Medicina",
+      "name_en_us": "Senior physician college student",
+      "place_pt_br": "Faculdade de Medicina da Bahia - UFBA"
+    },
+    {
+      "id": 2,
+      "description_pt_br": "- Ensino de qualidade com disciplina\r\n- Certificado de aluno disciplinado\r\n- Campeão nas competições internas de atletismo e basquete\r\n- Ala/armador em basquete",
+      "description_en_us": "- Quality teaching with discipline\r\n- Disciplined Student Certificate\r\n- Champion in internal athletics and basketball competitions\r\n- Basketball wing/guard",
+      "since": "2008-03-01",
+      "until": "2014-07-01",
+      "created_at": "2021-05-25 11:55:01.488311",
+      "updated_at": "2021-06-01 20:35:08.859575",
+      "place_en_us": "Military School of Salvador",
+      "relevance_id": 3,
+      "name_pt_br": "Segundo Grau Completo",
+      "name_en_us": "High school degree",
+      "place_pt_br": "Colégio Militar de Salvador"
+    },
+    {
+      "id": 3,
+      "description_pt_br": "Curso concluído com certificação",
+      "description_en_us": "Course completed with certification",
+      "since": "2018-07-11",
+      "until": "2019-12-27",
+      "created_at": "2021-06-01 20:49:24.730535",
+      "updated_at": "2021-06-01 20:49:57.423881",
+      "place_en_us": "Udemy",
+      "relevance_id": 2,
+      "name_pt_br": "Python 3 Completo do Iniciante ao Avançado",
+      "name_en_us": "Python 3 from beginning to advanced",
+      "place_pt_br": "Udemy"
+    }
+  ],
+  "curriculum_experience": [
+    {
+      "id": 3,
+      "title_pt_br": "Desenvolvedor frontend ReactJS, colaborador em equipe SCRUM",
+      "title_en_us": "ReactJS frontend developers in a SCRUM team",
+      "organization": "International Conservation",
+      "place": "Salvador - BA (INEMA)",
+      "description_pt_br": "- Trabalhei com a metodologia Ágil, gerenciando atividades remotamente\r\n- Lançamos a nova versão do GEOBAHIA (http://mapa.geobahia.ba.gov.br)\r\n- Melhorei o uso de técnicas na empresa com introdução de novos conceitos de programação",
+      "description_en_us": "- Worked with agile SCRUM team managing activities remotely\r\n- Lauched new GEOBAHIA version (http://mapa.geobahia.ba.gov.br)\r\n- Improved programing techniques with GraphQL",
+      "key_achievement_pt_br": "Novos conhecimentos ao trabalhar com manipulação de mapas e ferramentas de análise",
+      "key_achievement_en_us": "Work with map manipulation and map data analysis",
+      "since": "2019-09-01",
+      "until": "2021-02-28",
+      "created_at": "2021-05-07 23:29:48.157230",
+      "updated_at": "2021-06-01 20:26:32.042182",
+      "relevance_id": 3
+    },
+    {
+      "id": 4,
+      "title_pt_br": "CEO, CTO, Web Developer, SCRUM Master, Gerenciador de Projetos,DevOps",
+      "title_en_us": "CEO, CTO, Web Developer, SCRUM Master,  Project Manager, DevOps",
+      "organization": "ORANGO I/O TECNOLOGIA",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Me envolvi na contratação, avaliação e capacitação de profissionais para trabalhar nos projetos da empresa, criando uma platarfoma para gerência de recursos de colaboradores\r\n- Trabalhei com diversas linguagens de programação, estrutura de projetos e framework\r\n- Me aprofundei em estrutura Linux com implementação de várias estruturas de dados\r\n- Trabalhos com estrtura de banco de dados noSQL e subscriptions",
+      "description_en_us": "- I got involved in hiring, evaluating and professionals training to work on the company's projects, creating a platform for managing employee resources\r\n- Worked with several programming languages, project structure and framework\r\n- I delved into Linux structure with implementation of various data structures\r\n- Works with noSQL database structure and subscriptions",
+      "key_achievement_pt_br": "Trabalhar com gestão de equipe/projetos e infraestrutura de projetos em VPS Linux",
+      "key_achievement_en_us": "Work with team / project management and project infrastructure on Linux VPS",
+      "since": "2020-05-06",
+      "until": null,
+      "created_at": "2021-05-24 11:37:27.694982",
+      "updated_at": "2021-06-01 20:26:36.888765",
+      "relevance_id": 3
+    },
+    {
+      "id": 5,
+      "title_pt_br": "Diretor de projeto e desenvolvedor ReactJS",
+      "title_en_us": "Project Manager and ReactJS Developer",
+      "organization": "ALT F4 Informática (Rio de Janeiro)",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Diálogo com equipe externa de backend\r\n- Diálogo com equipe externa requisitos\r\n- Desenvolvimento de um sistema de gerenciamento de sessões para votação de matérias online\r\n- Durante o desenvolvimento gerenciei uma equipe com um designer e um desenvolvedor júnior atuando juntamente com eles no desenvolvimento. O projeto foi solicitado pela ALT F4 para suprir as necessidades da câmara de vereadores de Mangaratiba - Costa Verde - Rio de Janeiro.",
+      "description_en_us": "- Dialogue with external backend team\r\n- Dialogue with external requirements team\r\n- Development of a session management system for voting on online political subjects\r\n- During development I managed a team with a junior designer and a junior developer working together with them in the development. The project was requested by ALT F4 to meet the needs of the City Council of Mangaratiba - Costa Verde - Rio de Janeiro.",
+      "key_achievement_pt_br": "Coordenar e desenvolver criação de sistema",
+      "key_achievement_en_us": "Manage a team and help develop",
+      "since": "2020-07-01",
+      "until": "2020-03-01",
+      "created_at": "2021-05-24 18:55:10.047884",
+      "updated_at": "2021-06-01 20:26:20.165954",
+      "relevance_id": 2
+    },
+    {
+      "id": 6,
+      "title_pt_br": "Desenvolvedor Fullstack Wordpress API + SlimFramework + ReactJS",
+      "title_en_us": "Fullstack developer Wordpress API + SlimFramework + ReactJS",
+      "organization": "Montreal Tecnologia, alocado no INEMA",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Desenvolvimento de toda a intranet do Instituto do Meio Ambiente e Recursos Hídricos da Bahia \r\n- Backend em WORDPRESS para fornecimento de API própria e frontend em ReactJS\r\n- Criação de API do painel de monitoramento de tempo com SlimFramework",
+      "description_en_us": "- Development of the entire intranet of the Institute for the Environment and Water Resources of Bahia\r\n- Backend written in WORDPRESS to supply its own API and ReactJS frontend\r\n- Creation of weather monitoring API with SlimFramework with government data",
+      "key_achievement_pt_br": "Desenvolver sozinho uma intranet sofisticada com gerenciamento de conteúdo",
+      "key_achievement_en_us": "Develop a sophisticated intranet with content management on your own",
+      "since": "2019-02-01",
+      "until": "2019-08-01",
+      "created_at": "2021-05-24 19:02:22.637138",
+      "updated_at": "2021-06-01 20:26:02.100998",
+      "relevance_id": 2
+    },
+    {
+      "id": 7,
+      "title_pt_br": "Desenvolvedor PHP Fullstack",
+      "title_en_us": "PHP Fullstack developer",
+      "organization": "ITMPR",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Reformulação do site oficial da empresa com uma estrutura simples e rápida a pedido do cliente para mostrar os produtos da empresa sem serviço de banco de dados, porém de forma eficiente.\r\n- Desenvolvimento de site de baixo custo e alto desempenho 88 pontos no PageSpeed Isights\r\n- Criação de um sistema de gerenciamento e cadastro de orçamentos e respectivos dependentes (usuários, clientes, produtos…) em PHP, JQuery e Ajax.\r\n- Desenvolvimento de aplicação monólito de baixo custo e alto desempenho\r\n- Consulta a banco de dados com ORM Elloquent",
+      "description_en_us": "- Reformulation of the company's official website with a simple and quick code structure to show the company's products without a database service, but in an efficient way.\r\n- Low-cost, high-performance website development with 88 points on PageSpeed ​​Isights\r\n- Creation of a quotes management and registration system and their dependents (users, customers, products…) in PHP, JQuery and Ajax.\r\n- Development of low cost, high performance monolith application\r\n- Database query with ORM Elloquent",
+      "key_achievement_pt_br": "Aplicação PDV com suporte duradouro e manutenção contínua",
+      "key_achievement_en_us": "POS application with long-term support",
+      "since": "2017-11-01",
+      "until": null,
+      "created_at": "2021-05-24 19:12:57.989608",
+      "updated_at": "2021-06-01 20:25:44.452969",
+      "relevance_id": 2
+    },
+    {
+      "id": 8,
+      "title_pt_br": "Desenvolvedor PHP Fullstack",
+      "title_en_us": "PHP Fullstack developer",
+      "organization": "Qualité Ortodontia",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Trabalhando com criação de gráficos e PDF para relatórios\r\n- Criação de um sistema de controle de guias para clínica de ortodontia utilizando PHP, MySQL, JQuery e Ajax.",
+      "description_en_us": "- Creation of graphs and creation of PDF file report\r\n- Creation of a document control system for orthodontics clinic using PHP, MySQL, JQuery and Ajax.",
+      "key_achievement_pt_br": "Criação de aplicação monólito",
+      "key_achievement_en_us": "Monolithic application development",
+      "since": "2019-10-01",
+      "until": "2020-02-01",
+      "created_at": "2021-05-24 19:19:29.336931",
+      "updated_at": "2021-06-01 20:25:28.284081",
+      "relevance_id": 1
+    },
+    {
+      "id": 9,
+      "title_pt_br": "Desenvolvedor com stack WORDPRESS + ReactJS",
+      "title_en_us": "ReactJS and WORDPRESS stack developer",
+      "organization": "Instituto de Ciência e Saúde - UFBA",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Criação do Atlas digital de histologia da Universidade Federal da Bahia para consulta de alunos e auxílio ao ensino utilizando WORDPRESS API e ReactJS\r\n- Container Wordpress API com Docker\r\n- Criação de tema e plugin wordpress\r\n- Novo sistema de upload para o wordpress no plugin criado",
+      "description_en_us": "- Criação do Atlas digital de histologia da Universidade Federal da Bahia para consulta de alunos e auxílio ao ensino utilizando WORDPRESS API e ReactJS\r\n- WORDPRESS Container API with Docker\r\n- WORDPRESS theme and plugin development\r\n- new WORDPRESS self upload system",
+      "key_achievement_pt_br": "Trabalhando para instituição de ensino federal para o curso de medicina",
+      "key_achievement_en_us": "Working for a federal medicine teaching institution",
+      "since": "2018-07-01",
+      "until": null,
+      "created_at": "2021-05-24 19:21:15.418339",
+      "updated_at": "2021-06-01 20:25:13.426779",
+      "relevance_id": 2
+    },
+    {
+      "id": 10,
+      "title_pt_br": "Desenvolvedor WORDPRESS",
+      "title_en_us": "WORDPRESS developer",
+      "organization": "Hangar Comunicação",
+      "place": "Salvador - BA",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "key_achievement_pt_br": "Criação de site com template próprio e plugin WORDPRESS.",
+      "key_achievement_en_us": "WORDPRESS template and plugin development",
+      "since": "2018-10-01",
+      "until": "2018-11-01",
+      "created_at": "2021-05-24 19:22:22.089843",
+      "updated_at": "2021-06-01 20:24:58.600210",
+      "relevance_id": 2
+    },
+    {
+      "id": 11,
+      "title_pt_br": "Desenvolvedor web e modelador 3D",
+      "title_en_us": "3D moddelling and Frontend Developer",
+      "organization": "Marinha do Brasil",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Criação do sistema de hasteamento de bandeira digital para campeonato mundial de artes marciais (38th WMC Judo - 38o. Campeonato Mundial Militar de Judô - Rio de Janeiro) utilizando Blender3D, Blend4Web e OpenGL para Web.\r\n- Modelagem e animação de modelo 3D",
+      "description_en_us": "- Creation of a digital flag hoisting system for the world martial arts championship (38th WMC Judo - 38th. World Military Judo Championship - Rio de Janeiro) using Blender3D, Blend4Web and OpenGL for Web.\r\n- Creation of 3D enviroment and animation",
+      "key_achievement_pt_br": "Desenvolvimento de sistema complexo 3D com visibilidade televisionada mundialmente",
+      "key_achievement_en_us": "Development of a complex 3D system with televised visibility worldwide",
+      "since": "2018-10-01",
+      "until": "2018-11-01",
+      "created_at": "2021-05-24 19:24:11.390979",
+      "updated_at": "2021-06-01 20:24:49.447098",
+      "relevance_id": 2
+    },
+    {
+      "id": 12,
+      "title_pt_br": "CTO, Desenvolvedor Backend, Revisor de Código, DevOps",
+      "title_en_us": "CTO, Backend Developer, Code Reviewer",
+      "organization": "CLICKLAV",
+      "place": "Salvador/Lauro de Freitas - BA",
+      "description_pt_br": "- Revisão de código React Native\r\n- Desenvolvimento e remodelamento de backend \r\n- Criação de estrutura de modelagem e versionamento de banco de dados com prisma.io\r\n- Realizar deploy de app nativo e instalação nas plataformas digitais\r\n- Gerenciar projeto de construção de todo ecossistema CLICKLAV",
+      "description_en_us": "- React Native code review and development\r\n- Backend development with subscriptions and graphqQL using sequelize and graphql-yoga\r\n- Database migrations with prisma.io\r\n- Mobile app deploy on digital store\r\n- Manage all CLICKLAV ecosystem",
+      "key_achievement_pt_br": "Trabalhar com aplicação mobile e gerenciar um projeto de ponta a ponta com equipes variadas, utilizando SCRUM e fazer deploy de Aplicativo em plataformas digitais",
+      "key_achievement_en_us": "Work with mobile app and deploy it on Apple/Google store",
+      "since": "2020-01-16",
+      "until": null,
+      "created_at": "2021-05-25 11:48:27.718225",
+      "updated_at": "2021-06-01 20:24:33.464026",
+      "relevance_id": 2
+    }
+  ],
+  "curriculum_relevance": [
+    {
+      "id": 1,
+      "value": "LOW",
+      "description_pt_br": "Baixa relevância, não deve aparecer em muitos lugares, apenas em relatórios completos",
+      "created_at": "2021-06-01 20:23:02.811317",
+      "updated_at": "2021-06-01 20:23:02.811339",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "value": "MID",
+      "description_pt_br": "Média Relevância, deve aparecer na página do site",
+      "created_at": "2021-06-01 20:23:43.190545",
+      "updated_at": "2021-06-01 20:23:43.190581",
+      "order": 5
+    },
+    {
+      "id": 3,
+      "value": "HIGH",
+      "description_pt_br": "Alta relevância, deve aparecer nos PDFs gerados e na página do site",
+      "created_at": "2021-06-01 20:24:12.736570",
+      "updated_at": "2021-06-01 20:24:12.736602",
+      "order": 10
+    }
+  ],
+  "curriculum_skill": [
+    {
+      "id": 3,
+      "description_pt_br": "Modelador, animador de modelos 3D. Integração com a WEB",
+      "description_en_us": "Modeling and 3D animation with web integration",
+      "level": 65,
+      "name_pt_br": "Blender",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:38:48.185209",
+      "updated_at": "2021-05-08 16:14:44.052518",
+      "icon": "skills/blender.png",
+      "category_id": 1,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 4,
+      "description_pt_br": "Manipulação de imagens",
+      "description_en_us": "Image manipulation",
+      "level": 75,
+      "name_pt_br": "Gimp",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:39:30.434058",
+      "updated_at": "2021-05-08 16:14:38.031131",
+      "icon": "skills/gimp.png",
+      "category_id": 1,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 5,
+      "description_pt_br": "Criação de imagens em vetor",
+      "description_en_us": "Vector images creation",
+      "level": 25,
+      "name_pt_br": "Corel Draw",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:40:06.593123",
+      "updated_at": "2021-05-08 16:14:32.941013",
+      "icon": "skills/coreldraw.jpg",
+      "category_id": 1,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 6,
+      "description_pt_br": "Criação de imagens de vetor",
+      "description_en_us": "Vector image creation",
+      "level": 45,
+      "name_pt_br": "Inkscape",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:40:46.017521",
+      "updated_at": "2021-05-08 16:14:21.359466",
+      "icon": "skills/inkscape.jpg",
+      "category_id": 1,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 7,
+      "description_pt_br": "Fotogrametria gerando modelos 3d de boa qualidade",
+      "description_en_us": "Photogrammetry generating good quality 3d models",
+      "level": 60,
+      "name_pt_br": "Photoscan Ankisoft&reg;",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:43:22.587562",
+      "updated_at": "2021-05-08 16:14:28.037717",
+      "icon": "skills/photoscan.jpg",
+      "category_id": 1,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 8,
+      "description_pt_br": "Criação de CRUD e Rest API, utilização de ORM, manipulação de imagens com Imagemagick. Desde 2010.",
+      "description_en_us": "CRUD creation and Rest API. ORM utilization. Image manipulation with Imagemagick. Since 2010",
+      "level": 75,
+      "name_pt_br": "PHP",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:45:49.336737",
+      "updated_at": "2021-05-08 16:14:15.853241",
+      "icon": "skills/php.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 9,
+      "description_pt_br": "Rest API, GraphQL, ORM, estudando ML.",
+      "description_en_us": "Rest API, GraphQL, ORM, studying ML.",
+      "level": 80,
+      "name_pt_br": "Python",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:47:24.846719",
+      "updated_at": "2021-05-08 16:14:10.907312",
+      "icon": "skills/python_DiB9AYf.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 10,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 45,
+      "name_pt_br": "Django",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:47:50.163270",
+      "updated_at": "2021-05-08 16:14:06.407592",
+      "icon": "skills/python_khui5jH.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 9
+    },
+    {
+      "id": 11,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 70,
+      "name_pt_br": "Flask",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:48:18.844199",
+      "updated_at": "2021-05-08 16:14:00.995437",
+      "icon": "skills/python_OPCCPNT.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 9
+    },
+    {
+      "id": 12,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 60,
+      "name_pt_br": "FastAPI",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:48:49.133714",
+      "updated_at": "2021-05-08 16:13:55.245865",
+      "icon": "skills/python_vjcJZAE.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 9
+    },
+    {
+      "id": 13,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 80,
+      "name_pt_br": "SQLAlchemy",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:49:32.947087",
+      "updated_at": "2021-05-08 16:13:49.954900",
+      "icon": "skills/python_ytNqgGI.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 9
+    },
+    {
+      "id": 14,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 2,
+      "name_pt_br": "TensorFlow",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:49:59.779673",
+      "updated_at": "2021-05-08 16:13:44.188989",
+      "icon": "skills/python_zy1INdG.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 9
+    },
+    {
+      "id": 15,
+      "description_pt_br": "Fullstack. Desde 2010 desenvolvendo frontend com JQuery. Mais recentemente 3+ anos com ReactJS",
+      "description_en_us": "Fullstack. ReactJS lover. JQuery developer since 2010.",
+      "level": 80,
+      "name_pt_br": "Javascript",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:52:53.263059",
+      "updated_at": "2021-05-08 16:13:38.884555",
+      "icon": "skills/javascript.png",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 16,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 80,
+      "name_pt_br": "ReactJS",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:53:15.573271",
+      "updated_at": "2021-05-08 16:13:31.259187",
+      "icon": "skills/ReactJS.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 15
+    },
+    {
+      "id": 17,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 45,
+      "name_pt_br": "React Native",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:53:41.954569",
+      "updated_at": "2021-05-08 16:13:25.983584",
+      "icon": "skills/ReactNative.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 15
+    },
+    {
+      "id": 18,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 95,
+      "name_pt_br": "JQuery",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:53:59.966097",
+      "updated_at": "2021-05-08 16:13:21.459256",
+      "icon": "skills/JQuery.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 15
+    },
+    {
+      "id": 19,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 70,
+      "name_pt_br": "Blend4Web",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:54:17.189885",
+      "updated_at": "2021-05-08 16:13:16.265357",
+      "icon": "skills/Blend4Web.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 15
+    },
+    {
+      "id": 20,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 68,
+      "name_pt_br": "Node.js",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:54:39.772564",
+      "updated_at": "2021-05-08 16:13:11.889981",
+      "icon": "",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 15
+    },
+    {
+      "id": 21,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 86,
+      "name_pt_br": "Prisma",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:55:11.263614",
+      "updated_at": "2021-05-08 16:13:07.110857",
+      "icon": "",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 15
+    },
+    {
+      "id": 22,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 78,
+      "name_pt_br": "Graphql-yoga",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:55:37.059737",
+      "updated_at": "2021-05-08 16:13:02.559122",
+      "icon": "",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 15
+    },
+    {
+      "id": 23,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 99,
+      "name_pt_br": "CSS",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:56:06.766345",
+      "updated_at": "2021-05-08 16:12:56.563810",
+      "icon": "skills/css3.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 24,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 99,
+      "name_pt_br": "Sass",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:56:30.590883",
+      "updated_at": "2021-05-08 16:12:51.136547",
+      "icon": "skills/Sass_NcQ6C7b.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": 23
+    },
+    {
+      "id": 25,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 99,
+      "name_pt_br": "HTML",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:57:01.500354",
+      "updated_at": "2021-05-08 16:12:45.189271",
+      "icon": "skills/html5.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 26,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 88,
+      "name_pt_br": "MySQL",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:57:53.087987",
+      "updated_at": "2021-05-08 16:12:39.689023",
+      "icon": "skills/mysql.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 27,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 82,
+      "name_pt_br": "PostgreSQL",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:58:34.904118",
+      "updated_at": "2021-05-08 16:12:33.712856",
+      "icon": "skills/postgresql.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 28,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 88,
+      "name_pt_br": "SQLite",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:58:53.946973",
+      "updated_at": "2021-05-08 16:12:28.129502",
+      "icon": "",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 29,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 70,
+      "name_pt_br": "Docker",
+      "name_en_us": "",
+      "created_at": "2021-05-07 23:59:05.430155",
+      "updated_at": "2021-05-08 16:12:22.647728",
+      "icon": "",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 30,
+      "description_pt_br": "Apto para trabalhar em equipes de desenvolvimento, gerenciar atividades e projetos com integração contínua.",
+      "description_en_us": "Able to work in development teams, manage activities and projects with continuous integration.",
+      "level": 96,
+      "name_pt_br": "Git",
+      "name_en_us": "",
+      "created_at": "2021-05-08 14:39:09.315056",
+      "updated_at": "2021-05-08 16:12:16.667613",
+      "icon": "skills/git.jpg",
+      "category_id": 2,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 31,
+      "description_pt_br": "Língua nativa",
+      "description_en_us": "Native language",
+      "level": 98,
+      "name_pt_br": "Português",
+      "name_en_us": "Portuguese",
+      "created_at": "2021-05-08 14:40:59.608193",
+      "updated_at": "2021-05-08 16:12:11.226268",
+      "icon": "",
+      "category_id": 3,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 32,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 82,
+      "name_pt_br": "Inglês",
+      "name_en_us": "English",
+      "created_at": "2021-05-08 15:04:42.122458",
+      "updated_at": "2021-05-08 16:12:06.084853",
+      "icon": "skills/ingles.jpg",
+      "category_id": 3,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 33,
+      "description_pt_br": "Curso Básico de LIBRAS na Universidade Federal da Bahia. LÍNGUA BRASILEIRA DE SINAIS NIVEL I CH 68h",
+      "description_en_us": "LIBRAS Level 1 Course at Federal University. 68 h.s.",
+      "level": 15,
+      "name_pt_br": "Língua Brasileira de Sinais (LIBRAS)",
+      "name_en_us": "Brazilian Sign Language (LIBRAS)",
+      "created_at": "2021-05-08 15:12:09.233967",
+      "updated_at": "2021-05-08 16:12:01.099635",
+      "icon": "skills/libras.jpg",
+      "category_id": 3,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 34,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 99,
+      "name_pt_br": "Fala fluente",
+      "name_en_us": "Fluent speech",
+      "created_at": "2021-05-08 15:13:30.324889",
+      "updated_at": "2021-05-08 16:11:55.560724",
+      "icon": "skills/portugues.jpg",
+      "category_id": 3,
+      "relevance_id": null,
+      "parent_id": 31
+    },
+    {
+      "id": 35,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 98,
+      "name_pt_br": "Ouve bem",
+      "name_en_us": "Listen well",
+      "created_at": "2021-05-08 15:14:11.958557",
+      "updated_at": "2021-05-08 16:11:49.633418",
+      "icon": "skills/portugues_0ssKeCq.jpg",
+      "category_id": 3,
+      "relevance_id": null,
+      "parent_id": 31
+    },
+    {
+      "id": 36,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 98,
+      "name_pt_br": "Escreve bem",
+      "name_en_us": "Write well",
+      "created_at": "2021-05-08 15:14:59.864725",
+      "updated_at": "2021-05-08 16:11:44.460529",
+      "icon": "skills/portugues_asbPwnC.jpg",
+      "category_id": 3,
+      "relevance_id": null,
+      "parent_id": 31
+    },
+    {
+      "id": 37,
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 84,
+      "name_pt_br": "Fala fluente",
+      "name_en_us": "Fluent speech",
+      "created_at": "2021-05-08 15:15:50.863380",
+      "updated_at": "2021-05-08 16:11:38.043022",
+      "icon": "skills/ingles_ZVeSjxD.jpg",
+      "category_id": 3,
+      "relevance_id": null,
+      "parent_id": 32
+    },
+    {
+      "id": 38,
+      "description_pt_br": "Por anos, graças a Deus, manejando tempo em curso de medicina, trabalho e empresa.",
+      "description_en_us": "For years, thank God, managing time in medicine, work and business.",
+      "level": 92,
+      "name_pt_br": "Gerenciamento de Tempo",
+      "name_en_us": "Time Management Skills",
+      "created_at": "2021-06-01 13:32:21.644101",
+      "updated_at": "2021-06-01 13:32:21.644144",
+      "icon": "",
+      "category_id": 4,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 39,
+      "description_pt_br": "De consertar vaso sanitário à construir circuito elétrico, de programação à medicina.",
+      "description_en_us": "From fixing toilets to building an electrical circuit, from programming to medicine.",
+      "level": 92,
+      "name_pt_br": "Multitarefa",
+      "name_en_us": "Multitasking",
+      "created_at": "2021-06-01 13:34:30.193712",
+      "updated_at": "2021-06-01 13:34:30.193751",
+      "icon": "",
+      "category_id": 4,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 40,
+      "description_pt_br": "Venda de produtos e serviços, já vendi algumas coisas na vida, inclusive com lojas virtuais e pessoalmente, mas não é uma das minhas melhores habilidades.",
+      "description_en_us": "Selling products and services. I've sold some things in my life, including online stores and in person, but it's not one of my best skills.",
+      "level": 75,
+      "name_pt_br": "Vendedor",
+      "name_en_us": "Seller",
+      "created_at": "2021-06-01 13:36:06.159744",
+      "updated_at": "2021-06-01 13:36:16.351630",
+      "icon": "",
+      "category_id": 4,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 41,
+      "description_pt_br": "Elogiado por boa comunicação em plataformas de freelancers. Gosto sempre de manter meus clientes informados sobre o andamento do projeto. É uma necessidade essa habilidade para transmitir confiança para clientes à distância.",
+      "description_en_us": "Praised for good communication on freelancer platforms. I always like to keep my clients informed about the progress of the project. This skill is a necessity to convey confidence to customers from a distance.",
+      "level": 88,
+      "name_pt_br": "Comunicação",
+      "name_en_us": "Communication",
+      "created_at": "2021-06-01 13:39:15.763313",
+      "updated_at": "2021-06-01 13:39:15.763353",
+      "icon": "",
+      "category_id": 4,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 42,
+      "description_pt_br": "É uma das coisas que mais amo fazer. Resolver problemas! Criar soluções, por isso o lema da minha empresa criada. ORANGO I/O, soluções inteligentes.",
+      "description_en_us": "It's one of the things I love to do the most. Solve problems! Create solutions, hence the motto of my company created. ORANGO I/O, smart solutions.",
+      "level": 98,
+      "name_pt_br": "Resolução de Problemas",
+      "name_en_us": "Problem Solving",
+      "created_at": "2021-06-01 13:40:33.103031",
+      "updated_at": "2021-06-01 13:40:33.103098",
+      "icon": "",
+      "category_id": 4,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 43,
+      "description_pt_br": "Ensino desde os meus 14 anos: Física, Química e Matemática. Mais recentemente com aulas de Wordpress e Assessoria em programação. Um diferencial são as apresentações.",
+      "description_en_us": "I teach since I was 14 years old: Physics, Chemistry and Mathematics. More recently with Wordpress classes and programming advices. A differential are the slide presentations.",
+      "level": 88,
+      "name_pt_br": "Ensinar",
+      "name_en_us": "Teaching",
+      "created_at": "2021-06-01 13:44:26.620542",
+      "updated_at": "2021-06-01 13:44:26.620600",
+      "icon": "",
+      "category_id": 4,
+      "relevance_id": null,
+      "parent_id": null
+    },
+    {
+      "id": 44,
+      "description_pt_br": "Algo que ainda preciso melhorar um pouco e coloquei aqui pois considero um defeito em melhoria e construção. A performance para falar à frente de grupos grandes.",
+      "description_en_us": "Something I still need to improve a little bit and I put it here because I consider it a defect in improvement and construction. The performance to speak in front of large groups.",
+      "level": 60,
+      "name_pt_br": "Performance pública",
+      "name_en_us": "Talk",
+      "created_at": "2021-06-01 13:46:23.804013",
+      "updated_at": "2021-06-01 13:46:23.804064",
+      "icon": "",
+      "category_id": 4,
+      "relevance_id": null,
+      "parent_id": null
+    }
+  ],
+  "django_admin_log": [
+    {
+      "id": 1,
+      "action_time": "2021-05-04 02:48:26.545031",
+      "object_id": "2",
+      "object_repr": "Skill object (2)",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 2,
+      "action_time": "2021-05-04 02:58:11.001704",
+      "object_id": "2",
+      "object_repr": "Python: 75%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Icon\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 3,
+      "action_time": "2021-05-07 21:38:29.254713",
+      "object_id": "1",
+      "object_repr": "Post object (1)",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 12,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 4,
+      "action_time": "2021-05-07 22:16:51.536055",
+      "object_id": "2",
+      "object_repr": "Filipe Lopes - about-me",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 12,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 5,
+      "action_time": "2021-05-07 22:17:43.118793",
+      "object_id": "2",
+      "object_repr": "Teste - Academia do Saber",
+      "change_message": "",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 3
+    },
+    {
+      "id": 6,
+      "action_time": "2021-05-07 22:17:43.139298",
+      "object_id": "1",
+      "object_repr": "Teste - Academia do Saber",
+      "change_message": "",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 3
+    },
+    {
+      "id": 7,
+      "action_time": "2021-05-07 22:31:29.401238",
+      "object_id": "2",
+      "object_repr": "Filipe Lopes - about-me",
+      "change_message": "[{\"changed\": {\"fields\": [\"Content pt br\"]}}]",
+      "content_type_id": 12,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 8,
+      "action_time": "2021-05-07 23:29:48.158288",
+      "object_id": "3",
+      "object_repr": "Desenvolvedor frontend ReactJS, colaborador em equipe SCRUM - International Conservation",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 9,
+      "action_time": "2021-05-07 23:30:21.728610",
+      "object_id": "2",
+      "object_repr": "Python: 75%",
+      "change_message": "",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 3
+    },
+    {
+      "id": 10,
+      "action_time": "2021-05-07 23:30:21.748801",
+      "object_id": "1",
+      "object_repr": "PHP: 75%",
+      "change_message": "",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 3
+    },
+    {
+      "id": 11,
+      "action_time": "2021-05-07 23:38:48.185997",
+      "object_id": "3",
+      "object_repr": "Blender: 65%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 12,
+      "action_time": "2021-05-07 23:39:30.434651",
+      "object_id": "4",
+      "object_repr": "Gimp: 75%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 13,
+      "action_time": "2021-05-07 23:40:06.594273",
+      "object_id": "5",
+      "object_repr": "Corel Draw: 25%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 14,
+      "action_time": "2021-05-07 23:40:46.018283",
+      "object_id": "6",
+      "object_repr": "Inkscape: 45%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 15,
+      "action_time": "2021-05-07 23:43:22.588405",
+      "object_id": "7",
+      "object_repr": "Photoscan Ankisoft&reg;: 60%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 16,
+      "action_time": "2021-05-07 23:45:49.337411",
+      "object_id": "8",
+      "object_repr": "PHP: 75%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 17,
+      "action_time": "2021-05-07 23:47:24.847391",
+      "object_id": "9",
+      "object_repr": "Python: 80%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 18,
+      "action_time": "2021-05-07 23:47:50.164151",
+      "object_id": "10",
+      "object_repr": "Django: 45%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 19,
+      "action_time": "2021-05-07 23:48:18.844846",
+      "object_id": "11",
+      "object_repr": "Flask: 70%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 20,
+      "action_time": "2021-05-07 23:48:49.134524",
+      "object_id": "12",
+      "object_repr": "FastAPI: 60%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 21,
+      "action_time": "2021-05-07 23:49:32.948052",
+      "object_id": "13",
+      "object_repr": "SQLAlchemy: 80%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 22,
+      "action_time": "2021-05-07 23:49:59.780362",
+      "object_id": "14",
+      "object_repr": "TensorFlow: 2%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 23,
+      "action_time": "2021-05-07 23:52:53.264143",
+      "object_id": "15",
+      "object_repr": "Javascript: 80%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 24,
+      "action_time": "2021-05-07 23:53:15.574350",
+      "object_id": "16",
+      "object_repr": "ReactJS: 80%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 25,
+      "action_time": "2021-05-07 23:53:41.955717",
+      "object_id": "17",
+      "object_repr": "React Native: 45%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 26,
+      "action_time": "2021-05-07 23:53:59.966854",
+      "object_id": "18",
+      "object_repr": "JQuery: 95%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 27,
+      "action_time": "2021-05-07 23:54:17.190731",
+      "object_id": "19",
+      "object_repr": "Blend4Web: 70%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 28,
+      "action_time": "2021-05-07 23:54:39.773238",
+      "object_id": "20",
+      "object_repr": "Node.js: 68%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 29,
+      "action_time": "2021-05-07 23:55:11.264258",
+      "object_id": "21",
+      "object_repr": "Prisma: 86%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 30,
+      "action_time": "2021-05-07 23:55:37.061146",
+      "object_id": "22",
+      "object_repr": "Graphql-yoga: 78%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 31,
+      "action_time": "2021-05-07 23:56:06.767054",
+      "object_id": "23",
+      "object_repr": "CSS: 99%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 32,
+      "action_time": "2021-05-07 23:56:30.591512",
+      "object_id": "24",
+      "object_repr": "Sass: 99%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 33,
+      "action_time": "2021-05-07 23:57:01.501191",
+      "object_id": "25",
+      "object_repr": "HTML: 99%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 34,
+      "action_time": "2021-05-07 23:57:53.088842",
+      "object_id": "26",
+      "object_repr": "MySQL: 88%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 35,
+      "action_time": "2021-05-07 23:58:34.905036",
+      "object_id": "27",
+      "object_repr": "PostgreSQL: 82%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 36,
+      "action_time": "2021-05-07 23:58:53.947809",
+      "object_id": "28",
+      "object_repr": "SQLite: 88%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 37,
+      "action_time": "2021-05-07 23:59:05.430835",
+      "object_id": "29",
+      "object_repr": "Docker: 70%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 38,
+      "action_time": "2021-05-08 14:39:09.315965",
+      "object_id": "30",
+      "object_repr": "Git: 96%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 39,
+      "action_time": "2021-05-08 14:40:59.608958",
+      "object_id": "31",
+      "object_repr": "Português: 97%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 40,
+      "action_time": "2021-05-08 15:04:42.123563",
+      "object_id": "32",
+      "object_repr": "Inglês: 82%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 41,
+      "action_time": "2021-05-08 15:12:09.234744",
+      "object_id": "33",
+      "object_repr": "Língua Brasileira de Sinais (LIBRAS): 15%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 42,
+      "action_time": "2021-05-08 15:12:29.642909",
+      "object_id": "33",
+      "object_repr": "Língua Brasileira de Sinais (LIBRAS): 15%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Icon\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 43,
+      "action_time": "2021-05-08 15:13:30.326035",
+      "object_id": "34",
+      "object_repr": "Fala fluente: 99%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 44,
+      "action_time": "2021-05-08 15:14:11.959256",
+      "object_id": "35",
+      "object_repr": "Ouve bem: 98%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 45,
+      "action_time": "2021-05-08 15:14:26.152222",
+      "object_id": "31",
+      "object_repr": "Português: 98%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Level\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 46,
+      "action_time": "2021-05-08 15:14:59.865834",
+      "object_id": "36",
+      "object_repr": "Escreve bem: 98%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 47,
+      "action_time": "2021-05-08 15:15:18.627576",
+      "object_id": "34",
+      "object_repr": "Fala fluente: 99%",
+      "change_message": "[]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 48,
+      "action_time": "2021-05-08 15:15:50.864390",
+      "object_id": "37",
+      "object_repr": "Fala fluente: 84%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 49,
+      "action_time": "2021-05-08 16:10:06.618947",
+      "object_id": "1",
+      "object_repr": "Category object (1)",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 13,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 50,
+      "action_time": "2021-05-08 16:11:13.321203",
+      "object_id": "2",
+      "object_repr": "Desenvolvedor Web/Mobile",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 13,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 51,
+      "action_time": "2021-05-08 16:11:26.346030",
+      "object_id": "3",
+      "object_repr": "Idiomas",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 13,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 52,
+      "action_time": "2021-05-08 16:11:38.044274",
+      "object_id": "37",
+      "object_repr": " Idiomas - (Inglês) Fala fluente: 84%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 53,
+      "action_time": "2021-05-08 16:11:44.461951",
+      "object_id": "36",
+      "object_repr": " Idiomas - (Português) Escreve bem: 98%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 54,
+      "action_time": "2021-05-08 16:11:49.635293",
+      "object_id": "35",
+      "object_repr": " Idiomas - (Português) Ouve bem: 98%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 55,
+      "action_time": "2021-05-08 16:11:55.561785",
+      "object_id": "34",
+      "object_repr": " Idiomas - (Português) Fala fluente: 99%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 56,
+      "action_time": "2021-05-08 16:12:01.101137",
+      "object_id": "33",
+      "object_repr": " Idiomas - Língua Brasileira de Sinais (LIBRAS): 15%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 57,
+      "action_time": "2021-05-08 16:12:06.085799",
+      "object_id": "32",
+      "object_repr": " Idiomas - Inglês: 82%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 58,
+      "action_time": "2021-05-08 16:12:11.228194",
+      "object_id": "31",
+      "object_repr": " Idiomas - Português: 98%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 59,
+      "action_time": "2021-05-08 16:12:16.668598",
+      "object_id": "30",
+      "object_repr": " Desenvolvedor Web/Mobile - Git: 96%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 60,
+      "action_time": "2021-05-08 16:12:22.649165",
+      "object_id": "29",
+      "object_repr": " Desenvolvedor Web/Mobile - Docker: 70%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 61,
+      "action_time": "2021-05-08 16:12:28.131008",
+      "object_id": "28",
+      "object_repr": " Desenvolvedor Web/Mobile - SQLite: 88%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 62,
+      "action_time": "2021-05-08 16:12:33.713944",
+      "object_id": "27",
+      "object_repr": " Desenvolvedor Web/Mobile - PostgreSQL: 82%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 63,
+      "action_time": "2021-05-08 16:12:39.689935",
+      "object_id": "26",
+      "object_repr": " Desenvolvedor Web/Mobile - MySQL: 88%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 64,
+      "action_time": "2021-05-08 16:12:45.190786",
+      "object_id": "25",
+      "object_repr": " Desenvolvedor Web/Mobile - HTML: 99%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 65,
+      "action_time": "2021-05-08 16:12:51.137548",
+      "object_id": "24",
+      "object_repr": " Desenvolvedor Web/Mobile - (CSS) Sass: 99%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 66,
+      "action_time": "2021-05-08 16:12:56.564916",
+      "object_id": "23",
+      "object_repr": " Desenvolvedor Web/Mobile - CSS: 99%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 67,
+      "action_time": "2021-05-08 16:13:02.560309",
+      "object_id": "22",
+      "object_repr": " Desenvolvedor Web/Mobile - (Javascript) Graphql-yoga: 78%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 68,
+      "action_time": "2021-05-08 16:13:07.111858",
+      "object_id": "21",
+      "object_repr": " Desenvolvedor Web/Mobile - (Javascript) Prisma: 86%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 69,
+      "action_time": "2021-05-08 16:13:11.891282",
+      "object_id": "20",
+      "object_repr": " Desenvolvedor Web/Mobile - (Javascript) Node.js: 68%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 70,
+      "action_time": "2021-05-08 16:13:16.266484",
+      "object_id": "19",
+      "object_repr": " Desenvolvedor Web/Mobile - (Javascript) Blend4Web: 70%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 71,
+      "action_time": "2021-05-08 16:13:21.460453",
+      "object_id": "18",
+      "object_repr": " Desenvolvedor Web/Mobile - (Javascript) JQuery: 95%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 72,
+      "action_time": "2021-05-08 16:13:25.984695",
+      "object_id": "17",
+      "object_repr": " Desenvolvedor Web/Mobile - (Javascript) React Native: 45%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 73,
+      "action_time": "2021-05-08 16:13:31.260149",
+      "object_id": "16",
+      "object_repr": " Desenvolvedor Web/Mobile - (Javascript) ReactJS: 80%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 74,
+      "action_time": "2021-05-08 16:13:38.885468",
+      "object_id": "15",
+      "object_repr": " Desenvolvedor Web/Mobile - Javascript: 80%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 75,
+      "action_time": "2021-05-08 16:13:44.190573",
+      "object_id": "14",
+      "object_repr": " Desenvolvedor Web/Mobile - (Python) TensorFlow: 2%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 76,
+      "action_time": "2021-05-08 16:13:49.956475",
+      "object_id": "13",
+      "object_repr": " Desenvolvedor Web/Mobile - (Python) SQLAlchemy: 80%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 77,
+      "action_time": "2021-05-08 16:13:55.247600",
+      "object_id": "12",
+      "object_repr": " Desenvolvedor Web/Mobile - (Python) FastAPI: 60%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 78,
+      "action_time": "2021-05-08 16:14:00.996586",
+      "object_id": "11",
+      "object_repr": " Desenvolvedor Web/Mobile - (Python) Flask: 70%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 79,
+      "action_time": "2021-05-08 16:14:06.409127",
+      "object_id": "10",
+      "object_repr": " Desenvolvedor Web/Mobile - (Python) Django: 45%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 80,
+      "action_time": "2021-05-08 16:14:10.908584",
+      "object_id": "9",
+      "object_repr": " Desenvolvedor Web/Mobile - Python: 80%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 81,
+      "action_time": "2021-05-08 16:14:15.855290",
+      "object_id": "8",
+      "object_repr": " Desenvolvedor Web/Mobile - PHP: 75%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 82,
+      "action_time": "2021-05-08 16:14:21.360512",
+      "object_id": "6",
+      "object_repr": " Designer gráfico - Inkscape: 45%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 83,
+      "action_time": "2021-05-08 16:14:28.038885",
+      "object_id": "7",
+      "object_repr": " Designer gráfico - Photoscan Ankisoft&reg;: 60%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 84,
+      "action_time": "2021-05-08 16:14:32.942103",
+      "object_id": "5",
+      "object_repr": " Designer gráfico - Corel Draw: 25%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 85,
+      "action_time": "2021-05-08 16:14:38.032210",
+      "object_id": "4",
+      "object_repr": " Designer gráfico - Gimp: 75%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 86,
+      "action_time": "2021-05-08 16:14:44.053610",
+      "object_id": "3",
+      "object_repr": " Designer gráfico - Blender: 65%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 87,
+      "action_time": "2021-05-08 17:24:59.598426",
+      "object_id": "3",
+      "object_repr": "Daniel 2:21 ACF - daniel-2-21",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 12,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 88,
+      "action_time": "2021-05-08 18:16:57.460280",
+      "object_id": "4",
+      "object_repr": "Resumo - curriculum-resume",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 12,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 89,
+      "action_time": "2021-05-08 18:20:57.904820",
+      "object_id": "2",
+      "object_repr": "Filipe Lopes - about-me",
+      "change_message": "[{\"changed\": {\"fields\": [\"Content pt br\", \"Content en us\"]}}]",
+      "content_type_id": 12,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 90,
+      "action_time": "2021-05-24 11:37:27.696533",
+      "object_id": "4",
+      "object_repr": "CEO, CTO, Web Developer, SCRUM Master, Gerenciador de Projetos,DevOps - ORANGO I/O TECNOLOGIA",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 91,
+      "action_time": "2021-05-24 18:55:10.049475",
+      "object_id": "5",
+      "object_repr": "Diretor de projeto e desenvolvedor ReactJS - ALT F4 Informática",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 92,
+      "action_time": "2021-05-24 19:02:22.638879",
+      "object_id": "6",
+      "object_repr": "Desenvolvedor Fullstack Wordpress API e ReactJS - Montreal Tecnologia, alocado no INEMA",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 93,
+      "action_time": "2021-05-24 19:04:39.015659",
+      "object_id": "6",
+      "object_repr": "Desenvolvedor Fullstack Wordpress API e ReactJS - Montreal Tecnologia, alocado no INEMA",
+      "change_message": "[]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 94,
+      "action_time": "2021-05-24 19:12:57.991076",
+      "object_id": "7",
+      "object_repr": "Desenvolvedor PHP Fullstack - ITMPR",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 95,
+      "action_time": "2021-05-24 19:19:29.338512",
+      "object_id": "8",
+      "object_repr": "Desenvolvedor PHP Fullstack - Qualité Ortodontia",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 96,
+      "action_time": "2021-05-24 19:21:15.419962",
+      "object_id": "9",
+      "object_repr": "Desenvolvedor com stack WORDPRESS + ReactJS - Instituto de Ciência e Saúde - UFBA",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 97,
+      "action_time": "2021-05-24 19:22:22.090966",
+      "object_id": "10",
+      "object_repr": "Desenvolvedor WORDPRESS - Hangar Comunicação",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 98,
+      "action_time": "2021-05-24 19:24:11.392406",
+      "object_id": "11",
+      "object_repr": "Desenvolvedor - Marinha do Brasil",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 99,
+      "action_time": "2021-05-25 11:48:27.720486",
+      "object_id": "12",
+      "object_repr": "CTO, Desenvolvedor Backend, Revisor de Código, DevOps - CLICKLAV",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 100,
+      "action_time": "2021-05-25 11:52:43.042599",
+      "object_id": "1",
+      "object_repr": "Course object (1)",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 101,
+      "action_time": "2021-05-25 11:55:01.490202",
+      "object_id": "2",
+      "object_repr": "Course object (2)",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 102,
+      "action_time": "2021-05-31 23:44:27.333532",
+      "object_id": "12",
+      "object_repr": "CTO, Desenvolvedor Backend, Revisor de Código, DevOps - CLICKLAV",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description en us\", \"Key achievement pt br\", \"Key achievement en us\", \"Until\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 103,
+      "action_time": "2021-05-31 23:55:07.056699",
+      "object_id": "11",
+      "object_repr": "Desenvolvedor web e modelador 3D - Marinha do Brasil",
+      "change_message": "[{\"changed\": {\"fields\": [\"Title pt br\", \"Title en us\", \"Description pt br\", \"Description en us\", \"Key achievement pt br\", \"Key achievement en us\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 104,
+      "action_time": "2021-06-01 11:32:55.301624",
+      "object_id": "10",
+      "object_repr": "Desenvolvedor WORDPRESS - Hangar Comunicação",
+      "change_message": "[{\"changed\": {\"fields\": [\"Title en us\", \"Description pt br\", \"Key achievement pt br\", \"Key achievement en us\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 105,
+      "action_time": "2021-06-01 11:43:14.872827",
+      "object_id": "9",
+      "object_repr": "Desenvolvedor com stack WORDPRESS + ReactJS - Instituto de Ciência e Saúde - UFBA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Title en us\", \"Description pt br\", \"Description en us\", \"Key achievement pt br\", \"Key achievement en us\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 106,
+      "action_time": "2021-06-01 11:46:59.909475",
+      "object_id": "8",
+      "object_repr": "Desenvolvedor PHP Fullstack - Qualité Ortodontia",
+      "change_message": "[{\"changed\": {\"fields\": [\"Title en us\", \"Description pt br\", \"Description en us\", \"Key achievement pt br\", \"Key achievement en us\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 107,
+      "action_time": "2021-06-01 12:14:16.217121",
+      "object_id": "7",
+      "object_repr": "Desenvolvedor PHP Fullstack - ITMPR",
+      "change_message": "[{\"changed\": {\"fields\": [\"Title en us\", \"Description pt br\", \"Description en us\", \"Key achievement pt br\", \"Key achievement en us\", \"Until\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 108,
+      "action_time": "2021-06-01 12:33:36.648382",
+      "object_id": "6",
+      "object_repr": "Desenvolvedor Fullstack Wordpress API + SlimFramework + ReactJS - Montreal Tecnologia, alocado no INEMA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Title pt br\", \"Title en us\", \"Description pt br\", \"Description en us\", \"Key achievement pt br\", \"Key achievement en us\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 109,
+      "action_time": "2021-06-01 12:38:54.575476",
+      "object_id": "5",
+      "object_repr": "Diretor de projeto e desenvolvedor ReactJS - ALT F4 Informática (Rio de Janeiro)",
+      "change_message": "[{\"changed\": {\"fields\": [\"Title en us\", \"Organization\", \"Description pt br\", \"Description en us\", \"Key achievement pt br\", \"Key achievement en us\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 110,
+      "action_time": "2021-06-01 12:42:07.308691",
+      "object_id": "4",
+      "object_repr": "CEO, CTO, Web Developer, SCRUM Master, Gerenciador de Projetos,DevOps - ORANGO I/O TECNOLOGIA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Key achievement en us\", \"Until\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 111,
+      "action_time": "2021-06-01 12:42:15.563137",
+      "object_id": "3",
+      "object_repr": "Desenvolvedor frontend ReactJS, colaborador em equipe SCRUM - International Conservation",
+      "change_message": "[]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 112,
+      "action_time": "2021-06-01 12:46:23.159708",
+      "object_id": "4",
+      "object_repr": "Pesoal",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 13,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 113,
+      "action_time": "2021-06-01 13:32:21.646722",
+      "object_id": "38",
+      "object_repr": " Pesoal - Gerenciamento de Tempo: 92%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 114,
+      "action_time": "2021-06-01 13:34:30.194974",
+      "object_id": "39",
+      "object_repr": " Pesoal - Multitarefa: 92%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 115,
+      "action_time": "2021-06-01 13:36:06.160859",
+      "object_id": "40",
+      "object_repr": " Designer gráfico - Vendedor: 75%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 116,
+      "action_time": "2021-06-01 13:36:16.353309",
+      "object_id": "40",
+      "object_repr": " Pesoal - Vendedor: 75%",
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 117,
+      "action_time": "2021-06-01 13:36:23.562543",
+      "object_id": "4",
+      "object_repr": "Pessoal",
+      "change_message": "[{\"changed\": {\"fields\": [\"Name pt br\"]}}]",
+      "content_type_id": 13,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 118,
+      "action_time": "2021-06-01 13:39:15.764630",
+      "object_id": "41",
+      "object_repr": " Pessoal - Comunicação: 88%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 119,
+      "action_time": "2021-06-01 13:40:33.104215",
+      "object_id": "42",
+      "object_repr": " Pessoal - Resolução de Problemas: 98%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 120,
+      "action_time": "2021-06-01 13:44:26.622534",
+      "object_id": "43",
+      "object_repr": " Pessoal - Ensinar: 88%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 121,
+      "action_time": "2021-06-01 13:46:23.805252",
+      "object_id": "44",
+      "object_repr": " Pessoal - Performance pública: 60%",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 10,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 122,
+      "action_time": "2021-06-01 17:43:48.469310",
+      "object_id": "5",
+      "object_repr": "Tiago 1:17 ARA - tiago-1-17",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 12,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 123,
+      "action_time": "2021-06-01 20:23:02.811932",
+      "object_id": "1",
+      "object_repr": "1 - LOW",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 14,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 124,
+      "action_time": "2021-06-01 20:23:43.191228",
+      "object_id": "2",
+      "object_repr": "5 - MID",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 14,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 125,
+      "action_time": "2021-06-01 20:24:12.737329",
+      "object_id": "3",
+      "object_repr": "10 - HIGH",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 14,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 126,
+      "action_time": "2021-06-01 20:24:33.466310",
+      "object_id": "12",
+      "object_repr": "CTO, Desenvolvedor Backend, Revisor de Código, DevOps - CLICKLAV",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Until\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 127,
+      "action_time": "2021-06-01 20:24:42.491756",
+      "object_id": "11",
+      "object_repr": "Desenvolvedor web e modelador 3D - Marinha do Brasil",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 128,
+      "action_time": "2021-06-01 20:24:49.448543",
+      "object_id": "11",
+      "object_repr": "Desenvolvedor web e modelador 3D - Marinha do Brasil",
+      "change_message": "[{\"changed\": {\"fields\": [\"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 129,
+      "action_time": "2021-06-01 20:24:58.601470",
+      "object_id": "10",
+      "object_repr": "Desenvolvedor WORDPRESS - Hangar Comunicação",
+      "change_message": "[{\"changed\": {\"fields\": [\"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 130,
+      "action_time": "2021-06-01 20:25:05.826014",
+      "object_id": "9",
+      "object_repr": "Desenvolvedor com stack WORDPRESS + ReactJS - Instituto de Ciência e Saúde - UFBA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 131,
+      "action_time": "2021-06-01 20:25:13.428560",
+      "object_id": "9",
+      "object_repr": "Desenvolvedor com stack WORDPRESS + ReactJS - Instituto de Ciência e Saúde - UFBA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Until\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 132,
+      "action_time": "2021-06-01 20:25:28.285344",
+      "object_id": "8",
+      "object_repr": "Desenvolvedor PHP Fullstack - Qualité Ortodontia",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 133,
+      "action_time": "2021-06-01 20:25:36.424181",
+      "object_id": "7",
+      "object_repr": "Desenvolvedor PHP Fullstack - ITMPR",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Until\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 134,
+      "action_time": "2021-06-01 20:25:44.454285",
+      "object_id": "7",
+      "object_repr": "Desenvolvedor PHP Fullstack - ITMPR",
+      "change_message": "[]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 135,
+      "action_time": "2021-06-01 20:26:02.102725",
+      "object_id": "6",
+      "object_repr": "Desenvolvedor Fullstack Wordpress API + SlimFramework + ReactJS - Montreal Tecnologia, alocado no INEMA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 136,
+      "action_time": "2021-06-01 20:26:13.994033",
+      "object_id": "5",
+      "object_repr": "Diretor de projeto e desenvolvedor ReactJS - ALT F4 Informática (Rio de Janeiro)",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 137,
+      "action_time": "2021-06-01 20:26:20.167307",
+      "object_id": "5",
+      "object_repr": "Diretor de projeto e desenvolvedor ReactJS - ALT F4 Informática (Rio de Janeiro)",
+      "change_message": "[]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 138,
+      "action_time": "2021-06-01 20:26:27.141350",
+      "object_id": "4",
+      "object_repr": "CEO, CTO, Web Developer, SCRUM Master, Gerenciador de Projetos,DevOps - ORANGO I/O TECNOLOGIA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 139,
+      "action_time": "2021-06-01 20:26:32.043816",
+      "object_id": "3",
+      "object_repr": "Desenvolvedor frontend ReactJS, colaborador em equipe SCRUM - International Conservation",
+      "change_message": "[{\"changed\": {\"fields\": [\"Description pt br\", \"Description en us\", \"Relevance\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 140,
+      "action_time": "2021-06-01 20:26:36.890171",
+      "object_id": "4",
+      "object_repr": "CEO, CTO, Web Developer, SCRUM Master, Gerenciador de Projetos,DevOps - ORANGO I/O TECNOLOGIA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Until\"]}}]",
+      "content_type_id": 9,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 141,
+      "action_time": "2021-06-01 20:27:36.109069",
+      "object_id": "1",
+      "object_repr": "Graduando em Medicina na Universidade Federal da Bahia - Faculdade de Medicina da Bahia",
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description pt br\", \"Until\", \"Relevance\"]}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 142,
+      "action_time": "2021-06-01 20:31:00.765015",
+      "object_id": "1",
+      "object_repr": "Graduando em Medicina",
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Place pt br\", \"Place en us\", \"Description en us\"]}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 143,
+      "action_time": "2021-06-01 20:32:41.684360",
+      "object_id": "2",
+      "object_repr": "Segundo Grau Completo - Colégio Militar de Salvador",
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Place pt br\", \"Place en us\", \"Description pt br\", \"Description en us\", \"Relevance\"]}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 144,
+      "action_time": "2021-06-01 20:35:04.576397",
+      "object_id": "2",
+      "object_repr": "Segundo Grau Completo - Colégio Militar de Salvador",
+      "change_message": "[{\"changed\": {\"fields\": [\"Name en us\"]}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 145,
+      "action_time": "2021-06-01 20:35:08.860963",
+      "object_id": "2",
+      "object_repr": "Segundo Grau Completo - Colégio Militar de Salvador",
+      "change_message": "[]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 146,
+      "action_time": "2021-06-01 20:36:06.247647",
+      "object_id": "1",
+      "object_repr": "Graduando em Medicina - Faculdade de Medicina da Bahia - UFBA",
+      "change_message": "[{\"changed\": {\"fields\": [\"Name en us\"]}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 147,
+      "action_time": "2021-06-01 20:49:24.732118",
+      "object_id": "3",
+      "object_repr": "Python 3 Completo do Iniciante ao Avançado - Udemy",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 148,
+      "action_time": "2021-06-01 20:49:57.425392",
+      "object_id": "3",
+      "object_repr": "Python 3 Completo do Iniciante ao Avançado - Udemy",
+      "change_message": "[{\"changed\": {\"fields\": [\"Name en us\"]}}]",
+      "content_type_id": 8,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 149,
+      "action_time": "2021-06-13 20:49:20.844784",
+      "object_id": "1",
+      "object_repr": "Destaque em Disciplina - Colegio Militar de Salvador",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 150,
+      "action_time": "2021-06-13 21:51:13.936608",
+      "object_id": "2",
+      "object_repr": "Diploma de Assiduidade - Colégio Militar de Salvador",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 151,
+      "action_time": "2021-06-13 21:52:02.425442",
+      "object_id": "3",
+      "object_repr": "Diploma de Conclusão do Ensino Fundamental",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 152,
+      "action_time": "2021-06-13 21:52:08.618521",
+      "object_id": "2",
+      "object_repr": "Diploma de Assiduidade - Colégio Militar de Salvador",
+      "change_message": "[{\"changed\": {\"fields\": [\"File\"]}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 2
+    },
+    {
+      "id": 153,
+      "action_time": "2021-06-13 21:55:06.207290",
+      "object_id": "4",
+      "object_repr": "Robot Care Brasil 2019 - PUC-RS",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 154,
+      "action_time": "2021-06-13 21:55:51.927817",
+      "object_id": "5",
+      "object_repr": "Medalha de Ouro - Olimpíadas Brasileira de Matemática das Escolas Públicas 2014",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 155,
+      "action_time": "2021-06-13 21:59:00.656952",
+      "object_id": "6",
+      "object_repr": "Medalha de Bronze - Nacional - Olimpíada Brasileira de Física das Escolas Públicas 2012",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 156,
+      "action_time": "2021-06-13 21:59:43.020997",
+      "object_id": "7",
+      "object_repr": "Medalha de Prata - Estadual - Olimíadas Brasileira de Física das Escolas Públicas 2012",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 157,
+      "action_time": "2021-06-13 22:00:45.425430",
+      "object_id": "8",
+      "object_repr": "Medalha de Ouro - Olimíadas Brasileira de Física das Escolas Públicas 2011",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 158,
+      "action_time": "2021-06-13 22:03:20.067652",
+      "object_id": "9",
+      "object_repr": "Medalha de Bronze - VII Olimpíada Baiana de Química",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 159,
+      "action_time": "2021-06-13 22:08:48.969008",
+      "object_id": "10",
+      "object_repr": "Medalha de Prata - Aplicação 2 ano - Colégio Militar de Salvador",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 160,
+      "action_time": "2021-06-13 22:09:24.983849",
+      "object_id": "11",
+      "object_repr": "Medalha de Bronze - Aplicação 9 ano - Colégio Militar de Salvador",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 161,
+      "action_time": "2021-06-13 22:10:04.274813",
+      "object_id": "12",
+      "object_repr": "Medalha de Ouro - Aplicação 1 ano - Colégio Militar de Salvador",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 162,
+      "action_time": "2021-06-13 22:11:42.509995",
+      "object_id": "13",
+      "object_repr": "Curso de Inglês Avançado - NUPEL - Universidade Federal da Bahia",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 163,
+      "action_time": "2021-06-13 22:14:13.196447",
+      "object_id": "14",
+      "object_repr": "Conclusão do Ensino Médio - Colégio Militar de Salvador",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 164,
+      "action_time": "2021-06-13 22:18:09.251600",
+      "object_id": "15",
+      "object_repr": "Curso de Inglês Júnior CCAA - 2004",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 165,
+      "action_time": "2021-06-13 22:18:55.251647",
+      "object_id": "16",
+      "object_repr": "Curso de Inglẽs Júnior - 2005",
+      "change_message": "[{\"added\": {}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 1
+    },
+    {
+      "id": 166,
+      "action_time": "2021-06-13 22:19:17.503507",
+      "object_id": "16",
+      "object_repr": "Curso de Inglês Júnior CCAA - 2005",
+      "change_message": "[{\"changed\": {\"fields\": [\"Title pt br\"]}}]",
+      "content_type_id": 15,
+      "user_id": 1,
+      "action_flag": 2
+    }
+  ],
+  "django_content_type": [
+    {
+      "id": 1,
+      "app_label": "admin",
+      "model": "logentry"
+    },
+    {
+      "id": 2,
+      "app_label": "auth",
+      "model": "permission"
+    },
+    {
+      "id": 3,
+      "app_label": "auth",
+      "model": "group"
+    },
+    {
+      "id": 4,
+      "app_label": "auth",
+      "model": "user"
+    },
+    {
+      "id": 5,
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    },
+    {
+      "id": 6,
+      "app_label": "sessions",
+      "model": "session"
+    },
+    {
+      "id": 7,
+      "app_label": "core",
+      "model": "tag"
+    },
+    {
+      "id": 8,
+      "app_label": "curriculum",
+      "model": "course"
+    },
+    {
+      "id": 9,
+      "app_label": "curriculum",
+      "model": "experience"
+    },
+    {
+      "id": 10,
+      "app_label": "curriculum",
+      "model": "skill"
+    },
+    {
+      "id": 11,
+      "app_label": "portfolio",
+      "model": "item"
+    },
+    {
+      "id": 12,
+      "app_label": "posts",
+      "model": "post"
+    },
+    {
+      "id": 13,
+      "app_label": "curriculum",
+      "model": "category"
+    },
+    {
+      "id": 14,
+      "app_label": "curriculum",
+      "model": "relevance"
+    },
+    {
+      "id": 15,
+      "app_label": "curriculum",
+      "model": "certificate"
+    }
+  ],
+  "django_migrations": [
+    {
+      "id": 1,
+      "app": "contenttypes",
+      "name": "0001_initial",
+      "applied": "2021-04-02 13:10:53.809100"
+    },
+    {
+      "id": 2,
+      "app": "auth",
+      "name": "0001_initial",
+      "applied": "2021-04-02 13:10:53.835563"
+    },
+    {
+      "id": 3,
+      "app": "admin",
+      "name": "0001_initial",
+      "applied": "2021-04-02 13:10:53.857284"
+    },
+    {
+      "id": 4,
+      "app": "admin",
+      "name": "0002_logentry_remove_auto_add",
+      "applied": "2021-04-02 13:10:53.885392"
+    },
+    {
+      "id": 5,
+      "app": "admin",
+      "name": "0003_logentry_add_action_flag_choices",
+      "applied": "2021-04-02 13:10:53.908536"
+    },
+    {
+      "id": 6,
+      "app": "contenttypes",
+      "name": "0002_remove_content_type_name",
+      "applied": "2021-04-02 13:10:53.936867"
+    },
+    {
+      "id": 7,
+      "app": "auth",
+      "name": "0002_alter_permission_name_max_length",
+      "applied": "2021-04-02 13:10:53.957018"
+    },
+    {
+      "id": 8,
+      "app": "auth",
+      "name": "0003_alter_user_email_max_length",
+      "applied": "2021-04-02 13:10:53.978032"
+    },
+    {
+      "id": 9,
+      "app": "auth",
+      "name": "0004_alter_user_username_opts",
+      "applied": "2021-04-02 13:10:54.002849"
+    },
+    {
+      "id": 10,
+      "app": "auth",
+      "name": "0005_alter_user_last_login_null",
+      "applied": "2021-04-02 13:10:54.021724"
+    },
+    {
+      "id": 11,
+      "app": "auth",
+      "name": "0006_require_contenttypes_0002",
+      "applied": "2021-04-02 13:10:54.032568"
+    },
+    {
+      "id": 12,
+      "app": "auth",
+      "name": "0007_alter_validators_add_error_messages",
+      "applied": "2021-04-02 13:10:54.051174"
+    },
+    {
+      "id": 13,
+      "app": "auth",
+      "name": "0008_alter_user_username_max_length",
+      "applied": "2021-04-02 13:10:54.070697"
+    },
+    {
+      "id": 14,
+      "app": "auth",
+      "name": "0009_alter_user_last_name_max_length",
+      "applied": "2021-04-02 13:10:54.093272"
+    },
+    {
+      "id": 15,
+      "app": "auth",
+      "name": "0010_alter_group_name_max_length",
+      "applied": "2021-04-02 13:10:54.112181"
+    },
+    {
+      "id": 16,
+      "app": "auth",
+      "name": "0011_update_proxy_permissions",
+      "applied": "2021-04-02 13:10:54.128844"
+    },
+    {
+      "id": 17,
+      "app": "auth",
+      "name": "0012_alter_user_first_name_max_length",
+      "applied": "2021-04-02 13:10:54.146929"
+    },
+    {
+      "id": 18,
+      "app": "sessions",
+      "name": "0001_initial",
+      "applied": "2021-04-02 13:10:54.159582"
+    },
+    {
+      "id": 19,
+      "app": "core",
+      "name": "0001_initial",
+      "applied": "2021-04-02 17:51:46.134938"
+    },
+    {
+      "id": 20,
+      "app": "curriculum",
+      "name": "0001_initial",
+      "applied": "2021-04-02 17:51:46.153522"
+    },
+    {
+      "id": 21,
+      "app": "posts",
+      "name": "0001_initial",
+      "applied": "2021-04-02 17:51:46.166916"
+    },
+    {
+      "id": 22,
+      "app": "portfolio",
+      "name": "0001_initial",
+      "applied": "2021-04-02 17:51:46.188575"
+    },
+    {
+      "id": 23,
+      "app": "curriculum",
+      "name": "0002_auto_20210502_1438",
+      "applied": "2021-05-02 14:54:48.040259"
+    },
+    {
+      "id": 24,
+      "app": "curriculum",
+      "name": "0003_auto_20210502_1952",
+      "applied": "2021-05-02 19:53:11.923021"
+    },
+    {
+      "id": 25,
+      "app": "posts",
+      "name": "0002_auto_20210502_1952",
+      "applied": "2021-05-02 19:53:11.967176"
+    },
+    {
+      "id": 26,
+      "app": "curriculum",
+      "name": "0004_auto_20210504_0247",
+      "applied": "2021-05-04 02:47:56.003062"
+    },
+    {
+      "id": 27,
+      "app": "posts",
+      "name": "0003_auto_20210507_2135",
+      "applied": "2021-05-07 21:35:59.523666"
+    },
+    {
+      "id": 28,
+      "app": "curriculum",
+      "name": "0005_auto_20210508_1555",
+      "applied": "2021-05-08 15:56:02.937471"
+    },
+    {
+      "id": 29,
+      "app": "curriculum",
+      "name": "0006_auto_20210601_2020",
+      "applied": "2021-06-01 20:20:21.864003"
+    },
+    {
+      "id": 30,
+      "app": "curriculum",
+      "name": "0007_relevance_order",
+      "applied": "2021-06-01 20:22:37.891701"
+    },
+    {
+      "id": 31,
+      "app": "curriculum",
+      "name": "0008_auto_20210601_2033",
+      "applied": "2021-06-01 20:33:59.262643"
+    },
+    {
+      "id": 32,
+      "app": "curriculum",
+      "name": "0009_certificate",
+      "applied": "2021-06-06 22:11:38.734600"
+    }
+  ],
+  "django_session": [
+    {
+      "session_key": "58ri81ulhkgau7pcfeewp16rw7co3uu6",
+      "session_data": ".eJxVjLsOwjAMAP8lM4pw8ywjO99Q2bVDCiiRmnZC_DuK1AHWu9O91YT7lqe9yTotrC4K1OmXEc5PKV3wA8u96rmWbV1I90QftulbZXldj_ZvkLHlvgUPTIDRQCIWIGvHyOiEHAWxgdAIB0yDjGAo0WwIZICzdeI5Dl59vgHsOKo:1lSJgm:jVCR7Ii42L3lHHqTsscUc8krLpcddAuImgvi0fafWWA",
+      "expire_date": "2021-04-16 13:18:16.678153"
+    },
+    {
+      "session_key": "t9pxz1r9oo4fg5lg2td1wheilrj09y2c",
+      "session_data": ".eJxVjLsOwjAMAP8lM4pw8ywjO99Q2bVDCiiRmnZC_DuK1AHWu9O91YT7lqe9yTotrC4K1OmXEc5PKV3wA8u96rmWbV1I90QftulbZXldj_ZvkLHlvgUPTIDRQCIWIGvHyOiEHAWxgdAIB0yDjGAo0WwIZICzdeI5Dl59vgHsOKo:1ldl4H:bRg7l9ADGr00UFrTntJQOczCR1OvZ5amSor5iNVtO18",
+      "expire_date": "2021-05-18 02:45:49.516726"
+    },
+    {
+      "session_key": "h6wmh624v363owy9uewimqa6jeckt4gf",
+      "session_data": ".eJxVjLsOwjAMAP8lM4pw8ywjO99Q2bVDCiiRmnZC_DuK1AHWu9O91YT7lqe9yTotrC4K1OmXEc5PKV3wA8u96rmWbV1I90QftulbZXldj_ZvkLHlvgUPTIDRQCIWIGvHyOiEHAWxgdAIB0yDjGAo0WwIZICzdeI5Dl59vgHsOKo:1lnrUa:cpKNWKopUPjSJvy1us5xvR2vXQ856huu8R4ORHe2oEs",
+      "expire_date": "2021-06-14 23:38:44.300240"
+    },
+    {
+      "session_key": "ca7wxahhd63zy5k7h9a3r6jry230zmo3",
+      "session_data": ".eJxVjLsOwjAMAP8lM4pw8ywjO99Q2bVDCiiRmnZC_DuK1AHWu9O91YT7lqe9yTotrC4K1OmXEc5PKV3wA8u96rmWbV1I90QftulbZXldj_ZvkLHlvgUPTIDRQCIWIGvHyOiEHAWxgdAIB0yDjGAo0WwIZICzdeI5Dl59vgHsOKo:1loA4J:nJ1bzNStb73c9_jeya8pmr4FE_fDREdBWKKeN35zCKY",
+      "expire_date": "2021-06-15 19:28:51.968499"
+    },
+    {
+      "session_key": "uzn84fexqk4ws90ynr2ml7ah7obg1hi4",
+      "session_data": ".eJxVjLsOwjAMAP8lM4pw8ywjO99Q2bVDCiiRmnZC_DuK1AHWu9O91YT7lqe9yTotrC4K1OmXEc5PKV3wA8u96rmWbV1I90QftulbZXldj_ZvkLHlvgUPTIDRQCIWIGvHyOiEHAWxgdAIB0yDjGAo0WwIZICzdeI5Dl59vgHsOKo:1lrSm2:dU0XD_PD2QNAlW4hDZAOCyYUI0uAcfJU58lCJwshio4",
+      "expire_date": "2021-06-24 22:03:38.301923"
+    },
+    {
+      "session_key": "emy4ogaolu09yl2n45wbqyk94ol8fdsq",
+      "session_data": ".eJxVjLsOwjAMAP8lM4pw8ywjO99Q2bVDCiiRmnZC_DuK1AHWu9O91YT7lqe9yTotrC4K1OmXEc5PKV3wA8u96rmWbV1I90QftulbZXldj_ZvkLHlvgUPTIDRQCIWIGvHyOiEHAWxgdAIB0yDjGAo0WwIZICzdeI5Dl59vgHsOKo:1lrtZ2:RMyTVCRJ5X2O6Qlyap55--gRCT3KY8aBIEYnTPV34CQ",
+      "expire_date": "2021-06-26 02:40:00.166981"
+    },
+    {
+      "session_key": "r3ruz0117aw6iwen3vxkcic2z0fcdadu",
+      "session_data": ".eJxVjLsOwjAMAP8lM4pw8ywjO99Q2bVDCiiRmnZC_DuK1AHWu9O91YT7lqe9yTotrC4K1OmXEc5PKV3wA8u96rmWbV1I90QftulbZXldj_ZvkLHlvgUPTIDRQCIWIGvHyOiEHAWxgdAIB0yDjGAo0WwIZICzdeI5Dl59vgHsOKo:1lsX0r:wGD2IYhMHKnFBfm9_niuXFWGqrHc42sUn71u7QtcX1U",
+      "expire_date": "2021-06-27 20:47:21.668544"
+    },
+    {
+      "session_key": "15uuyfoe18pgk3b6sd6byummgk8csk3n",
+      "session_data": ".eJxVjLsOwjAMAP8lM4pw8ywjO99Q2bVDCiiRmnZC_DuK1AHWu9O91YT7lqe9yTotrC4K1OmXEc5PKV3wA8u96rmWbV1I90QftulbZXldj_ZvkLHlvgUPTIDRQCIWIGvHyOiEHAWxgdAIB0yDjGAo0WwIZICzdeI5Dl59vgHsOKo:1pDosL:DqodbzTGWhxxG2jO2XXQrOPfpyCSbNoJseGv_co9w0g",
+      "expire_date": "2023-01-20 15:43:21.702936"
+    }
+  ],
+  "portfolio_item": [],
+  "portfolio_item_posts": [],
+  "portfolio_item_tags": [],
+  "posts_post": [
+    {
+      "id": 1,
+      "title_en_us": "Pixel",
+      "slug": "pixel",
+      "excerpt_pt_br": "",
+      "excerpt_en_us": "",
+      "content_pt_br": "é unidade básica da composição digital. É o símbolo da criação, criatividade, construção e transformação. Se existe algo que você pode pensar, com pixels você pode criar!",
+      "content_en_us": "is the minimal component of the visible software tecnology. It's a creation symbol meaning creativity and transformation. Imagine something! Now pixel it and your imagination becomes real!",
+      "type": "TXT",
+      "created_at": "2021-05-07 21:38:29.254014",
+      "updated_at": "2021-05-07 21:38:29.254046",
+      "title_pt_br": "Pixel"
+    },
+    {
+      "id": 2,
+      "title_en_us": "Filipe Lopes",
+      "slug": "about-me",
+      "excerpt_pt_br": "",
+      "excerpt_en_us": "",
+      "content_pt_br": "Discípulo de Jesus Cristo, programador criativo com mais de 10 anos de experiência,  fundador da empresa ORANGO I/O TECNOLOGIA, concluindo o curso de medicina na Universidade Federal da Bahia. Ao longo dos anos trabalhei para diversos clientes como Marinha do Brasil e organizações do meio ambiente estaduais e internacionais com Javascript, Python, PHP, desenvolvendo e gerenciando desde sistemas de orçamentos e teleatendimento para clínicas até programa com visualização tridimensional. Desejoso por aprender, criar e trazer soluções práticas e simples nas diversas áreas do conhecimento, porém com foco maior em saúde. Atualmente estou estudando matemática avançada e Machine Learning para poder aumentar o alcance e eficiência dos sistemas a serem criados com a real Inteligência Artificial. Gosto muito de praticar atividades físicas e cantar em grupo nas horas vagas.",
+      "content_en_us": "Disciple of Jesus Christ. Programmer with 10+ year of experience. Founder of ORANGO I / O TECNOLOGIA. Finishing the medicine course at Federal University of Bahia. For all those years I worked for a great variety of clients, from Brazil Navy to environment international and national organizations. I realy enjoy learning and create bringing practical solutions in all knowledge areas but now focusing on health.",
+      "type": "TXT",
+      "created_at": "2021-05-07 22:16:51.535309",
+      "updated_at": "2021-05-08 18:20:57.903657",
+      "title_pt_br": "Filipe Lopes"
+    },
+    {
+      "id": 3,
+      "title_en_us": "Daniel 2:21 KJV",
+      "slug": "daniel-2-21",
+      "excerpt_pt_br": "",
+      "excerpt_en_us": "",
+      "content_pt_br": "E Ele muda os tempos e as estações; Ele remove os reis e estabelece os reis; Ele dá sabedoria aos sábios e conhecimento aos entendidos.",
+      "content_en_us": "And He changeth the times and the seasons: He removeth kings, and setteth up kings: He giveth wisdom unto the wise, and knowledge to them that know understanding",
+      "type": "TXT",
+      "created_at": "2021-05-08 17:24:59.597444",
+      "updated_at": "2021-05-08 17:24:59.597502",
+      "title_pt_br": "Daniel 2:21 ACF"
+    },
+    {
+      "id": 4,
+      "title_en_us": "Resume",
+      "slug": "curriculum-resume",
+      "excerpt_pt_br": "",
+      "excerpt_en_us": "",
+      "content_pt_br": "Discípulo de Jesus. Programador criativo com mais de 10 anos de experiência e mercado.  Fundador da ORANGO I/O TECNOLOGIA, concluindo o curso de medicina na Universidade Federal da Bahia. Ao longo dos anos trabalhei para diversos clientes como Marinha do Brasil, organizações estaduais e internacionais de meio ambiente e clínicas particulares desenvolvendo soluções que otimizaram processos. Utilizando as linguagens modernas e promissoras do mercado como Javascript, Python, construí desde sistemas de orçamentos e teleatendimento para clínicas até programa com visualização tridimensional. Desejoso por aprender, criar e trazer soluções práticas e simples nas diversas áreas do conhecimento, porém com foco maior em saúde. Estudando matemática avançada para criar com Machine Learning.",
+      "content_en_us": "Disciple of Jesus. Creative programmer with 10+ years of experience and market. Founder of ORANGO I/O TECNOLOGIA, completing the medical course at the Federal University of Bahia. Over the years I have worked for several clients such as the Brazilian Navy, state and international environmental organizations and private clinics developing solutions that optimizing processes. Using modern and promising market languages ​​such as Javascript and Python, I built from budgeting and call center systems for clinics to a program with three-dimensional visualization. Desiring to learn, create and bring practical and simple solutions in the various areas of knowledge, but with a greater focus on health. Studying advanced mathematics to create with Machine Learning.",
+      "type": "TXT",
+      "created_at": "2021-05-08 18:16:57.459601",
+      "updated_at": "2021-05-08 18:16:57.459632",
+      "title_pt_br": "Resumo"
+    },
+    {
+      "id": 5,
+      "title_en_us": "James 1:17 KJV",
+      "slug": "tiago-1-17",
+      "excerpt_pt_br": "",
+      "excerpt_en_us": "",
+      "content_pt_br": "Toda boa dádiva e todo dom perfeito são lá do alto, descendo do Pai das luzes, em quem não pode existir variação ou sombra de mudança.",
+      "content_en_us": "Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.",
+      "type": "TXT",
+      "created_at": "2021-06-01 17:43:48.467410",
+      "updated_at": "2021-06-01 17:43:48.467450",
+      "title_pt_br": "Tiago 1:17 ARA"
+    }
+  ],
+  "sqlite_sequence": [
+    {
+      "name": "django_migrations",
+      "seq": 32
+    },
+    {
+      "name": "django_admin_log",
+      "seq": 166
+    },
+    {
+      "name": "django_content_type",
+      "seq": 15
+    },
+    {
+      "name": "auth_permission",
+      "seq": 60
+    },
+    {
+      "name": "auth_group",
+      "seq": 0
+    },
+    {
+      "name": "auth_user",
+      "seq": 1
+    },
+    {
+      "name": "posts_post",
+      "seq": 5
+    },
+    {
+      "name": "curriculum_category",
+      "seq": 4
+    },
+    {
+      "name": "curriculum_experience",
+      "seq": 12
+    },
+    {
+      "name": "curriculum_skill",
+      "seq": 44
+    },
+    {
+      "name": "curriculum_relevance",
+      "seq": 3
+    },
+    {
+      "name": "curriculum_course",
+      "seq": 3
+    },
+    {
+      "name": "curriculum_certificate",
+      "seq": 16
+    }
+  ]
+}

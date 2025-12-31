@@ -22,6 +22,7 @@ class PortfolioCoverItem extends Component {
   };
 
   over = () => {
+    if (!this.pixelate) return;
     let pixelState = this.state.pixel;
     cancelAnimationFrame(this.requestAnimation);
 
@@ -36,6 +37,7 @@ class PortfolioCoverItem extends Component {
   };
 
   out = () => {
+    if (!this.pixelate) return;
     let pixelState = this.state.pixel;
     cancelAnimationFrame(this.requestAnimation);
 
@@ -50,11 +52,18 @@ class PortfolioCoverItem extends Component {
   };
 
   componentDidMount = () => {
-    this.pixelate = new Pixelate(this.coverRef.current);
+    if (this.coverRef.current) {
+      this.pixelate = new Pixelate(this.coverRef.current);
+    }
   };
 
   render() {
     const item = this.props.item;
+    const resolveUrl = url => {
+      if (!url) return url;
+      if (url.startsWith('http') || url.startsWith('/')) return url;
+      return '/img/portfolio/cover/' + url;
+    };
 
     if (item.items) {
       return (
@@ -91,7 +100,7 @@ class PortfolioCoverItem extends Component {
                 <img
                   key={i}
                   ref={this.coverRef}
-                  src={'/img/portfolio/cover/' + portfolioItem.url}
+                  src={resolveUrl(portfolioItem.url)}
                   alt="Imagem de capa do portfólio"
                 />
               ))}

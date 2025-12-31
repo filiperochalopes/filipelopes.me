@@ -1,61 +1,53 @@
-import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
+import * as styledModule from 'styled-components';
+const styled = styledModule.default || styledModule;
 
-export default styled.section`
-  background: ${({ theme }) => theme.default.invertedBackgroundColor};
-  padding: 100px 0;
-  color: #fff;
+export default styled.footer`
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+  padding: 60px 0;
+  color: #0f172a;
 
   .container {
-    max-width: 670px;
+    max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 0 32px;
 
-    @media (max-width: 480px) {
-      padding: 0 32px;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      text-align: center;
     }
   }
 
   h1 {
-    display: block;
-    text-align: left;
-    margin-bottom: 46px;
-    margin-top: none;
+    font-size: 22px;
+    margin: 0 0 6px 0;
   }
 
-  sub {
-    padding-top: 60px;
-    display: block;
+  p {
+    margin: 0;
+    color: #64748b;
   }
-`;
 
-export const ContactButton = styled(Button)`
-  &.MuiButton-contained {
-    color: #fff;
-    padding: 5px 15px;
-    display: table;
-    width: auto;
-    opacity: 0.8;
-    margin-bottom: 10px;
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &.whatsapp {
-      background-color: #0bd262;
-    }
+  .links a {
+    color: #94a3b8;
+    font-size: 18px;
+    transition: color 0.2s ease;
+  }
 
-    &.instagram {
-      background-image: linear-gradient(
-        45deg,
-        #fad373 0%,
-        #f21974 48%,
-        #6743ea 100%
-      );
-    }
-
-    &:hover {
-      opacity: 1;
-    }
-
-    .MuiButton-label {
-      font-size: 16px;
-    }
+  .links a:hover {
+    color: #0f172a;
   }
 `;

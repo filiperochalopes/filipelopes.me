@@ -1,8 +1,9 @@
-import Footer, { ContactButton } from './styles';
+import Footer from './styles';
 
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import OnVisible from 'react-on-visible';
 import AppContext from 'services/AppContext';
+import TextLang from 'components/TextLang';
 
 export default () => {
   const { setActiveSection, language } = useContext(AppContext);
@@ -10,37 +11,7 @@ export default () => {
   useEffect(() => {
     console.log(language);
   }, [language]);
-
-  const [views, setViews] = useState(0);
-
-  // const get_put_Views = () => {
-  //   // fetch("server/get_put_views.php")
-  //   fetch('https://server.filipelopes.me/get_put_views.php')
-  //     .then(function (response) {
-  //       return response.text();
-  //     })
-  //     .then(data => {
-  //       let json = JSON.parse(data);
-  //       setViews(json.views);
-  //     });
-  // };
-
-  // get_put_Views();
-
-  const webAPIshare = () => {
-    if (navigator.share) {
-      navigator
-        .share({
-          title: 'site de Filipe Lopes',
-          text: 'Dê uma olhada no site de Filipe Lopes, desenvolvedor WEB.',
-          url: 'https://filipelopes.me',
-        })
-        .then(() => console.log('Successful share'))
-        .catch(error => console.log('Error sharing', error));
-    } else {
-      alert('Seu navegador não suporta essa função');
-    }
-  };
+  const currentYear = new Date().getFullYear();
 
   return (
     <OnVisible
@@ -56,42 +27,55 @@ export default () => {
       }}
     >
       <Footer id="contact">
-        <section className="container">
-          <h1>Contato</h1>
-          <ContactButton
-            variant="contained"
-            href="https://api.whatsapp.com/send?phone=5571986056232&text=Olá%20Filipe%20Lopes,%20estou%20entrando%20em%20contato%20através%20de%20seu%20site."
-            target="_blank"
-            size="large"
-            className="whatsapp"
-          >
-            <i className="fab fa-whatsapp"></i>&nbsp;WhatsApp
-          </ContactButton>
-
-          <ContactButton
-            variant="contained"
-            href="https://www.instagram.com/filipelopes.web/"
-            target="_blank"
-            size="large"
-            className="instagram"
-          >
-            <i className="fab fa-instagram"></i>&nbsp;Instagram.web
-          </ContactButton>
-
-          <ContactButton
-            variant="contained"
-            href="https://www.instagram.com/filipelopes.art/"
-            target="_blank"
-            size="large"
-            className="instagram"
-          >
-            <i className="fab fa-instagram"></i>&nbsp;Instagram.art
-          </ContactButton>
-        </section>
-        {/* <sub>
-          <i className="far fa-eye"></i> {views} visualizações
-        </sub> */}
-        <sub>Filipe Lopes &copy; 2010 - 2021</sub>
+        <div className="container">
+          <div>
+            <h1>Filipe Lopes</h1>
+            <p>
+              &copy; 2010 - {currentYear}.{' '}
+              <TextLang
+                ptBR="Todos os direitos reservados."
+                enUS="All rights reserved."
+              />
+            </p>
+          </div>
+          <div className="links">
+            <a
+              href="https://api.whatsapp.com/send?phone=5571986056232&text=Olá%20Filipe%20Lopes,%20estou%20entrando%20em%20contato%20através%20de%20seu%20site."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i className="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/filipelopes.web/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram web"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/filipelopes.art/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram art"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:contato@filipelopes.me" aria-label="Email">
+              <i className="far fa-envelope"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/filipelopes/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
       </Footer>
     </OnVisible>
   );

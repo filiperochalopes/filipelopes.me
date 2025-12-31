@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import App from '../../App';
+import portfolio from '../../data/portfolio.json';
+
+export function getStaticPaths() {
+  if (!Array.isArray(portfolio)) return [];
+  return portfolio.map((item) => ({
+    params: { slug: item.slug },
+  }));
+}
+---
+
+<Layout title="Filipe Lopes | Portfólio">
+  <App client:load />
+</Layout>

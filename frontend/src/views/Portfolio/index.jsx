@@ -11,6 +11,7 @@ import OnVisible from 'react-on-visible';
 import Palette from 'react-palette';
 import { Link } from 'react-router-dom';
 import AppContext from 'services/AppContext';
+import { fetchData } from 'services/getters';
 
 class Portfolio extends Component {
   constructor(props) {
@@ -36,42 +37,32 @@ class Portfolio extends Component {
       pixel: 0,
       backgroundColor: '#252525',
       currentIndex: 0,
+      language: null,
     };
   }
 
   requestAnimation = null;
 
-  getPortfolio = () => {
-    fetch('http://192.168.0.64/sites/server.filipelopes.me/get_portfolio.php')
-      // fetch("https://server.filipelopes.me/get_put_views.php")
-      .then(function (response) {
-        return response.text();
-      })
-      .then(data => {
-        data = JSON.parse(data);
-        console.log(data);
+  static contextType = AppContext;
 
-        this.setState({
-          data,
-        });
+  getPortfolio = () => {
+    const { language } = this.context;
+    fetchData('/portfolio', language).then(data => {
+      this.setState({
+        data: data && data.length ? data : [],
+        language,
       });
+    });
   };
 
   getPortfolioItem = slug => {
-    fetch(
-      'http://192.168.0.64/sites/server.filipelopes.me/get_portfolio_item.php?slug=' +
-        slug
-    )
-      // fetch("https://server.filipelopes.me/get_put_views.php")
-      .then(function (response) {
-        return response.text();
-      })
-      .then(atual => {
-        atual = JSON.parse(atual);
-        this.setState({
-          atual,
-        });
+    const { language } = this.context;
+    fetchData('/portfolio', language).then(data => {
+      const atual = (data || []).find(item => item.slug === slug);
+      this.setState({
+        atual: atual || { items: [] },
       });
+    });
   };
 
   shouldComponentUpdate = (nextProps, nextState) => {
@@ -91,6 +82,12 @@ class Portfolio extends Component {
   };
 
   componentDidUpdate = () => {
+    if (this.context.language !== this.state.language) {
+      this.getPortfolio();
+      if (this.props.match.params.name) {
+        this.getPortfolioItem(this.props.match.params.name);
+      }
+    }
     if (this.props.match.params.name) {
       this.getPortfolioItem(this.props.match.params.name);
     }
@@ -117,6 +114,8 @@ class Portfolio extends Component {
   };
 
   getUrl = item => {
+    if (!item || !item.url) return '/img/portfolio/defaultBackground.jpg';
+    if (item.url.startsWith('http') || item.url.startsWith('/')) return item.url;
     switch (item.type) {
       case 'cover':
         return '/img/portfolio/cover/' + item.url;
@@ -240,16 +239,13 @@ class Portfolio extends Component {
               }}
               swiping={true}
             >
-              {this.state.atual.items.map((item, i) =>
-                console.log(i)(
-                  <PortfolioItem
-                    // backgroundColor={this.changeBackColor}
-                    item={item}
-                    key={i}
-                    backgroundColor={i}
-                  />
-                )
-              )}
+              {this.state.atual.items.map((item, i) => (
+                <PortfolioItem
+                  item={item}
+                  key={i}
+                  backgroundColor={i}
+                />
+              ))}
             </Carousel>
           </div>
           {/* </Palette> */}
@@ -275,9 +271,12 @@ class Portfolio extends Component {
                   wrappingElement="div"
                   onChange={this.getPortfolio}
                 >
-                  {this.state.data.map((item, i) => (
-                    <PortfolioCoverItem key={i} item={item} />
-                  ))}
+              {this.state.data.length === 0 && (
+                <p style={{ padding: '20px 0' }}>Nenhum item encontrado.</p>
+              )}
+              {this.state.data.map((item, i) => (
+                <PortfolioCoverItem key={i} item={item} />
+              ))}
                 </OnVisible>
               </div>
             </section>

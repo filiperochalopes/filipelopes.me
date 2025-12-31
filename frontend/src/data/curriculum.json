@@ -1,0 +1,1128 @@
+{
+  "experiences": [
+    {
+      "id": 3,
+      "title_pt_br": "Desenvolvedor frontend ReactJS, colaborador em equipe SCRUM",
+      "title_en_us": "ReactJS frontend developers in a SCRUM team",
+      "organization": "International Conservation",
+      "place": "Salvador - BA (INEMA)",
+      "description_pt_br": "- Trabalhei com a metodologia Ágil, gerenciando atividades remotamente\r\n- Lançamos a nova versão do GEOBAHIA (http://mapa.geobahia.ba.gov.br)\r\n- Melhorei o uso de técnicas na empresa com introdução de novos conceitos de programação",
+      "description_en_us": "- Worked with agile SCRUM team managing activities remotely\r\n- Lauched new GEOBAHIA version (http://mapa.geobahia.ba.gov.br)\r\n- Improved programing techniques with GraphQL",
+      "key_achievement_pt_br": "Novos conhecimentos ao trabalhar com manipulação de mapas e ferramentas de análise",
+      "key_achievement_en_us": "Work with map manipulation and map data analysis",
+      "since": "2019-09-01",
+      "until": "2021-02-28",
+      "relevance_id": 3
+    },
+    {
+      "id": 4,
+      "title_pt_br": "CEO, CTO, Web Developer, SCRUM Master, Gerenciador de Projetos,DevOps",
+      "title_en_us": "CEO, CTO, Web Developer, SCRUM Master,  Project Manager, DevOps",
+      "organization": "ORANGO I/O TECNOLOGIA",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Me envolvi na contratação, avaliação e capacitação de profissionais para trabalhar nos projetos da empresa, criando uma platarfoma para gerência de recursos de colaboradores\r\n- Trabalhei com diversas linguagens de programação, estrutura de projetos e framework\r\n- Me aprofundei em estrutura Linux com implementação de várias estruturas de dados\r\n- Trabalhos com estrtura de banco de dados noSQL e subscriptions",
+      "description_en_us": "- I got involved in hiring, evaluating and professionals training to work on the company's projects, creating a platform for managing employee resources\r\n- Worked with several programming languages, project structure and framework\r\n- I delved into Linux structure with implementation of various data structures\r\n- Works with noSQL database structure and subscriptions",
+      "key_achievement_pt_br": "Trabalhar com gestão de equipe/projetos e infraestrutura de projetos em VPS Linux",
+      "key_achievement_en_us": "Work with team / project management and project infrastructure on Linux VPS",
+      "since": "2020-05-06",
+      "until": null,
+      "relevance_id": 3
+    },
+    {
+      "id": 5,
+      "title_pt_br": "Diretor de projeto e desenvolvedor ReactJS",
+      "title_en_us": "Project Manager and ReactJS Developer",
+      "organization": "ALT F4 Informática (Rio de Janeiro)",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Diálogo com equipe externa de backend\r\n- Diálogo com equipe externa requisitos\r\n- Desenvolvimento de um sistema de gerenciamento de sessões para votação de matérias online\r\n- Durante o desenvolvimento gerenciei uma equipe com um designer e um desenvolvedor júnior atuando juntamente com eles no desenvolvimento. O projeto foi solicitado pela ALT F4 para suprir as necessidades da câmara de vereadores de Mangaratiba - Costa Verde - Rio de Janeiro.",
+      "description_en_us": "- Dialogue with external backend team\r\n- Dialogue with external requirements team\r\n- Development of a session management system for voting on online political subjects\r\n- During development I managed a team with a junior designer and a junior developer working together with them in the development. The project was requested by ALT F4 to meet the needs of the City Council of Mangaratiba - Costa Verde - Rio de Janeiro.",
+      "key_achievement_pt_br": "Coordenar e desenvolver criação de sistema",
+      "key_achievement_en_us": "Manage a team and help develop",
+      "since": "2020-07-01",
+      "until": "2020-03-01",
+      "relevance_id": 2
+    },
+    {
+      "id": 6,
+      "title_pt_br": "Desenvolvedor Fullstack Wordpress API + SlimFramework + ReactJS",
+      "title_en_us": "Fullstack developer Wordpress API + SlimFramework + ReactJS",
+      "organization": "Montreal Tecnologia, alocado no INEMA",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Desenvolvimento de toda a intranet do Instituto do Meio Ambiente e Recursos Hídricos da Bahia \r\n- Backend em WORDPRESS para fornecimento de API própria e frontend em ReactJS\r\n- Criação de API do painel de monitoramento de tempo com SlimFramework",
+      "description_en_us": "- Development of the entire intranet of the Institute for the Environment and Water Resources of Bahia\r\n- Backend written in WORDPRESS to supply its own API and ReactJS frontend\r\n- Creation of weather monitoring API with SlimFramework with government data",
+      "key_achievement_pt_br": "Desenvolver sozinho uma intranet sofisticada com gerenciamento de conteúdo",
+      "key_achievement_en_us": "Develop a sophisticated intranet with content management on your own",
+      "since": "2019-02-01",
+      "until": "2019-08-01",
+      "relevance_id": 2
+    },
+    {
+      "id": 7,
+      "title_pt_br": "Desenvolvedor PHP Fullstack",
+      "title_en_us": "PHP Fullstack developer",
+      "organization": "ITMPR",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Reformulação do site oficial da empresa com uma estrutura simples e rápida a pedido do cliente para mostrar os produtos da empresa sem serviço de banco de dados, porém de forma eficiente.\r\n- Desenvolvimento de site de baixo custo e alto desempenho 88 pontos no PageSpeed Isights\r\n- Criação de um sistema de gerenciamento e cadastro de orçamentos e respectivos dependentes (usuários, clientes, produtos…) em PHP, JQuery e Ajax.\r\n- Desenvolvimento de aplicação monólito de baixo custo e alto desempenho\r\n- Consulta a banco de dados com ORM Elloquent",
+      "description_en_us": "- Reformulation of the company's official website with a simple and quick code structure to show the company's products without a database service, but in an efficient way.\r\n- Low-cost, high-performance website development with 88 points on PageSpeed ​​Isights\r\n- Creation of a quotes management and registration system and their dependents (users, customers, products…) in PHP, JQuery and Ajax.\r\n- Development of low cost, high performance monolith application\r\n- Database query with ORM Elloquent",
+      "key_achievement_pt_br": "Aplicação PDV com suporte duradouro e manutenção contínua",
+      "key_achievement_en_us": "POS application with long-term support",
+      "since": "2017-11-01",
+      "until": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 8,
+      "title_pt_br": "Desenvolvedor PHP Fullstack",
+      "title_en_us": "PHP Fullstack developer",
+      "organization": "Qualité Ortodontia",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Trabalhando com criação de gráficos e PDF para relatórios\r\n- Criação de um sistema de controle de guias para clínica de ortodontia utilizando PHP, MySQL, JQuery e Ajax.",
+      "description_en_us": "- Creation of graphs and creation of PDF file report\r\n- Creation of a document control system for orthodontics clinic using PHP, MySQL, JQuery and Ajax.",
+      "key_achievement_pt_br": "Criação de aplicação monólito",
+      "key_achievement_en_us": "Monolithic application development",
+      "since": "2019-10-01",
+      "until": "2020-02-01",
+      "relevance_id": 1
+    },
+    {
+      "id": 9,
+      "title_pt_br": "Desenvolvedor com stack WORDPRESS + ReactJS",
+      "title_en_us": "ReactJS and WORDPRESS stack developer",
+      "organization": "Instituto de Ciência e Saúde - UFBA",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Criação do Atlas digital de histologia da Universidade Federal da Bahia para consulta de alunos e auxílio ao ensino utilizando WORDPRESS API e ReactJS\r\n- Container Wordpress API com Docker\r\n- Criação de tema e plugin wordpress\r\n- Novo sistema de upload para o wordpress no plugin criado",
+      "description_en_us": "- Criação do Atlas digital de histologia da Universidade Federal da Bahia para consulta de alunos e auxílio ao ensino utilizando WORDPRESS API e ReactJS\r\n- WORDPRESS Container API with Docker\r\n- WORDPRESS theme and plugin development\r\n- new WORDPRESS self upload system",
+      "key_achievement_pt_br": "Trabalhando para instituição de ensino federal para o curso de medicina",
+      "key_achievement_en_us": "Working for a federal medicine teaching institution",
+      "since": "2018-07-01",
+      "until": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 10,
+      "title_pt_br": "Desenvolvedor WORDPRESS",
+      "title_en_us": "WORDPRESS developer",
+      "organization": "Hangar Comunicação",
+      "place": "Salvador - BA",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "key_achievement_pt_br": "Criação de site com template próprio e plugin WORDPRESS.",
+      "key_achievement_en_us": "WORDPRESS template and plugin development",
+      "since": "2018-10-01",
+      "until": "2018-11-01",
+      "relevance_id": 2
+    },
+    {
+      "id": 11,
+      "title_pt_br": "Desenvolvedor web e modelador 3D",
+      "title_en_us": "3D moddelling and Frontend Developer",
+      "organization": "Marinha do Brasil",
+      "place": "Salvador - BA",
+      "description_pt_br": "- Criação do sistema de hasteamento de bandeira digital para campeonato mundial de artes marciais (38th WMC Judo - 38o. Campeonato Mundial Militar de Judô - Rio de Janeiro) utilizando Blender3D, Blend4Web e OpenGL para Web.\r\n- Modelagem e animação de modelo 3D",
+      "description_en_us": "- Creation of a digital flag hoisting system for the world martial arts championship (38th WMC Judo - 38th. World Military Judo Championship - Rio de Janeiro) using Blender3D, Blend4Web and OpenGL for Web.\r\n- Creation of 3D enviroment and animation",
+      "key_achievement_pt_br": "Desenvolvimento de sistema complexo 3D com visibilidade televisionada mundialmente",
+      "key_achievement_en_us": "Development of a complex 3D system with televised visibility worldwide",
+      "since": "2018-10-01",
+      "until": "2018-11-01",
+      "relevance_id": 2
+    },
+    {
+      "id": 12,
+      "title_pt_br": "CTO, Desenvolvedor Backend, Revisor de Código, DevOps",
+      "title_en_us": "CTO, Backend Developer, Code Reviewer",
+      "organization": "CLICKLAV",
+      "place": "Salvador/Lauro de Freitas - BA",
+      "description_pt_br": "- Revisão de código React Native\r\n- Desenvolvimento e remodelamento de backend \r\n- Criação de estrutura de modelagem e versionamento de banco de dados com prisma.io\r\n- Realizar deploy de app nativo e instalação nas plataformas digitais\r\n- Gerenciar projeto de construção de todo ecossistema CLICKLAV",
+      "description_en_us": "- React Native code review and development\r\n- Backend development with subscriptions and graphqQL using sequelize and graphql-yoga\r\n- Database migrations with prisma.io\r\n- Mobile app deploy on digital store\r\n- Manage all CLICKLAV ecosystem",
+      "key_achievement_pt_br": "Trabalhar com aplicação mobile e gerenciar um projeto de ponta a ponta com equipes variadas, utilizando SCRUM e fazer deploy de Aplicativo em plataformas digitais",
+      "key_achievement_en_us": "Work with mobile app and deploy it on Apple/Google store",
+      "since": "2020-01-16",
+      "until": null,
+      "relevance_id": 2
+    }
+  ],
+  "skills": [
+    {
+      "id": 3,
+      "name_pt_br": "Blender",
+      "name_en_us": "",
+      "description_pt_br": "Modelador, animador de modelos 3D. Integração com a WEB",
+      "description_en_us": "Modeling and 3D animation with web integration",
+      "level": 65,
+      "icon": "/media/skills/blender.png",
+      "category_id": 1,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 1,
+        "name_pt_br": "Designer gráfico",
+        "name_en_us": "Graphic Designer"
+      },
+      "parent": null
+    },
+    {
+      "id": 4,
+      "name_pt_br": "Gimp",
+      "name_en_us": "",
+      "description_pt_br": "Manipulação de imagens",
+      "description_en_us": "Image manipulation",
+      "level": 75,
+      "icon": "/media/skills/gimp.png",
+      "category_id": 1,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 1,
+        "name_pt_br": "Designer gráfico",
+        "name_en_us": "Graphic Designer"
+      },
+      "parent": null
+    },
+    {
+      "id": 5,
+      "name_pt_br": "Corel Draw",
+      "name_en_us": "",
+      "description_pt_br": "Criação de imagens em vetor",
+      "description_en_us": "Vector images creation",
+      "level": 25,
+      "icon": "/media/skills/coreldraw.jpg",
+      "category_id": 1,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 1,
+        "name_pt_br": "Designer gráfico",
+        "name_en_us": "Graphic Designer"
+      },
+      "parent": null
+    },
+    {
+      "id": 6,
+      "name_pt_br": "Inkscape",
+      "name_en_us": "",
+      "description_pt_br": "Criação de imagens de vetor",
+      "description_en_us": "Vector image creation",
+      "level": 45,
+      "icon": "/media/skills/inkscape.jpg",
+      "category_id": 1,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 1,
+        "name_pt_br": "Designer gráfico",
+        "name_en_us": "Graphic Designer"
+      },
+      "parent": null
+    },
+    {
+      "id": 7,
+      "name_pt_br": "Photoscan Ankisoft&reg;",
+      "name_en_us": "",
+      "description_pt_br": "Fotogrametria gerando modelos 3d de boa qualidade",
+      "description_en_us": "Photogrammetry generating good quality 3d models",
+      "level": 60,
+      "icon": "/media/skills/photoscan.jpg",
+      "category_id": 1,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 1,
+        "name_pt_br": "Designer gráfico",
+        "name_en_us": "Graphic Designer"
+      },
+      "parent": null
+    },
+    {
+      "id": 8,
+      "name_pt_br": "PHP",
+      "name_en_us": "",
+      "description_pt_br": "Criação de CRUD e Rest API, utilização de ORM, manipulação de imagens com Imagemagick. Desde 2010.",
+      "description_en_us": "CRUD creation and Rest API. ORM utilization. Image manipulation with Imagemagick. Since 2010",
+      "level": 75,
+      "icon": "/media/skills/php.jpg",
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 9,
+      "name_pt_br": "Python",
+      "name_en_us": "",
+      "description_pt_br": "Rest API, GraphQL, ORM, estudando ML.",
+      "description_en_us": "Rest API, GraphQL, ORM, studying ML.",
+      "level": 80,
+      "icon": "/media/skills/python_DiB9AYf.jpg",
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 10,
+      "name_pt_br": "Django",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 45,
+      "icon": "/media/skills/python_khui5jH.jpg",
+      "category_id": 2,
+      "parent_id": 9,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 9
+    },
+    {
+      "id": 11,
+      "name_pt_br": "Flask",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 70,
+      "icon": "/media/skills/python_OPCCPNT.jpg",
+      "category_id": 2,
+      "parent_id": 9,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 9
+    },
+    {
+      "id": 12,
+      "name_pt_br": "FastAPI",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 60,
+      "icon": "/media/skills/python_vjcJZAE.jpg",
+      "category_id": 2,
+      "parent_id": 9,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 9
+    },
+    {
+      "id": 13,
+      "name_pt_br": "SQLAlchemy",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 80,
+      "icon": "/media/skills/python_ytNqgGI.jpg",
+      "category_id": 2,
+      "parent_id": 9,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 9
+    },
+    {
+      "id": 14,
+      "name_pt_br": "TensorFlow",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 2,
+      "icon": "/media/skills/python_zy1INdG.jpg",
+      "category_id": 2,
+      "parent_id": 9,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 9
+    },
+    {
+      "id": 15,
+      "name_pt_br": "Javascript",
+      "name_en_us": "",
+      "description_pt_br": "Fullstack. Desde 2010 desenvolvendo frontend com JQuery. Mais recentemente 3+ anos com ReactJS",
+      "description_en_us": "Fullstack. ReactJS lover. JQuery developer since 2010.",
+      "level": 80,
+      "icon": "/media/skills/javascript.png",
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 16,
+      "name_pt_br": "ReactJS",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 80,
+      "icon": "/media/skills/ReactJS.jpg",
+      "category_id": 2,
+      "parent_id": 15,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 15
+    },
+    {
+      "id": 17,
+      "name_pt_br": "React Native",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 45,
+      "icon": "/media/skills/ReactNative.jpg",
+      "category_id": 2,
+      "parent_id": 15,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 15
+    },
+    {
+      "id": 18,
+      "name_pt_br": "JQuery",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 95,
+      "icon": "/media/skills/JQuery.jpg",
+      "category_id": 2,
+      "parent_id": 15,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 15
+    },
+    {
+      "id": 19,
+      "name_pt_br": "Blend4Web",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 70,
+      "icon": "/media/skills/Blend4Web.jpg",
+      "category_id": 2,
+      "parent_id": 15,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 15
+    },
+    {
+      "id": 20,
+      "name_pt_br": "Node.js",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 68,
+      "icon": null,
+      "category_id": 2,
+      "parent_id": 15,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 15
+    },
+    {
+      "id": 21,
+      "name_pt_br": "Prisma",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 86,
+      "icon": null,
+      "category_id": 2,
+      "parent_id": 15,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 15
+    },
+    {
+      "id": 22,
+      "name_pt_br": "Graphql-yoga",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 78,
+      "icon": null,
+      "category_id": 2,
+      "parent_id": 15,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 15
+    },
+    {
+      "id": 23,
+      "name_pt_br": "CSS",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 99,
+      "icon": "/media/skills/css3.jpg",
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 24,
+      "name_pt_br": "Sass",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 99,
+      "icon": "/media/skills/Sass_NcQ6C7b.jpg",
+      "category_id": 2,
+      "parent_id": 23,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": 23
+    },
+    {
+      "id": 25,
+      "name_pt_br": "HTML",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 99,
+      "icon": "/media/skills/html5.jpg",
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 26,
+      "name_pt_br": "MySQL",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 88,
+      "icon": "/media/skills/mysql.jpg",
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 27,
+      "name_pt_br": "PostgreSQL",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 82,
+      "icon": "/media/skills/postgresql.jpg",
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 28,
+      "name_pt_br": "SQLite",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 88,
+      "icon": null,
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 29,
+      "name_pt_br": "Docker",
+      "name_en_us": "",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 70,
+      "icon": null,
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 30,
+      "name_pt_br": "Git",
+      "name_en_us": "",
+      "description_pt_br": "Apto para trabalhar em equipes de desenvolvimento, gerenciar atividades e projetos com integração contínua.",
+      "description_en_us": "Able to work in development teams, manage activities and projects with continuous integration.",
+      "level": 96,
+      "icon": "/media/skills/git.jpg",
+      "category_id": 2,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 2,
+        "name_pt_br": "Desenvolvedor Web/Mobile",
+        "name_en_us": "Web/Mobile Developer"
+      },
+      "parent": null
+    },
+    {
+      "id": 31,
+      "name_pt_br": "Português",
+      "name_en_us": "Portuguese",
+      "description_pt_br": "Língua nativa",
+      "description_en_us": "Native language",
+      "level": 98,
+      "icon": null,
+      "category_id": 3,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 3,
+        "name_pt_br": "Idiomas",
+        "name_en_us": "Languages"
+      },
+      "parent": null
+    },
+    {
+      "id": 32,
+      "name_pt_br": "Inglês",
+      "name_en_us": "English",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 82,
+      "icon": "/media/skills/ingles.jpg",
+      "category_id": 3,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 3,
+        "name_pt_br": "Idiomas",
+        "name_en_us": "Languages"
+      },
+      "parent": null
+    },
+    {
+      "id": 33,
+      "name_pt_br": "Língua Brasileira de Sinais (LIBRAS)",
+      "name_en_us": "Brazilian Sign Language (LIBRAS)",
+      "description_pt_br": "Curso Básico de LIBRAS na Universidade Federal da Bahia. LÍNGUA BRASILEIRA DE SINAIS NIVEL I CH 68h",
+      "description_en_us": "LIBRAS Level 1 Course at Federal University. 68 h.s.",
+      "level": 15,
+      "icon": "/media/skills/libras.jpg",
+      "category_id": 3,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 3,
+        "name_pt_br": "Idiomas",
+        "name_en_us": "Languages"
+      },
+      "parent": null
+    },
+    {
+      "id": 34,
+      "name_pt_br": "Fala fluente",
+      "name_en_us": "Fluent speech",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 99,
+      "icon": "/media/skills/portugues.jpg",
+      "category_id": 3,
+      "parent_id": 31,
+      "relevance_id": null,
+      "category": {
+        "id": 3,
+        "name_pt_br": "Idiomas",
+        "name_en_us": "Languages"
+      },
+      "parent": 31
+    },
+    {
+      "id": 35,
+      "name_pt_br": "Ouve bem",
+      "name_en_us": "Listen well",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 98,
+      "icon": "/media/skills/portugues_0ssKeCq.jpg",
+      "category_id": 3,
+      "parent_id": 31,
+      "relevance_id": null,
+      "category": {
+        "id": 3,
+        "name_pt_br": "Idiomas",
+        "name_en_us": "Languages"
+      },
+      "parent": 31
+    },
+    {
+      "id": 36,
+      "name_pt_br": "Escreve bem",
+      "name_en_us": "Write well",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 98,
+      "icon": "/media/skills/portugues_asbPwnC.jpg",
+      "category_id": 3,
+      "parent_id": 31,
+      "relevance_id": null,
+      "category": {
+        "id": 3,
+        "name_pt_br": "Idiomas",
+        "name_en_us": "Languages"
+      },
+      "parent": 31
+    },
+    {
+      "id": 37,
+      "name_pt_br": "Fala fluente",
+      "name_en_us": "Fluent speech",
+      "description_pt_br": "",
+      "description_en_us": "",
+      "level": 84,
+      "icon": "/media/skills/ingles_ZVeSjxD.jpg",
+      "category_id": 3,
+      "parent_id": 32,
+      "relevance_id": null,
+      "category": {
+        "id": 3,
+        "name_pt_br": "Idiomas",
+        "name_en_us": "Languages"
+      },
+      "parent": 32
+    },
+    {
+      "id": 38,
+      "name_pt_br": "Gerenciamento de Tempo",
+      "name_en_us": "Time Management Skills",
+      "description_pt_br": "Por anos, graças a Deus, manejando tempo em curso de medicina, trabalho e empresa.",
+      "description_en_us": "For years, thank God, managing time in medicine, work and business.",
+      "level": 92,
+      "icon": null,
+      "category_id": 4,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 4,
+        "name_pt_br": "Pessoal",
+        "name_en_us": "Personal"
+      },
+      "parent": null
+    },
+    {
+      "id": 39,
+      "name_pt_br": "Multitarefa",
+      "name_en_us": "Multitasking",
+      "description_pt_br": "De consertar vaso sanitário à construir circuito elétrico, de programação à medicina.",
+      "description_en_us": "From fixing toilets to building an electrical circuit, from programming to medicine.",
+      "level": 92,
+      "icon": null,
+      "category_id": 4,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 4,
+        "name_pt_br": "Pessoal",
+        "name_en_us": "Personal"
+      },
+      "parent": null
+    },
+    {
+      "id": 40,
+      "name_pt_br": "Vendedor",
+      "name_en_us": "Seller",
+      "description_pt_br": "Venda de produtos e serviços, já vendi algumas coisas na vida, inclusive com lojas virtuais e pessoalmente, mas não é uma das minhas melhores habilidades.",
+      "description_en_us": "Selling products and services. I've sold some things in my life, including online stores and in person, but it's not one of my best skills.",
+      "level": 75,
+      "icon": null,
+      "category_id": 4,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 4,
+        "name_pt_br": "Pessoal",
+        "name_en_us": "Personal"
+      },
+      "parent": null
+    },
+    {
+      "id": 41,
+      "name_pt_br": "Comunicação",
+      "name_en_us": "Communication",
+      "description_pt_br": "Elogiado por boa comunicação em plataformas de freelancers. Gosto sempre de manter meus clientes informados sobre o andamento do projeto. É uma necessidade essa habilidade para transmitir confiança para clientes à distância.",
+      "description_en_us": "Praised for good communication on freelancer platforms. I always like to keep my clients informed about the progress of the project. This skill is a necessity to convey confidence to customers from a distance.",
+      "level": 88,
+      "icon": null,
+      "category_id": 4,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 4,
+        "name_pt_br": "Pessoal",
+        "name_en_us": "Personal"
+      },
+      "parent": null
+    },
+    {
+      "id": 42,
+      "name_pt_br": "Resolução de Problemas",
+      "name_en_us": "Problem Solving",
+      "description_pt_br": "É uma das coisas que mais amo fazer. Resolver problemas! Criar soluções, por isso o lema da minha empresa criada. ORANGO I/O, soluções inteligentes.",
+      "description_en_us": "It's one of the things I love to do the most. Solve problems! Create solutions, hence the motto of my company created. ORANGO I/O, smart solutions.",
+      "level": 98,
+      "icon": null,
+      "category_id": 4,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 4,
+        "name_pt_br": "Pessoal",
+        "name_en_us": "Personal"
+      },
+      "parent": null
+    },
+    {
+      "id": 43,
+      "name_pt_br": "Ensinar",
+      "name_en_us": "Teaching",
+      "description_pt_br": "Ensino desde os meus 14 anos: Física, Química e Matemática. Mais recentemente com aulas de Wordpress e Assessoria em programação. Um diferencial são as apresentações.",
+      "description_en_us": "I teach since I was 14 years old: Physics, Chemistry and Mathematics. More recently with Wordpress classes and programming advices. A differential are the slide presentations.",
+      "level": 88,
+      "icon": null,
+      "category_id": 4,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 4,
+        "name_pt_br": "Pessoal",
+        "name_en_us": "Personal"
+      },
+      "parent": null
+    },
+    {
+      "id": 44,
+      "name_pt_br": "Performance pública",
+      "name_en_us": "Talk",
+      "description_pt_br": "Algo que ainda preciso melhorar um pouco e coloquei aqui pois considero um defeito em melhoria e construção. A performance para falar à frente de grupos grandes.",
+      "description_en_us": "Something I still need to improve a little bit and I put it here because I consider it a defect in improvement and construction. The performance to speak in front of large groups.",
+      "level": 60,
+      "icon": null,
+      "category_id": 4,
+      "parent_id": null,
+      "relevance_id": null,
+      "category": {
+        "id": 4,
+        "name_pt_br": "Pessoal",
+        "name_en_us": "Personal"
+      },
+      "parent": null
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name_pt_br": "Graduando em Medicina",
+      "name_en_us": "Senior physician college student",
+      "place_pt_br": "Faculdade de Medicina da Bahia - UFBA",
+      "place_en_us": "Medicine University of Bahia (FMB - Federal University of Bahia)",
+      "description_pt_br": "Formação em médico generalista na primeira Universidade de Medicina do país",
+      "description_en_us": "Physician graduation at the country's first Medical University",
+      "since": "2015-03-01",
+      "until": null,
+      "relevance_id": 3
+    },
+    {
+      "id": 2,
+      "name_pt_br": "Segundo Grau Completo",
+      "name_en_us": "High school degree",
+      "place_pt_br": "Colégio Militar de Salvador",
+      "place_en_us": "Military School of Salvador",
+      "description_pt_br": "- Ensino de qualidade com disciplina\r\n- Certificado de aluno disciplinado\r\n- Campeão nas competições internas de atletismo e basquete\r\n- Ala/armador em basquete",
+      "description_en_us": "- Quality teaching with discipline\r\n- Disciplined Student Certificate\r\n- Champion in internal athletics and basketball competitions\r\n- Basketball wing/guard",
+      "since": "2008-03-01",
+      "until": "2014-07-01",
+      "relevance_id": 3
+    },
+    {
+      "id": 3,
+      "name_pt_br": "Python 3 Completo do Iniciante ao Avançado",
+      "name_en_us": "Python 3 from beginning to advanced",
+      "place_pt_br": "Udemy",
+      "place_en_us": "Udemy",
+      "description_pt_br": "Curso concluído com certificação",
+      "description_en_us": "Course completed with certification",
+      "since": "2018-07-11",
+      "until": "2019-12-27",
+      "relevance_id": 2
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "title_pt_br": "Destaque em Disciplina - Colegio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2011-12-06",
+      "file": "/media/certificates/diploma_de_destaque_disciplina_cms.pdf",
+      "course_id": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 2,
+      "title_pt_br": "Diploma de Assiduidade - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2011-12-06",
+      "file": "/media/certificates/diploma_de_assiduidade_2011.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 3,
+      "title_pt_br": "Diploma de Conclusão do Ensino Fundamental",
+      "title_en_us": "",
+      "date": "2011-12-05",
+      "file": "/media/certificates/diploma_de_conclusao_ensino_fundamental_2011.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 4,
+      "title_pt_br": "Robot Care Brasil 2019 - PUC-RS",
+      "title_en_us": "",
+      "date": "2019-05-15",
+      "file": "/media/certificates/certificado_robot_care.pdf",
+      "course_id": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 5,
+      "title_pt_br": "Medalha de Ouro - Olimpíadas Brasileira de Matemática das Escolas Públicas 2014",
+      "title_en_us": "",
+      "date": "2015-12-14",
+      "file": "/media/certificates/certificado_olimpiada_de_matematica_2014.pdf",
+      "course_id": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 6,
+      "title_pt_br": "Medalha de Bronze - Nacional - Olimpíada Brasileira de Física das Escolas Públicas 2012",
+      "title_en_us": "",
+      "date": "2013-05-01",
+      "file": "/media/certificates/certificado_OBFEP_2012_nivel_nacional.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 7,
+      "title_pt_br": "Medalha de Prata - Estadual - Olimíadas Brasileira de Física das Escolas Públicas 2012",
+      "title_en_us": "",
+      "date": "2013-05-01",
+      "file": "/media/certificates/certificado_OBFEP_2012_nivel_estadual.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 8,
+      "title_pt_br": "Medalha de Ouro - Olimíadas Brasileira de Física das Escolas Públicas 2011",
+      "title_en_us": "",
+      "date": "2012-05-01",
+      "file": "/media/certificates/certificado_OBFEP_2011.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 9,
+      "title_pt_br": "Medalha de Bronze - VII Olimpíada Baiana de Química",
+      "title_en_us": "",
+      "date": "2012-10-31",
+      "file": "/media/certificates/medalha_bronze_olimpiadas_baiana_quimica.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 10,
+      "title_pt_br": "Medalha de Prata - Aplicação 2 ano - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2014-05-23",
+      "file": "/media/certificates/certificado_de_aplicacao_em_prata_2ano2014.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 11,
+      "title_pt_br": "Medalha de Bronze - Aplicação 9 ano - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2012-02-14",
+      "file": "/media/certificates/certificado_de_aplicacao_em_broze_9ano2012.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 12,
+      "title_pt_br": "Medalha de Ouro - Aplicação 1 ano - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2013-03-27",
+      "file": "/media/certificates/certificado_de_aplicacao_em_ouro_1ano2013.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 13,
+      "title_pt_br": "Curso de Inglês Avançado - NUPEL - Universidade Federal da Bahia",
+      "title_en_us": "",
+      "date": "2015-12-08",
+      "file": "/media/certificates/certificado_curso_ingles.pdf",
+      "course_id": null,
+      "relevance_id": 2
+    },
+    {
+      "id": 14,
+      "title_pt_br": "Conclusão do Ensino Médio - Colégio Militar de Salvador",
+      "title_en_us": "",
+      "date": "2014-07-24",
+      "file": "/media/certificates/certificado_conclusao_ensino_medio.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 15,
+      "title_pt_br": "Curso de Inglês Júnior CCAA - 2004",
+      "title_en_us": "",
+      "date": "2004-12-01",
+      "file": "/media/certificates/certificado_curso_de_ingles_junior_CCAA_2004.pdf",
+      "course_id": null,
+      "relevance_id": 1
+    },
+    {
+      "id": 16,
+      "title_pt_br": "Curso de Inglês Júnior CCAA - 2005",
+      "title_en_us": "",
+      "date": "2005-06-01",
+      "file": null,
+      "course_id": null,
+      "relevance_id": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name_pt_br": "Designer gráfico",
+      "name_en_us": "Graphic Designer"
+    },
+    {
+      "id": 2,
+      "name_pt_br": "Desenvolvedor Web/Mobile",
+      "name_en_us": "Web/Mobile Developer"
+    },
+    {
+      "id": 3,
+      "name_pt_br": "Idiomas",
+      "name_en_us": "Languages"
+    },
+    {
+      "id": 4,
+      "name_pt_br": "Pessoal",
+      "name_en_us": "Personal"
+    }
+  ],
+  "relevance": [
+    {
+      "id": 1,
+      "value": "LOW",
+      "description_pt_br": "Baixa relevância, não deve aparecer em muitos lugares, apenas em relatórios completos",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "value": "MID",
+      "description_pt_br": "Média Relevância, deve aparecer na página do site",
+      "order": 5
+    },
+    {
+      "id": 3,
+      "value": "HIGH",
+      "description_pt_br": "Alta relevância, deve aparecer nos PDFs gerados e na página do site",
+      "order": 10
+    }
+  ]
+}

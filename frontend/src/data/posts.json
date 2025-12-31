@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "slug": "pixel",
+    "title_pt_br": "Pixel",
+    "title_en_us": "Pixel",
+    "excerpt_pt_br": "",
+    "excerpt_en_us": "",
+    "content_pt_br": "é unidade básica da composição digital. É o símbolo da criação, criatividade, construção e transformação. Se existe algo que você pode pensar, com pixels você pode criar!",
+    "content_en_us": "is the minimal component of the visible software tecnology. It's a creation symbol meaning creativity and transformation. Imagine something! Now pixel it and your imagination becomes real!",
+    "type": "TXT"
+  },
+  {
+    "id": 2,
+    "slug": "about-me",
+    "title_pt_br": "Filipe Lopes",
+    "title_en_us": "Filipe Lopes",
+    "excerpt_pt_br": "",
+    "excerpt_en_us": "",
+    "content_pt_br": "Discípulo de Jesus Cristo, programador criativo com mais de 10 anos de experiência,  fundador da empresa ORANGO I/O TECNOLOGIA, concluindo o curso de medicina na Universidade Federal da Bahia. Ao longo dos anos trabalhei para diversos clientes como Marinha do Brasil e organizações do meio ambiente estaduais e internacionais com Javascript, Python, PHP, desenvolvendo e gerenciando desde sistemas de orçamentos e teleatendimento para clínicas até programa com visualização tridimensional. Desejoso por aprender, criar e trazer soluções práticas e simples nas diversas áreas do conhecimento, porém com foco maior em saúde. Atualmente estou estudando matemática avançada e Machine Learning para poder aumentar o alcance e eficiência dos sistemas a serem criados com a real Inteligência Artificial. Gosto muito de praticar atividades físicas e cantar em grupo nas horas vagas.",
+    "content_en_us": "Disciple of Jesus Christ. Programmer with 10+ year of experience. Founder of ORANGO I / O TECNOLOGIA. Finishing the medicine course at Federal University of Bahia. For all those years I worked for a great variety of clients, from Brazil Navy to environment international and national organizations. I realy enjoy learning and create bringing practical solutions in all knowledge areas but now focusing on health.",
+    "type": "TXT"
+  },
+  {
+    "id": 3,
+    "slug": "daniel-2-21",
+    "title_pt_br": "Daniel 2:21 ACF",
+    "title_en_us": "Daniel 2:21 KJV",
+    "excerpt_pt_br": "",
+    "excerpt_en_us": "",
+    "content_pt_br": "E Ele muda os tempos e as estações; Ele remove os reis e estabelece os reis; Ele dá sabedoria aos sábios e conhecimento aos entendidos.",
+    "content_en_us": "And He changeth the times and the seasons: He removeth kings, and setteth up kings: He giveth wisdom unto the wise, and knowledge to them that know understanding",
+    "type": "TXT"
+  },
+  {
+    "id": 4,
+    "slug": "curriculum-resume",
+    "title_pt_br": "Resumo",
+    "title_en_us": "Resume",
+    "excerpt_pt_br": "",
+    "excerpt_en_us": "",
+    "content_pt_br": "Discípulo de Jesus. Programador criativo com mais de 10 anos de experiência e mercado.  Fundador da ORANGO I/O TECNOLOGIA, concluindo o curso de medicina na Universidade Federal da Bahia. Ao longo dos anos trabalhei para diversos clientes como Marinha do Brasil, organizações estaduais e internacionais de meio ambiente e clínicas particulares desenvolvendo soluções que otimizaram processos. Utilizando as linguagens modernas e promissoras do mercado como Javascript, Python, construí desde sistemas de orçamentos e teleatendimento para clínicas até programa com visualização tridimensional. Desejoso por aprender, criar e trazer soluções práticas e simples nas diversas áreas do conhecimento, porém com foco maior em saúde. Estudando matemática avançada para criar com Machine Learning.",
+    "content_en_us": "Disciple of Jesus. Creative programmer with 10+ years of experience and market. Founder of ORANGO I/O TECNOLOGIA, completing the medical course at the Federal University of Bahia. Over the years I have worked for several clients such as the Brazilian Navy, state and international environmental organizations and private clinics developing solutions that optimizing processes. Using modern and promising market languages ​​such as Javascript and Python, I built from budgeting and call center systems for clinics to a program with three-dimensional visualization. Desiring to learn, create and bring practical and simple solutions in the various areas of knowledge, but with a greater focus on health. Studying advanced mathematics to create with Machine Learning.",
+    "type": "TXT"
+  },
+  {
+    "id": 5,
+    "slug": "tiago-1-17",
+    "title_pt_br": "Tiago 1:17 ARA",
+    "title_en_us": "James 1:17 KJV",
+    "excerpt_pt_br": "",
+    "excerpt_en_us": "",
+    "content_pt_br": "Toda boa dádiva e todo dom perfeito são lá do alto, descendo do Pai das luzes, em quem não pode existir variação ou sombra de mudança.",
+    "content_en_us": "Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.",
+    "type": "TXT"
+  }
+]

@@ -12,12 +12,17 @@ class PortfolioItem extends Component {
 
   filterItem = item => {
     if (item.type) {
+      const resolveUrl = url => {
+        if (!url) return url;
+        if (url.startsWith('http') || url.startsWith('/')) return url;
+        return url;
+      };
       switch (item.type) {
         case 'cover':
           return (
             <img
               className="children"
-              src={'/img/portfolio/cover/' + item.url}
+              src={resolveUrl(item.url) || '/img/portfolio/cover/' + item.url}
               alt="Imagem de capa de potfólio"
             />
           );
@@ -25,7 +30,7 @@ class PortfolioItem extends Component {
           return (
             <img
               className="children"
-              src={'/img/portfolio/' + item.url}
+              src={resolveUrl(item.url) || '/img/portfolio/' + item.url}
               alt="Imagem de Porfólio"
             />
           );
