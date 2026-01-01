@@ -1,22 +1,15 @@
-FROM node:20-bullseye-slim as build_stage
+FROM node:20-bullseye-slim
 
-RUN mkdir -p /app
-WORKDIR /app
+RUN mkdir -p /home/node/app
+WORKDIR /home/node/app
 RUN apt-get update \
   && apt-get install -y --no-install-recommends python3 make g++ \
   && rm -rf /var/lib/apt/lists/*
 RUN corepack enable \
   && corepack prepare pnpm@10.26.2 --activate
-COPY frontend/package.json frontend/pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
-COPY frontend .
-RUN pnpm build
+COPY . .
+EXPOSE 3000
 
-FROM nginx:1.16.0-alpine
-
-COPY --from=build_stage /app/dist /usr/share/nginx/html
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+CMD ["pnpm", "dev", "--host", "0.0.0.0", "--port", "3000"]

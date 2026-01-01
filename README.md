@@ -1,39 +1,19 @@
-# filipelopes.me
+# filipelopes.me (frontend)
 
-Site estático em Astro + React. O conteúdo vem do SQLite (sem Django) e é exportado para JSON.
+Astro + React (sem Tailwind). O layout preserva a experiência original do site.
 
-## Exportar dados do SQLite
-
-```sh
-python3 scripts/export_data.py
-```
-
-Gera:
-- `frontend/src/data/posts.json`
-- `frontend/src/data/curriculum.json`
-- `frontend/src/data/portfolio.json`
-- `frontend/src/data/database.json`
-
-## Desenvolvimento
+## Scripts
 
 ```sh
-cd frontend
-pnpm install
 pnpm dev
+pnpm build
+pnpm preview
 ```
 
-## Docker (dev)
+## Dados
+
+Os dados ficam em `src/data/` e são gerados a partir do SQLite:
 
 ```sh
-docker-compose up --build
+python3 ../scripts/export_data.py
 ```
-
-## Build (produção)
-
-```sh
-docker-compose -f docker-compose.prod.yml up --build
-```
-
-## PDF do currículo
-
-A rota `/pdf/curriculum` gera o PDF via **jsPDF** no navegador.
