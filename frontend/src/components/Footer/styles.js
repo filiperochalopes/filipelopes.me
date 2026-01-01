@@ -3,24 +3,20 @@ const styled = styledModule.default || styledModule;
 
 export default styled.footer`
   border-top: 1px solid #e2e8f0;
-  background: #f8fafc;
+  background: #ef9d0e;
   padding: 60px 0;
-  color: #0f172a;
+  color: #ffffff;
 
   .container {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     gap: 24px;
     padding: 0 32px;
-
-    @media (max-width: 600px) {
-      flex-direction: column;
-      text-align: center;
-    }
   }
 
   h1 {
@@ -30,7 +26,7 @@ export default styled.footer`
 
   p {
     margin: 0;
-    color: #64748b;
+    color: #ffffff;
   }
 
   .links {
@@ -42,12 +38,13 @@ export default styled.footer`
   }
 
   .links a {
-    color: #94a3b8;
+    color: #ffffff;
     font-size: 18px;
-    transition: color 0.2s ease;
+    transition: opacity 0.2s ease;
   }
 
   .links a:hover {
-    color: #0f172a;
+    opacity: 0.8;
+    color: #ffffff;
   }
 `;

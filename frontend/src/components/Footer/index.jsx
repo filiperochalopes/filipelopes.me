@@ -29,7 +29,7 @@ export default () => {
       <Footer id="contact">
         <div className="container">
           <div>
-            <h1>Filipe Lopes</h1>
+            <img src="/img/filipelopes-logo-horizontal.svg" alt="Filipe Lopes" style={{ maxWidth: '200px', marginBottom: '10px' }} />
             <p>
               &copy; 2010 - {currentYear}.{' '}
               <TextLang
