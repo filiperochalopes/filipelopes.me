@@ -79,9 +79,7 @@ export default () => {
       <Section id="curriculum">
         <div className="container">
           <h1>
-            <Link to="/curriculo">
-              Currículo <i className="fas fa-external-link-alt"></i>
-            </Link>
+            Currículo
             <button>
               <a href="/pdf/curriculum">
                 <i className="fas fa-print"></i>

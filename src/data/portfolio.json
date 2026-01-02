@@ -1,1 +1,2760 @@
-[]
+[
+  {
+    "id": "59e7c8ce-a125-4077-9fb8-e42b59ebc54e",
+    "name_pt_br": "fundamentos-dev - cifras",
+    "name_en_us": "fundamentos-dev - cifras",
+    "description_pt_br": "# Repositório Pessoal de Letras e Cifras - SelfHosted",
+    "description_en_us": "# Repositório Pessoal de Letras e Cifras - SelfHosted",
+    "link": "https://cifras.filipelopes.me",
+    "tags": [
+      "javascript",
+      "ci",
+      "open source"
+    ],
+    "order": 0
+  },
+  {
+    "id": "358c039b-07e9-4063-8147-7fa976620441",
+    "name_pt_br": "fundamentos-dev - biblia",
+    "name_en_us": "fundamentos-dev - biblia",
+    "description_pt_br": "Bíblia Self-Hosted em português com intenção de uso doméstico, inicialmente criado para o Jogo da Bíblia, porém com pretenção de ser um rápido buscador desacoplado da nuvem com a facilidade de rodar fora de rastreamento.",
+    "description_en_us": "Bíblia Self-Hosted em português com intenção de uso doméstico, inicialmente criado para o Jogo da Bíblia, porém com pretenção de ser um rápido buscador desacoplado da nuvem com a facilidade de rodar fora de rastreamento.",
+    "link": "https://biblia.filipelopes.me",
+    "tags": [
+      "python",
+      "ci",
+      "ia",
+      "open source"
+    ],
+    "order": 1
+  },
+  {
+    "id": "659ea6bc-59d8-4c74-a390-6c64ce3dedf1",
+    "name_pt_br": "fundamentos-dev - proposito-eterno-parallax",
+    "name_en_us": "fundamentos-dev - proposito-eterno-parallax",
+    "description_pt_br": "# Propósito Eterno",
+    "description_en_us": "# Propósito Eterno",
+    "link": "https://propositoeterno.filipelopes.me/#0",
+    "tags": [
+      "javascript",
+      "open source"
+    ],
+    "order": 2
+  },
+  {
+    "id": "fc355bc1-187b-4578-ad89-5b406aaf97d8",
+    "name_pt_br": "fundamentos-dev - mapa",
+    "name_en_us": "fundamentos-dev - mapa",
+    "description_pt_br": "Evolução dos mapas e povos na linha do tempo da evolução humana",
+    "description_en_us": "Evolução dos mapas e povos na linha do tempo da evolução humana",
+    "link": "https://github.com/fundamentos-dev/mapa",
+    "tags": [
+      "open source"
+    ],
+    "order": 3
+  },
+  {
+    "id": "3e2717a3-193d-44cc-946d-a4a6697067c8",
+    "name_pt_br": "fundamentos-dev - intro",
+    "name_en_us": "fundamentos-dev - intro",
+    "description_pt_br": "## Por que essa iniciativa",
+    "description_en_us": "## Por que essa iniciativa",
+    "link": "https://github.com/fundamentos-dev/intro",
+    "tags": [
+      "ci",
+      "ia",
+      "open source"
+    ],
+    "order": 4
+  },
+  {
+    "id": "74f406d4-a4e0-4a6c-9fab-381edaf32e9f",
+    "name_pt_br": "fundamentos-dev - site",
+    "name_en_us": "fundamentos-dev - site",
+    "description_pt_br": "## Sobre",
+    "description_en_us": "## Sobre",
+    "link": "https://fundamentos-dev.github.io/site/",
+    "tags": [
+      "scss",
+      "open source"
+    ],
+    "order": 5
+  },
+  {
+    "id": "f02faaa8-2847-495e-84cf-f2eea0b6aaae",
+    "name_pt_br": "fundamentos-dev - servi",
+    "name_en_us": "fundamentos-dev - servi",
+    "description_pt_br": "# SERVI (Serviço de Registros Virtual da Igreja)",
+    "description_en_us": "# SERVI (Serviço de Registros Virtual da Igreja)",
+    "link": "https://github.com/fundamentos-dev/servi",
+    "tags": [
+      "python",
+      "open source"
+    ],
+    "order": 6
+  },
+  {
+    "id": "28d88905-2bbb-436f-873e-5a84ec64931a",
+    "name_pt_br": "filipelopes.me",
+    "name_en_us": "filipelopes.me",
+    "description_pt_br": "# Nome do projeto.",
+    "description_en_us": "# Nome do projeto.",
+    "link": "https://github.com/filiperochalopes/filipelopes.me",
+    "tags": [
+      "javascript",
+      "open source"
+    ],
+    "order": 7
+  },
+  {
+    "id": "07ce4901-c70d-4ba6-9e4e-c07576b70e03",
+    "name_pt_br": "ciel-lab-v2",
+    "name_en_us": "ciel-lab-v2",
+    "description_pt_br": "# CIEL Lab V2",
+    "description_en_us": "# CIEL Lab V2",
+    "link": "https://github.com/filiperochalopes/ciel-lab-v2",
+    "tags": [
+      "python",
+      "ci"
+    ],
+    "order": 8
+  },
+  {
+    "id": "7411734c-6106-4956-b39c-432a83d2f815",
+    "name_pt_br": "v2.filipelopes.med.br",
+    "name_en_us": "v2.filipelopes.med.br",
+    "description_pt_br": "# Filipe Lopes - Médico Digital",
+    "description_en_us": "# Filipe Lopes - Médico Digital",
+    "link": "https://github.com/filiperochalopes/v2.filipelopes.med.br",
+    "tags": [
+      "html",
+      "open source"
+    ],
+    "order": 9
+  },
+  {
+    "id": "62ca7f0e-c68e-4ace-9498-70977c68f368",
+    "name_pt_br": "art.filipelopes.me",
+    "name_en_us": "art.filipelopes.me",
+    "description_pt_br": "# Astro Starter Kit: Minimal",
+    "description_en_us": "# Astro Starter Kit: Minimal",
+    "link": "https://github.com/filiperochalopes/art.filipelopes.me",
+    "tags": [
+      "javascript"
+    ],
+    "order": 10
+  },
+  {
+    "id": "4a6971e9-0201-44f5-a032-2d2b10c44470",
+    "name_pt_br": "esus-pec-mcp",
+    "name_en_us": "esus-pec-mcp",
+    "description_pt_br": "# PEC MCP (MVP)",
+    "description_en_us": "# PEC MCP (MVP)",
+    "link": "https://github.com/filiperochalopes/esus-pec-mcp",
+    "tags": [
+      "python",
+      "open source"
+    ],
+    "order": 11
+  },
+  {
+    "id": "4bf1b653-55eb-4fe6-8791-82c956a35a7a",
+    "name_pt_br": "meuexa.me",
+    "name_en_us": "meuexa.me",
+    "description_pt_br": "# Meu Exame - Sistema de Gestão de Exames Médicos",
+    "description_en_us": "# Meu Exame - Sistema de Gestão de Exames Médicos",
+    "link": "https://github.com/filiperochalopes/meuexa.me",
+    "tags": [
+      "typescript"
+    ],
+    "order": 12
+  },
+  {
+    "id": "f63716ec-2e59-46fd-8537-27e5cb6d6a33",
+    "name_pt_br": "flow.filipelopes.med.br",
+    "name_en_us": "flow.filipelopes.med.br",
+    "description_pt_br": "# React + Vite",
+    "description_en_us": "# React + Vite",
+    "link": "https://github.com/filiperochalopes/flow.filipelopes.med.br",
+    "tags": [
+      "javascript",
+      "react"
+    ],
+    "order": 13
+  },
+  {
+    "id": "fc5e7434-0229-468c-bee8-51cc96a20576",
+    "name_pt_br": "greenbook",
+    "name_en_us": "greenbook",
+    "description_pt_br": "# Greenbook",
+    "description_en_us": "# Greenbook",
+    "link": "https://github.com/filiperochalopes/greenbook",
+    "tags": [
+      "javascript"
+    ],
+    "order": 14
+  },
+  {
+    "id": "bd4c178b-a100-4552-9fb9-95c09b8a01f5",
+    "name_pt_br": "oclapi2",
+    "name_en_us": "oclapi2",
+    "description_pt_br": "# oclapi2 The new and improved OCL terminology service v2",
+    "description_en_us": "# oclapi2 The new and improved OCL terminology service v2",
+    "link": "https://github.com/filiperochalopes/oclapi2",
+    "tags": [
+      "python",
+      "api",
+      "open source"
+    ],
+    "order": 15
+  },
+  {
+    "id": "a485836a-e15d-45a2-957f-61370681ad6c",
+    "name_pt_br": "curso-atualizacao-mfc-2025",
+    "name_en_us": "curso-atualizacao-mfc-2025",
+    "description_pt_br": "# Curso Manole MFC – Materiais e Exportação para PDF",
+    "description_en_us": "# Curso Manole MFC – Materiais e Exportação para PDF",
+    "link": "https://github.com/filiperochalopes/curso-atualizacao-mfc-2025",
+    "tags": [
+      "jupyter notebook",
+      "ai",
+      "ia"
+    ],
+    "order": 16
+  },
+  {
+    "id": "ed67cb53-8d68-4062-8584-72ee077b3797",
+    "name_pt_br": "oclapi2-codex",
+    "name_en_us": "oclapi2-codex",
+    "description_pt_br": "# oclapi2 The new and improved OCL terminology service v2",
+    "description_en_us": "# oclapi2 The new and improved OCL terminology service v2",
+    "link": "https://github.com/filiperochalopes/oclapi2-codex",
+    "tags": [
+      "python",
+      "api"
+    ],
+    "order": 17
+  },
+  {
+    "id": "af2e5679-89ec-45c1-9e1b-0379b28861a9",
+    "name_pt_br": "ciel-scripts",
+    "name_en_us": "ciel-scripts",
+    "description_pt_br": "# README - SNOMED CT Loader",
+    "description_en_us": "# README - SNOMED CT Loader",
+    "link": "https://github.com/filiperochalopes/ciel-scripts",
+    "tags": [
+      "python"
+    ],
+    "order": 18
+  },
+  {
+    "id": "b22255e1-9411-456c-84a7-b36eda3d454d",
+    "name_pt_br": "ICD-11-AI-Terminologist",
+    "name_en_us": "ICD-11-AI-Terminologist",
+    "description_pt_br": "# ICD-11 LangGraph Agent",
+    "description_en_us": "# ICD-11 LangGraph Agent",
+    "link": "https://github.com/filiperochalopes/ICD-11-AI-Terminologist",
+    "tags": [
+      "python",
+      "cd"
+    ],
+    "order": 19
+  },
+  {
+    "id": "202883f8-2e9f-441b-b644-2d9a5b830c45",
+    "name_pt_br": "olympic-flag-rising",
+    "name_en_us": "olympic-flag-rising",
+    "description_pt_br": "# Sistema de hasteamento de bandeiras digitais",
+    "description_en_us": "# Sistema de hasteamento de bandeiras digitais",
+    "link": "https://github.com/filiperochalopes/olympic-flag-rising",
+    "tags": [
+      "javascript",
+      "ai",
+      "open source"
+    ],
+    "order": 20
+  },
+  {
+    "id": "c9d304fc-2efe-4b68-908f-e9bcd64eb5c8",
+    "name_pt_br": "ciel-lab",
+    "name_en_us": "ciel-lab",
+    "description_pt_br": "```sh PYTHONPATH=$(pwd) python cli/verify_typos.py PYTHONPATH=$(pwd) python cli/en_gb_spelling_screening.py PYTHONPATH=$(pwd) python cli/remove_duplicates.py PYTHONPATH=$(pwd) python cli/remove_retired.py PYTHONPATH=$(pwd) python cli/verify_units_of_measure.py ```",
+    "description_en_us": "```sh PYTHONPATH=$(pwd) python cli/verify_typos.py PYTHONPATH=$(pwd) python cli/en_gb_spelling_screening.py PYTHONPATH=$(pwd) python cli/remove_duplicates.py PYTHONPATH=$(pwd) python cli/remove_retired.py PYTHONPATH=$(pwd) python cli/verify_units_of_measure.py ```",
+    "link": "https://github.com/filiperochalopes/ciel-lab",
+    "tags": [
+      "python",
+      "cli"
+    ],
+    "order": 21
+  },
+  {
+    "id": "6f470df7-115c-47c8-be2d-5ac7ba192c23",
+    "name_pt_br": "docs-2-web",
+    "name_en_us": "docs-2-web",
+    "description_pt_br": "# React Auth/Login Boilerplate",
+    "description_en_us": "# React Auth/Login Boilerplate",
+    "link": "https://github.com/filiperochalopes/docs-2-web",
+    "tags": [
+      "typescript",
+      "react"
+    ],
+    "order": 22
+  },
+  {
+    "id": "0eeeda7f-181d-413a-95ca-52542f52191d",
+    "name_pt_br": "blender-cortecloud-export-extension",
+    "name_en_us": "blender-cortecloud-export-extension",
+    "description_pt_br": "# Plano de corte com Blender",
+    "description_en_us": "# Plano de corte com Blender",
+    "link": "https://github.com/filiperochalopes/blender-cortecloud-export-extension",
+    "tags": [
+      "python",
+      "open source"
+    ],
+    "order": 23
+  },
+  {
+    "id": "42c4d5e3-d52b-4a62-b20f-037c5eb138ab",
+    "name_pt_br": "esus-pec-docker",
+    "name_en_us": "esus-pec-docker",
+    "description_pt_br": "<img src=\"https://github.com/filiperochalopes/e-SUS-PEC/blob/main/assets/img/docker-esus.png\"/>",
+    "description_en_us": "<img src=\"https://github.com/filiperochalopes/e-SUS-PEC/blob/main/assets/img/docker-esus.png\"/>",
+    "link": "https://github.com/filiperochalopes/esus-pec-docker",
+    "tags": [
+      "aws",
+      "docker",
+      "docker-compose",
+      "esus-pec",
+      "esusaps",
+      "shell",
+      "ai",
+      "open source"
+    ],
+    "order": 24
+  },
+  {
+    "id": "d164bab2-08b5-4377-9759-06519b296d7d",
+    "name_pt_br": "cifras-de-viola",
+    "name_en_us": "cifras-de-viola",
+    "description_pt_br": "## Modulação de tablatura",
+    "description_en_us": "## Modulação de tablatura",
+    "link": "https://www.cifrasdeviola.com.br/",
+    "tags": [
+      "chords",
+      "musica",
+      "viola",
+      "javascript",
+      "open source"
+    ],
+    "order": 25
+  },
+  {
+    "id": "05a4528d-4333-4099-9a81-ba94d54ebba4",
+    "name_pt_br": "oclweb2",
+    "name_en_us": "oclweb2",
+    "description_pt_br": "# oclweb2 OCL TermBrowser v2, an open-source ReactJS-based web client for terminology management",
+    "description_en_us": "# oclweb2 OCL TermBrowser v2, an open-source ReactJS-based web client for terminology management",
+    "link": "https://github.com/filiperochalopes/oclweb2",
+    "tags": [
+      "javascript",
+      "react",
+      "cli",
+      "open source"
+    ],
+    "order": 26
+  },
+  {
+    "id": "11cea530-3f0c-4046-a8c1-e99fd8c3a20a",
+    "name_pt_br": "docs-v2-web",
+    "name_en_us": "docs-v2-web",
+    "description_pt_br": "# React Auth/Login Boilerplate",
+    "description_en_us": "# React Auth/Login Boilerplate",
+    "link": "https://gitlab.com/filiperochalopes/docs-v2-web",
+    "tags": [
+      "react"
+    ],
+    "order": 27
+  },
+  {
+    "id": "f793d0cd-05f5-435e-963b-8642464a0f5e",
+    "name_pt_br": "container",
+    "name_en_us": "container",
+    "description_pt_br": "# `container`",
+    "description_en_us": "# `container`",
+    "link": "https://apple.github.io/container/documentation/",
+    "tags": [
+      "swift",
+      "ai",
+      "open source"
+    ],
+    "order": 28
+  },
+  {
+    "id": "32e9d305-2834-47f9-813c-2fa895d7f6d9",
+    "name_pt_br": "esus-plugin",
+    "name_en_us": "esus-plugin",
+    "description_pt_br": "# Plugin Firefox eSUS PEC",
+    "description_en_us": "# Plugin Firefox eSUS PEC",
+    "link": "https://github.com/filiperochalopes/esus-plugin",
+    "tags": [
+      "javascript",
+      "plugin"
+    ],
+    "order": 29
+  },
+  {
+    "id": "738a3169-3ab6-4e03-9588-68413360df0c",
+    "name_pt_br": "mcpjam-inspector",
+    "name_en_us": "mcpjam-inspector",
+    "description_pt_br": "<div align=\"center\">",
+    "description_en_us": "<div align=\"center\">",
+    "link": "https://www.mcpjam.com/",
+    "tags": [
+      "typescript",
+      "open source"
+    ],
+    "order": 30
+  },
+  {
+    "id": "6a09919d-b904-4eeb-9225-23d89638b55f",
+    "name_pt_br": "ocl-docs",
+    "name_en_us": "ocl-docs",
+    "description_pt_br": "# ocl-docs",
+    "description_en_us": "# ocl-docs",
+    "link": "https://github.com/filiperochalopes/ocl-docs",
+    "tags": [
+      "open source"
+    ],
+    "order": 31
+  },
+  {
+    "id": "d006612b-07f2-4c05-870c-a99c633cb2b0",
+    "name_pt_br": "pec-crawler",
+    "name_en_us": "pec-crawler",
+    "description_pt_br": "# dentro de pec_app/ python -m venv .venv && source .venv/bin/activate pip install \"fastapi>=0.112\" \"uvicorn[standard]>=0.30\" \"apscheduler>=3.10\" \\             \"playwright>=1.41\" \"sqlalchemy>=2.0\" \"aiosqlite>=0.20\" playwright install chromium",
+    "description_en_us": "# dentro de pec_app/ python -m venv .venv && source .venv/bin/activate pip install \"fastapi>=0.112\" \"uvicorn[standard]>=0.30\" \"apscheduler>=3.10\" \\             \"playwright>=1.41\" \"sqlalchemy>=2.0\" \"aiosqlite>=0.20\" playwright install chromium",
+    "link": "https://github.com/filiperochalopes/pec-crawler",
+    "tags": [
+      "python",
+      "fastapi",
+      "ai",
+      "sqlite",
+      "api",
+      "open source"
+    ],
+    "order": 32
+  },
+  {
+    "id": "a7095aee-a90f-4400-90e5-a4fa0afbed00",
+    "name_pt_br": "omni-database",
+    "name_en_us": "omni-database",
+    "description_pt_br": "# Omni Database",
+    "description_en_us": "# Omni Database",
+    "link": "https://github.com/filiperochalopes/omni-database",
+    "tags": [
+      "shell",
+      "open source"
+    ],
+    "order": 33
+  },
+  {
+    "id": "5b879a28-e3b1-4535-ab5a-09fd8376925d",
+    "name_pt_br": "itmpr-adm",
+    "name_en_us": "itmpr-adm",
+    "description_pt_br": "# Sistema de Gerenciamento de Orçamentos ITMPR",
+    "description_en_us": "# Sistema de Gerenciamento de Orçamentos ITMPR",
+    "link": "https://github.com/filiperochalopes/itmpr-adm",
+    "tags": [
+      "javascript",
+      "ci",
+      "ia"
+    ],
+    "order": 34
+  },
+  {
+    "id": "47ca40ac-cf75-4da5-9b8a-2e795937edb5",
+    "name_pt_br": "docs-api-v2",
+    "name_en_us": "docs-api-v2",
+    "description_pt_br": "# API de docs.filipelopes.med.br",
+    "description_en_us": "# API de docs.filipelopes.med.br",
+    "link": "https://github.com/filiperochalopes/docs-api-v2",
+    "tags": [
+      "python",
+      "api"
+    ],
+    "order": 35
+  },
+  {
+    "id": "f146ba47-9819-4bc9-9e91-c86d40d9631e",
+    "name_pt_br": "ocl-sandbox",
+    "name_en_us": "ocl-sandbox",
+    "description_pt_br": "# OCL Sandbox",
+    "description_en_us": "# OCL Sandbox",
+    "link": "https://github.com/filiperochalopes/ocl-sandbox",
+    "tags": [
+      "jupyter notebook",
+      "open source"
+    ],
+    "order": 36
+  },
+  {
+    "id": "60040270-9406-435a-8752-77a973e3c8fd",
+    "name_pt_br": "drcalc",
+    "name_en_us": "drcalc",
+    "description_pt_br": "# A icalc Flet app",
+    "description_en_us": "# A icalc Flet app",
+    "link": "https://github.com/filiperochalopes/drcalc",
+    "tags": [
+      "python"
+    ],
+    "order": 37
+  },
+  {
+    "id": "2f862e4c-aedc-45f8-bcb1-a3bedc8da2fa",
+    "name_pt_br": "meus-pacientes",
+    "name_en_us": "meus-pacientes",
+    "description_pt_br": "# Meus Pacientes",
+    "description_en_us": "# Meus Pacientes",
+    "link": "https://atencaobasica.filipelopes.med.br",
+    "tags": [
+      "javascript",
+      "ci",
+      "open source"
+    ],
+    "order": 38
+  },
+  {
+    "id": "a3ab504b-0146-488d-82b3-8ec1d1b2c4cf",
+    "name_pt_br": "validation-br",
+    "name_en_us": "validation-br",
+    "description_pt_br": "# validation-br",
+    "description_en_us": "# validation-br",
+    "link": "https://www.npmjs.com/validation-br",
+    "tags": [
+      "typescript",
+      "open source"
+    ],
+    "order": 39
+  },
+  {
+    "id": "e02d074d-2dfb-47f6-981e-214bb8bd2349",
+    "name_pt_br": "neurovias",
+    "name_en_us": "neurovias",
+    "description_pt_br": "Aplicação resultado de meu trabalho de conclusão de curso. Programa interativo para aprendizado das vias neurais e suas correlações clínicas.",
+    "description_en_us": "Aplicação resultado de meu trabalho de conclusão de curso. Programa interativo para aprendizado das vias neurais e suas correlações clínicas.",
+    "link": "https://github.com/filiperochalopes/neurovias",
+    "tags": [
+      "javascript",
+      "ai",
+      "ia",
+      "open source"
+    ],
+    "order": 40
+  },
+  {
+    "id": "97141e3b-7cb2-4bf4-81f0-5b0261eb7126",
+    "name_pt_br": "transcricao-audio-pt-br",
+    "name_en_us": "transcricao-audio-pt-br",
+    "description_pt_br": "### Transcrição de Áudio para Português utilizando ML em MacOS",
+    "description_en_us": "### Transcrição de Áudio para Português utilizando ML em MacOS",
+    "link": "https://github.com/filiperochalopes/transcricao-audio-pt-br",
+    "tags": [
+      "python",
+      "ml",
+      "open source"
+    ],
+    "order": 41
+  },
+  {
+    "id": "eae40aa0-968d-42fb-a2cb-867283c4d05d",
+    "name_pt_br": "dev-notes",
+    "name_en_us": "dev-notes",
+    "description_pt_br": "Um compêndio de anotações de coisas úteis da prática com devops e implementação de ambientes",
+    "description_en_us": "Um compêndio de anotações de coisas úteis da prática com devops e implementação de ambientes",
+    "link": "https://github.com/filiperochalopes/dev-notes",
+    "tags": [
+      "shell",
+      "open source"
+    ],
+    "order": 42
+  },
+  {
+    "id": "6fe4ad5e-2d42-44e6-ab42-e83f4cc4df0b",
+    "name_pt_br": "strapi-docker-boilerplate",
+    "name_en_us": "strapi-docker-boilerplate",
+    "description_pt_br": "Criar futuramente o custom resolver/controller para envio de email",
+    "description_en_us": "Criar futuramente o custom resolver/controller para envio de email",
+    "link": "https://github.com/filiperochalopes/strapi-docker-boilerplate",
+    "tags": [
+      "javascript",
+      "ai",
+      "ia",
+      "open source"
+    ],
+    "order": 43
+  },
+  {
+    "id": "98cab6b3-c6c5-4319-8518-bf09ac31b356",
+    "name_pt_br": "dolar-tag",
+    "name_en_us": "dolar-tag",
+    "description_pt_br": "# Django Contabilidade Residencial",
+    "description_en_us": "# Django Contabilidade Residencial",
+    "link": "https://github.com/filiperochalopes/dolar-tag",
+    "tags": [
+      "python",
+      "django",
+      "ci",
+      "ia",
+      "open source"
+    ],
+    "order": 44
+  },
+  {
+    "id": "9ad87c2b-526c-4234-9b24-e9224f3b3f54",
+    "name_pt_br": "api.icalc.filipelopes.med.br",
+    "name_en_us": "api.icalc.filipelopes.med.br",
+    "description_pt_br": "# iCalc API",
+    "description_en_us": "# iCalc API",
+    "link": "https://github.com/filiperochalopes/api.icalc.filipelopes.med.br",
+    "tags": [
+      "graphql-yoga",
+      "prisma",
+      "typescript",
+      "api",
+      "open source"
+    ],
+    "order": 45
+  },
+  {
+    "id": "bba40e0b-878d-4102-bc4d-716486b06928",
+    "name_pt_br": "clicklav-chat-client",
+    "name_en_us": "clicklav-chat-client",
+    "description_pt_br": "Essa aplicação foi realizada para testar um serviço de subscriptions utilizando websocket em vez do padrão de SSE com graphql-yoga.",
+    "description_en_us": "Essa aplicação foi realizada para testar um serviço de subscriptions utilizando websocket em vez do padrão de SSE com graphql-yoga.",
+    "link": "https://github.com/filiperochalopes/clicklav-chat-client",
+    "tags": [
+      "javascript",
+      "graphql",
+      "graphql-yoga",
+      "open source"
+    ],
+    "order": 46
+  },
+  {
+    "id": "79ece845-3ddd-4713-86cc-85f21235f491",
+    "name_pt_br": "d2l-en",
+    "name_en_us": "d2l-en",
+    "description_pt_br": "<div align=\"left\">   <img src=\"https://raw.githubusercontent.com/d2l-ai/d2l-en/master/static/logo-with-text.png\" width=\"350\"> </div>",
+    "description_en_us": "<div align=\"left\">   <img src=\"https://raw.githubusercontent.com/d2l-ai/d2l-en/master/static/logo-with-text.png\" width=\"350\"> </div>",
+    "link": "https://D2L.ai",
+    "tags": [
+      "python",
+      "ai",
+      "open source"
+    ],
+    "order": 47
+  },
+  {
+    "id": "de9bdae8-a024-451b-81e0-0f84945b07a4",
+    "name_pt_br": "filiperochalopes",
+    "name_en_us": "filiperochalopes",
+    "description_pt_br": "**Mission**: Improve brazilian public health data analysis and clinical records   **Missão**: Melhorar sistema de análize e registro de dados em saúde brasileiro, com ênfase do serviço público e particular (pessoais, pequenas e médias empresas)",
+    "description_en_us": "**Mission**: Improve brazilian public health data analysis and clinical records   **Missão**: Melhorar sistema de análize e registro de dados em saúde brasileiro, com ênfase do serviço público e particular (pessoais, pequenas e médias empresas)",
+    "link": "https://github.com/filiperochalopes",
+    "tags": [
+      "config",
+      "github-config",
+      "ai",
+      "ia",
+      "cli",
+      "open source"
+    ],
+    "order": 48
+  },
+  {
+    "id": "0275efdd-b773-438b-9555-509b448f1989",
+    "name_pt_br": "painel-chamadas-esus-pec",
+    "name_en_us": "painel-chamadas-esus-pec",
+    "description_pt_br": "# ATENÇÃO: Licenciamento da versão PHP ENCERRADO!",
+    "description_en_us": "# ATENÇÃO: Licenciamento da versão PHP ENCERRADO!",
+    "link": "https://esushost.com.br",
+    "tags": [
+      "php",
+      "ci",
+      "ia",
+      "open source"
+    ],
+    "order": 49
+  },
+  {
+    "id": "54efd436-64f2-4893-ab9d-5699202d7cba",
+    "name_pt_br": "calc.filipelopes.med.br",
+    "name_en_us": "calc.filipelopes.med.br",
+    "description_pt_br": "``` docker-compose up ```",
+    "description_en_us": "``` docker-compose up ```",
+    "link": "https://github.com/filiperochalopes/calc.filipelopes.med.br",
+    "tags": [
+      "html",
+      "docker",
+      "open source"
+    ],
+    "order": 50
+  },
+  {
+    "id": "f45aa2d6-0944-4ce6-a17f-dafc2c3bf181",
+    "name_pt_br": "KE-complex_modifications",
+    "name_en_us": "KE-complex_modifications",
+    "description_pt_br": "[![Build Status](https://github.com/pqrs-org/KE-complex_modifications/workflows/KE-complex_modifications%20CI/badge.svg)](https://github.com/pqrs-org/KE-complex_modifications/actions) [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://github.com/pqrs-org/KE-complex_modifications/blob/main/LICENSE.md)",
+    "description_en_us": "[![Build Status](https://github.com/pqrs-org/KE-complex_modifications/workflows/KE-complex_modifications%20CI/badge.svg)](https://github.com/pqrs-org/KE-complex_modifications/actions) [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://github.com/pqrs-org/KE-complex_modifications/blob/main/LICENSE.md)",
+    "link": "https://ke-complex-modifications.pqrs.org/",
+    "tags": [
+      "javascript",
+      "ci",
+      "ai",
+      "open source"
+    ],
+    "order": 51
+  },
+  {
+    "id": "5effc8cd-e625-4a9f-b02d-7437b70e098a",
+    "name_pt_br": "wp-plugin-smtp-api",
+    "name_en_us": "wp-plugin-smtp-api",
+    "description_pt_br": "Plugin Wordprees to send email trough phpmailer. Useful when using docker wordpress",
+    "description_en_us": "Plugin Wordprees to send email trough phpmailer. Useful when using docker wordpress",
+    "link": "https://github.com/filiperochalopes/wp-plugin-smtp-api",
+    "tags": [
+      "docker",
+      "mail",
+      "phpmailer",
+      "wordpress",
+      "javascript",
+      "ai",
+      "plugin",
+      "open source"
+    ],
+    "order": 52
+  },
+  {
+    "id": "64f5764a-c277-47bb-ba95-58a134de04a2",
+    "name_pt_br": "wordpress-react-docker-boilerplate",
+    "name_en_us": "wordpress-react-docker-boilerplate",
+    "description_pt_br": "# Exemplo de uso de aplicação React com WordPress",
+    "description_en_us": "# Exemplo de uso de aplicação React com WordPress",
+    "link": "https://github.com/filiperochalopes/wordpress-react-docker-boilerplate",
+    "tags": [
+      "css",
+      "react",
+      "wordpress",
+      "open source"
+    ],
+    "order": 53
+  },
+  {
+    "id": "de83b4f2-2632-4362-afae-555bbcd1ed73",
+    "name_pt_br": "sistema-evolucao-medica",
+    "name_en_us": "sistema-evolucao-medica",
+    "description_pt_br": "# Sistema de Evolução Clínica",
+    "description_en_us": "# Sistema de Evolução Clínica",
+    "link": "https://github.com/filiperochalopes/sistema-evolucao-medica",
+    "tags": [
+      "flask",
+      "flask-sqlalchemy",
+      "reactjs",
+      "ariadne",
+      "python",
+      "open source"
+    ],
+    "order": 54
+  },
+  {
+    "id": "71cc7e5a-bfcb-4615-bd3f-7ec7b0649c62",
+    "name_pt_br": "d2l-book",
+    "name_en_us": "d2l-book",
+    "description_pt_br": "# D2L-Book: A Toolkit for Hands-on Books",
+    "description_en_us": "# D2L-Book: A Toolkit for Hands-on Books",
+    "link": "https://book.d2l.ai/",
+    "tags": [
+      "python",
+      "open source"
+    ],
+    "order": 55
+  },
+  {
+    "id": "1a10d8e6-d29d-4d10-88d5-6ec96f2e4007",
+    "name_pt_br": "e-SUS-dashboard",
+    "name_en_us": "e-SUS-dashboard",
+    "description_pt_br": "# e-SUS PEC API",
+    "description_en_us": "# e-SUS PEC API",
+    "link": "https://github.com/filiperochalopes/e-SUS-dashboard",
+    "tags": [
+      "python",
+      "api",
+      "open source"
+    ],
+    "order": 56
+  },
+  {
+    "id": "85006d64-cc92-40ec-ba06-42f0935aff27",
+    "name_pt_br": "cadastro-procedimentos-fisioterapia",
+    "name_en_us": "cadastro-procedimentos-fisioterapia",
+    "description_pt_br": "# Formulário de cadastro de procedimentos de fisioterapia para o CEFAN",
+    "description_en_us": "# Formulário de cadastro de procedimentos de fisioterapia para o CEFAN",
+    "link": "https://github.com/filiperochalopes/cadastro-procedimentos-fisioterapia",
+    "tags": [
+      "php",
+      "ia",
+      "api",
+      "open source"
+    ],
+    "order": 57
+  },
+  {
+    "id": "7e643a64-1597-49f2-b163-2534774ad11d",
+    "name_pt_br": "cadastro-pessoas-igreja",
+    "name_en_us": "cadastro-pessoas-igreja",
+    "description_pt_br": "Sistema Django de Cadastro de Pessoas da Igreja em Salvador",
+    "description_en_us": "Sistema Django de Cadastro de Pessoas da Igreja em Salvador",
+    "link": "https://github.com/filiperochalopes/cadastro-pessoas-igreja",
+    "tags": [
+      "django"
+    ],
+    "order": 58
+  },
+  {
+    "id": "cb3b90c4-062c-47ac-b088-ccdb0dafa2b5",
+    "name_pt_br": "django-docker-class",
+    "name_en_us": "django-docker-class",
+    "description_pt_br": "# Aplicação Django-Docker",
+    "description_en_us": "# Aplicação Django-Docker",
+    "link": "https://github.com/filiperochalopes/django-docker-class",
+    "tags": [
+      "dockerfile",
+      "django",
+      "docker",
+      "open source"
+    ],
+    "order": 59
+  },
+  {
+    "id": "8d4ad01a-2f29-43ce-b710-d0895cce1e90",
+    "name_pt_br": "python-django-web-scraping",
+    "name_en_us": "python-django-web-scraping",
+    "description_pt_br": "```sh docker-compose build --no-cache docker-compose up -d firefox localhost:8089/docs ```",
+    "description_en_us": "```sh docker-compose build --no-cache docker-compose up -d firefox localhost:8089/docs ```",
+    "link": "https://github.com/filiperochalopes/python-django-web-scraping",
+    "tags": [
+      "python",
+      "docker",
+      "open source"
+    ],
+    "order": 60
+  },
+  {
+    "id": "054a88e0-8d99-4854-bd3b-0bf238f6d70e",
+    "name_pt_br": "segi-frontend",
+    "name_en_us": "segi-frontend",
+    "description_pt_br": "# SEGI-FRONTEND.",
+    "description_en_us": "# SEGI-FRONTEND.",
+    "link": "https://gitlab.com/filiperochalopes/segi-frontend",
+    "tags": [],
+    "order": 61
+  },
+  {
+    "id": "ea746c9a-7201-468f-b8a0-27f947036d9a",
+    "name_pt_br": "eplenario-frontend",
+    "name_en_us": "eplenario-frontend",
+    "description_pt_br": "# Nome do projeto.",
+    "description_en_us": "# Nome do projeto.",
+    "link": "https://gitlab.com/filiperochalopes/eplenario-frontend",
+    "tags": [],
+    "order": 62
+  },
+  {
+    "id": "7bce6325-41ec-4e60-af37-8c428f2fd3d5",
+    "name_pt_br": "Papaya",
+    "name_en_us": "Papaya",
+    "description_pt_br": "Papaya  ====== Papaya is a pure JavaScript medical research image viewer, supporting [DICOM and NIFTI formats](https://github.com/rii-mango/Papaya/wiki/Supported-Formats), compatible across a [range of web browsers](https://github.com/rii-mango/Papaya/wiki/Requirements).  This orthogonal viewer supports [overlays](https://github.com/rii-mango/Papaya/wiki/Configuration#images), [atlases](https://github.com/rii-mango/Papaya/wiki/How-To-Use-Atlases), [GIFTI & VTK surface...",
+    "description_en_us": "Papaya  ====== Papaya is a pure JavaScript medical research image viewer, supporting [DICOM and NIFTI formats](https://github.com/rii-mango/Papaya/wiki/Supported-Formats), compatible across a [range of web browsers](https://github.com/rii-mango/Papaya/wiki/Requirements).  This orthogonal viewer supports [overlays](https://github.com/rii-mango/Papaya/wiki/Configuration#images), [atlases](https://github.com/rii-mango/Papaya/wiki/How-To-Use-Atlases), [GIFTI & VTK surface...",
+    "link": "https://github.com/filiperochalopes/Papaya",
+    "tags": [
+      "javascript",
+      "open source"
+    ],
+    "order": 63
+  },
+  {
+    "id": "33f981f4-69d2-4389-b5a2-5806bb63cf62",
+    "name_pt_br": "wedding",
+    "name_en_us": "wedding",
+    "description_pt_br": "Esse foi um projeto de site para o nosso casamento criado por mim e minha noiva, formada em Matemática, a quem eu estava ensinando a programar.",
+    "description_en_us": "Esse foi um projeto de site para o nosso casamento criado por mim e minha noiva, formada em Matemática, a quem eu estava ensinando a programar.",
+    "link": "https://github.com/filiperochalopes/wedding",
+    "tags": [
+      "javascript",
+      "ia",
+      "open source"
+    ],
+    "order": 64
+  },
+  {
+    "id": "ffde86b3-7c00-4162-bf07-0eea06133c42",
+    "name_pt_br": "segi-flipbook",
+    "name_en_us": "segi-flipbook",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/filiperochalopes/segi-flipbook",
+    "tags": [],
+    "order": 65
+  },
+  {
+    "id": "2e15bef1-5454-4f1c-86ad-89eccd3824e0",
+    "name_pt_br": "qualite-ortodontia",
+    "name_en_us": "qualite-ortodontia",
+    "description_pt_br": "Sistema de gerenciamento de guias para consultório de Ortodontia Qualité",
+    "description_en_us": "Sistema de gerenciamento de guias para consultório de Ortodontia Qualité",
+    "link": "https://github.com/filiperochalopes/qualite-ortodontia",
+    "tags": [
+      "php",
+      "ci",
+      "ia",
+      "open source"
+    ],
+    "order": 66
+  },
+  {
+    "id": "3bf770f7-0a15-45c0-b768-2520fe236bb0",
+    "name_pt_br": "sistema-orcamento-gitlab",
+    "name_en_us": "sistema-orcamento-gitlab",
+    "description_pt_br": "# sistema-orcamento-gitlab",
+    "description_en_us": "# sistema-orcamento-gitlab",
+    "link": "https://gitlab.com/filiperochalopes/sistema-orcamento-gitlab",
+    "tags": [],
+    "order": 67
+  },
+  {
+    "id": "9dc74a84-e5b2-4cec-850b-6875058ea15b",
+    "name_pt_br": "darling",
+    "name_en_us": "darling",
+    "description_pt_br": "# Nome do projeto.",
+    "description_en_us": "# Nome do projeto.",
+    "link": "https://github.com/filiperochalopes/darling",
+    "tags": [
+      "javascript",
+      "open source"
+    ],
+    "order": 68
+  },
+  {
+    "id": "987ff585-635f-46ae-8f11-7af65d3a254e",
+    "name_pt_br": "sistema-de-recolhimento",
+    "name_en_us": "sistema-de-recolhimento",
+    "description_pt_br": "Sistema de gerenciamento de recolhimentos de provisões e ofertas de parte da Igreja em Salvador.",
+    "description_en_us": "Sistema de gerenciamento de recolhimentos de provisões e ofertas de parte da Igreja em Salvador.",
+    "link": "https://github.com/filiperochalopes/sistema-de-recolhimento",
+    "tags": [
+      "php",
+      "ci",
+      "ia",
+      "open source"
+    ],
+    "order": 69
+  },
+  {
+    "id": "52ccdc8f-4587-4a82-9ad0-178a89ac32ac",
+    "name_pt_br": "api-inema",
+    "name_en_us": "api-inema",
+    "description_pt_br": "# API Inema Clima-tempo Uma API para consumir dados de temperatura, tempo e vento do banco de dados INEMA.",
+    "description_en_us": "# API Inema Clima-tempo Uma API para consumir dados de temperatura, tempo e vento do banco de dados INEMA.",
+    "link": "https://github.com/filiperochalopes/api-inema",
+    "tags": [
+      "php",
+      "api",
+      "cli",
+      "open source"
+    ],
+    "order": 70
+  },
+  {
+    "id": "de0791e3-c179-4b13-ad41-7ca0fb535a48",
+    "name_pt_br": "varal-das-aguas",
+    "name_en_us": "varal-das-aguas",
+    "description_pt_br": "# Varal das Águas Varal das águas - Concurso de fotografia.",
+    "description_en_us": "# Varal das Águas Varal das águas - Concurso de fotografia.",
+    "link": "https://varaldasaguas.filipelopes.me/",
+    "tags": [
+      "javascript",
+      "ia",
+      "open source"
+    ],
+    "order": 71
+  },
+  {
+    "id": "fb785e4f-8661-4860-b6ff-1451aed41440",
+    "name_pt_br": "ORANGO-IO - adri-chat",
+    "name_en_us": "ORANGO-IO - adri-chat",
+    "description_pt_br": "# Adri MVP",
+    "description_en_us": "# Adri MVP",
+    "link": "https://github.com/ORANGO-IO/adri-chat",
+    "tags": [
+      "python"
+    ],
+    "order": 72
+  },
+  {
+    "id": "7b14c05d-9096-409e-b469-65583a443b8b",
+    "name_pt_br": "ORANGO-IO - carol",
+    "name_en_us": "ORANGO-IO - carol",
+    "description_pt_br": "# C.A.R.O.L.",
+    "description_en_us": "# C.A.R.O.L.",
+    "link": "https://github.com/ORANGO-IO/carol",
+    "tags": [
+      "emergency",
+      "emergency-services",
+      "manchester",
+      "medicine",
+      "python",
+      "react",
+      "triage",
+      "javascript",
+      "open source"
+    ],
+    "order": 73
+  },
+  {
+    "id": "85ba2928-e1e8-4382-83fa-f8fbc6a7e7df",
+    "name_pt_br": "ORANGO-IO - status",
+    "name_en_us": "ORANGO-IO - status",
+    "description_pt_br": "Dentro da pasta do projeto execute",
+    "description_en_us": "Dentro da pasta do projeto execute",
+    "link": "https://github.com/ORANGO-IO/status",
+    "tags": [
+      "python",
+      "open source"
+    ],
+    "order": 74
+  },
+  {
+    "id": "b51813f3-8919-4fdc-9799-da30591ae9ab",
+    "name_pt_br": "ORANGO-IO - adri",
+    "name_en_us": "ORANGO-IO - adri",
+    "description_pt_br": "# Aplicação Omnichannel com bot e WhatsApp",
+    "description_en_us": "# Aplicação Omnichannel com bot e WhatsApp",
+    "link": "https://github.com/ORANGO-IO/adri",
+    "tags": [
+      "shell",
+      "bot",
+      "open source"
+    ],
+    "order": 75
+  },
+  {
+    "id": "7f0544cf-edd8-44d0-8301-a39925dee5be",
+    "name_pt_br": "ORANGO-IO - pin",
+    "name_en_us": "ORANGO-IO - pin",
+    "description_pt_br": "# PIN (Prontuário \"Pessoal\" Inteligente)",
+    "description_en_us": "# PIN (Prontuário \"Pessoal\" Inteligente)",
+    "link": "https://github.com/ORANGO-IO/pin",
+    "tags": [
+      "typescript",
+      "open source"
+    ],
+    "order": 76
+  },
+  {
+    "id": "0ff87e51-a734-4748-9532-60017f920b70",
+    "name_pt_br": "orango - docker",
+    "name_en_us": "orango - docker",
+    "description_pt_br": "# docs.filipelopes.med.br v2",
+    "description_en_us": "# docs.filipelopes.med.br v2",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/docs/v2/docker",
+    "tags": [],
+    "order": 77
+  },
+  {
+    "id": "383e3f20-2dd9-4c1c-9e06-fdc24362ebbe",
+    "name_pt_br": "orango - api",
+    "name_en_us": "orango - api",
+    "description_pt_br": "# API de docs.filipelopes.med.br",
+    "description_en_us": "# API de docs.filipelopes.med.br",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/docs/v2/api",
+    "tags": [
+      "api"
+    ],
+    "order": 78
+  },
+  {
+    "id": "a8d0b96d-2793-4bde-a2de-16b348f1fcdf",
+    "name_pt_br": "orango - web",
+    "name_en_us": "orango - web",
+    "description_pt_br": "# React Auth/Login Boilerplate",
+    "description_en_us": "# React Auth/Login Boilerplate",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/docs/v2/web",
+    "tags": [
+      "react"
+    ],
+    "order": 79
+  },
+  {
+    "id": "3decd7ff-1d71-4f6a-9d17-cb02f1ce9d3e",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# CAVID-20 frontend ## Central de Atendimento por Vídeo",
+    "description_en_us": "# CAVID-20 frontend ## Central de Atendimento por Vídeo",
+    "link": "https://gitlab.com/orango/projetos/cavid-20/frontend",
+    "tags": [],
+    "order": 80
+  },
+  {
+    "id": "11b24e70-d841-4a49-b291-6e46ef9ca4a9",
+    "name_pt_br": "orango - docker",
+    "name_en_us": "orango - docker",
+    "description_pt_br": "# Cavid-20",
+    "description_en_us": "# Cavid-20",
+    "link": "https://gitlab.com/orango/projetos/cavid-20/docker",
+    "tags": [],
+    "order": 81
+  },
+  {
+    "id": "522bb97c-88e6-4b00-bce4-97bed44bfdeb",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# Habitat",
+    "description_en_us": "# Habitat",
+    "link": "https://gitlab.com/orango/habitat/frontend-js",
+    "tags": [],
+    "order": 82
+  },
+  {
+    "id": "403f9cfa-c436-4f8c-a21f-a1336c55e2a5",
+    "name_pt_br": "orango - backend",
+    "name_en_us": "orango - backend",
+    "description_pt_br": "Para rodar a API, primeiramente crie um `virtualenv` em python3.5+ na pasta pai:",
+    "description_en_us": "Para rodar a API, primeiramente crie um `virtualenv` em python3.5+ na pasta pai:",
+    "link": "https://gitlab.com/orango/projetos/cavid-20/backend",
+    "tags": [
+      "python",
+      "ai",
+      "api"
+    ],
+    "order": 83
+  },
+  {
+    "id": "1237ab86-4be2-490b-87cd-036b1bc553a0",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# React Basics Boilerplate",
+    "description_en_us": "# React Basics Boilerplate",
+    "link": "https://gitlab.com/orango/adri/frontend",
+    "tags": [
+      "react"
+    ],
+    "order": 84
+  },
+  {
+    "id": "7f17e5a7-1f9f-407e-959c-46482ef4cd5b",
+    "name_pt_br": "orango - docker",
+    "name_en_us": "orango - docker",
+    "description_pt_br": "## Prisma",
+    "description_en_us": "## Prisma",
+    "link": "https://gitlab.com/orango/adri/docker",
+    "tags": [
+      "prisma"
+    ],
+    "order": 85
+  },
+  {
+    "id": "a5306c08-0990-4c5f-bfce-6a7b2b7e69f0",
+    "name_pt_br": "orango - client-plugin",
+    "name_en_us": "orango - client-plugin",
+    "description_pt_br": "# Getting Started with Create React App",
+    "description_en_us": "# Getting Started with Create React App",
+    "link": "https://gitlab.com/orango/adri/client-plugin",
+    "tags": [
+      "react"
+    ],
+    "order": 86
+  },
+  {
+    "id": "fd7071eb-4f77-46f6-a030-1672352693db",
+    "name_pt_br": "orango - hotsite",
+    "name_en_us": "orango - hotsite",
+    "description_pt_br": "# Getting Started with Create React App",
+    "description_en_us": "# Getting Started with Create React App",
+    "link": "https://gitlab.com/orango/projetos/clinsite/hotsite",
+    "tags": [
+      "react"
+    ],
+    "order": 87
+  },
+  {
+    "id": "db6a8f03-b062-48da-b0ba-6a954f6061ee",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# ClintSite",
+    "description_en_us": "# ClintSite",
+    "link": "https://gitlab.com/orango/projetos/clinsite/frontend",
+    "tags": [
+      "cli"
+    ],
+    "order": 88
+  },
+  {
+    "id": "beb9c404-53a4-4ae0-a5ce-947c90910423",
+    "name_pt_br": "orango - backend",
+    "name_en_us": "orango - backend",
+    "description_pt_br": "# Backend Clinsite",
+    "description_en_us": "# Backend Clinsite",
+    "link": "https://gitlab.com/orango/projetos/clinsite/backend",
+    "tags": [
+      "cli"
+    ],
+    "order": 89
+  },
+  {
+    "id": "b1e36ebc-4f61-4462-95dc-139a7ac761fc",
+    "name_pt_br": "orango - esus-pec-plugin",
+    "name_en_us": "orango - esus-pec-plugin",
+    "description_pt_br": "# Plugin Firefox eSUS PEC",
+    "description_en_us": "# Plugin Firefox eSUS PEC",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/firefox-esus-plugin",
+    "tags": [
+      "plugin"
+    ],
+    "order": 90
+  },
+  {
+    "id": "59a86a13-aa81-4885-a805-48d6899c329b",
+    "name_pt_br": "orango - flow",
+    "name_en_us": "orango - flow",
+    "description_pt_br": "# React + Vite",
+    "description_en_us": "# React + Vite",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/anamin-site",
+    "tags": [
+      "react"
+    ],
+    "order": 91
+  },
+  {
+    "id": "3cb3e700-0f41-4986-8b62-87c7130106fd",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# Orango",
+    "description_en_us": "# Orango",
+    "link": "https://gitlab.com/orango/site/v2/frontend",
+    "tags": [],
+    "order": 92
+  },
+  {
+    "id": "8b7f1224-c037-42cf-801c-381705c442e9",
+    "name_pt_br": "orango - docker-client",
+    "name_en_us": "orango - docker-client",
+    "description_pt_br": "Grupo de aplicação frontend/backend que será gerando instância para cada cliente novo que for adicionado",
+    "description_en_us": "Grupo de aplicação frontend/backend que será gerando instância para cada cliente novo que for adicionado",
+    "link": "https://gitlab.com/orango/projetos/clinsite/docker-client",
+    "tags": [
+      "ci",
+      "ia",
+      "cli"
+    ],
+    "order": 93
+  },
+  {
+    "id": "2e506ff7-fc47-491d-8331-b7fdf2e1ab9d",
+    "name_pt_br": "orango - docker-main",
+    "name_en_us": "orango - docker-main",
+    "description_pt_br": "# Clinsite",
+    "description_en_us": "# Clinsite",
+    "link": "https://gitlab.com/orango/projetos/clinsite/docker-main",
+    "tags": [
+      "cli"
+    ],
+    "order": 94
+  },
+  {
+    "id": "3920387a-ca54-452f-ae83-551663243896",
+    "name_pt_br": "orango - v1-legacy",
+    "name_en_us": "orango - v1-legacy",
+    "description_pt_br": "# docs.filipelopes.med.br v2",
+    "description_en_us": "# docs.filipelopes.med.br v2",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/docs/v1-legacy",
+    "tags": [],
+    "order": 95
+  },
+  {
+    "id": "509717c2-0d7e-41df-82e1-00adedef2975",
+    "name_pt_br": "orango - pay.orango.io",
+    "name_en_us": "orango - pay.orango.io",
+    "description_pt_br": "O\u0000R\u0000A\u0000N\u0000G\u0000O\u0000P\u0000A\u0000Y\u0000\r\u0000 \u0000\r\u0000 \u0000V\u0000o\u0000c\u0000\u0000 \u0000p\u0000r\u0000e\u0000c\u0000i\u0000s\u0000a\u0000 \u0000t\u0000e\u0000r\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000a\u0000d\u0000o\u0000 \u0000n\u0000a\u0000 \u0000m\u0000\u0000q\u0000u\u0000i\u0000n\u0000a\u0000 \u0000o\u0000 \u0000`\u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000`\u0000 \u0000e\u0000 \u0000`\u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000c\u0000o\u0000m\u0000p\u0000o\u0000s\u0000e\u0000`\u0000 \u0000p\u0000a\u0000r\u0000a\u0000 \u0000r\u0000o\u0000d\u0000a\u0000r\u0000 \u0000e\u0000s\u0000s\u0000e\u0000s\u0000 \u0000c\u0000o\u0000m\u0000a\u0000n\u0000d\u0000o\u0000s\u0000 \u0000e\u0000 \u0000d\u0000e\u0000s\u0000e\u0000n\u0000v\u0000o\u0000l\u0000v\u0000e\u0000r\u0000 \u0000e\u0000m\u0000 \u0000a\u0000m\u0000b\u0000i\u0000e\u0000n\u0000t\u0000e\u0000 \u0000`\u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000`\u0000 \u0000 \u0000\r\u0000 \u0000\r\u0000 \u0000`\u0000`\u0000`\u0000s\u0000h\u0000\r\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000c\u0000o\u0000m\u0000p\u0000o\u0000s\u0000e\u0000 \u0000u\u0000p\u0000 \u0000-\u0000d\u0000\r\u0000 \u0000`\u0000`\u0000`\u0000\r\u0000 \u0000\r\u0000 \u0000#\u0000#\u0000 \u0000I\u0000n\u0000i\u0000c\u0000i\u0000a\u0000l\u0000i\u0000z\u0000a\u0000n\u0000d\u0000o\u0000\r\u0000 \u0000\r\u0000 \u0000`\u0000`\u0000`\u0000s\u0000h\u0000\r\u0000 \u0000#\u0000 \u0000G\u0000e\u0000r\u0000a\u0000r\u0000 \u0000m\u0000i\u0000g\u0000r\u0000a\u0000t\u0000i\u0000o\u0000n\u0000\r\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000 \u0000e\u0000x\u0000e\u0000c\u0000...",
+    "description_en_us": "O\u0000R\u0000A\u0000N\u0000G\u0000O\u0000P\u0000A\u0000Y\u0000\r\u0000 \u0000\r\u0000 \u0000V\u0000o\u0000c\u0000\u0000 \u0000p\u0000r\u0000e\u0000c\u0000i\u0000s\u0000a\u0000 \u0000t\u0000e\u0000r\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000a\u0000d\u0000o\u0000 \u0000n\u0000a\u0000 \u0000m\u0000\u0000q\u0000u\u0000i\u0000n\u0000a\u0000 \u0000o\u0000 \u0000`\u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000`\u0000 \u0000e\u0000 \u0000`\u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000c\u0000o\u0000m\u0000p\u0000o\u0000s\u0000e\u0000`\u0000 \u0000p\u0000a\u0000r\u0000a\u0000 \u0000r\u0000o\u0000d\u0000a\u0000r\u0000 \u0000e\u0000s\u0000s\u0000e\u0000s\u0000 \u0000c\u0000o\u0000m\u0000a\u0000n\u0000d\u0000o\u0000s\u0000 \u0000e\u0000 \u0000d\u0000e\u0000s\u0000e\u0000n\u0000v\u0000o\u0000l\u0000v\u0000e\u0000r\u0000 \u0000e\u0000m\u0000 \u0000a\u0000m\u0000b\u0000i\u0000e\u0000n\u0000t\u0000e\u0000 \u0000`\u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000`\u0000 \u0000 \u0000\r\u0000 \u0000\r\u0000 \u0000`\u0000`\u0000`\u0000s\u0000h\u0000\r\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000c\u0000o\u0000m\u0000p\u0000o\u0000s\u0000e\u0000 \u0000u\u0000p\u0000 \u0000-\u0000d\u0000\r\u0000 \u0000`\u0000`\u0000`\u0000\r\u0000 \u0000\r\u0000 \u0000#\u0000#\u0000 \u0000I\u0000n\u0000i\u0000c\u0000i\u0000a\u0000l\u0000i\u0000z\u0000a\u0000n\u0000d\u0000o\u0000\r\u0000 \u0000\r\u0000 \u0000`\u0000`\u0000`\u0000s\u0000h\u0000\r\u0000 \u0000#\u0000 \u0000G\u0000e\u0000r\u0000a\u0000r\u0000 \u0000m\u0000i\u0000g\u0000r\u0000a\u0000t\u0000i\u0000o\u0000n\u0000\r\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000 \u0000e\u0000x\u0000e\u0000c\u0000...",
+    "link": "https://gitlab.com/orango/projetos/orango-pay",
+    "tags": [],
+    "order": 96
+  },
+  {
+    "id": "e8d5f178-9769-4abd-aea9-f4f5f4035185",
+    "name_pt_br": "orango - flask-docker",
+    "name_en_us": "orango - flask-docker",
+    "description_pt_br": "Dentro da pasta do projeto execute",
+    "description_en_us": "Dentro da pasta do projeto execute",
+    "link": "https://gitlab.com/orango/projetos/status.orango.io/flask-docker",
+    "tags": [],
+    "order": 97
+  },
+  {
+    "id": "fbb71a1e-6ac6-4bbc-a1b3-53cf882fc20d",
+    "name_pt_br": "orango - docker-v2",
+    "name_en_us": "orango - docker-v2",
+    "description_pt_br": "Conjunto de ferramentas para leads e captura de clientes, assim como agendamento de exames e outras coisas mais, de forma simplificada, com recursos já existentes como EvolutionAPI e serviço de Omnichannel",
+    "description_en_us": "Conjunto de ferramentas para leads e captura de clientes, assim como agendamento de exames e outras coisas mais, de forma simplificada, com recursos já existentes como EvolutionAPI e serviço de Omnichannel",
+    "link": "https://gitlab.com/orango/adri/evolution-api",
+    "tags": [
+      "evolution",
+      "omnichannel",
+      "whatsapp",
+      "whatsapp-bot",
+      "ai",
+      "api",
+      "cli"
+    ],
+    "order": 98
+  },
+  {
+    "id": "88a0ab84-84cf-44f6-9da8-745828e0f4cb",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# Getting Started with Create React App",
+    "description_en_us": "# Getting Started with Create React App",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/site/frontend",
+    "tags": [
+      "react"
+    ],
+    "order": 99
+  },
+  {
+    "id": "d4b2c04d-e9a9-413d-b455-ec9cf6a67943",
+    "name_pt_br": "orango - backend",
+    "name_en_us": "orango - backend",
+    "description_pt_br": "# Meu Exame",
+    "description_en_us": "# Meu Exame",
+    "link": "https://gitlab.com/orango/projetos/meuexame.app/backend",
+    "tags": [],
+    "order": 100
+  },
+  {
+    "id": "69f94126-ffbc-45df-9237-230ea042dc25",
+    "name_pt_br": "orango - Docker V2",
+    "name_en_us": "orango - Docker V2",
+    "description_pt_br": "# Instruções gerais",
+    "description_en_us": "# Instruções gerais",
+    "link": "https://gitlab.com/orango/lithocenter/site/docker-v2",
+    "tags": [
+      "ai"
+    ],
+    "order": 101
+  },
+  {
+    "id": "539c7a7f-e0ed-4fbb-b1fe-ebdf8ce98104",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "Projeto de frontend da clínica Lithocenter",
+    "description_en_us": "Projeto de frontend da clínica Lithocenter",
+    "link": "https://gitlab.com/orango/lithocenter/site/frontend",
+    "tags": [],
+    "order": 102
+  },
+  {
+    "id": "f32252c0-030b-4d2d-951f-25fc7b0d6e38",
+    "name_pt_br": "orango - react-basics",
+    "name_en_us": "orango - react-basics",
+    "description_pt_br": "# React Basics Boilerplate",
+    "description_en_us": "# React Basics Boilerplate",
+    "link": "https://gitlab.com/orango/boilerplate/react-basics",
+    "tags": [
+      "react"
+    ],
+    "order": 103
+  },
+  {
+    "id": "1c7684ef-3b90-43ab-a492-c37700d02d90",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# CAROL",
+    "description_en_us": "# CAROL",
+    "link": "https://gitlab.com/orango/carol/frontend",
+    "tags": [],
+    "order": 104
+  },
+  {
+    "id": "06c12ebd-a1da-48c8-994c-7cc21215571d",
+    "name_pt_br": "orango - backend",
+    "name_en_us": "orango - backend",
+    "description_pt_br": "Para rodar localmente ```sh export FLASK_APP=main.py export FLASK_ENV=development flask run --host=0.0.0.0 --port=8083 ```",
+    "description_en_us": "Para rodar localmente ```sh export FLASK_APP=main.py export FLASK_ENV=development flask run --host=0.0.0.0 --port=8083 ```",
+    "link": "https://gitlab.com/orango/carol/backend",
+    "tags": [
+      "flask",
+      "ai"
+    ],
+    "order": 105
+  },
+  {
+    "id": "0caac811-f7ae-404e-b079-2284333c3a1f",
+    "name_pt_br": "orango - anamin-plugin",
+    "name_en_us": "orango - anamin-plugin",
+    "description_pt_br": "# Anamis - Plugin Chrome",
+    "description_en_us": "# Anamis - Plugin Chrome",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/anamin-plugin",
+    "tags": [
+      "plugin"
+    ],
+    "order": 106
+  },
+  {
+    "id": "f73d1a58-636b-4f3a-b169-0908f6181610",
+    "name_pt_br": "orango - react-auth",
+    "name_en_us": "orango - react-auth",
+    "description_pt_br": "# React Auth/Login Boilerplate",
+    "description_en_us": "# React Auth/Login Boilerplate",
+    "link": "https://gitlab.com/orango/boilerplate/react-auth",
+    "tags": [
+      "react"
+    ],
+    "order": 107
+  },
+  {
+    "id": "ef15cdae-6d7b-4b06-8bcc-38256e788220",
+    "name_pt_br": "orango - node-prisma-graphql-auth",
+    "name_en_us": "orango - node-prisma-graphql-auth",
+    "description_pt_br": "<img alt=\"Orango\" src=\"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80\" />",
+    "description_en_us": "<img alt=\"Orango\" src=\"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80\" />",
+    "link": "https://gitlab.com/orango/boilerplate/node-prisma-graphql-auth",
+    "tags": [],
+    "order": 108
+  },
+  {
+    "id": "284d38ff-6ad3-4697-af79-d9f68fa9d1ee",
+    "name_pt_br": "orango - nascimento",
+    "name_en_us": "orango - nascimento",
+    "description_pt_br": "# ORANGO",
+    "description_en_us": "# ORANGO",
+    "link": "https://gitlab.com/orango/nascimento",
+    "tags": [],
+    "order": 109
+  },
+  {
+    "id": "016864c9-71ef-46fa-b956-0093af0d078e",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# React Auth/Login Boilerplate",
+    "description_en_us": "# React Auth/Login Boilerplate",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/sus-dashboard/frontend",
+    "tags": [
+      "react"
+    ],
+    "order": 110
+  },
+  {
+    "id": "8b14aea5-a4cd-4990-b110-2cd7eb1972a9",
+    "name_pt_br": "orango - docker",
+    "name_en_us": "orango - docker",
+    "description_pt_br": "# Formulário Medfy",
+    "description_en_us": "# Formulário Medfy",
+    "link": "https://gitlab.com/orango/projetos/meuexame.app/docker",
+    "tags": [],
+    "order": 111
+  },
+  {
+    "id": "00971e5c-87ca-4e04-9a76-35d59210eaf9",
+    "name_pt_br": "orango - instabot",
+    "name_en_us": "orango - instabot",
+    "description_pt_br": "## Um pouco Sobre",
+    "description_en_us": "## Um pouco Sobre",
+    "link": "https://gitlab.com/orango/bots/instabot",
+    "tags": [
+      "rpa",
+      "bot",
+      "instagram"
+    ],
+    "order": 112
+  },
+  {
+    "id": "352590d4-6706-4a10-b737-4be5ac99fb3c",
+    "name_pt_br": "orango - diversos",
+    "name_en_us": "orango - diversos",
+    "description_pt_br": "Diversos scripts de automação tagui simples em um só projeto",
+    "description_en_us": "Diversos scripts de automação tagui simples em um só projeto",
+    "link": "https://gitlab.com/orango/bots/diversos",
+    "tags": [],
+    "order": 113
+  },
+  {
+    "id": "2c8a709f-5ebc-48e2-99cd-b73c0b6e1773",
+    "name_pt_br": "orango - admin",
+    "name_en_us": "orango - admin",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/orango/projetos/cavid-20/admin",
+    "tags": [],
+    "order": 114
+  },
+  {
+    "id": "d1ed6f26-05bf-4b44-bff4-a138bd13db79",
+    "name_pt_br": "orango - django-docker",
+    "name_en_us": "orango - django-docker",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/orango/projetos/pay/django-docker",
+    "tags": [],
+    "order": 115
+  },
+  {
+    "id": "d3fbb6a7-8773-410d-9103-3161d02d75e0",
+    "name_pt_br": "orango - uberflow-frontend-bootstrap",
+    "name_en_us": "orango - uberflow-frontend-bootstrap",
+    "description_pt_br": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+    "description_en_us": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+    "link": "https://gitlab.com/orango/sites/uberflow-frontend-bootstrap",
+    "tags": [
+      "react"
+    ],
+    "order": 116
+  },
+  {
+    "id": "e3ec40bc-4462-40dd-942e-66b7b31a3b9a",
+    "name_pt_br": "orango - graphql-yoga-subscriptions",
+    "name_en_us": "orango - graphql-yoga-subscriptions",
+    "description_pt_br": "# graphql-yoga-subscriptions",
+    "description_en_us": "# graphql-yoga-subscriptions",
+    "link": "https://gitlab.com/orango/boilerplate/graphql-yoga-subscriptions",
+    "tags": [
+      "graphql",
+      "graphql-yoga"
+    ],
+    "order": 117
+  },
+  {
+    "id": "73da7136-d09a-441c-8797-59b90ecedec9",
+    "name_pt_br": "orango - prisma-migrations",
+    "name_en_us": "orango - prisma-migrations",
+    "description_pt_br": "```sh yarn prisma init ```",
+    "description_en_us": "```sh yarn prisma init ```",
+    "link": "https://gitlab.com/orango/boilerplate/prisma-migrations",
+    "tags": [
+      "prisma"
+    ],
+    "order": 118
+  },
+  {
+    "id": "75faa8f0-974c-43ee-a9f6-d5b3316f2cc7",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# React Basics Boilerplate",
+    "description_en_us": "# React Basics Boilerplate",
+    "link": "https://gitlab.com/orango/site/frontend",
+    "tags": [
+      "react"
+    ],
+    "order": 119
+  },
+  {
+    "id": "a2e2a7fa-5fef-4053-b491-3108bafac21d",
+    "name_pt_br": "orango - djangoapp",
+    "name_en_us": "orango - djangoapp",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/microajuda/djangoapp",
+    "tags": [],
+    "order": 120
+  },
+  {
+    "id": "ba673d1e-5802-451a-9d02-6d71e84deee9",
+    "name_pt_br": "orango - firefox-esus-plugin-api",
+    "name_en_us": "orango - firefox-esus-plugin-api",
+    "description_pt_br": "# Bolierplate de aplicação React-Django",
+    "description_en_us": "# Bolierplate de aplicação React-Django",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/firefox-esus-plugin-api",
+    "tags": [
+      "react",
+      "django"
+    ],
+    "order": 121
+  },
+  {
+    "id": "6a5cebfb-935f-4248-a4b3-9ae080f6acc5",
+    "name_pt_br": "orango - esus-dashboard",
+    "name_en_us": "orango - esus-dashboard",
+    "description_pt_br": "# React Auth/Login Boilerplate",
+    "description_en_us": "# React Auth/Login Boilerplate",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/esus-dashboard",
+    "tags": [
+      "react"
+    ],
+    "order": 122
+  },
+  {
+    "id": "913c7142-7835-40cb-a466-59c4ed49e4f7",
+    "name_pt_br": "orango - docker",
+    "name_en_us": "orango - docker",
+    "description_pt_br": "# Welcome to Prescript 👋 ![Version](https://img.shields.io/badge/version-1.2.2-blue.svg?cacheSeconds=2592000) [![Twitter: Offplayer\\_G](https://img.shields.io/twitter/follow/Offplayer\\_G.svg?style=social)](https://twitter.com/Offplayer\\_G)",
+    "description_en_us": "# Welcome to Prescript 👋 ![Version](https://img.shields.io/badge/version-1.2.2-blue.svg?cacheSeconds=2592000) [![Twitter: Offplayer\\_G](https://img.shields.io/twitter/follow/Offplayer\\_G.svg?style=social)](https://twitter.com/Offplayer\\_G)",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/docs/docker",
+    "tags": [
+      "ci",
+      "ia"
+    ],
+    "order": 123
+  },
+  {
+    "id": "d8a9ec45-4a51-4c3d-91da-b3e7b5201da8",
+    "name_pt_br": "orango - wattpad-chuva",
+    "name_en_us": "orango - wattpad-chuva",
+    "description_pt_br": "## Bot wattpad-chuva Criado com a finalidade de automatizar o envio de mensagens para usuários Whattpad com finalidade de comunicação e promoção de um livro da autora Chuva",
+    "description_en_us": "## Bot wattpad-chuva Criado com a finalidade de automatizar o envio de mensagens para usuários Whattpad com finalidade de comunicação e promoção de um livro da autora Chuva",
+    "link": "https://gitlab.com/orango/bots/wattpad-chuva",
+    "tags": [
+      "ia",
+      "bot"
+    ],
+    "order": 124
+  },
+  {
+    "id": "feb7dcaf-7981-47bc-873d-3b354433b0bb",
+    "name_pt_br": "orango - docker",
+    "name_en_us": "orango - docker",
+    "description_pt_br": "# Lithocenter",
+    "description_en_us": "# Lithocenter",
+    "link": "https://gitlab.com/orango/lithocenter/site/docker",
+    "tags": [],
+    "order": 125
+  },
+  {
+    "id": "86e93703-8b59-492e-a258-121dfa0c21ee",
+    "name_pt_br": "orango - docker",
+    "name_en_us": "orango - docker",
+    "description_pt_br": "# Carol",
+    "description_en_us": "# Carol",
+    "link": "https://gitlab.com/orango/carol/docker",
+    "tags": [],
+    "order": 126
+  },
+  {
+    "id": "49e0b0e5-989a-46c6-ba48-b4d1f217d823",
+    "name_pt_br": "orango - backend",
+    "name_en_us": "orango - backend",
+    "description_pt_br": "## Para atualizar pasta no repo",
+    "description_en_us": "## Para atualizar pasta no repo",
+    "link": "https://gitlab.com/orango/lithocenter/site/backend",
+    "tags": [],
+    "order": 127
+  },
+  {
+    "id": "dd2674f7-d2cc-490e-906d-80140ecc8701",
+    "name_pt_br": "orango - formulario-credenciamento-medfy",
+    "name_en_us": "orango - formulario-credenciamento-medfy",
+    "description_pt_br": "# Formulário Medfy",
+    "description_en_us": "# Formulário Medfy",
+    "link": "https://gitlab.com/orango/sites/formulario-credenciamento-medfy",
+    "tags": [],
+    "order": 128
+  },
+  {
+    "id": "03207fc9-38be-47a7-97a0-d87a0b3fa30f",
+    "name_pt_br": "orango - django-react",
+    "name_en_us": "orango - django-react",
+    "description_pt_br": "# Bolierplate de aplicação React-Django",
+    "description_en_us": "# Bolierplate de aplicação React-Django",
+    "link": "https://gitlab.com/orango/boilerplate/django-react",
+    "tags": [
+      "react",
+      "django"
+    ],
+    "order": 129
+  },
+  {
+    "id": "2c69d550-c963-4160-9c7d-023a801736e9",
+    "name_pt_br": "orango - intranet-frontend",
+    "name_en_us": "orango - intranet-frontend",
+    "description_pt_br": "# React Auth/Login Boilerplate",
+    "description_en_us": "# React Auth/Login Boilerplate",
+    "link": "https://gitlab.com/orango/projetos/filipelopes.med.br/hmlem/intranet-frontend",
+    "tags": [
+      "react"
+    ],
+    "order": 130
+  },
+  {
+    "id": "6bb03edf-f6e6-4a7e-82be-38e8c5bb3d16",
+    "name_pt_br": "orango - api-twilio",
+    "name_en_us": "orango - api-twilio",
+    "description_pt_br": "# API Twilio",
+    "description_en_us": "# API Twilio",
+    "link": "https://gitlab.com/orango/adri/api-twilio",
+    "tags": [
+      "api"
+    ],
+    "order": 131
+  },
+  {
+    "id": "b21b1e7c-023f-4f29-8a06-730ba0bb261e",
+    "name_pt_br": "orango - docker-graphql-yoga-prisma-postgresql-mongo",
+    "name_en_us": "orango - docker-graphql-yoga-prisma-postgresql-mongo",
+    "description_pt_br": "## Prisma",
+    "description_en_us": "## Prisma",
+    "link": "https://gitlab.com/orango/boilerplate/docker-graphql-yoga-prisma-postgresql-mongo",
+    "tags": [
+      "prisma"
+    ],
+    "order": 132
+  },
+  {
+    "id": "c1d4ea2b-7132-4b72-880a-ce5b438fada0",
+    "name_pt_br": "orango - nginx-server-confs",
+    "name_en_us": "orango - nginx-server-confs",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/orango/configuracoes/nginx-server-confs",
+    "tags": [],
+    "order": 133
+  },
+  {
+    "id": "74564f2f-f4e6-4bdd-bf2d-8d3c0b0390b9",
+    "name_pt_br": "orango - django-api",
+    "name_en_us": "orango - django-api",
+    "description_pt_br": "# Bolierplate de aplicação React-Django",
+    "description_en_us": "# Bolierplate de aplicação React-Django",
+    "link": "https://gitlab.com/orango/boilerplate/django-api",
+    "tags": [
+      "react",
+      "django"
+    ],
+    "order": 134
+  },
+  {
+    "id": "5d22c6d0-6c41-48da-b848-e37076651bce",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# Orango",
+    "description_en_us": "# Orango",
+    "link": "https://gitlab.com/orango/site/blog/frontend",
+    "tags": [],
+    "order": 135
+  },
+  {
+    "id": "cf5f8c5a-e57a-4da2-8893-54406acdd8b7",
+    "name_pt_br": "orango - docker",
+    "name_en_us": "orango - docker",
+    "description_pt_br": "## Prisma",
+    "description_en_us": "## Prisma",
+    "link": "https://gitlab.com/orango/projetos/pin/docker",
+    "tags": [
+      "prisma"
+    ],
+    "order": 136
+  },
+  {
+    "id": "53dc5dbc-e447-444e-b0b9-3453fd4e3912",
+    "name_pt_br": "orango - docker-wordpress",
+    "name_en_us": "orango - docker-wordpress",
+    "description_pt_br": "A intenção desse projeto é criar um docker que faça a restauração de posts, uploads, temas e plugins de qualquer blog/site wordpress preexistente, sem necessidade de uso de plugins",
+    "description_en_us": "A intenção desse projeto é criar um docker que faça a restauração de posts, uploads, temas e plugins de qualquer blog/site wordpress preexistente, sem necessidade de uso de plugins",
+    "link": "https://gitlab.com/orango/boilerplate/docker-wordpress",
+    "tags": [
+      "docker",
+      "ia",
+      "wordpress",
+      "plugin"
+    ],
+    "order": 137
+  },
+  {
+    "id": "27b6d466-a36c-4418-8117-34df864b1641",
+    "name_pt_br": "orango - strapi",
+    "name_en_us": "orango - strapi",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/orango/site/v2/strapi",
+    "tags": [],
+    "order": 138
+  },
+  {
+    "id": "a9fd4105-9103-45e8-9730-915886905be7",
+    "name_pt_br": "orango - Padawan",
+    "name_en_us": "orango - Padawan",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/orango/projetos/padawan",
+    "tags": [],
+    "order": 139
+  },
+  {
+    "id": "76bcc152-d205-4d4b-9330-60cf501aa24f",
+    "name_pt_br": "orango - supervisor",
+    "name_en_us": "orango - supervisor",
+    "description_pt_br": "*.ini files",
+    "description_en_us": "*.ini files",
+    "link": "https://gitlab.com/orango/configuracoes/supervisor",
+    "tags": [],
+    "order": 140
+  },
+  {
+    "id": "6e25ec3f-84d6-4646-acd0-97a101ccf4c7",
+    "name_pt_br": "orango - adm",
+    "name_en_us": "orango - adm",
+    "description_pt_br": "Projeto para gerenciamento de recursos administrativos",
+    "description_en_us": "Projeto para gerenciamento de recursos administrativos",
+    "link": "https://gitlab.com/orango/adri/adm",
+    "tags": [
+      "ci",
+      "ia"
+    ],
+    "order": 141
+  },
+  {
+    "id": "7a41c248-1ae8-41b0-81be-e8226ffb9c81",
+    "name_pt_br": "orango - strapi-docker-nginx",
+    "name_en_us": "orango - strapi-docker-nginx",
+    "description_pt_br": "Utilizando proxy reverso para uso do strapi",
+    "description_en_us": "Utilizando proxy reverso para uso do strapi",
+    "link": "https://gitlab.com/orango/boilerplate/strapi-nginx",
+    "tags": [
+      "api"
+    ],
+    "order": 142
+  },
+  {
+    "id": "32d912e0-ee59-4889-9f21-ab683258565b",
+    "name_pt_br": "orango - docker-lamp-nginx",
+    "name_en_us": "orango - docker-lamp-nginx",
+    "description_pt_br": "# docker-lamp",
+    "description_en_us": "# docker-lamp",
+    "link": "https://gitlab.com/orango/boilerplate/docker-lamp-nginx",
+    "tags": [
+      "docker"
+    ],
+    "order": 143
+  },
+  {
+    "id": "03d897a3-4a83-49c2-99fa-052d5c6ba787",
+    "name_pt_br": "orango - docker-react-wordpress",
+    "name_en_us": "orango - docker-react-wordpress",
+    "description_pt_br": "## Comandos úteis",
+    "description_en_us": "## Comandos úteis",
+    "link": "https://gitlab.com/orango/boilerplate/docker-react-wordpress",
+    "tags": [],
+    "order": 144
+  },
+  {
+    "id": "bc781087-9e08-478c-a6bb-3400503960af",
+    "name_pt_br": "orango - frontend",
+    "name_en_us": "orango - frontend",
+    "description_pt_br": "# React Basics Boilerplate",
+    "description_en_us": "# React Basics Boilerplate",
+    "link": "https://gitlab.com/orango/projetos/rx/react-basics",
+    "tags": [
+      "react"
+    ],
+    "order": 145
+  },
+  {
+    "id": "bca048d1-46df-4ea1-845c-a6674c7fc7bb",
+    "name_pt_br": "orango - backend",
+    "name_en_us": "orango - backend",
+    "description_pt_br": "<img alt=\"Orango\" src=\"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80\" />",
+    "description_en_us": "<img alt=\"Orango\" src=\"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80\" />",
+    "link": "https://gitlab.com/orango/habitat/backend",
+    "tags": [],
+    "order": 146
+  },
+  {
+    "id": "c3c54862-e37d-4f79-b13c-0b09769b39d3",
+    "name_pt_br": "orango - admin",
+    "name_en_us": "orango - admin",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/orango/habitat/admin",
+    "tags": [],
+    "order": 147
+  },
+  {
+    "id": "7ce977a4-eb11-46ea-9d41-0e39d5ff62ec",
+    "name_pt_br": "orango - backend",
+    "name_en_us": "orango - backend",
+    "description_pt_br": "<img alt=\"Orango\" src=\"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80\" />",
+    "description_en_us": "<img alt=\"Orango\" src=\"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80\" />",
+    "link": "https://gitlab.com/orango/adri/backend",
+    "tags": [],
+    "order": 148
+  },
+  {
+    "id": "711c57c8-da6b-45c3-adcd-887743918295",
+    "name_pt_br": "orango - python-fastapi-auth",
+    "name_en_us": "orango - python-fastapi-auth",
+    "description_pt_br": "Para rodar a API, primeiramente crie um `virtualenv` em python3.5+ na pasta pai:",
+    "description_en_us": "Para rodar a API, primeiramente crie um `virtualenv` em python3.5+ na pasta pai:",
+    "link": "https://gitlab.com/orango/boilerplate/python-fastapi-auth",
+    "tags": [
+      "python",
+      "ai",
+      "api"
+    ],
+    "order": 149
+  },
+  {
+    "id": "b8cb81d8-729f-4f8e-bc54-d0c78cc90cfa",
+    "name_pt_br": "orango - design",
+    "name_en_us": "orango - design",
+    "description_pt_br": "https://www.figma.com/file/x811JWHDTm5ORVINSMid1Y/LITHOCENTER-layout",
+    "description_en_us": "https://www.figma.com/file/x811JWHDTm5ORVINSMid1Y/LITHOCENTER-layout",
+    "link": "https://gitlab.com/orango/lithocenter/site/design",
+    "tags": [],
+    "order": 150
+  },
+  {
+    "id": "5210566b-594b-4a66-9e80-1bb20a4acfd6",
+    "name_pt_br": "orango - html-components",
+    "name_en_us": "orango - html-components",
+    "description_pt_br": "# Objetivo do projeto O objetivo desse projeto é desenvolver e arquivar os componentes estilizados não funcionais, em HTML e SCSS, que serão utilizados no projeto ADRI. # Tecnologias utilizadas - HTML5 - Sass - CSS3 # Instruções 1. Todos os documentos devem ter o mínimo de configurações possíveis, atributos CSS que não são utilizados, não devem ser colocados, pelo contrário, devem ser descartados   2. Pode-se consultar a pasta `modelo` para ver os requisitos mínimos   3....",
+    "description_en_us": "# Objetivo do projeto O objetivo desse projeto é desenvolver e arquivar os componentes estilizados não funcionais, em HTML e SCSS, que serão utilizados no projeto ADRI. # Tecnologias utilizadas - HTML5 - Sass - CSS3 # Instruções 1. Todos os documentos devem ter o mínimo de configurações possíveis, atributos CSS que não são utilizados, não devem ser colocados, pelo contrário, devem ser descartados   2. Pode-se consultar a pasta `modelo` para ver os requisitos mínimos   3....",
+    "link": "https://gitlab.com/orango/adri/html-components",
+    "tags": [
+      "ci",
+      "ai",
+      "ia",
+      "ml",
+      "sass",
+      "scss"
+    ],
+    "order": 151
+  },
+  {
+    "id": "44aeccd8-c20c-4d86-b5b4-4099b5fd149c",
+    "name_pt_br": "orango - administrativo",
+    "name_en_us": "orango - administrativo",
+    "description_pt_br": "# Contas de utilidade",
+    "description_en_us": "# Contas de utilidade",
+    "link": "https://gitlab.com/orango/lithocenter/site/documentacao",
+    "tags": [],
+    "order": 152
+  },
+  {
+    "id": "41e49de9-d9af-43e2-bdb7-03be0ab43372",
+    "name_pt_br": "orango - frontend_old",
+    "name_en_us": "orango - frontend_old",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/orango/adri/frontend_old",
+    "tags": [],
+    "order": 153
+  },
+  {
+    "id": "ea62be67-488b-4dad-b21f-5fe56bcd02f0",
+    "name_pt_br": "orango - node-sequelize-postgres",
+    "name_en_us": "orango - node-sequelize-postgres",
+    "description_pt_br": "Orango's boilerplate for Node.js, Sequelize and Postgres projects.",
+    "description_en_us": "Orango's boilerplate for Node.js, Sequelize and Postgres projects.",
+    "link": "https://gitlab.com/orango/boilerplate/node-sequelize-postgres",
+    "tags": [
+      "node",
+      "node.js",
+      "postgres"
+    ],
+    "order": 154
+  },
+  {
+    "id": "3f671bbc-dd13-4031-af43-6af1a4b2a892",
+    "name_pt_br": "orango - node-sequelize-postgres",
+    "name_en_us": "orango - node-sequelize-postgres",
+    "description_pt_br": "Orango's boilerplate for Node.js, Sequelize and Postgres projects.",
+    "description_en_us": "Orango's boilerplate for Node.js, Sequelize and Postgres projects.",
+    "link": "https://gitlab.com/orango/node-sequelize-postgres",
+    "tags": [
+      "node",
+      "node.js",
+      "postgres"
+    ],
+    "order": 155
+  },
+  {
+    "id": "6ab12be6-fcf6-4b51-b7d6-a70149a90c86",
+    "name_pt_br": "orango - node-auth",
+    "name_en_us": "orango - node-auth",
+    "description_pt_br": "Node boilerplate for login and auth systems",
+    "description_en_us": "Node boilerplate for login and auth systems",
+    "link": "https://gitlab.com/orango/boilerplate/node-auth",
+    "tags": [
+      "node"
+    ],
+    "order": 156
+  },
+  {
+    "id": "bd59960c-28f0-4d14-bdc8-4461383aa360",
+    "name_pt_br": "orango - cliente",
+    "name_en_us": "orango - cliente",
+    "description_pt_br": "https://cliente.orango.io\r\nSistema de orçamento e gerenciamento de projetos voltado para integração com o cliente com GitLab como base.",
+    "description_en_us": "https://cliente.orango.io\r\nSistema de orçamento e gerenciamento de projetos voltado para integração com o cliente com GitLab como base.",
+    "link": "https://gitlab.com/orango/cliente",
+    "tags": [
+      "cliente",
+      "dashboard",
+      "painel",
+      "ci",
+      "ia",
+      "cli"
+    ],
+    "order": 157
+  },
+  {
+    "id": "c0fe6264-fa93-451c-ae96-3dbc57a1b4ce",
+    "name_pt_br": "clicklav - app-cliente",
+    "name_en_us": "clicklav - app-cliente",
+    "description_pt_br": "# Styled Components Example",
+    "description_en_us": "# Styled Components Example",
+    "link": "https://gitlab.com/clicklav/app",
+    "tags": [],
+    "order": 158
+  },
+  {
+    "id": "e57c7c0e-df70-4af2-9e8a-950142e71e67",
+    "name_pt_br": "clicklav - app-parceiro",
+    "name_en_us": "clicklav - app-parceiro",
+    "description_pt_br": "Aplicativo do parceiro Clicklav",
+    "description_en_us": "Aplicativo do parceiro Clicklav",
+    "link": "https://gitlab.com/clicklav/app-parceiro",
+    "tags": [
+      "cli"
+    ],
+    "order": 159
+  },
+  {
+    "id": "4b56e304-116f-479e-85c8-a6fafb1b6e0a",
+    "name_pt_br": "clicklav - backend",
+    "name_en_us": "clicklav - backend",
+    "description_pt_br": "# Deploy no nginx",
+    "description_en_us": "# Deploy no nginx",
+    "link": "https://gitlab.com/clicklav/site/backend",
+    "tags": [],
+    "order": 160
+  },
+  {
+    "id": "ddcb3d7f-4de0-4fe1-9644-2a4948f386df",
+    "name_pt_br": "clicklav - docker",
+    "name_en_us": "clicklav - docker",
+    "description_pt_br": "# Serviços ClickLav dockerizados",
+    "description_en_us": "# Serviços ClickLav dockerizados",
+    "link": "https://gitlab.com/clicklav/docker",
+    "tags": [
+      "docker",
+      "cli"
+    ],
+    "order": 161
+  },
+  {
+    "id": "ef9b33fc-2751-4aeb-812c-1af8a6848407",
+    "name_pt_br": "clicklav - frontend",
+    "name_en_us": "clicklav - frontend",
+    "description_pt_br": "# React Basics Boilerplate",
+    "description_en_us": "# React Basics Boilerplate",
+    "link": "https://gitlab.com/clicklav/site/frontend",
+    "tags": [
+      "react"
+    ],
+    "order": 162
+  },
+  {
+    "id": "e7589cc6-64fd-47b4-9b0f-d4f92b2c80d9",
+    "name_pt_br": "clicklav - dash",
+    "name_en_us": "clicklav - dash",
+    "description_pt_br": "# React Basics Boilerplate",
+    "description_en_us": "# React Basics Boilerplate",
+    "link": "https://gitlab.com/clicklav/dash",
+    "tags": [
+      "react"
+    ],
+    "order": 163
+  },
+  {
+    "id": "209785a2-a11f-4635-8606-e16bc58ed00f",
+    "name_pt_br": "clicklav - prisma",
+    "name_en_us": "clicklav - prisma",
+    "description_pt_br": "### Gerando migrations ```sh yarn prisma init yarn prisma migrate dev yarn prisma migrate deploy ```",
+    "description_en_us": "### Gerando migrations ```sh yarn prisma init yarn prisma migrate dev yarn prisma migrate deploy ```",
+    "link": "https://gitlab.com/clicklav/prisma",
+    "tags": [
+      "prisma"
+    ],
+    "order": 164
+  },
+  {
+    "id": "2d327e8f-b2e5-4201-98b8-441cd13c418e",
+    "name_pt_br": "clicklav - administrativo",
+    "name_en_us": "clicklav - administrativo",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/clicklav/administrativo",
+    "tags": [],
+    "order": 165
+  },
+  {
+    "id": "01b0e972-9d06-496b-8319-d29b1f8bcd07",
+    "name_pt_br": "clicklav - graphql-yoga-subscription-server",
+    "name_en_us": "clicklav - graphql-yoga-subscription-server",
+    "description_pt_br": "# graphql-yoga-subscriptions",
+    "description_en_us": "# graphql-yoga-subscriptions",
+    "link": "https://gitlab.com/clicklav/graphql-yoga-subscription-server",
+    "tags": [
+      "graphql",
+      "graphql-yoga"
+    ],
+    "order": 166
+  },
+  {
+    "id": "c8c58639-7f34-4109-8eba-5053dcda12b8",
+    "name_pt_br": "Prisma-Consultoria - siscan-rpa",
+    "name_en_us": "Prisma-Consultoria - siscan-rpa",
+    "description_pt_br": "# RPA SISCAN",
+    "description_en_us": "# RPA SISCAN",
+    "link": "https://github.com/Prisma-Consultoria/siscan-rpa",
+    "tags": [
+      "python",
+      "rpa"
+    ],
+    "order": 167
+  },
+  {
+    "id": "da119c89-c3c9-42b1-bbca-a0002640dce9",
+    "name_pt_br": "Prisma-Consultoria - assistente-siscan-rpa",
+    "name_en_us": "Prisma-Consultoria - assistente-siscan-rpa",
+    "description_pt_br": "# Assistente SISCan RPA",
+    "description_en_us": "# Assistente SISCan RPA",
+    "link": "https://github.com/Prisma-Consultoria/assistente-siscan-rpa",
+    "tags": [
+      "powershell",
+      "rpa",
+      "open source"
+    ],
+    "order": 168
+  },
+  {
+    "id": "18fdbe44-eea5-4571-91d2-e718bebd3b59",
+    "name_pt_br": "Prisma-Consultoria - siscan-analytics",
+    "name_en_us": "Prisma-Consultoria - siscan-analytics",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://github.com/Prisma-Consultoria/siscan-analytics",
+    "tags": [],
+    "order": 169
+  },
+  {
+    "id": "cfc6cfa9-fb3f-411e-8592-ac48cc471625",
+    "name_pt_br": "Prisma-Consultoria - vault-siscan-infra",
+    "name_en_us": "Prisma-Consultoria - vault-siscan-infra",
+    "description_pt_br": "# Vault OSS para SISCAN — Infraestrutura de Cofre de Segredos (Dev/HML/PRD)",
+    "description_en_us": "# Vault OSS para SISCAN — Infraestrutura de Cofre de Segredos (Dev/HML/PRD)",
+    "link": "https://github.com/Prisma-Consultoria/vault-siscan-infra",
+    "tags": [
+      "shell",
+      "ml",
+      "open source"
+    ],
+    "order": 170
+  },
+  {
+    "id": "2b825a4a-32e7-4a41-a1ae-e4a12de11d83",
+    "name_pt_br": "Prisma-Consultoria - siscan-mamografia-busca-ativa",
+    "name_en_us": "Prisma-Consultoria - siscan-mamografia-busca-ativa",
+    "description_pt_br": "# RosaAtiva — Sistema de Apoio à Busca Ativa em Mamografia",
+    "description_en_us": "# RosaAtiva — Sistema de Apoio à Busca Ativa em Mamografia",
+    "link": "https://github.com/Prisma-Consultoria/siscan-mamografia-busca-ativa",
+    "tags": [
+      "python",
+      "ia",
+      "open source"
+    ],
+    "order": 171
+  },
+  {
+    "id": "1efcc2ba-4459-42fb-9fdd-e4248fd8b5db",
+    "name_pt_br": "Prisma-Consultoria - .github",
+    "name_en_us": "Prisma-Consultoria - .github",
+    "description_pt_br": "# Prisma Consultoria em Saúde",
+    "description_en_us": "# Prisma Consultoria em Saúde",
+    "link": "https://github.com/Prisma-Consultoria/.github",
+    "tags": [
+      "prisma",
+      "ia",
+      "open source"
+    ],
+    "order": 172
+  },
+  {
+    "id": "78b0450b-ee02-42e4-9318-92a449e72594",
+    "name_pt_br": "Jogo-da-Biblia - main",
+    "name_en_us": "Jogo-da-Biblia - main",
+    "description_pt_br": "# Sistema de Cadastro de Perguntas - Jogo da Bíblia",
+    "description_en_us": "# Sistema de Cadastro de Perguntas - Jogo da Bíblia",
+    "link": "https://jogodabiblia.com",
+    "tags": [
+      "boardgame",
+      "dashboard",
+      "python",
+      "ia",
+      "open source"
+    ],
+    "order": 173
+  },
+  {
+    "id": "19fda14d-2390-4ede-96b2-c9c5fad81c02",
+    "name_pt_br": "Jogo-da-Biblia - app-frontend",
+    "name_en_us": "Jogo-da-Biblia - app-frontend",
+    "description_pt_br": "# Jogo da Bíblia",
+    "description_en_us": "# Jogo da Bíblia",
+    "link": "https://github.com/Jogo-da-Biblia/app-frontend",
+    "tags": [
+      "javascript",
+      "ia"
+    ],
+    "order": 174
+  },
+  {
+    "id": "95196f43-c8b1-4ddf-83d3-8b120559171b",
+    "name_pt_br": "Jogo-da-Biblia - hotsite",
+    "name_en_us": "Jogo-da-Biblia - hotsite",
+    "description_pt_br": "Site de propaganda e divulgação do jogo. Convite para colaboração",
+    "description_en_us": "Site de propaganda e divulgação do jogo. Convite para colaboração",
+    "link": "https://github.com/Jogo-da-Biblia/hotsite",
+    "tags": [
+      "open source"
+    ],
+    "order": 175
+  },
+  {
+    "id": "1f3fd38b-6ede-4ee6-a150-1bb7ded49816",
+    "name_pt_br": "OpenMRS-Brazil - docker",
+    "name_en_us": "OpenMRS-Brazil - docker",
+    "description_pt_br": "# OpenMRS 3.0 Aplicação em Portugês - Brasil",
+    "description_en_us": "# OpenMRS 3.0 Aplicação em Portugês - Brasil",
+    "link": "https://github.com/OpenMRS-Brazil/docker",
+    "tags": [
+      "open source"
+    ],
+    "order": 176
+  },
+  {
+    "id": "49541ac4-5c2c-4348-bc93-672f86f5dad6",
+    "name_pt_br": "OpenMRS-Brazil - .github",
+    "name_en_us": "OpenMRS-Brazil - .github",
+    "description_pt_br": "# .github",
+    "description_en_us": "# .github",
+    "link": "https://github.com/OpenMRS-Brazil/.github",
+    "tags": [
+      "open source"
+    ],
+    "order": 177
+  },
+  {
+    "id": "5159d385-4e15-4f45-9ee4-00a4a5bc14d3",
+    "name_pt_br": "OpenMRS-Brazil - openmrs-module-printable-reports",
+    "name_en_us": "OpenMRS-Brazil - openmrs-module-printable-reports",
+    "description_pt_br": "Impressão de documentos clínicos para a prática médica necessários em muitos países que tem interoperabilidade limitada",
+    "description_en_us": "Impressão de documentos clínicos para a prática médica necessários em muitos países que tem interoperabilidade limitada",
+    "link": "https://github.com/OpenMRS-Brazil/openmrs-module-printable-reports",
+    "tags": [
+      "open source"
+    ],
+    "order": 178
+  },
+  {
+    "id": "34df086c-0299-4afb-b322-d6a3f3d7ada3",
+    "name_pt_br": "OpenMRS-Brazil - openmrs-printing-module",
+    "name_en_us": "OpenMRS-Brazil - openmrs-printing-module",
+    "description_pt_br": "Impressão de documentos clínicos para a prática médica necessários em muitos países que tem interoperabilidade limitada",
+    "description_en_us": "Impressão de documentos clínicos para a prática médica necessários em muitos países que tem interoperabilidade limitada",
+    "link": "https://github.com/OpenMRS-Brazil/openmrs-printing-module",
+    "tags": [
+      "open source"
+    ],
+    "order": 179
+  },
+  {
+    "id": "b457f3e4-e4e3-4871-b7dc-3da91b6be764",
+    "name_pt_br": "OpenMRS-Brazil - br-forms",
+    "name_en_us": "OpenMRS-Brazil - br-forms",
+    "description_pt_br": "Repo de formulários JSON e HTMLForm para uso no OpenMRS",
+    "description_en_us": "Repo de formulários JSON e HTMLForm para uso no OpenMRS",
+    "link": "https://github.com/OpenMRS-Brazil/br-forms",
+    "tags": [
+      "ml",
+      "open source"
+    ],
+    "order": 180
+  },
+  {
+    "id": "2e39be80-729a-4870-b246-83ec77a09e9b",
+    "name_pt_br": "hub-center - frontend-webapp",
+    "name_en_us": "hub-center - frontend-webapp",
+    "description_pt_br": "React Progressive WebApp",
+    "description_en_us": "React Progressive WebApp",
+    "link": "https://gitlab.com/hub-center/frontend-webapp",
+    "tags": [
+      "react"
+    ],
+    "order": 181
+  },
+  {
+    "id": "d388ec3e-7836-4b2b-9c5e-137696ccc9ac",
+    "name_pt_br": "hub-center - backend",
+    "name_en_us": "hub-center - backend",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/hub-center/backend",
+    "tags": [],
+    "order": 182
+  },
+  {
+    "id": "73fdc4fa-d41c-4036-a60f-cd0bce329ae4",
+    "name_pt_br": "hub-center - docker-project",
+    "name_en_us": "hub-center - docker-project",
+    "description_pt_br": "# Bolierplate de aplicação React-Django",
+    "description_en_us": "# Bolierplate de aplicação React-Django",
+    "link": "https://gitlab.com/hub-center/docker-project",
+    "tags": [
+      "react",
+      "django"
+    ],
+    "order": 183
+  },
+  {
+    "id": "3c574d32-5280-4008-b4ed-07c31ba9adfc",
+    "name_pt_br": "hmlem - integra-saude",
+    "name_en_us": "hmlem - integra-saude",
+    "description_pt_br": "Sistema de chamados e comunicação interna da saúde para municípios de pequeno porte",
+    "description_en_us": "Sistema de chamados e comunicação interna da saúde para municípios de pequeno porte",
+    "link": "https://github.com/hmlem/integra-saude",
+    "tags": [
+      "python",
+      "open source"
+    ],
+    "order": 184
+  },
+  {
+    "id": "557452b8-9998-4271-9864-41267a80e4ae",
+    "name_pt_br": "hmlem - intranet",
+    "name_en_us": "hmlem - intranet",
+    "description_pt_br": "# React Auth/Login Boilerplate",
+    "description_en_us": "# React Auth/Login Boilerplate",
+    "link": "https://github.com/hmlem/intranet",
+    "tags": [
+      "javascript",
+      "react",
+      "open source"
+    ],
+    "order": 185
+  },
+  {
+    "id": "4145ddab-39f0-431c-8ad7-f50202d5776d",
+    "name_pt_br": "hmlem - protocolos",
+    "name_en_us": "hmlem - protocolos",
+    "description_pt_br": "# HMLEM Protocolos",
+    "description_en_us": "# HMLEM Protocolos",
+    "link": "https://github.com/hmlem/protocolos",
+    "tags": [
+      "ml",
+      "open source"
+    ],
+    "order": 186
+  },
+  {
+    "id": "354970a0-54e1-4144-9b95-1c3229ab9cf2",
+    "name_pt_br": "hmlem - telegram-bot",
+    "name_en_us": "hmlem - telegram-bot",
+    "description_pt_br": "Bot para capturar perguntas realizadas no Google Forms e redirecionar de forma estilizada via Telegram",
+    "description_en_us": "Bot para capturar perguntas realizadas no Google Forms e redirecionar de forma estilizada via Telegram",
+    "link": "https://github.com/hmlem/telegram-bot",
+    "tags": [
+      "ci",
+      "ia",
+      "bot",
+      "open source"
+    ],
+    "order": 187
+  },
+  {
+    "id": "eef573ce-e500-4622-9932-56b2b1898626",
+    "name_pt_br": "hmlem - meu-plantao",
+    "name_en_us": "hmlem - meu-plantao",
+    "description_pt_br": "Agenda de contato de profissionais de saúde para alocação em casos de urgências necessárias",
+    "description_en_us": "Agenda de contato de profissionais de saúde para alocação em casos de urgências necessárias",
+    "link": "https://github.com/hmlem/meu-plantao",
+    "tags": [
+      "ci",
+      "ai",
+      "ia"
+    ],
+    "order": 188
+  },
+  {
+    "id": "40027966-bd7b-471a-9039-f205f497076c",
+    "name_pt_br": "personal292 - ssh",
+    "name_en_us": "personal292 - ssh",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/personal292/ssh",
+    "tags": [],
+    "order": 189
+  },
+  {
+    "id": "5a8ce769-139e-4cfd-87e7-a0da2c7a1302",
+    "name_pt_br": "personal292 - python-drive-api-quickstart",
+    "name_en_us": "personal292 - python-drive-api-quickstart",
+    "description_pt_br": "## Criando venv",
+    "description_en_us": "## Criando venv",
+    "link": "https://gitlab.com/personal292/python-drive-api-quickstart",
+    "tags": [
+      "ia"
+    ],
+    "order": 190
+  },
+  {
+    "id": "0d2f617c-0278-4a0a-a687-001e95888d86",
+    "name_pt_br": "personal292 - home-config-folders",
+    "name_en_us": "personal292 - home-config-folders",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/personal292/home-config-folders",
+    "tags": [],
+    "order": 191
+  },
+  {
+    "id": "df6502f6-f465-4c67-b0b1-4c1538d217c5",
+    "name_pt_br": "personal292 - water-level-measure",
+    "name_en_us": "personal292 - water-level-measure",
+    "description_pt_br": "Para rodar localmente ```sh export FLASK_APP=main.py export FLASK_ENV=development flask run --host=0.0.0.0 --port=8001 ```",
+    "description_en_us": "Para rodar localmente ```sh export FLASK_APP=main.py export FLASK_ENV=development flask run --host=0.0.0.0 --port=8001 ```",
+    "link": "https://gitlab.com/personal292/water-level-measure",
+    "tags": [
+      "flask",
+      "ai"
+    ],
+    "order": 192
+  },
+  {
+    "id": "b6dd3432-a2b8-4b79-8b87-e835dde0d254",
+    "name_pt_br": "HistOnline - histonline-docker",
+    "name_en_us": "HistOnline - histonline-docker",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://github.com/HistOnline/histonline-docker",
+    "tags": [
+      "php",
+      "open source"
+    ],
+    "order": 193
+  },
+  {
+    "id": "c85dc295-d98c-45a6-850b-1c8321c88324",
+    "name_pt_br": "HistOnline - histonline-frontend",
+    "name_en_us": "HistOnline - histonline-frontend",
+    "description_pt_br": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+    "description_en_us": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+    "link": "https://github.com/HistOnline/histonline-frontend",
+    "tags": [
+      "javascript",
+      "react",
+      "open source"
+    ],
+    "order": 194
+  },
+  {
+    "id": "be23e0bf-1ce7-4b50-b248-ed5719c8e652",
+    "name_pt_br": "clev - web",
+    "name_en_us": "clev - web",
+    "description_pt_br": "# React Basics Boilerplate",
+    "description_en_us": "# React Basics Boilerplate",
+    "link": "https://gitlab.com/clev/web",
+    "tags": [
+      "react"
+    ],
+    "order": 195
+  },
+  {
+    "id": "81ecea49-ccbe-4d9a-9ce6-d2e8f4f12034",
+    "name_pt_br": "clev - fastapi",
+    "name_en_us": "clev - fastapi",
+    "description_pt_br": "Para rodar a API, primeiramente crie um `virtualenv` em python3.5+ na pasta pai:",
+    "description_en_us": "Para rodar a API, primeiramente crie um `virtualenv` em python3.5+ na pasta pai:",
+    "link": "https://gitlab.com/clev/fastapi",
+    "tags": [
+      "python",
+      "ai",
+      "api"
+    ],
+    "order": 196
+  },
+  {
+    "id": "3112d890-0ab4-4002-999e-ceb07507207b",
+    "name_pt_br": "clev - scripts",
+    "name_en_us": "clev - scripts",
+    "description_pt_br": "## Um pouco Sobre",
+    "description_en_us": "## Um pouco Sobre",
+    "link": "https://gitlab.com/clev/clev",
+    "tags": [],
+    "order": 197
+  },
+  {
+    "id": "16d22f7c-3e08-4871-a41e-6afdfc2190f4",
+    "name_pt_br": "clev - flask",
+    "name_en_us": "clev - flask",
+    "description_pt_br": "Web App em Python 3 e Flask para consumir dados de log do RPA",
+    "description_en_us": "Web App em Python 3 e Flask para consumir dados de log do RPA",
+    "link": "https://gitlab.com/clev/flask",
+    "tags": [
+      "python",
+      "flask",
+      "rpa"
+    ],
+    "order": 198
+  },
+  {
+    "id": "aa506a00-2ab2-4b43-a4bb-5ad475847333",
+    "name_pt_br": "clev - app",
+    "name_en_us": "clev - app",
+    "description_pt_br": "Aplicação de gerenciamento móvel de fluxos de Clev",
+    "description_en_us": "Aplicação de gerenciamento móvel de fluxos de Clev",
+    "link": "https://gitlab.com/clev/app",
+    "tags": [
+      "ci",
+      "ia"
+    ],
+    "order": 199
+  },
+  {
+    "id": "ef5f8432-9357-4340-90cd-4df804a218e8",
+    "name_pt_br": "filpelopes.me - frontend",
+    "name_en_us": "filpelopes.me - frontend",
+    "description_pt_br": "# Nome do projeto.",
+    "description_en_us": "# Nome do projeto.",
+    "link": "https://gitlab.com/filpelopes.me/filipelopes.me_frontend",
+    "tags": [
+      "open source"
+    ],
+    "order": 200
+  },
+  {
+    "id": "f94c6b2c-e43e-4cc3-8d32-a0de3c6b10a0",
+    "name_pt_br": "filpelopes.me - backend",
+    "name_en_us": "filpelopes.me - backend",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/filpelopes.me/filipelopes.me_backend",
+    "tags": [
+      "open source"
+    ],
+    "order": 201
+  },
+  {
+    "id": "3ad5340d-375b-4b07-90b5-ca266b592005",
+    "name_pt_br": "histonline - frontend",
+    "name_en_us": "histonline - frontend",
+    "description_pt_br": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+    "description_en_us": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+    "link": "https://gitlab.com/histonline/frontend",
+    "tags": [
+      "react",
+      "open source"
+    ],
+    "order": 202
+  },
+  {
+    "id": "cccdf3fe-4d54-4604-8e99-1740d1deb529",
+    "name_pt_br": "histonline - plugin-laminas",
+    "name_en_us": "histonline - plugin-laminas",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/histonline/wordpress/plugin-laminas",
+    "tags": [
+      "open source"
+    ],
+    "order": 203
+  },
+  {
+    "id": "cefdff97-d3bb-4834-92ff-7eb40a5d5472",
+    "name_pt_br": "histonline - backend",
+    "name_en_us": "histonline - backend",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/histonline/backend",
+    "tags": [
+      "open source"
+    ],
+    "order": 204
+  },
+  {
+    "id": "8e0761ec-fdfd-4b24-82a0-2ae3f1de7e22",
+    "name_pt_br": "histonline - backend__old",
+    "name_en_us": "histonline - backend__old",
+    "description_pt_br": "Backend em python abandonado por motivos de falta de servidor dedicado (VPS) na Universidade Federal que pudesse alocar a API.",
+    "description_en_us": "Backend em python abandonado por motivos de falta de servidor dedicado (VPS) na Universidade Federal que pudesse alocar a API.",
+    "link": "https://gitlab.com/histonline/backend__old",
+    "tags": [
+      "python",
+      "api",
+      "open source"
+    ],
+    "order": 205
+  },
+  {
+    "id": "c79315a1-5e42-4f9e-a56d-22acfa12775c",
+    "name_pt_br": "sm-projects - pedido-casamento",
+    "name_en_us": "sm-projects - pedido-casamento",
+    "description_pt_br": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+    "description_en_us": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+    "link": "https://gitlab.com/sm-projects/pedido-casamento",
+    "tags": [
+      "react"
+    ],
+    "order": 206
+  },
+  {
+    "id": "f871432f-083d-490b-8b3b-96820fccadf3",
+    "name_pt_br": "sm-projects - matheus-upload",
+    "name_en_us": "sm-projects - matheus-upload",
+    "description_pt_br": "# Nome do projeto.",
+    "description_en_us": "# Nome do projeto.",
+    "link": "https://gitlab.com/sm-projects/matheus-upload",
+    "tags": [],
+    "order": 207
+  },
+  {
+    "id": "feb3bf31-0e8c-4f93-9f6c-9b6acb9e8a5d",
+    "name_pt_br": "uilgo - administrativo",
+    "name_en_us": "uilgo - administrativo",
+    "description_pt_br": "Descrição não disponível.",
+    "description_en_us": "Descrição não disponível.",
+    "link": "https://gitlab.com/uilgo/administrativo",
+    "tags": [],
+    "order": 208
+  },
+  {
+    "id": "c8f51067-e71d-4259-a2b4-1c0a84d32d87",
+    "name_pt_br": "uilgo - backend",
+    "name_en_us": "uilgo - backend",
+    "description_pt_br": "uilgo: Sistema de Controle de Eventos ======================== Author: João Santana Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV Summary: Aplicação RESTFUL para controle de eventos. Target Project: WildFly",
+    "description_en_us": "uilgo: Sistema de Controle de Eventos ======================== Author: João Santana Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV Summary: Aplicação RESTFUL para controle de eventos. Target Project: WildFly",
+    "link": "https://gitlab.com/uilgo/backend",
+    "tags": [
+      "cd",
+      "open source"
+    ],
+    "order": 209
+  },
+  {
+    "id": "8d97b39f-db91-4450-8c26-af45ea9b67b7",
+    "name_pt_br": "uilgo - frontend",
+    "name_en_us": "uilgo - frontend",
+    "description_pt_br": "# Uilgo.   **Inscreva-se de forma inteligente.**   Esse projeto teve base clonada do meu [GitHub](https://github.com/filiperochalopes/react-template) , que por sua vez é estruturado com as definições do [Create React App](https://github.com/facebook/create-react-app).",
+    "description_en_us": "# Uilgo.   **Inscreva-se de forma inteligente.**   Esse projeto teve base clonada do meu [GitHub](https://github.com/filiperochalopes/react-template) , que por sua vez é estruturado com as definições do [Create React App](https://github.com/facebook/create-react-app).",
+    "link": "https://gitlab.com/uilgo/auilgo_frontend",
+    "tags": [
+      "react",
+      "open source"
+    ],
+    "order": 210
+  },
+  {
+    "id": "9130afa8-9d8a-4fd0-a3b1-033261a38c60",
+    "name_pt_br": "medapps - medapps-frontend",
+    "name_en_us": "medapps - medapps-frontend",
+    "description_pt_br": "# React Basics Boilerplate",
+    "description_en_us": "# React Basics Boilerplate",
+    "link": "https://gitlab.com/medapps/medapps-frontend",
+    "tags": [
+      "react"
+    ],
+    "order": 211
+  },
+  {
+    "id": "953d1329-9ea7-4dca-8195-fae879fcf50b",
+    "name_pt_br": "medapps - enfermaria",
+    "name_en_us": "medapps - enfermaria",
+    "description_pt_br": "# Nome do projeto.",
+    "description_en_us": "# Nome do projeto.",
+    "link": "https://gitlab.com/medapps/enfermaria",
+    "tags": [],
+    "order": 212
+  },
+  {
+    "id": "19bfc16e-4e4b-42d2-a445-dcd4798775af",
+    "name_pt_br": "jogodabiblia - administrativo",
+    "name_en_us": "jogodabiblia - administrativo",
+    "description_pt_br": "## Contas",
+    "description_en_us": "## Contas",
+    "link": "https://gitlab.com/jogodabiblia/administrativo",
+    "tags": [],
+    "order": 213
+  },
+  {
+    "id": "71b847f9-82d7-4191-8982-07f877791b5e",
+    "name_pt_br": "jogodabiblia - sigepe",
+    "name_en_us": "jogodabiblia - sigepe",
+    "description_pt_br": "Sistema de Gerenciamento de Perguntas (sigepe) para cadastro de perguntas em banco de dados, contagem e moderação das mesmas.",
+    "description_en_us": "Sistema de Gerenciamento de Perguntas (sigepe) para cadastro de perguntas em banco de dados, contagem e moderação das mesmas.",
+    "link": "https://gitlab.com/jogodabiblia/sigepe",
+    "tags": [
+      "ci",
+      "ia",
+      "open source"
+    ],
+    "order": 214
+  },
+  {
+    "id": "d93f9dd0-668a-44f0-b7db-636a8f19b3c3",
+    "name_pt_br": "jogodabiblia - design",
+    "name_en_us": "jogodabiblia - design",
+    "description_pt_br": "Pasta de design.",
+    "description_en_us": "Pasta de design.",
+    "link": "https://gitlab.com/jogodabiblia/design",
+    "tags": [
+      "open source"
+    ],
+    "order": 215
+  },
+  {
+    "id": "7362c689-8698-4862-b35f-3700c1173292",
+    "name_pt_br": "inema - backend",
+    "name_en_us": "inema - backend",
+    "description_pt_br": "# Instalação local do WordPress 5.1.1",
+    "description_en_us": "# Instalação local do WordPress 5.1.1",
+    "link": "https://gitlab.com/inema/backend",
+    "tags": [
+      "wordpress",
+      "open source"
+    ],
+    "order": 216
+  },
+  {
+    "id": "4fb3a9ae-ceb9-4827-bead-8fd20809aa23",
+    "name_pt_br": "inema - frontend",
+    "name_en_us": "inema - frontend",
+    "description_pt_br": "# Intranet corporativa INEMA-SEMA (frontend)",
+    "description_en_us": "# Intranet corporativa INEMA-SEMA (frontend)",
+    "link": "https://gitlab.com/inema/frontend",
+    "tags": [
+      "open source"
+    ],
+    "order": 217
+  },
+  {
+    "id": "496ecdc9-8d39-4473-847c-74defb8bf5be",
+    "name_pt_br": "inema - api-tempo",
+    "name_en_us": "inema - api-tempo",
+    "description_pt_br": "# API Inema Clima-tempo Uma API para consumir dados de temperatura, tempo e vento do banco de dados INEMA.",
+    "description_en_us": "# API Inema Clima-tempo Uma API para consumir dados de temperatura, tempo e vento do banco de dados INEMA.",
+    "link": "https://gitlab.com/inema/api-tempo",
+    "tags": [
+      "api",
+      "cli",
+      "open source"
+    ],
+    "order": 218
+  }
+]

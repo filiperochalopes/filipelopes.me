@@ -1,15 +1,19 @@
-FROM node:20-bullseye-slim
+FROM node:20-bullseye-slim AS build
 
-RUN mkdir -p /home/node/app
-WORKDIR /home/node/app
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends python3 make g++ \
-  && rm -rf /var/lib/apt/lists/*
-RUN corepack enable \
-  && corepack prepare pnpm@10.26.2 --activate
+WORKDIR /app
+
+RUN corepack enable && corepack prepare pnpm@10.26.2 --activate
+
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install
-COPY . .
-EXPOSE 3000
+RUN pnpm install --frozen-lockfile
 
-CMD ["pnpm", "dev", "--host", "0.0.0.0", "--port", "3000"]
+COPY . .
+RUN pnpm build
+
+FROM nginx:alpine
+
+COPY --from=build /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

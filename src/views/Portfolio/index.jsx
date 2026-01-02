@@ -261,7 +261,7 @@ class Portfolio extends Component {
                   <Link to="/portfolio">
                     Portfólio <i className="fas fa-external-link-alt"></i>
                   </Link>{' '}
-                  <ShareBt whatsapp="whatsapp://send?text=Veja o meu currículo: https://filipelopes.me/curriculo" />
+                  <ShareBt whatsapp="whatsapp://send?text=Veja meu portfólio: https://filipelopes.me/portfolio" />
                 </h1>
                 {/* <PortfolioSearch/> */}
                 <OnVisible

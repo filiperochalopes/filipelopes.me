@@ -64,8 +64,6 @@ export default () => {
             <Switch>
               <Route exact path="/" component={Index} />
               <Route path="/portfolio/:name?" component={AsyncPortfolio} />
-              <Route path="/curriculo" component={AsyncCurriculum} />
-              <Route path="/curriculum" component={AsyncCurriculum} />
               <Route path="/pdf/curriculum" component={AsyncPdfCurriculum} />
               <Route
                 path="/pdf/download/curriculum"
