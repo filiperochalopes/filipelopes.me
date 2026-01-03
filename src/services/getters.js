@@ -1,6 +1,7 @@
 import posts from '../data/posts.json';
 import curriculum from '../data/curriculum.json';
 import portfolio from '../data/portfolio.json';
+import { withPortfolioSlugs } from '../utils/portfolio';
 
 export const fetchData = (url, language = 'pt-br') =>
   new Promise((resolve, reject) => {
@@ -63,7 +64,7 @@ export const fetchData = (url, language = 'pt-br') =>
       } else if (url === '/curriculum/certificate') {
         data = curriculum.certificates;
       } else if (url === '/portfolio') {
-        data = portfolio;
+        data = withPortfolioSlugs(portfolio);
       }
 
       if (data === null || data === undefined) {

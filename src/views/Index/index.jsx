@@ -1,6 +1,7 @@
 import Wrap from './styles';
 
 import Curriculum from '../Curriculum';
+import PortfolioHomeSection from '../Portfolio/HomeSection';
 
 import Footer from 'components/Footer';
 import Header from 'components/Header';
@@ -15,6 +16,7 @@ export default () => {
       <Header />
       <Me />
       <Curriculum />
+      <PortfolioHomeSection />
       <Footer />
     </Wrap>
   );

@@ -17,6 +17,11 @@ export default () => {
       title_ptBR: 'Currículo',
       title_enUS: 'Curriculum',
     },
+    {
+      reference: 'portfolio',
+      title_ptBR: 'Portfolio',
+      title_enUS: 'Portfolio',
+    },
     { reference: 'contact', title_ptBR: 'Contato', title_enUS: 'Contact' },
   ];
 

@@ -2,10 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 import App from '../../App';
 import portfolio from '../../data/portfolio.json';
+import { withPortfolioSlugs } from '../../utils/portfolio';
 
 export function getStaticPaths() {
-  if (!Array.isArray(portfolio)) return [];
-  return portfolio.map((item) => ({
+  const items = withPortfolioSlugs(portfolio).filter(
+    (item) => item && typeof item === 'object' && item.slug
+  );
+
+  return items.map((item) => ({
     params: { slug: item.slug },
   }));
 }

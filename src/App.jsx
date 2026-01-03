@@ -23,20 +23,29 @@ export default () => {
 
   const setLanguage = language => {
     console.log(state);
-    return ['pt-br', 'en-us'].includes(language)
-      ? setState({ ...state, language })
-      : setState({ ...state, language: state.language });
+    return setState(prevState => {
+      if (!['pt-br', 'en-us'].includes(language)) {
+        return prevState;
+      }
+      return { ...prevState, language };
+    });
   };
   const setActiveSection = activeSection => {
     console.log(activeSection);
-    return [null, 'intro', 'me', 'curriculum', 'contact'].includes(
-      activeSection
-    )
-      ? setState({ ...state, activeSection })
-      : setState({ ...state, activeSection: state.activeSection });
+    return setState(prevState => {
+      if (
+        ![null, 'intro', 'me', 'curriculum', 'portfolio', 'contact'].includes(
+          activeSection
+        )
+      ) {
+        return prevState;
+      }
+      return { ...prevState, activeSection };
+    });
   };
 
-  const setLogoReset = boolean => setState({ ...state, logoReset: boolean });
+  const setLogoReset = boolean =>
+    setState(prevState => ({ ...prevState, logoReset: boolean }));
 
   useEffect(() => {
     import('smooth-scroll').then((module) => {

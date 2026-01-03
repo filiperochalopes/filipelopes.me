@@ -21,6 +21,7 @@ export const LanguageBt = styled.button`
   right: 20px;
   top: 15px;
   height: 20px;
+  z-index: 6;
   cursor: pointer;
 
   img {

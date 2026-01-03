@@ -16,13 +16,14 @@ export default () => {
   return (
     <OnVisible
       bounce={true}
+      percent={20}
       onChange={visible => {
         if (visible) {
           setTimeout(() => {
             setActiveSection('contact');
           }, 100);
         } else {
-          setActiveSection('curriculum');
+          setActiveSection('portfolio');
         }
       }}
     >

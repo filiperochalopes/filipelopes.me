@@ -65,6 +65,7 @@ export default () => {
   return (
     <OnVisible
       bounce={true}
+      percent={20}
       onChange={visible => {
         console.log('Curriculum visibility', visible);
         if (visible) {

@@ -60,8 +60,11 @@ export const Navigation = styled.nav`
 `;
 
 export const Buttons = styled.div`
-  position: absolute;
-  padding-left: calc(50vw - 265px / 2);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   z-index: 5;
 `;
 

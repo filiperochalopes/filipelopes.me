@@ -19,6 +19,7 @@ export default () => {
   return (
     <OnVisible
       bounce={true}
+      percent={20}
       onChange={visible => {
         console.log('Me visibility', visible);
         if (visible) {

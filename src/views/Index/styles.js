@@ -12,5 +12,9 @@ export default styled.main`
     display: inline-block;
     margin: 0 auto;
     padding-top: 80px;
+
+    button{
+      margin-left: 16px;
+    }
   }
 `;

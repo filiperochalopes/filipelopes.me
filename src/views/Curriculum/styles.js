@@ -61,4 +61,8 @@ export default styled.section`
   section {
     margin: 80px 0;
   }
+
+  section:last-of-type {
+    margin-bottom: 0;
+  }
 `;
