@@ -13,7 +13,7 @@ export default ({ slug }) => {
 
   return (
     text && (
-      <p>
+      <p className="footer-bible-text">
         {text.title} {text.content}
       </p>
     )

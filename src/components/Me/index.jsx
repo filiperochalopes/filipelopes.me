@@ -41,7 +41,7 @@ export default () => {
             }}
           >
             <ImageWrap>
-              <img src="/img/new_profile_photo.jpg" alt="Profile" />
+              <img src="/img/profile.jpg" alt="Profile" />
             </ImageWrap>
           </Parallax>
           <Parallax

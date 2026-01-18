@@ -29,6 +29,12 @@ export default styled.footer`
     color: #ffffff;
   }
 
+  p.footer-bible-text {
+    margin-bottom: 32px;
+    max-width: 900px;
+    color: #b1750d;
+  }
+
   .links {
     display: flex;
     flex-wrap: wrap;
