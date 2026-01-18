@@ -17,8 +17,19 @@
     "title_en_us": "Filipe Lopes",
     "excerpt_pt_br": "",
     "excerpt_en_us": "",
-    "content_pt_br": "Discípulo de Jesus Cristo, programador criativo com mais de 10 anos de experiência,  fundador da empresa ORANGO I/O TECNOLOGIA, concluindo o curso de medicina na Universidade Federal da Bahia. Ao longo dos anos trabalhei para diversos clientes como Marinha do Brasil e organizações do meio ambiente estaduais e internacionais com Javascript, Python, PHP, desenvolvendo e gerenciando desde sistemas de orçamentos e teleatendimento para clínicas até programa com visualização tridimensional. Desejoso por aprender, criar e trazer soluções práticas e simples nas diversas áreas do conhecimento, porém com foco maior em saúde. Atualmente estou estudando matemática avançada e Machine Learning para poder aumentar o alcance e eficiência dos sistemas a serem criados com a real Inteligência Artificial. Gosto muito de praticar atividades físicas e cantar em grupo nas horas vagas.",
+    "content_pt_br": "Médico dinâmico, engenheiro de software autodidata e empreendedor em health-tech com mais de 15 anos de experiência, combinando expertise clínica e informática em saúde para criar soluções de saúde open-source impactantes. Proficiente no desenvolvimento de sistemas interoperáveis e pipelines ETL robustos, utilizando padrões como CIEL, ICD-11 e FHIR. Comprometido em aumentar a segurança do paciente e a auditabilidade através de implantações tecnológicas inovadoras, promovendo a colaboração dentro da comunidade health-tech. Apaixonado por impulsionar melhorias nos sistemas de informação em saúde e contribuir para iniciativas de saúde pública.",
     "content_en_us": "Dynamic MD, self-taught software engineer and health-tech entrepreneur with 15+ years of experience, blending clinical expertise and health informatics to create impactful, open-source health solutions. Proficient in developing interoperable systems and robust ETL pipelines, leveraging standards like CIEL, ICD-11, and FHIR. Committed to enhancing patient safety and auditability through innovative technology deployments, while fostering collaboration within the health-tech community. Passionate about driving improvements in health information systems and contributing to public health initiatives.",
+    "type": "TXT"
+  },
+  {
+    "id": 7,
+    "slug": "proverbs-3-5-8",
+    "title_pt_br": "",
+    "title_en_us": "",
+    "excerpt_pt_br": "",
+    "excerpt_en_us": "",
+    "content_pt_br": "Confia no SENHOR de todo o teu coração e não te estribes no teu próprio entendimento. Reconhece-o em todos os teus caminhos, e ele endireitará as tuas veredas. Não sejas sábio aos teus próprios olhos; teme ao SENHOR e aparta-te do mal; será isto saúde para o teu corpo e refrigério, para os teus ossos. Pv 3:5-8",
+    "content_en_us": "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight. Do not be wise in your own eyes; fear the LORD and shun evil. This will bring health to your body and nourishment to your bones. Prov 3:5-8",
     "type": "TXT"
   },
   {

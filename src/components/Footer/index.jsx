@@ -4,6 +4,7 @@ import React, { useContext, useEffect } from 'react';
 import OnVisible from 'react-on-visible';
 import AppContext from 'services/AppContext';
 import TextLang from 'components/TextLang';
+import BibleText from 'components/BibleText';
 
 export default () => {
   const { setActiveSection, language } = useContext(AppContext);
@@ -30,6 +31,7 @@ export default () => {
       <Footer id="contact">
         <div className="container">
           <div>
+            <BibleText slug="proverbs-3-5-8" />
             <img src="/img/filipelopes-logo-horizontal.svg" alt="Filipe Lopes" style={{ maxWidth: '200px', marginBottom: '10px' }} />
             <p>
               &copy; 2010 - {currentYear}.{' '}
