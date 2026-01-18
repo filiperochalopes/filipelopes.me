@@ -13,14 +13,11 @@ const CONTACT = {
 };
 
 const COLORS = {
-  sidebarBg: '#0f141f',
-  sidebarText: '#ffffff',
-  sidebarTextMuted: '#7a8599',
-  sidebarTextHighlight: '#cfd6e6', // Light blue/gray
-  mainText: '#0f141f',
-  mainTextMuted: '#7a8599',
+  text: '#0f141f',
+  textMuted: '#7a8599',
+  link: '#1155cc',
   headerText: '#0f141f',
-  accent: '#2e74b5', // Blue for subheaders
+  accent: '#953f98', // Purple from HTML
 };
 
 const loadImage = (src) => new Promise((resolve) => {
@@ -44,12 +41,13 @@ const formatMonthYear = (stringDate, language) => {
 
 const splitBullets = text => {
   if (!text) return [];
-  // Split by newlines or bullet points if present in text
+  // Corrigido: usando escape para quebras de linha em vez de quebra literal
   return text
     .split(/[\n\r]+|- /)
     .map(item => item.trim())
     .filter(item => item.length > 0 && item !== '-');
 };
+
 export const generateCurriculumPdf = async (language = 'pt-br', { download = true } = {}) => {
   const [resume, experiences, skills, courses, certificates, ai] = await Promise.all([
     fetchData('/posts/curriculum-resume', language),
@@ -73,83 +71,72 @@ export const generateCurriculumPdf = async (language = 'pt-br', { download = tru
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
   
-  const sidebarWidth = 180;
-  const margin = 20;
-  const mainColumnX = sidebarWidth + margin * 2;
+  const margin = 40;
+  const colGap = 30;
+  const sidebarWidth = 150; 
+  const mainColumnX = margin + sidebarWidth + colGap;
   const mainColumnWidth = pageWidth - mainColumnX - margin;
   
-  let yMain = margin + 10;
-  let ySidebar = margin + 10;
+  let y = margin;
 
-  // Helper to check page break
+  // --- HEADER SECTION (Full Width, Centered) ---
+  if (profileImg) {
+    const imgSize = 60;
+    doc.addImage(profileImg, 'JPEG', (pageWidth - imgSize) / 2, y, imgSize, imgSize);
+    y += imgSize + 10;
+  }
+
+  if (logoImg) {
+    const w = 180;
+    const h = (logoImg.height / logoImg.width) * w;
+    doc.addImage(logoImg, 'PNG', (pageWidth - w) / 2, y, w, h);
+    y += h + 15;
+  }
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(9);
+  doc.setTextColor(COLORS.text);
+  const headerLine = `${CONTACT.title}  •  ${CONTACT.location}  •  ${CONTACT.phone}`;
+  doc.text(headerLine, pageWidth / 2, y, { align: 'center' });
+  y += 30;
+
+  let ySidebar = y;
+  let yMain = y;
+
   const ensureSpace = (height, isSidebar = false) => {
-    let y = isSidebar ? ySidebar : yMain;
-    if (y + height > pageHeight - margin) {
+    let currentY = isSidebar ? ySidebar : yMain;
+    if (currentY + height > pageHeight - margin) {
       doc.addPage();
-      // Redraw sidebar background on new page
-      doc.setFillColor(COLORS.sidebarBg);
-      doc.rect(0, 0, sidebarWidth, pageHeight, 'F');
-      
-      if (isSidebar) {
-        ySidebar = margin;
-        return ySidebar;
-      } else {
-        yMain = margin;
-        return yMain;
-      }
+      ySidebar = margin;
+      yMain = margin;
+      return margin;
     }
-    return y;
+    return currentY;
   };
 
-  // --- SIDEBAR RENDER ---
-  doc.setFillColor(COLORS.sidebarBg);
-  doc.rect(0, 0, sidebarWidth, pageHeight, 'F');
-
-  // Profile Image
-  if (profileImg) {
-    const imgSize = 80;
-    const x = (sidebarWidth - imgSize) / 2;
-    // Circular mask approximation (not supported directly in jsPDF without advanced API, using square for now or clipping)
-    // To do circle: doc.circle(x+r, y+r, r, 'Clip'); doc.addImage(...);
-    // Simple square for stability
-    doc.addImage(profileImg, 'JPEG', x, ySidebar, imgSize, imgSize);
-    ySidebar += imgSize + 20;
-  }
-
-  // Logo
-  if (logoImg) {
-    const w = 140;
-    const h = (logoImg.height / logoImg.width) * w;
-    const x = (sidebarWidth - w) / 2;
-    doc.addImage(logoImg, 'PNG', x, ySidebar, w, h);
-    ySidebar += h + 20;
-  }
-
-  // Contact Info
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(10);
-  doc.setTextColor(COLORS.sidebarText);
-  
-  const drawSidebarSection = (title, items) => {
-    ensureSpace(30, true);
+  // --- LEFT COLUMN (SIDEBAR - NO BACKGROUND) ---
+  const drawSidebarSection = (title, items, isLink = false) => {
+    ensureSpace(40, true);
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
-    doc.setTextColor(COLORS.sidebarText);
-    doc.text(title.toUpperCase(), 15, ySidebar);
+    doc.setTextColor(COLORS.text);
+    doc.text(title.toUpperCase(), margin, ySidebar);
     ySidebar += 15;
     
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(9);
-    doc.setTextColor(COLORS.sidebarTextHighlight);
     
     items.forEach(item => {
       if (!item) return;
-      const lines = doc.splitTextToSize(item, sidebarWidth - 30);
+      if (isLink) doc.setTextColor(COLORS.link);
+      else doc.setTextColor(COLORS.text);
+
+      const lines = doc.splitTextToSize(item, sidebarWidth);
       ensureSpace(lines.length * 11, true);
-      doc.text(lines, 15, ySidebar);
-      ySidebar += lines.length * 11 + 6;
+      doc.text(lines, margin, ySidebar);
+      ySidebar += lines.length * 11 + 4;
     });
-    ySidebar += 10;
+    ySidebar += 15;
   };
 
   drawSidebarSection('Details', [
@@ -162,121 +149,86 @@ export const generateCurriculumPdf = async (language = 'pt-br', { download = tru
     CONTACT.github,
     CONTACT.linkedin,
     CONTACT.website
-  ]);
+  ], true);
 
-  // Languages
-  // Filter language skills
-  const languages = (skills || []).filter(s => s.category?.id === 3); // Category 3 is Languages in db
+  const languages = (skills || []).filter(s => s.category?.id === 3);
   if (languages.length > 0) {
     drawSidebarSection(language === 'en-us' ? 'Languages' : 'Idiomas', 
-      languages.map(l => `${l.name}: ${l.level >= 90 ? 'Fluent/Native' : 'Advanced'}`)
+      languages.map(l => `${l.name}: ${l.level >= 90 ? 'Native' : 'Fluent'}`)
     );
   }
 
-  // Areas of Expertise (Static)
   drawSidebarSection('Areas of Expertise', [
     'Health Sciences - Medicine, Primary Care',
-    'Exact & Earth Sciences - Computer Science, Information Systems',
-    'Public Health - Policy, Planning, Management'
+    'Exact & Earth Sciences - Computer Science',
+    'Public Health - Policy, Planning'
   ]);
 
 
-  // --- MAIN COLUMN RENDER ---
-  
-  // Header Name & Title
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(18);
-  doc.setTextColor(COLORS.mainText);
-  const nameLines = doc.splitTextToSize(CONTACT.name.toUpperCase(), mainColumnWidth);
-  doc.text(nameLines, mainColumnX, yMain);
-  yMain += nameLines.length * 20;
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(10);
-  doc.setTextColor(COLORS.mainTextMuted);
-  const titleLines = doc.splitTextToSize(CONTACT.title, mainColumnWidth);
-  doc.text(titleLines, mainColumnX, yMain);
-  yMain += titleLines.length * 12 + 20;
-
-  const drawMainSection = (title, icon, content, isHtml = false) => {
-    ensureSpace(40);
+  // --- RIGHT COLUMN (MAIN) ---
+  const drawMainSection = (title, icon, content) => {
+    ensureSpace(50);
     
-    // Icon and Title Line
-    const iconSize = 15;
+    const iconSize = 14;
     if (icon) {
-      doc.addImage(icon, 'PNG', mainColumnX - 25, yMain - 12, iconSize, iconSize);
+      doc.addImage(icon, 'PNG', mainColumnX - 20, yMain - 10, iconSize, iconSize);
     }
     
     doc.setFont('helvetica', 'bold');
-    doc.setFontSize(14);
-    doc.setTextColor(COLORS.headerText);
+    doc.setFontSize(12);
+    doc.setTextColor(title === 'AI' ? COLORS.accent : COLORS.headerText);
     doc.text(title.toUpperCase(), mainColumnX, yMain);
-    yMain += 20;
+    yMain += 18;
 
-    // Content
     doc.setFont('helvetica', 'normal');
-    doc.setFontSize(10);
-    doc.setTextColor(COLORS.mainText);
+    doc.setFontSize(9);
+    doc.setTextColor(COLORS.text);
 
     if (Array.isArray(content)) {
       content.forEach(block => {
-        ensureSpace(20);
-        // Sub-blocks handling
         if (block.title) {
+            ensureSpace(15);
             doc.setFont('helvetica', 'bold');
-            doc.setFontSize(11);
             doc.text(block.title, mainColumnX, yMain);
-            yMain += 14;
+            yMain += 12;
         }
         if (block.subtitle) {
             doc.setFont('helvetica', 'italic');
-            doc.setFontSize(9);
-            doc.setTextColor(COLORS.mainTextMuted);
+            doc.setTextColor(COLORS.textMuted);
             doc.text(block.subtitle, mainColumnX, yMain);
-            doc.setTextColor(COLORS.mainText);
+            doc.setTextColor(COLORS.text);
             yMain += 12;
             doc.setFont('helvetica', 'normal');
-            doc.setFontSize(10);
         }
         if (block.text) {
              const lines = doc.splitTextToSize(block.text, mainColumnWidth);
-             ensureSpace(lines.length * 12);
+             ensureSpace(lines.length * 11);
              doc.text(lines, mainColumnX, yMain);
-             yMain += lines.length * 12 + 8;
+             yMain += lines.length * 11 + 5;
         }
         if (block.bullets) {
             block.bullets.forEach(bullet => {
-                const bText = `• ${bullet}`;
-                const bLines = doc.splitTextToSize(bText, mainColumnWidth);
-                ensureSpace(bLines.length * 12);
+                const bLines = doc.splitTextToSize(`• ${bullet}`, mainColumnWidth);
+                ensureSpace(bLines.length * 11);
                 doc.text(bLines, mainColumnX, yMain);
-                yMain += bLines.length * 12 + 4;
+                yMain += bLines.length * 11 + 2;
             });
-            yMain += 4;
+            yMain += 5;
         }
       });
     } else if (typeof content === 'string') {
         const lines = doc.splitTextToSize(content, mainColumnWidth);
-        ensureSpace(lines.length * 12);
+        ensureSpace(lines.length * 11);
         doc.text(lines, mainColumnX, yMain);
-        yMain += lines.length * 12 + 10;
+        yMain += lines.length * 11 + 10;
     }
     yMain += 10;
   };
 
-  // AI Section
-  if (ai) {
-    drawMainSection('AI', aiIcon, ai.content);
-  }
+  if (ai) drawMainSection('AI', aiIcon, ai.content);
+  if (resume) drawMainSection('Profile', profileIcon, resume.content);
 
-  // Profile (Resume) Section
-  if (resume) {
-    drawMainSection('Profile', profileIcon, resume.content);
-  }
-
-  // Technical Skills
-  // Group non-language skills
-  const techSkills = (skills || []).filter(s => s.category?.id !== 3 && s.category?.id !== 4); // Exclude Languages(3) and Personal(4)
+  const techSkills = (skills || []).filter(s => s.category?.id !== 3 && s.category?.id !== 4);
   const groupedSkills = techSkills.reduce((acc, skill) => {
     const catName = skill.category ? (language === 'en-us' ? skill.category.name_en_us : skill.category.name_pt_br) : 'Other';
     if (!acc[catName]) acc[catName] = [];
@@ -292,11 +244,9 @@ export const generateCurriculumPdf = async (language = 'pt-br', { download = tru
       drawMainSection('Technical & Method Skills', skillsIcon, skillsBlocks);
   }
 
-  // Experience Section
   const expBlocks = (experiences || []).map(exp => ({
       title: `${exp.title} - ${exp.organization}`,
       subtitle: `${formatMonthYear(exp.since, language)} - ${exp.until ? formatMonthYear(exp.until, language) : 'Present'} | ${exp.place}`,
-      text: exp.description ? null : '', // If we have bullets, use them, otherwise text
       bullets: splitBullets(exp.description)
   }));
   
